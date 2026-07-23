@@ -1,8 +1,10 @@
 # 蕾瓦娜斯角色設定包
 
-視覺正本：`../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
+角色版本 ID：**`REVANAS-V1-CRYSTAL-DRAGONKIN`**
 
-本資料夾以既有四視圖的外觀為唯一身份正本。`CHARACTER_SPEC.md` 與舊版 `PROMPTS.md` 若描述深色角、破舊囚服、手腕殘鏈、無尾等與圖片不符的內容，均不得套用到本圖片包。
+視覺正本：既有已核准的 `01–09` PNG（畫風參考圖 `../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png` 僅控制共用畫風，非本角色身份參考）
+
+> **2026-07-23 正典衝突已解決**：`CHARACTER_SPEC.md` 已全面改寫，與本資料夾既有 `01–09` PNG 的實際外觀完全同步（銀白長髮＋青藍下段、雙眼同色冰藍、藍紫水晶長角、銀藍龍翼、水晶尾尖、白銀水晶戰甲禮服）。`CHARACTER_SPEC.md` 與 `PROMPTS.md` 自本版本起**不再有兩份互相矛盾的正本**；深色角、破舊囚服、手腕殘鏈、無尾等舊文字設定僅保留於 `CHARACTER_SPEC.md` 文末作為未建置版本 `REVANAS-V2-CAVE-CAPTIVE` 的歷史記錄，不適用於本圖片包。
 
 ## 圖片索引
 

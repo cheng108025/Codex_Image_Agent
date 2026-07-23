@@ -1,17 +1,33 @@
 # 馬爾科（Marco）— 獒犬家、軍權
 
-> Tier A — 《赫克托》三大貴族之一（軍權線）。本檔為文字版身份規格，供 `00-marco-character-identity-anchor.png` 生成之依據。
+> Tier A — 《赫克托》三大貴族之一（軍權線）。本檔為文字版身份規格（範本 v2 FULL package），供 `00-marco-character-identity-anchor.png` 與 01–10 全套參考圖生成／校對之依據。
 > 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
+> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
 > 服裝版本鎖定：**山谷／宮廷會議重甲版** — 獒犬家紋厚重鐵甲／禮儀重甲，會議桌旁亦不卸甲。此為「以武力當發言權」形象最一致的版本。
 
 ## 基本資料
 - 中文名：馬爾科
 - 英文名：Marco
+- 角色版本 ID：**`MARCO-V1-COUNCIL-ARMOR`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
 - 性別：男
 - 年齡／外觀年齡：壯年武將，外觀約 45–52 歲（`DESIGN-PROPOSAL`）
 - 身高：約 192cm（`CANON` 文檔明載）
 - 體型：魁梧壯碩、虎背熊腰、氣勢壓人（`CANON`）
-- 故事時期／服裝版本：山谷／宮廷會議重甲版 — 獒犬家紋厚重鐵甲，不卸甲（`CANON` 重甲大方向；分件細節為 `DESIGN-PROPOSAL`）
+- 故事時期：軍權線、山谷／宮廷會議場景（`CANON`；本版本鎖定此時期外觀，其他時期需另立版本 ID）
+- 服裝版本：山谷／宮廷會議重甲版 — 獒犬家紋厚重鐵甲，不卸甲（`CANON` 重甲大方向；分件細節為 `DESIGN-PROPOSAL`）
+
+## 身體量化鎖定 Body Metrics Lock
+- 身高（cm）：**192**（`CANON`）
+- 頭身比：**7.0–7.5**（`DESIGN-PROPOSAL`，利於參數化人體擬合）
+- 肩寬（頭寬倍數）：**約 2.8 倍頭寬**（魁梧壯碩、虎背熊腰的重量級武將體格，覆蓋畫風預設纖細比例；`DESIGN-PROPOSAL`，可覆蓋）
+- 左右不對稱特徵：**披風主扣固定於角色解剖學左肩**（`DESIGN-PROPOSAL` 提案側別——文檔未明載側別，本規格提出左肩以保留右肩／慣用臂活動空間，可覆蓋並重生對應圖片）；其餘部位（胸前獒犬家紋）置中對稱
+
+## 血緣關係鎖定 Kinship Lock
+- 親屬清單：無——馬爾科在家族註冊表（§13）中無血緣親屬記錄
+- 家族錨點：不適用
+- 承襲特徵：不適用
+- 刻意區分特徵：不適用
+- 禁止混淆項：不適用
 
 ## 參考圖片
 - 初始角色外觀圖片：無
@@ -27,39 +43,41 @@
 
 ## 外貌鎖定 Identity Lock
 - 臉型：**方臉、寬下顎、稜角分明**（`CANON`）；風霜刻痕的武將面容（`DESIGN-PROPOSAL`）
-- 膚色：偏深、飽經風吹日曬的健康古銅調（`DESIGN-PROPOSAL`）
-- 眼型與眼睛顏色：目光凶悍、鋒利具壓迫感（`CANON` 凶悍神情）；眼睛顏色深褐／鐵灰（`DESIGN-PROPOSAL`；`PENDING-USER-INPUT`）
-- 髮型、髮色與固定髮束：**修短鬚／短髭**（`CANON` 短鬚）；短硬的鐵灰摻黑短髮（`DESIGN-PROPOSAL`）
-- 身材比例：約七至七頭半身、厚重魁梧的重量級武將體格（`CANON` 魁梧；比例呈現為 `DESIGN-PROPOSAL`）
+- 膚色：偏深、飽經風吹日曬的健康古銅調 **#8C6239**（`DESIGN-PROPOSAL`）
+- 眼型與眼睛顏色：目光凶悍、鋒利具壓迫感（`CANON` 凶悍神情）；眼睛顏色鎖定為**鋼灰色 steel-gray #7C8088**（`DESIGN-PROPOSAL` 鎖定）
+- 髮型、髮色與固定髮束：**修短鬚／短髭**（`CANON` 短鬚）；短硬的鐵灰摻黑短髮 **#55524C**（`DESIGN-PROPOSAL`）
+- 身材比例：約七至七頭半身、厚重魁梧的重量級武將體格；見 Body Metrics Lock（192cm／7.0–7.5 頭身／肩寬約 2.8 倍頭寬）
 - 標誌性輪廓：厚重板甲的寬肩巨影＋胸前獒犬家紋（`CANON` 重甲與家紋；輪廓構成為 `DESIGN-PROPOSAL`）
 - 不可改變特徵：方臉短鬚、凶悍目光、厚重鐵甲、胸前獒犬（mastiff）家紋、魁梧壯碩體格
+- **anatomical left／right 不對稱鎖定**：披風主扣固定於角色解剖學**左肩**（`DESIGN-PROPOSAL` 提案，可覆蓋），胸前獒犬家紋置中對稱。02 號視圖＝相機位於角色解剖學左側（披風扣可見）；03 號視圖＝相機位於角色解剖學右側（披風扣在遠側）。
 
 ## 服裝鎖定 Costume Lock
 - 服裝層次：厚重鐵甲／禮儀重甲，內襯戰袍與鎖甲（`CANON` 重甲；分層為 `DESIGN-PROPOSAL`）
 - 領口：高聳護頸鋼領，內襯深色布料（`DESIGN-PROPOSAL`）
-- 肩部：巨大鐵製肩甲（pauldron），可鑄獒犬頭紋樣（`DESIGN-PROPOSAL`）
-- 胸前：整片鐵製胸甲，浮雕／蝕刻**獒犬家紋**（`CANON` 家紋存在；樣式為 `DESIGN-PROPOSAL`）
+- 肩部：巨大鐵製肩甲（pauldron），鑄有獒犬頭紋樣；披風主扣固定於左肩（`DESIGN-PROPOSAL`）
+- 胸前：整片鐵製胸甲，浮雕／蝕刻**獒犬家紋**，置中（`CANON` 家紋存在；樣式為 `DESIGN-PROPOSAL`）
 - 袖口／手部：板甲護臂與鐵手套（gauntlet）（`DESIGN-PROPOSAL`）
-- 腰部：鐵扣寬腰帶，可掛闊劍／戰劍（`DESIGN-PROPOSAL`）
-- 下襬／披風：及膝戰裙（tasset／faulds）＋厚重家紋披風（`DESIGN-PROPOSAL`）
+- 腰部：鐵扣寬腰帶，可掛闊劍／戰劍（僅 09）（`DESIGN-PROPOSAL`）
+- 下襬／披風：及膝戰裙（tasset／faulds）＋厚重家紋披風，左肩扣（`DESIGN-PROPOSAL`）
 - 腿部／鞋靴：全套板甲護腿與鐵靴，踏地有聲（`CANON` 鐵靴威嚇；細節為 `DESIGN-PROPOSAL`）
-- 背面結構：披風覆背、背甲完整，肩甲與腰帶扣件可見（`DESIGN-PROPOSAL`）
+- 背面結構：披風覆背、背甲完整，肩甲與腰帶扣件可見，左肩扣延伸至背面披風固定點（`DESIGN-PROPOSAL`）
 
-## 色票與材質
-- 主色：冷鐵灰／深鋼色重甲——與全書金／銀藍／深色系收斂一致（`CANON` 全書配色方向）
-- 輔色：暗金家紋刻線、深紅或墨黑戰袍披風（`DESIGN-PROPOSAL`）
-- 金屬：拋光與霧面交錯的鐵鋼板甲、暗金浮雕（`DESIGN-PROPOSAL`）
+## 色票與材質（固定色票，跨全部圖片不得漂移）
+- 主色：冷鐵灰／深鋼色重甲 **#5A5F66**——與全書金／銀藍／深色系收斂一致（`CANON` 全書配色方向；hex `DESIGN-PROPOSAL`）
+- 輔色：暗金家紋刻線 **#8A7239**、墨黑戰袍披風 **#16151A**（`DESIGN-PROPOSAL`）
+- 金屬：拋光與霧面交錯的鐵鋼板甲 **#5A5F66**、暗金浮雕 **#8A7239**（`DESIGN-PROPOSAL`）
 - 寶石：無或極少，僅腰帶扣可鑲深色小寶石（`DESIGN-PROPOSAL`；`PENDING-USER-INPUT`）
 - 布料：厚重披風織布、內襯戰袍（`DESIGN-PROPOSAL`）
 - 皮革：腰帶、甲下皮革襯墊（`DESIGN-PROPOSAL`）
 - 特殊材質：板甲的金屬磨損與戰痕質感（`DESIGN-PROPOSAL`）
+- 膚色／髮色／瞳色（hex）：膚 **#8C6239**（深古銅）／髮與短鬚（鐵灰摻黑）**#55524C**／瞳 **#7C8088**（鋼灰）（`DESIGN-PROPOSAL` 鎖定）
 
-## 道具與特殊構造
-- 武器：闊劍／戰劍佩於腰間（`DESIGN-PROPOSAL`；文檔未指名武器，佩劍為武將合理補完）
-- 飾品：胸甲上的獒犬家紋為主要識別（`CANON`）
+## 道具與特殊構造（僅出現在 09 道具表）
+- 武器：**闊劍 broadsword**，佩於腰間（`DESIGN-PROPOSAL`；文檔未指名武器，佩劍為武將合理補完）。**00–05 與 10 一律不出現**
+- 飾品：胸甲上的獒犬家紋為主要識別，置中（`CANON`）
 - 隨身道具：無特定隨身小物；以重甲本身為道具（`DESIGN-PROPOSAL`）
 - 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：板甲以皮帶與鐵扣分件連接；披風以肩甲扣件固定（`DESIGN-PROPOSAL`）
+- 配戴或連接方式：板甲以皮帶與鐵扣分件連接；披風以左肩肩甲扣件固定（`DESIGN-PROPOSAL`）
 
 ## 八種固定表情
 1. 自然 Neutral — 凶悍壓迫的預設神情
@@ -74,25 +92,25 @@
 ## 禁止特徵
 - 不可新增的配件：翅膀、角、尾巴、王冠、法杖、機械義肢
 - 不可出現的顏色：高飽和螢光色、粉彩系、與全書金／銀藍／深色系衝突的鮮豔色
-- 不可改變的左右位置：胸前獒犬家紋須置中；披風主扣側須跨圖一致
+- 不可改變的左右位置：胸前獒犬家紋須置中；披風主扣固定左肩，須跨圖一致、不得鏡像翻轉
 - 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
 
 ## 鎖定錨定預設值（可覆蓋）
+> 為讓 00 號圖完全確定，以下原 `PENDING-USER-INPUT` 已鎖成具體預設值，寫入 00 的 Character definition。使用者可事後覆蓋。
 
-> 為讓 00 號圖完全確定（§8），以下原 `PENDING-USER-INPUT` 已鎖成具體預設值，寫入 00 的 Character definition。使用者可事後覆蓋。
-
-- **眼睛顏色**：鋼灰色（steel-gray）— 呼應冷鐵重甲主色。
-- **獒犬（mastiff）家紋紋樣**：正面朝前、獠牙外露的獒犬頭（front-facing snarling mastiff-hound head），暗金浮雕。
-- **披風底色**：墨黑（ink-black）。
-- **佩帶武器**：闊劍（broadsword），佩於腰間。
-- **體型覆蓋（§1）**：共用畫風 §1 含 `slender`，本角色逐字保留 §1，但於 Character definition／Identity invariants 以 `massive heavyweight build` 覆蓋，並在負向補 `slender build / thin frame / slim youth`。
+- **眼睛顏色**：鋼灰色 steel-gray #7C8088 — 呼應冷鐵重甲主色。
+- **獒犬（mastiff）家紋紋樣**：正面朝前、獠牙外露的獒犬頭（front-facing snarling mastiff-hound head），暗金 #8A7239 浮雕，置中。
+- **披風底色**：墨黑 ink-black #16151A。
+- **披風主扣側**：左肩（`DESIGN-PROPOSAL` 提案，可覆蓋——見「Kinship／不對稱鎖定」）。
+- **佩帶武器**：闊劍（broadsword），佩於腰間（僅 09）。
+- **體型覆蓋**：共用畫風含 `slender`，本角色以 `massive heavyweight build` 覆蓋，並在負向補 `slender build / thin frame / slim youth`。
 
 ## 正典衝突與待確認事項
 - **已決定**：
   - 服裝版本採「會議重甲版」，緊扣「即使在會議桌旁也不卸甲」的正典描述。
   - 體格採 192cm 魁梧壯碩（`CANON`），畫風雖為日系纖細設定稿基準，仍以重量級武將體格為身份主軸。
-- **`PENDING-USER-INPUT`**：
-  - 眼睛顏色（深褐 vs 鐵灰）之最終定調——00 號圖生成後由使用者定案。
-  - 獒犬（mastiff）家紋的確切紋樣（文檔僅載「獒犬家紋」，未給圖形）。
-  - 佩帶武器的具體形制（闊劍／戰劍／戰錘）——目前暫定闊劍。
-  - 披風底色（深紅 vs 墨黑）。
+  - **披風主扣側（稽核 §7 未定項）已提案鎖定為左肩**（`DESIGN-PROPOSAL`，可覆蓋並重生對應圖片），不再留白。
+  - 固定色票 hex 值已鎖定（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
+- **`PENDING-USER-INPUT`**（僅存不影響核心辨識度之項）：
+  - 佩帶武器的具體形制（闊劍／戰劍／戰錘）——目前暫定闊劍，僅出現於 09。
+  - 腰帶扣寶石顏色（若採用）。

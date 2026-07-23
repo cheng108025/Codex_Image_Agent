@@ -1,8 +1,12 @@
 # 班尼迪克角色設定包
 
-視覺正本：`../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+> **角色版本 ID：`BENEDICT-V1-CLERIC-REGENT`**（範本 v2 FULL package：00–10，見 `PROMPTS.md`）
 
-本資料夾以既有四視圖的外觀為唯一身份正本。`CHARACTER_SPEC.md` 與舊版 `PROMPTS.md` 若描述深紫長袍、冠冕、聖劍、年長外貌等與圖片不符的內容，均不得套用到本圖片包。
+視覺正本：既有已核准 `01–09` 號 PNG（本資料夾）＋ `CHARACTER_SPEC.md`／`PROMPTS.md` 之文字鎖定。
+
+本資料夾以既有 `01–09` 號 PNG 的外觀為唯一身份正本。`CHARACTER_SPEC.md` 已同步至此外觀（年輕神職攝政男性），文檔原載之深紫長袍、冠冕、聖劍、年長外貌等設定已移至 `CHARACTER_SPEC.md` 文末列為未建置的 `BENEDICT-V0-ELDERLY-REGENT` 版本，不適用於本圖片包。
+
+`PROMPTS.md` 現為 FULL v2 套件（00–10 共 11 條，含獨立 01–04 正交視圖與固定 hex 色票）；00 與 10 尚未生成（`PENDING-GENERATION`），09 道具表之泛紫光聖劍去留為 `PENDING-USER-INPUT`（不阻擋其餘視圖）。
 
 ## 圖片索引
 

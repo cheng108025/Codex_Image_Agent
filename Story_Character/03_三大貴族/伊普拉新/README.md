@@ -29,6 +29,7 @@
 
 ## 提示詞
 
-- 原始身份、四視圖與表情提示詞：`PROMPTS.md`
-- 完整流程補充提示詞：`FULL_WORKFLOW_PROMPTS.md`
+- FULL v2 完整 00–10（11 條，含獨立 01–04）：`PROMPTS.md`
+- 角色版本 ID：`IPRANSHIN-V1-SHADOW-SCHEMER`
+- 舊版分工補充提示詞（不在本次改版範圍，未觸碰）：`FULL_WORKFLOW_PROMPTS.md`
 

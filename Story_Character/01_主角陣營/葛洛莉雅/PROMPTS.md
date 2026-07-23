@@ -1,21 +1,44 @@
-# 葛洛莉雅 Gloria — Image Generation Prompts (00–09)
+# 葛洛莉雅 Gloria — Image Generation Prompts（FULL v2 package: 00–10）
 
-> **Two-stage rule (mandatory).** Stage 1 generates ONLY `00-gloria-character-identity-anchor.png` using the three shared style images to lock the common art style. The three style images control STYLE ONLY — never copy their characters' faces, hairstyles or costumes. Stop after 00 and wait for the user to approve or request changes.
-> **01–09 must NOT be generated until the user has approved 00.** Once approved, `00-gloria-character-identity-anchor.png` becomes the SOLE identity/costume authority (Image 1) for every prompt below; the three style images stay style-only.
-> Each prompt below is independent and self-contained. Do not merge them.
+> **用途聲明（必讀）**
+> 這套圖片是 **3D 建模參考包（modeling reference pack）**，不是完成的 3D 模型。
+> 純 AI img2vid 無法保證跨鏡頭的角色完全一致；正式影片必須先以本參考包建立同一個經核准的 **Blender／VRM 角色模型**，並以該模型作為**唯一角色正本**驅動所有鏡頭。
 
-Shared style references (style only, do not copy their characters):
+> **角色版本 ID：`GLORIA-V1-NOBLE-TRAVELWEAR-BADGE`**（利落旅裝／貴族女裝＋左胸承諾徽章；潛行斗篷另立 `GLORIA-V2-STEALTH-CLOAK`，本包不建置，不得混用）
+
+> **版本切分聲明（稽核 §7 已解決）**：本包鎖定單一鏡頭狀態 `GLORIA-V1-NOBLE-TRAVELWEAR-BADGE`。潛入用素色斗篷屬不同鏡頭狀態，已移出 09 道具表，正式列為未建置版本 `GLORIA-V2-STEALTH-CLOAK`；本包 00–10 一律不出現該斗篷。
+
+> **兩階段規則（強制）**：第一階段只生成 `00-gloria-character-identity-anchor.png`（三視圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，缺一即 REJECT 重生成），生成後停止等待使用者核准。核准後 00 成為 01–10 的 Image 1 身份／服裝唯一正本。三張 style 圖永遠只控制畫風。
+> **檔案安全**：不得刪除或覆蓋現有 PNG；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
+
+共用畫風參考（style only, do not copy their characters）：
 - `../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
 - `../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
 - `../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
 
+生成順序與檔名（FULL package：00–10，人形角色不豁免任何一張）：
+
+| 編號 | 檔案 | 內容 |
+| --- | --- | --- |
+| 00 | `00-gloria-character-identity-anchor.png` | 身份母圖：A-pose 正面全身＋正面頭肩＋45° 頭肩，零道具 |
+| 01 | `01-gloria-front-fullbody.png` | 正面全身，A-pose，零道具 |
+| 02 | `02-gloria-left-profile-fullbody.png` | 相機位於角色解剖學左側全身，A-pose，零道具 |
+| 03 | `03-gloria-right-profile-fullbody.png` | 相機位於角色解剖學右側全身，A-pose，零道具 |
+| 04 | `04-gloria-back-fullbody.png` | 背面全身，A-pose，零道具 |
+| 05 | `05-gloria-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
+| 06 | `06-gloria-expression-sheet.png` | 八表情臉部表，4×2 網格 |
+| 07 | `07-gloria-costume-detail-sheet.png` | 服裝細節表（含旅行外套拆解） |
+| 08 | `08-gloria-color-material-sheet.png` | 色票／材質表（已補固定 hex） |
+| 09 | `09-gloria-prop-construction-sheet.png` | 道具表：承諾徽章＋隨身文件（本角色無武器；潛行斗篷不在此包，另立 GLORIA-V2） |
+| 10 | `10-gloria-body-reference-sheet.png` | 素體參考圖（SMPL-X／人體擬合用） |
+
 ---
 
-## 00 — `00-gloria-character-identity-anchor.png`  (STAGE 1 — generate this one only, then wait for approval)
+## 00 — `00-gloria-character-identity-anchor.png`（STAGE 1 — 只先生成這張，停止等核准）
 
 ```text
 Use case: stylized-concept
-Asset type: new-character identity anchor sheet
+Asset type: new-character identity anchor sheet (three views)
 
 Input images:
 - Image 1: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
@@ -23,197 +46,199 @@ Input images:
 - Image 3: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
 
 Character definition:
-Gloria, a refined young noblewoman (apparent age 20-25), height read ~165cm, medium build, elegant and graceful yet quietly resilient, roughly seven-and-a-half-heads slender feminine proportions. CANON facial identity: fair warm-toned skin, a delicate refined oval face, almond-shaped gentle eyes whose softness hides a firm resolve. LOCKED eye color: warm chestnut-brown eyes (locked anchor default, overridable). CANON hair with LOCKED shade: warm medium chestnut-brown LONG hair, usually tied up or braided - a single neat side braid / low braided gather worn over one shoulder. Costume version: refined practical travel wear of noble quality (CANON direction) - a fitted bodice-top under a short travel jacket or over-tunic, a modest high-to-mid neckline with soft inner lining, gentle no-armor shoulder line, a waist belt or cinch shaping the silhouette, an ankle-to-knee travel skirt, low walking boots. CANON signature accessory with LOCKED motif: Gawain's promise badge - a small round warm-gold / brass knight-style token engraved with a paired-vow clasped-hands emblem and set with a single small deep silver-blue stone at its center, matching the token she and Gawain exchanged - pinned at the LEFT chest. Palette: soft chestnut-brown, warm beige and ivory with a low-saturation muted blue or wine travel tone, warm-gold badge and fittings, aligned with the whole story's converged gold / silver-blue / dark scheme.
+Gloria, a refined young noblewoman (apparent age 20-25), height 165cm, medium build, elegant and graceful yet quietly resilient, approximately seven-and-a-half-heads slender feminine proportions. Locked facial identity: fair warm-toned skin (#F2DFC9), a delicate refined oval face, almond-shaped gentle eyes whose softness hides a firm resolve, warm chestnut-brown eyes (#8B5A2B). Locked hair: warm medium chestnut-brown (#6B4530) LONG hair, worn in a single neat side braid / low braided gather over one shoulder. Costume (version GLORIA-V1-NOBLE-TRAVELWEAR-BADGE): refined practical travel wear of noble quality - a fitted bodice-top (#8B5E3C chestnut-brown) under a short travel jacket / over-tunic with warm-beige (#D9C4A3) and ivory (#F0E6D2) inner lining, a modest high-to-mid neckline, gentle no-armor shoulder line, a waist belt/cinch, muted wine-red (#6B3B42) accent trim, an ankle-to-knee travel skirt, deep-brown leather (#4A3527) low walking boots. Locked signature accessory: Gawain's promise badge - a small round warm-gold (#B08D4E) knight-style token engraved with a paired-vow clasped-hands emblem and set with a single small deep silver-blue stone (#4A6C8C) at its center - pinned at the anatomical LEFT chest (locked side, must never be mirrored to the right). She carries NO weapon and NO props of any kind.
 
-Sheet layout: a single ultra-wide horizontal sheet, aspect ratio approximately 3:1 (reference 2048x672). Left ~55% of the canvas holds one neutral straight-on FULL-BODY front view, entire body from top of head to soles inside frame. Right ~45% holds one large straight-on HEAD-AND-SHOULDERS portrait of the same character, the head occupying at least 60% of that panel's height so the face reads clearly as the identity authority. Both halves share identical face, hair, colors and costume; no identity drift.
+Body metrics:
+Height 165 cm. Approximately 7.5 heads tall, slender feminine proportions. Shoulder width approximately 1.9 head-widths. Locked asymmetric feature: the promise badge sits at the anatomical LEFT chest only, never mirrored to the right.
+
+Kinship invariants:
+None. Gloria has no blood relatives registered in the family tables. Her bond with Gawain is an emotional/vow-based connection (the exchanged promise badge), not blood kinship.
 
 Primary request:
-Design one new and visually distinct character from the written specification. Create an identity-anchor sheet containing exactly two views of the same character: one neutral straight-on full-body front view and one large straight-on head-and-shoulders portrait. Both views must have identical facial identity, hairstyle, colors, costume and accessories. The head-and-shoulders portrait is the facial identity authority for later generations.
+Design one new and visually distinct character from the written specification. Create an identity-anchor sheet containing exactly three views of the same character — all three are mandatory; missing any view = REJECT:
+1. one neutral straight-on full-body front view in a standard A-pose (standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread);
+2. one large straight-on head-and-shoulders portrait;
+3. one 45-degree three-quarter head-and-shoulders portrait (for video-generation reference).
+Suggested layout: full-body view on the left ~45% of the canvas, straight-on portrait top-right, three-quarter portrait bottom-right. All three views must have identical facial identity, hairstyle, colors and costume, with the badge consistently on the LEFT chest. The straight-on head-and-shoulders portrait is the facial identity authority for later generations. Character and costume only - no weapons, no handheld items, no standalone props.
 
 Style:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, precise embroidery, layered fabric, polished metal, leather and gemstone material separation, restrained luminous highlights, soft neutral studio lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
+refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, precise embroidery, layered fabric, polished metal and gemstone material separation, restrained luminous highlights, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, plate armor, weapon, sword, crown, short hair, blonde hair, neon colors, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, tail, white-gold pale-purple clergy robe, heavy metal armor, gemstone encrustation, gold pauldrons, clergy silk, crystalline parts
+photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, plate armor, weapon, sword, crown, short hair, blonde hair, badge mirrored to right side, badge missing, neon colors, reference character face, copying any style-image character, blending the three reference characters, heavy metal armor, gemstone encrustation, gold pauldrons, clergy silk, crystalline parts, dark hooded cloak, infiltration cloak, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting
 
 Constraints:
 - The three input images control visual style only; do not reproduce or blend their characters.
-- Follow all CANON facts exactly (chestnut-brown long braided hair, gentle eyes hiding resolve, ~165cm medium build, refined travel wear, Gawain's promise badge pinned at the left chest).
-- Follow approved DESIGN-PROPOSAL items consistently.
-- Do not invent unresolved PENDING-USER-INPUT details.
-- Neutral front-facing presentation, plain warm light-gray background, no scene or action pose.
-- No text, labels, logo, signature or watermark.
-- Exactly one character identity shown twice; no identity drift between the two views.
-- The three style images define lighting, linework, shading and material rendering ONLY. Do NOT reproduce their characters' faces, hairstyles, costumes, colors or anatomy, and do not blend them into this character.
+- Follow the locked identity exactly (chestnut-brown long braided hair #6B4530, warm chestnut-brown eyes #8B5A2B hiding resolve, 165cm medium build, refined travel wear, Gawain's promise badge pinned at the anatomical LEFT chest).
+- Character and costume only: no weapons, no handheld items, no standalone props. All construction/prop studies belong exclusively to sheet 09.
+- Do not depict the GLORIA-V2-STEALTH-CLOAK alternate version; this sheet is GLORIA-V1-NOBLE-TRAVELWEAR-BADGE only.
+- Full-body view MUST use the standard neutral A-pose defined above; the two portraits are unaffected by the A-pose rule.
+- Flat even ambient lighting, no cast shadows, no strong highlights, no rim light.
+- Exactly one character identity shown three times; no identity drift between the three views. Missing any of the three views = invalid sheet, REJECT and regenerate.
+- Plain warm light-gray background. No text, labels, logo, signature or watermark.
 ```
 
 ---
 
-## 01 — `01-gloria-front-fullbody.png`  (STAGE 2 — after 00 approved)
+## 01 — `01-gloria-front-fullbody.png`（STAGE 2 — 正面全身）
 
 ```text
 Use case: identity-preserve
-Asset type: single front full-body orthographic view
+Asset type: single front-view full-body orthographic reference
 
 Input images:
 - Image 1: the approved 00-gloria-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
-Render Gloria as a single clean front full-body orthographic view, standing straight in a neutral A-pose, facing the viewer at 0 degrees, full body from head to boots inside frame.
+Render Gloria as ONE full-body front view (0 degrees) in true orthographic projection, in the standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose.
 
 Identity invariants:
-Exact face, gentle almond eyes with warm chestnut-brown color and a hidden firm resolve, chestnut-brown long hair tied in a single neat side braid, fair warm skin, refined oval face, seven-and-a-half-heads slender feminine proportions - all identical to Image 1.
+Identical character from Image 1: same refined oval face, warm chestnut-brown eyes (#8B5A2B) with hidden resolve, warm chestnut-brown side-braided long hair (#6B4530), fair warm skin (#F2DFC9).
+
+Body metrics:
+Height 165 cm. Approximately 7.5 heads tall. Shoulder width approximately 1.9 head-widths. The promise badge sits at the anatomical LEFT chest only.
 
 Costume invariants:
-Refined practical travel wear from Image 1: fitted bodice-top under a short travel jacket / over-tunic, modest neckline, no-armor soft shoulders, waist belt/cinch, ankle-to-knee travel skirt, low walking boots, and Gawain's promise badge pinned at the LEFT chest. Same accessory count, same positions, same colors and materials.
+Identical GLORIA-V1-NOBLE-TRAVELWEAR-BADGE attire from Image 1: fitted chestnut-brown bodice-top (#8B5E3C), short travel jacket with warm-beige/ivory lining (#D9C4A3/#F0E6D2), modest neckline, waist belt/cinch, muted wine-red accent trim (#6B3B42), ankle-to-knee travel skirt, deep-brown leather boots (#4A3527), and Gawain's warm-gold promise badge (#B08D4E) with its deep silver-blue gem (#4A6C8C) pinned at the anatomical LEFT chest. NO weapon anywhere; no stealth cloak (that belongs to a separate unbuilt version, GLORIA-V2-STEALTH-CLOAK).
 
 Composition:
-Standard single-figure vertical full-body sheet, taller than wide, whole body inside frame. Straight-on front view, full body head-to-toe, centered, feet on an implied ground line, warm light-gray low-contrast background, balanced negative space, no props beyond the canonical worn equipment.
+Single figure centered, entire body from hair to boot soles inside frame, flat even ambient lighting with no cast shadows, warm light-gray low-contrast background, no props, no grid lines, no labels.
 
 Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, precise embroidery, layered fabric, polished metal, leather and gemstone material separation, restrained luminous highlights, soft neutral studio lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
+refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished metal and gemstone material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, weapon, sword, crown, short hair, blonde hair, back view, side view, three-quarter view, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, tail, white-gold pale-purple clergy robe, heavy metal armor, gemstone encrustation, gold pauldrons, clergy silk, crystalline parts
+photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, weapon, sword, crown, short hair, blonde hair, badge mirrored to right side, badge missing, dark hooded cloak, infiltration cloak, reference character face, copying any style-image character, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, side view, profile, back view, three-quarter view
 
 Constraints:
-- Preserve the exact approved character identity from Image 1.
-- Use Images 2-4 for visual style only.
-- No text, captions, labels, logo, signature or watermark.
-- No extra character, duplicate figure, extra limbs or unspecified accessories.
-- Do not invent missing canonical details.
-- The three style images define lighting, linework, shading and material rendering ONLY. Do NOT reproduce their characters' faces, hairstyles, costumes, colors or anatomy, and do not blend them into this character.
+- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- Character and costume only; zero props; flat lighting; true orthographic front view.
+- No text or watermark. Do not invent missing canonical details.
 ```
 
 ---
 
-## 02 — `02-gloria-left-profile-fullbody.png`  (STAGE 2 — after 00 approved)
+## 02 — `02-gloria-left-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學左側）
 
 ```text
 Use case: identity-preserve
-Asset type: single left-profile full-body orthographic view
+Asset type: single anatomical-left-side full-body orthographic reference
 
 Input images:
 - Image 1: the approved 00-gloria-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
-Render Gloria as a single clean LEFT-side profile full-body orthographic view, standing straight in a neutral pose, body turned to a true 90-degree left profile, full body head-to-boots inside frame.
+Render Gloria as ONE full-body view with the camera positioned at the character's anatomical LEFT side (the camera looks directly at the character's left flank; the character's left side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical left, away from the camera's direct line; no head turn back toward the lens.
 
 Identity invariants:
-Exact face, gentle almond eye with warm chestnut-brown color and hidden resolve, chestnut-brown long side-braided hair, fair warm skin, refined oval face, seven-and-a-half-heads slender feminine proportions - identical to Image 1, only rotated to the left profile.
+Identical character from Image 1: same face structure seen from this angle, warm chestnut-brown side-braided long hair (#6B4530), fair warm skin (#F2DFC9).
+
+Body metrics:
+Height 165 cm. Approximately 7.5 heads tall. Shoulder width approximately 1.9 head-widths.
 
 Costume invariants:
-Same refined travel wear as Image 1: fitted bodice-top under short travel jacket, modest neckline, soft no-armor shoulders, waist belt/cinch, ankle-to-knee travel skirt, low walking boots, and Gawain's promise badge on the LEFT chest (reads at the front edge on this profile). Identical count, positions, colors and materials.
+Identical attire from Image 1 seen from the anatomical-left camera position: chestnut-brown bodice and travel-jacket silhouette (#8B5E3C), waist belt/cinch, wine-red accent trim (#6B3B42), travel skirt fall, leather boots (#4A3527). The promise badge (#B08D4E, gem #4A6C8C) is clearly visible on the near (left) side of the chest, front edge facing the camera. NO weapon anywhere; no stealth cloak.
 
 Composition:
-Standard single-figure vertical full-body sheet, taller than wide, whole body inside frame. True left-side profile, full body head-to-toe, centered, braid drape and skirt fall visible, warm light-gray low-contrast background, balanced negative space, no props beyond canonical worn equipment.
+Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
 
 Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, precise embroidery, layered fabric, polished metal, leather and gemstone material separation, restrained luminous highlights, soft neutral studio lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
+refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished metal and gemstone material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, weapon, sword, crown, short hair, blonde hair, front view, back view, three-quarter view, right profile, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, tail, white-gold pale-purple clergy robe, heavy metal armor, gemstone encrustation, gold pauldrons, clergy silk, crystalline parts
+photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, weapon, sword, crown, short hair, blonde hair, badge missing, dark hooded cloak, infiltration cloak, reference character face, copying any style-image character, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical right side
 
 Constraints:
-- Preserve the exact approved character identity from Image 1.
-- Use Images 2-4 for visual style only.
-- No text, captions, labels, logo, signature or watermark.
-- No extra character, duplicate figure, extra limbs or unspecified accessories.
-- Do not invent missing canonical details.
-- The three style images define lighting, linework, shading and material rendering ONLY. Do NOT reproduce their characters' faces, hairstyles, costumes, colors or anatomy, and do not blend them into this character.
+- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical LEFT side only (do not describe this as merely "facing left").
+- The promise badge must be visible on this near side; do not omit it.
+- No text or watermark. Do not invent missing canonical details.
 ```
 
 ---
 
-## 03 — `03-gloria-back-fullbody.png`  (STAGE 2 — after 00 approved)
+## 03 — `03-gloria-right-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學右側）
 
 ```text
 Use case: identity-preserve
-Asset type: single back full-body orthographic view
+Asset type: single anatomical-right-side full-body orthographic reference
 
 Input images:
 - Image 1: the approved 00-gloria-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
-Render Gloria as a single clean BACK full-body orthographic view, standing straight in a neutral pose, back fully to the viewer at 180 degrees, full body head-to-boots inside frame, clarifying the rear construction of the costume.
+Render Gloria as ONE full-body view with the camera positioned at the character's anatomical RIGHT side (the camera looks directly at the character's right flank; the character's right side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical right, away from the camera's direct line; no head turn back toward the lens.
 
 Identity invariants:
-Same character build, chestnut-brown long hair seen from behind as a single neat side braid falling down the back (back of head and neckline consistent with Image 1), fair warm skin, seven-and-a-half-heads slender feminine proportions. Face not visible but body identity unchanged.
+Identical character from Image 1: same face structure seen from this angle, warm chestnut-brown side-braided long hair (#6B4530), fair warm skin (#F2DFC9).
+
+Body metrics:
+Height 165 cm. Approximately 7.5 heads tall. Shoulder width approximately 1.9 head-widths.
 
 Costume invariants:
-Rear of the refined travel wear: back of the short travel jacket / over-tunic and bodice, waist belt/cinch tie readable at the back, ankle-to-knee travel skirt back panel, low walking boots, modest neckline back. The promise badge is on the front left chest and thus not visible from behind. Same count, positions, colors and materials as Image 1.
+Identical attire from Image 1 seen from the anatomical-right camera position: chestnut-brown bodice and travel-jacket silhouette (#8B5E3C), waist belt/cinch, wine-red accent trim (#6B3B42), travel skirt fall, leather boots (#4A3527). The promise badge (#B08D4E, gem #4A6C8C) sits on the character's LEFT chest, which is now the FAR side from this right-side camera; it must read as absent or only faintly suggested at the silhouette edge - do not draw it prominently on this near (right) side, and never mirror it onto the right chest.
 
 Composition:
-Standard single-figure vertical full-body sheet, taller than wide, whole body inside frame. Straight back view, full body head-to-toe, centered, braid and skirt back fully shown, warm light-gray low-contrast background, balanced negative space, no props beyond canonical worn equipment.
+Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
 
 Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, precise embroidery, layered fabric, polished metal, leather and gemstone material separation, restrained luminous highlights, soft neutral studio lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
+refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished metal and gemstone material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, weapon, sword, crown, short hair, blonde hair, front view, side view, three-quarter view, visible face, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, tail, white-gold pale-purple clergy robe, heavy metal armor, gemstone encrustation, gold pauldrons, clergy silk, crystalline parts
+photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, weapon, sword, crown, short hair, blonde hair, badge mirrored to right side, badge prominent on right chest, dark hooded cloak, infiltration cloak, reference character face, copying any style-image character, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical left side
 
 Constraints:
-- Preserve the exact approved character identity from Image 1.
-- Use Images 2-4 for visual style only.
-- No text, captions, labels, logo, signature or watermark.
-- No extra character, duplicate figure, extra limbs or unspecified accessories.
-- Do not invent missing canonical details.
-- The three style images define lighting, linework, shading and material rendering ONLY. Do NOT reproduce their characters' faces, hairstyles, costumes, colors or anatomy, and do not blend them into this character.
+- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical RIGHT side only (do not describe this as merely "facing right").
+- The promise badge is on the far (left) side from this camera; do not mirror it onto the near (right) chest.
+- No text or watermark. Do not invent missing canonical details.
 ```
 
 ---
 
-## 04 — `04-gloria-right-profile-fullbody.png`  (STAGE 2 — after 00 approved)
+## 04 — `04-gloria-back-fullbody.png`（STAGE 2 — 背面全身）
 
 ```text
 Use case: identity-preserve
-Asset type: single right-profile full-body orthographic view
+Asset type: single back-view full-body orthographic reference
 
 Input images:
 - Image 1: the approved 00-gloria-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
-Render Gloria as a single clean RIGHT-side profile full-body orthographic view, standing straight in a neutral pose, body turned to a true 90-degree right profile, full body head-to-boots inside frame.
+Render Gloria as ONE full-body BACK view (180 degrees) in true orthographic projection, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. Head faces exactly away from the viewer.
 
 Identity invariants:
-Exact face, gentle almond eye with warm chestnut-brown color and hidden resolve, chestnut-brown long side-braided hair, fair warm skin, refined oval face, seven-and-a-half-heads slender feminine proportions - identical to Image 1, only rotated to the right profile.
+Identical character from Image 1: same warm chestnut-brown hair seen from behind, gathered into its side braid (#6B4530), same build and proportions.
+
+Body metrics:
+Height 165 cm. Approximately 7.5 heads tall. Shoulder width approximately 1.9 head-widths.
 
 Costume invariants:
-Same refined travel wear as Image 1: fitted bodice-top under short travel jacket, modest neckline, soft no-armor shoulders, waist belt/cinch, ankle-to-knee travel skirt, low walking boots, and Gawain's promise badge on the LEFT chest (reads at the rear edge on this profile). Identical count, positions, colors and materials.
+Identical attire from Image 1 seen from behind: chestnut-brown travel-jacket back panel (#8B5E3C), clean back seaming, waist belt/cinch tied at the back, travel skirt fall to ankle/knee length, leather boots (#4A3527) seen from behind. The promise badge is NOT visible from behind (it is pinned at the front left chest). NO weapon anywhere; no stealth cloak.
 
 Composition:
-Standard single-figure vertical full-body sheet, taller than wide, whole body inside frame. True right-side profile, full body head-to-toe, centered, braid drape and skirt fall visible, warm light-gray low-contrast background, balanced negative space, no props beyond canonical worn equipment.
+Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
 
 Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, precise embroidery, layered fabric, polished metal, leather and gemstone material separation, restrained luminous highlights, soft neutral studio lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
+refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished metal and gemstone material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, weapon, sword, crown, short hair, blonde hair, front view, back view, three-quarter view, left profile, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, tail, white-gold pale-purple clergy robe, heavy metal armor, gemstone encrustation, gold pauldrons, clergy silk, crystalline parts
+photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, weapon, sword, crown, short hair, blonde hair, dark hooded cloak, infiltration cloak, reference character face, copying any style-image character, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, face visible, profile, three-quarter view
 
 Constraints:
-- Preserve the exact approved character identity from Image 1.
-- Use Images 2-4 for visual style only.
-- No text, captions, labels, logo, signature or watermark.
-- No extra character, duplicate figure, extra limbs or unspecified accessories.
-- Do not invent missing canonical details.
-- The three style images define lighting, linework, shading and material rendering ONLY. Do NOT reproduce their characters' faces, hairstyles, costumes, colors or anatomy, and do not blend them into this character.
+- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- Character and costume only; zero props; flat lighting; true orthographic back view.
+- No text or watermark. Do not invent missing canonical details.
 ```
 
 ---
 
-## 05 — `05-gloria-four-view-master.png`  (STAGE 2 — after 00 approved)
+## 05 — `05-gloria-four-view-master.png`（STAGE 2）
 
 ```text
 Use case: identity-preserve
@@ -221,44 +246,46 @@ Asset type: four-view orthographic master turnaround sheet
 
 Input images:
 - Image 1: the approved 00-gloria-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
-Render a single master turnaround sheet of Gloria containing four full-body orthographic views of the SAME character in one row at a consistent scale and shared ground line: front (0 degrees), left profile (90 degrees), back (180 degrees), right profile (270 degrees), in that left-to-right order. Neutral standing pose in every view.
+Render a single master turnaround sheet of Gloria containing four full-body orthographic views of the SAME character in one row on one shared ground line, in this exact left-to-right order: FRONT (0 degrees), LEFT profile (camera at anatomical left, 90 degrees), RIGHT profile (camera at anatomical right, 90 degrees), BACK (180 degrees). All four views use the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, identical height, identical head-to-body ratio, identical arm angles and foot spacing in every view, true orthographic projection, no contrapposto, no action pose, no T-pose.
 
 Identity invariants:
-All four figures are the identical character from Image 1: same face, gentle almond eyes with warm chestnut-brown color and hidden resolve, chestnut-brown long side-braided hair, fair warm skin, refined oval face, seven-and-a-half-heads slender feminine proportions. Identical head height and body scale across all four views, aligned to a common horizon and ground line.
+All four figures are the identical character from Image 1: same face, gentle almond eyes with warm chestnut-brown color (#8B5A2B) and hidden resolve, chestnut-brown long side-braided hair (#6B4530), fair warm skin (#F2DFC9), refined oval face, seven-and-a-half-heads slender feminine proportions. The promise badge stays on the anatomical LEFT chest: visible front-on in the front view, visible near-side in the left profile, absent/far-side in the right profile, absent in the back view. Head-top line and foot line perfectly horizontally aligned across all four views; silhouettes must be mutually alignable.
+
+Body metrics:
+Height 165 cm. Approximately 7.5 heads tall. Shoulder width approximately 1.9 head-widths.
+
+Kinship invariants:
+None.
 
 Costume invariants:
-Every view wears the identical refined travel wear from Image 1: fitted bodice-top under short travel jacket, modest neckline, soft no-armor shoulders, waist belt/cinch, ankle-to-knee travel skirt, low walking boots, and Gawain's promise badge on the LEFT chest. Same count, positions, colors and materials in all four views.
+Every view wears the identical GLORIA-V1-NOBLE-TRAVELWEAR-BADGE from Image 1: fitted bodice-top (#8B5E3C) under short travel jacket / over-tunic with beige/ivory lining (#D9C4A3/#F0E6D2), modest neckline, soft no-armor shoulders, waist belt/cinch, wine-red accent trim (#6B3B42), ankle-to-knee travel skirt, leather boots (#4A3527), and Gawain's promise badge on the LEFT chest. Same count, positions, colors and materials in all four views. NO weapon anywhere; no stealth cloak.
 
 Composition:
-Sheet layout: a single ultra-wide horizontal banner, aspect ratio approximately 3:1 (reference 2048x672). Four full-body figures in ONE row at equal scale on one shared ground line, evenly spaced, none cropped, no second row, no wrapping. Four full-body figures side by side in one clean row, equal size, aligned feet and heads, generous even spacing, warm light-gray low-contrast background, balanced negative space, no props beyond canonical worn equipment, no grid lines and no labels.
+A single ultra-wide horizontal banner, four full-body figures in ONE row at equal scale, evenly spaced, none cropped, no second row, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no grid lines, no labels.
 
 Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, precise embroidery, layered fabric, polished metal, leather and gemstone material separation, restrained luminous highlights, soft neutral studio lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
+refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, precise embroidery, layered fabric, polished metal and gemstone material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, weapon, sword, crown, short hair, blonde hair, inconsistent scale between views, different height per view, mismatched costume between views, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, tail, white-gold pale-purple clergy robe, heavy metal armor, gemstone encrustation, gold pauldrons, clergy silk, crystalline parts
+photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, masculine face, armor plate, weapon, sword, crown, short hair, blonde hair, badge mirrored to right side, badge missing, dark hooded cloak, infiltration cloak, inconsistent scale between views, different height per view, mismatched costume between views, reference character face, copying any style-image character, heavy metal armor, gemstone encrustation, gold pauldrons, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting
 
 Constraints:
-- Preserve the exact approved character identity from Image 1 in all four views.
-- Use Images 2-4 for visual style only.
-- No text, captions, labels, logo, signature or watermark.
-- No extra character beyond the four turnaround views, no extra limbs or unspecified accessories.
-- Do not invent missing canonical details.
-- The three style images define lighting, linework, shading and material rendering ONLY. Do NOT reproduce their characters' faces, hairstyles, costumes, colors or anatomy, and do not blend them into this character.
+- Preserve the exact approved identity from Image 1 in all four views; Images 2-4 are style only.
+- View order is fixed: front, left (camera at anatomical left), right (camera at anatomical right), back. Same height, same size, same body proportions, true orthographic projection in every view.
+- Character and costume only; zero props; flat lighting.
+- No text or watermark. Do not invent missing canonical details.
 ```
 
 ---
 
-## 06 — `06-gloria-expression-sheet.png`  (STAGE 2 — after 00 approved; eight-expression face sheet)
+## 06 — `06-gloria-expression-sheet.png`（STAGE 2 — 八表情臉部表）
 
 ```text
 Use case: identity-preserve
-Asset type: professional eight-expression anime character face sheet
+Asset type: professional eight-expression anime character face sheet (also serves as expression keyframe reference for video generation)
 
 Input images:
 - Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 00-gloria-character-identity-anchor.png). Ignore its original pose, framing and composition.
@@ -268,72 +295,77 @@ Primary request:
 Recompose Gloria into standardized head-and-shoulders studio portraits. Create exactly eight portraits arranged neatly in a 4-column by 2-row grid on a pure white seamless background. Every portrait must use a straight-on front view at 0 degrees. Crop from just below the collarbones to slightly above the top of the hair. The head must occupy approximately 70-75 percent of each panel.
 
 Identity invariants:
-Keep exactly the same character in all eight portraits. Preserve the identical facial identity and face proportions, gentle almond eyes with warm chestnut-brown color and hidden resolve, fair warm skin tone, chestnut-brown long hair worn in a neat side braid, bangs and hair length, refined oval face, neck proportions, modest neckline and the promise badge visible at the upper chest. Use the same framing, camera distance, head size, lighting, color grading and front-facing angle in every panel. Only the facial expression may change.
+Keep exactly the same character in all eight portraits. Preserve the identical facial identity and face proportions, gentle almond eyes with warm chestnut-brown color (#8B5A2B) and hidden resolve, fair warm skin tone (#F2DFC9), chestnut-brown long hair (#6B4530) worn in a neat side braid, bangs and hair length, refined oval face, neck proportions, modest neckline and the promise badge visible at the upper chest. Use the same framing, camera distance, head size, lighting, color grading and front-facing angle in every panel. Only the facial expression may change.
+
+Kinship invariants:
+None.
 
 Expression order, left to right and top to bottom:
-1. neutral
-2. gentle smile
+1. neutral - composed, quiet default expression
+2. gentle smile - warm but restrained
 3. broad smile with visible teeth
 4. joyful open laughter
 5. surprised
-6. angry
-7. sad
+6. angry - cold fury at being treated as a bargaining chip
+7. sad - suppressed grief and quiet defiance
 8. wink
 
 Style:
 Refined Japanese anime fantasy character design, professional production expression sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, detailed eyes and hair strands, soft diffused studio lighting, consistent white balance, pure white seamless background, high-resolution polished concept art, 85mm portrait-lens framing equivalent.
 
 Hard constraints:
-Exactly eight portraits and a 4x2 grid. Straight-on 0-degree view only. Head-and-shoulders close-up only. No full body, half body, waist-up, upper-body, bust-length, half-bust or zoomed-out composition. No different person, altered face, changed hairstyle, profile, side view, three-quarter view, head rotation, inconsistent lighting, inconsistent crop, inconsistent scale, costume change or extra accessories. The three style images define lighting, linework, shading and material rendering ONLY. Do NOT reproduce their characters' faces, hairstyles, costumes, colors or anatomy, and do not blend them into this character.
+Exactly eight portraits and a 4x2 grid. Straight-on 0-degree view only. Head-and-shoulders close-up only. No full body, half body, waist-up, upper-body, bust-length, half-bust or zoomed-out composition. No different person, altered face, changed hairstyle, profile, side view, three-quarter view, head rotation, inconsistent lighting, inconsistent crop, inconsistent scale, costume change or extra accessories.
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, full body, half body, waist-up, upper body, bust portrait, half-bust, zoomed out, long shot, medium shot, different composition, changed facial proportions, changed bangs, changed hair length, profile, side view, three-quarter view, head turned, tilted head, inconsistent lighting, inconsistent color grading, beauty filter, male, masculine face, short hair, blonde hair, extra portrait, missing portrait, more than eight portraits, fewer than eight portraits, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, tail, white-gold pale-purple clergy robe, heavy metal armor, gemstone encrustation, gold pauldrons, clergy silk, crystalline parts
+full body, half body, waist-up, upper body, bust portrait, half-bust, zoomed out, long shot, medium shot, different composition, different person, changed face, changed facial proportions, different hairstyle, changed bangs, changed hair length, profile, side view, three-quarter view, head turned, tilted head, inconsistent lighting, inconsistent color grading, beauty filter, male, masculine face, short hair, blonde hair, photorealistic, live-action photography, 3D render, CGI, western comic style, chibi, thick outlines, blurry, low resolution, text, caption, label, letters, numbers, logo, signature, watermark, extra portrait, missing portrait, more than eight portraits, fewer than eight portraits, reference character face, copying any style-image character, blending the three reference characters, holding weapon, weapon in hand, hand on sword pommel
 ```
 
 ---
 
-## 07 — `07-gloria-costume-detail-sheet.png`  (STAGE 2 — after 00 approved)
+## 07 — `07-gloria-costume-detail-sheet.png`（STAGE 2 — 服裝細節表，含旅行外套拆解）
 
 ```text
 Use case: identity-preserve
-Asset type: costume construction detail sheet
+Asset type: costume construction detail sheet with outer-layer separation
 
 Input images:
 - Image 1: the approved 00-gloria-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
-Render a costume construction detail sheet for Gloria's refined travel wear, presenting several clean close-up detail studies of the garment as it appears on Image 1: the modest neckline and bodice-top, the short travel jacket / over-tunic construction and hem, the waist belt/cinch and its fastening, the sleeve cuffs and optional travel gloves, the ankle-to-knee travel skirt fabric fall, the low walking boots, and Gawain's promise badge pinned at the left chest shown in detail. Arrange the detail studies cleanly on one sheet at a consistent scale.
+Create a professional costume construction sheet for Gloria's GLORIA-V1-NOBLE-TRAVELWEAR-BADGE attire, organized as clean callout panels on one sheet:
+1. LAYER SEPARATION (required for 3D modeling): the short travel jacket / over-tunic drawn SEPARATELY as a flat garment piece, AND one torso view of the character WITHOUT the jacket so the fitted bodice-top, promise badge and body silhouette underneath are fully visible.
+2. Neckline and bodice-top detail: the modest high-to-mid neckline construction.
+3. Waist belt/cinch detail: the fastening and silhouette shaping.
+4. Sleeve cuff detail: cuffs and optional travel gloves.
+5. Skirt detail: the ankle-to-knee travel skirt fabric fall.
+6. Boot detail: low walking boots.
+7. Promise badge detail: Gawain's badge pinned at the left chest, shown enlarged.
 
 Identity invariants:
-This is a costume study; do not introduce a different character. Any partial figure fragment shown must match Image 1's colors, materials and construction exactly. No face-focused portrait is required.
+All partial-figure panels depict the same character body from Image 1; skin and hair may appear at neck/collar edges only as needed. No full standalone face portrait panel is required.
 
 Costume invariants:
-All details must match Image 1 exactly in count, position, color and material: soft chestnut-brown / warm beige / ivory palette with a low-saturation muted blue or wine travel tone, fine noble-quality fabric, travel jacket weave, leather belt and boots, warm-gold promise badge. Do not redesign, add or remove any element.
+All details must match Image 1 exactly in count, position, color and material: chestnut-brown (#8B5E3C) / warm beige (#D9C4A3) / ivory (#F0E6D2) fine noble-quality fabric, wine-red accent trim (#6B3B42), deep-brown leather belt and boots (#4A3527), warm-gold promise badge (#B08D4E) with deep silver-blue gem (#4A6C8C). Do not redesign, add or remove any element. NO weapon anywhere; no stealth cloak (that belongs to a separate unbuilt version, GLORIA-V2-STEALTH-CLOAK).
 
 Composition:
-Several neatly arranged close-up detail callouts on a warm light-gray low-contrast background, consistent scale, balanced negative space, no connecting lines, no grid, no labels or numbers.
+Clean production-sheet layout on warm light-gray background, panels evenly arranged with generous spacing, flat even ambient lighting, no text labels, no annotation arrows with letters.
 
 Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, precise embroidery, layered fabric, polished metal, leather and gemstone material separation, restrained luminous highlights, soft neutral studio lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
+refined Japanese anime fantasy character design, professional production costume sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, precise embroidery, layered fabric, polished metal and gemstone material separation, flat even ambient lighting, low-contrast warm light-gray background, balanced negative space, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, armor plate, weapon, invented accessory, changed color scheme, different material, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, tail, white-gold pale-purple clergy robe, heavy metal armor, gemstone encrustation, gold pauldrons, clergy silk, crystalline parts
+photorealistic, 3D render, western comic style, chibi, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, dramatic cinematic background, scenery, action pose, extreme perspective, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, male, armor plate, weapon, sword, invented accessory, changed color scheme, different material, extra character, full-body pin-up, dark hooded cloak, infiltration cloak, holding weapon, cast shadows, strong highlights, rim light, reference character costume, copying any style-image character
 
 Constraints:
-- Preserve the exact approved costume from Image 1.
-- Use Images 2-4 for visual style only.
-- No text, captions, labels, logo, signature or watermark.
-- No extra character, duplicate figure, extra limbs or unspecified accessories.
-- Do not invent missing canonical details.
-- The three style images define lighting, linework, shading and material rendering ONLY. Do NOT reproduce their characters' faces, hairstyles, costumes, colors or anatomy, and do not blend them into this character.
+- Preserve the exact approved costume from Image 1; Images 2-4 are style only.
+- The jacket separation panel and the jacket-less torso view are mandatory.
+- No weapons on this sheet, no stealth cloak. No text or watermark. Do not invent missing canonical details.
 ```
 
 ---
 
-## 08 — `08-gloria-color-material-sheet.png`  (STAGE 2 — after 00 approved)
+## 08 — `08-gloria-color-material-sheet.png`（STAGE 2 — 色票／材質表，已補固定 hex）
 
 ```text
 Use case: identity-preserve
@@ -341,76 +373,145 @@ Asset type: color palette and material reference sheet
 
 Input images:
 - Image 1: the approved 00-gloria-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
-Render a color and material reference sheet derived from Gloria in Image 1: neatly arranged color swatches and material sample chips showing the chestnut-brown / warm beige / ivory primary, the low-saturation muted blue or wine travel tone, warm-gold badge and fittings metal, leather belt and boots, noble-quality fabric, travel jacket weave, chestnut-brown hair color and warm chestnut-brown eye color. Beside the swatches show small material studies illustrating the fabric-weave, leather, polished-metal and gemstone finishes as they appear on the character.
+Create a production color-and-material sheet for Gloria: a medium-size neutral A-pose front figure (character and costume only, no weapon) on the left, and on the right a column of large clean color swatches with material rendering patches for each locked color:
+- chestnut brown #8B5E3C (travel wear primary)
+- warm beige #D9C4A3 (inner lining)
+- ivory #F0E6D2 (inner lining)
+- muted wine-red #6B3B42 (travel accent trim)
+- warm gold #B08D4E (badge and fittings)
+- deep silver-blue #4A6C8C (badge center gem)
+- deep brown leather #4A3527 (belt and boots)
+- chestnut-brown hair #6B4530
+- warm chestnut-brown eyes #8B5A2B
+- fair warm skin #F2DFC9
+Each swatch pairs a flat color block with a small material patch showing how that surface reads (noble-quality fabric weave, travel-jacket weave, leather belt and boots, polished gold badge finish).
 
 Identity invariants:
-Colors and materials must be sampled exactly from Image 1. Do not shift hues, saturation or material appearance. Keep within the story's converged gold / silver-blue / dark scheme.
+The reference figure is the identical character from Image 1; same face, hair, proportions (165 cm, ~7.5 heads, ~1.9 head-widths shoulders).
 
 Costume invariants:
-Every swatch and material study corresponds to an element actually present on Image 1; do not add colors or materials not on the character. No costume redesign.
+Exact costume from Image 1; no redesign; NO weapon anywhere; no stealth cloak.
 
 Composition:
-Clean rows of color swatches plus adjacent material sample studies on a warm light-gray low-contrast background, consistent chip size, balanced negative space, no hex codes, no labels, no numbers, no text.
+Clean layout, warm light-gray background, flat even ambient lighting, swatches aligned in a tidy vertical column, no text labels (color blocks only, hex values are for internal reference and must not be rendered as visible text on the sheet).
 
 Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, precise embroidery, layered fabric, polished metal, leather and gemstone material separation, restrained luminous highlights, soft neutral studio lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
+refined Japanese anime fantasy character design, professional production color script sheet, clean delicate linework, soft cel shading, precise material separation for metal, fabric, leather and gemstone, flat even ambient lighting, low-contrast warm light-gray background, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, hex codes, neon colors, pastel colors, saturated rainbow palette, changed hue, wrong material, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, tail, white-gold pale-purple clergy robe, heavy metal armor, gemstone encrustation, gold pauldrons, clergy silk, crystalline parts
+photorealistic, 3D render, western comic style, chibi, thick outlines, muddy colors, dramatic background, scenery, action pose, text, labels, letters, numbers, logo, signature, watermark, low resolution, blurry, wrong palette, shifted hues, extra colors, neon colors, pastel palette, costume redesign, weapon, sword, holding weapon, cast shadows, rim light, extra character, copying any style-image character
 
 Constraints:
-- Sample colors and materials exactly from Image 1.
-- Use Images 2-4 for visual style only.
-- No text, captions, labels, logo, signature or watermark.
-- No extra character, duplicate figure, extra limbs or unspecified accessories.
-- Do not invent missing canonical details.
-- The three style images define lighting, linework, shading and material rendering ONLY. Do NOT reproduce their characters' faces, hairstyles, costumes, colors or anatomy, and do not blend them into this character.
+- Colors must match the locked hex palette exactly; hue drift = reject.
+- Character and costume only; zero props; flat lighting.
+- No text or watermark.
 ```
 
 ---
 
-## 09 — `09-gloria-prop-construction-sheet.png`  (STAGE 2 — after 00 approved; props only)
+## 09 — `09-gloria-prop-construction-sheet.png`（STAGE 2 — 道具表：本角色無武器；潛行斗篷不在此包）
 
 ```text
 Use case: stylized-concept
-Asset type: props and construction detail sheet
+Asset type: prop and construction sheet (props only, no weapons for this character)
 
 Input images:
-- Image 1: the approved 00-gloria-character-identity-anchor.png and sole authority for the props' colors, materials and construction.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 00-gloria-character-identity-anchor.png — use ONLY to match the warm-gold/chestnut-brown material language; do not depict the character.
+- Images 2-4: shared style references only; do not copy their characters.
 
 Primary request:
-Render a props and construction sheet for Gloria's personal items: Gawain's promise badge shown as a standalone emblem study with front view, side view and an exploded/disassembled study of the pin, plate and any set gemstone; the plain dark infiltration cloak's neck clasp shown in full and in close attachment detail; and any carried documents / sealed letters used in her double-agent line shown as flat and rolled studies. Arrange the studies cleanly on one sheet at consistent scale.
+Create a props-only construction sheet for Gloria's personal items (GLORIA-V1-NOBLE-TRAVELWEAR-BADGE version only):
+1. Gawain's promise badge: standalone emblem study with front view, side view and an exploded/disassembled study of the pin, plate and its central deep silver-blue gem (#4A6C8C), warm-gold base (#B08D4E).
+2. Carried documents / sealed letters used in her double-agent storyline: shown as flat and rolled studies.
 
-Props only: no full-body character, miniature person, portrait, face or human silhouette anywhere. A blank headless tailor form is allowed only when required to explain the cloak clasp or garment attachment. Do not include a character scale inset.
-
-Identity invariants:
-Not applicable - this sheet shows objects only. All props must match Image 1's colors, materials and construction exactly.
-
-Costume/props invariants:
-The promise badge is a single warm-gold knight-style token matching the badge on Image 1's left chest; the infiltration cloak clasp is a plain dark fastening in muted metal; the carried documents are plain parchment/letters. Do not add, remove or redesign any prop, and do not add weapons or armor.
+Props only: no full-body character, miniature person, portrait, face or human silhouette anywhere. A blank headless tailor form is allowed only when required to explain a garment attachment. Do not include a character scale inset.
 
 Composition:
-Neatly arranged prop studies and exploded views on a warm light-gray low-contrast background, consistent scale, balanced negative space, optional blank headless tailor form only for the cloak-clasp attachment study, no grid, no labels, no numbers, no text.
+Clean production-sheet layout on warm light-gray background, items evenly arranged, flat even ambient lighting, no text labels.
 
 Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, precise embroidery, layered fabric, polished metal, leather and gemstone material separation, restrained luminous highlights, soft neutral studio lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
+refined Japanese anime fantasy prop design, professional production prop sheet, clean delicate linework, controlled fine outlines, soft cel shading with subtle painterly rendering, precise metalwork and gemstone rendering, polished gold material separation, flat even ambient lighting, low-contrast warm light-gray background, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, full body character, miniature person, portrait, face, human silhouette, character scale inset, wings, horns, tail, weapon, sword, armor plate, invented prop, changed material, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, white-gold pale-purple clergy robe, heavy metal armor, gemstone encrustation, gold pauldrons, clergy silk, crystalline parts
+photorealistic, 3D render, western comic style, chibi, thick outlines, sketchy lines, muddy colors, dramatic background, scenery, text, labels, letters, numbers, logo, signature, watermark, low resolution, blurry, full-body character, miniature person, portrait, face, human silhouette, character scale inset, weapon, sword, armor plate, dark hooded cloak, infiltration cloak, invented prop, changed material, wrong palette, neon colors, cast shadows, rim light
 
 Constraints:
-- Match the props' exact appearance to Image 1.
-- Use Images 2-4 for visual style only.
-- Props only; no character body, face or silhouette anywhere except an optional blank headless tailor form for attachment studies.
-- No text, captions, labels, logo, signature or watermark.
-- Do not invent missing canonical details.
-- The three style images define lighting, linework, shading and material rendering ONLY. Do NOT reproduce their characters' faces, hairstyles, costumes, colors or anatomy, and do not blend them into this character.
+- No weapons appear anywhere in this package (none exist for this character); do not invent any.
+- Do NOT include the infiltration cloak or its clasp on this sheet - that item belongs exclusively to the separate, unbuilt GLORIA-V2-STEALTH-CLOAK version package and must not appear here.
+- Match the established warm-gold/chestnut-brown palette exactly.
+- No character depiction beyond an optional headless tailor form. No text or watermark.
 ```
+
+---
+
+## 10 — `10-gloria-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+
+```text
+Use case: identity-preserve
+Asset type: body reference sheet for parametric human-body fitting (SMPL-X)
+
+Input images:
+- Image 1: the approved 00-gloria-character-identity-anchor.png and sole identity authority (face, hair, skin tone, body proportions).
+- Images 2-4: shared style references only; do not copy their character identities.
+
+Primary request:
+Render Gloria WITHOUT the travel jacket, skirt or any outer garment - wearing only a plain tight dark-gray bodysuit (form-fitting underlayer, no folds, no accessories, no badge) - as TWO full-body views on one sheet: straight-on FRONT view and LEFT profile view (camera at the character's anatomical left side). Both views in the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, true orthographic projection, no contrapposto, no action pose, no T-pose. The body silhouette must be fully visible and unobstructed: no jacket, no skirt, no loose clothing; the braided hair must stay gathered so it does not cover the neck or shoulder outline.
+
+Identity invariants:
+Same character as Image 1: same face, warm chestnut-brown eyes (#8B5A2B), chestnut-brown hair (#6B4530, kept in its braid, gathered back), fair warm skin (#F2DFC9). The body underneath must be consistent with the clothed figure of the approved sheets: medium build, elegant, slender feminine proportions.
+
+Body metrics:
+Height 165 cm. Approximately 7.5 heads tall. Shoulder width approximately 1.9 head-widths. Identical height and proportions in both views; head-top and foot lines horizontally aligned across the two views.
+
+Composition:
+Two figures side by side (front, then left profile), equal scale, shared ground line, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
+
+Positive style prompt:
+refined Japanese anime character body reference, professional production model sheet, clean delicate linework, minimal soft cel shading, accurate consistent anatomy, flat even ambient lighting, low-contrast warm light-gray background, true orthographic presentation, high-resolution concept art
+
+Negative prompt:
+photorealistic, 3D render, western comic style, chibi, thick outlines, sketchy lines, muddy colors, dramatic background, scenery, text, labels, letters, numbers, logo, signature, watermark, low resolution, blurry, armor, cape, cloak, outer garment, loose clothing, weapon, props, accessories, jewelry, badge, boots, folds, drapery, nudity, male, masculine build, different face, different hairstyle, different proportions than approved sheets, action pose, contrapposto, T-pose, bent elbows, uneven shoulders, crossed legs, cast shadows, strong highlights, rim light, three-quarter view, back view, extra views, more than two figures
+
+Constraints:
+- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- No promise badge on this sheet (bare bodysuit shows the true silhouette for fitting).
+- Body silhouette fully visible; tight plain bodysuit only; zero props; flat lighting; true orthographic.
+- No text or watermark.
+```
+
+---
+
+## 逐張驗收清單（強制 — 任一項漂移即 REJECT，不得繼續下一張）
+
+生成順序：00 →（使用者核准）→ 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10。
+每張生成後逐項檢查；REJECT 的圖不覆蓋既有檔案，存入 `rejects/` 後重生成本張。
+
+**每張圖共同檢查項：**
+
+- [ ] 臉型與臉部身份與 00 號正本一致（06 的人像面板亦同）
+- [ ] 髮型、瀏海、髮色 #6B4530（栗棕色，單條側編辮）一致
+- [ ] 身材比例：165cm／約 7.5 頭身／肩寬約 1.9 倍頭寬
+- [ ] 服裝結構與 Costume Lock 一致（合身旅裝、短外套、腰帶、及膝裙、承諾徽章），且**不含** GLORIA-V2-STEALTH-CLOAK 潛行斗篷
+- [ ] 左右位置正確：承諾徽章固定佩於解剖學左胸，跨圖不得鏡像或無故消失
+- [ ] 色票未漂移：#8B5E3C／#D9C4A3／#F0E6D2／#6B3B42／#B08D4E／#4A6C8C／#4A3527／#6B4530／#8B5A2B／#F2DFC9
+- [ ] 該張圖片自身的構圖規則（視圖數量、順序、A-pose、零道具、平光）全部滿足
+- [ ] 血緣相似：不適用（無血緣角色；與高文為情感連結，非血緣）
+
+**單張額外檢查項：**
+
+| 張 | 額外驗收 |
+| --- | --- |
+| 00 | 三視圖齊全（A-pose 正面全身＋正面頭肩＋45° 頭肩），缺一即 REJECT |
+| 01 | 正面、A-pose、正交 |
+| 02 | 相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；承諾徽章於近側可見 |
+| 03 | 相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；承諾徽章在遠側，不得鏡像至近側 |
+| 04 | 背面、A-pose、正交；徽章不可見 |
+| 05 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊 |
+| 06 | 恰好 8 格 4×2、順序正確、只有表情改變 |
+| 07 | 旅行外套拆解面板＋無外套軀幹視圖必須存在 |
+| 08 | 色票方塊與鎖定 hex 完全一致 |
+| 09 | 僅承諾徽章與隨身文件；本角色無武器，不得無故新增；**不得出現潛行斗篷**；無角色、無臉、無人物剪影 |
+| 10 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖；辮髮須收攏、無徽章 |
