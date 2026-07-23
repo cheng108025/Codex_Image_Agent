@@ -1,6 +1,6 @@
 # Codex Image Agent — 角色圖像生成資產
 
-這個 repo 收錄《赫克托》故事的**角色圖像提示詞包**：每個角色都有寫好的英文提示詞（`PROMPTS.md`）與設定表（`CHARACTER_SPEC.md`），交給 **Codex（或任何有圖像生成能力的 AI 代理）** 就能產出風格一致的角色設定圖。
+這個 repo 收錄《偽典》故事的**角色圖像提示詞包**：每個角色都有寫好的英文提示詞（`PROMPTS.md`）與設定表（`CHARACTER_SPEC.md`），交給 **Codex（或任何有圖像生成能力的 AI 代理）** 就能產出風格一致的角色設定圖。
 
 角色資產全部在 [`Story_Character/`](Story_Character/)。其餘資料夾（`imagegen/`、`image_AI_Agent/`、`Text_To_Images_AI_Agent/`、`Image_To_Images_AI_Agent/`）是各式影像生成實驗與提示詞範例，與角色流程無關。
 
