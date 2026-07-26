@@ -35,13 +35,13 @@ foreach ($s in 'scene-to-characters','characters-to-sheets','sheets-to-codex') {
 }
 ```
 
-**2026-07-26 驗證結果（三份全 MATCH）**：
+**2026-07-27 驗證結果（正本與安裝副本 MATCH）**：
 
 | Skill | bytes | SHA-256 |
 | --- | ---: | --- |
 | `skills/scene-to-characters/SKILL.md` | 7727 | `76116398187F7C7642B1A1E8371328F0D06CEA2E7912639B57785F775885EE37` |
-| `skills/characters-to-sheets/SKILL.md` | 10887 | `31AFBF180434FDA50DABAB9A8A3CEB22433BA6C8BA101A1B847F63A17C8DEB69` |
-| `skills/sheets-to-codex/SKILL.md` | 6909 | `50D4C0844D9458E98A3A6089D0B0AE3EC89C1BC62B58E31DBFB6675C62A2A151` |
+| `skills/characters-to-sheets/SKILL.md` | 15308 | `2DE1AAC4261881A0D890DE415BAF25C45344961D4EA9798B05C3BFE00BFA2171` |
+| `skills/sheets-to-codex/SKILL.md` | 10683 | `77351745540A4FE650F1A7582A13BEF6EF4424C7E2175E662E06E4B749C7D578` |
 
 > **`<repo-root>`**：clone `Codex_Image_Agent` 時＝clone 的根目錄；從外層專案執行時＝`output/`。
 > **兩者不可相加**，寫成 `output/output/...` 一定是錯的。
@@ -57,7 +57,7 @@ foreach ($s in 'scene-to-characters','characters-to-sheets','sheets-to-codex') {
 每角色抽取檔（characters_extracted/<name>.md）
   │  人工核准
   ▼
-  │  ② characters-to-sheets     ──可派──▶  character-spec-manager
+  │  ② characters-to-sheets     ──逐角色──▶  character-spec-manager
   ▼
 <專案>/<角色>/CHARACTER_SPEC.md ＋ PROMPTS.md（01–07）＋ <專案>/STYLE_ANCHOR.md
   │
@@ -99,7 +99,7 @@ foreach ($s in 'scene-to-characters','characters-to-sheets','sheets-to-codex') {
 | `skills/characters-to-sheets/SKILL.md` | Skill 安裝副本 | ② | 抽取檔 → SPEC＋PROMPTS（01–07）＋STYLE_ANCHOR |
 | `skills/sheets-to-codex/SKILL.md` | Skill 安裝副本 | ③ | 交 Codex 兩階段產圖與逐張驗收 |
 | `agents/story-character-extractor.md` | Agent 執行體 | ① | 逐場抽角色線索，CANON 帶 SCENE 出處、推測標 DESIGN-PROPOSAL、缺口標 PENDING-USER-INPUT |
-| `agents/character-spec-manager.md` | Agent 執行體 | ② | 建資料夾＋SPEC＋PROMPTS.md（01–07），含 Codex 生成清單；單一角色為單位，可平行派多個 |
+| `agents/character-spec-manager.md` | Agent 執行體 | ② | 每次接一份角色抽取檔，建該角色資料夾＋SPEC＋PROMPTS.md（01–07），不掃描或批次刷新既有角色包 |
 
 ③ sheets-to-codex 是產圖編排，逐張要等使用者核准，不派 agent（但 Skill 本身仍需安裝）。
 
@@ -134,7 +134,7 @@ Copy-Item "$pkg\agents\*.md" ".claude\agents\" -Force
 ## 用法
 
 1. 有新場次文件 → `/scene-to-characters`（給文件路徑）→ 得到每角色抽取檔 → 人工核准
-2. `/characters-to-sheets`（指定專案名與範圍；若尚未指定首角色則保留動態首次請求）→ 得到資料夾＋SPEC＋PROMPTS.md（01–07）＋STYLE_ANCHOR.md
+2. `/characters-to-sheets`（指定專案名與單一角色檔；多個新角色逐一執行；若尚未指定首角色則保留動態首次請求）→ 每個角色各自得到資料夾＋SPEC＋PROMPTS.md（01–07）＋共用 STYLE_ANCHOR.md
 3. `/sheets-to-codex` → 依各角色 PROMPTS.md 檔尾「交給 Codex 的一鍵指令」交 Codex 兩階段產圖
 4. 首角色 01 先生先核准 → STYLE_ANCHOR 轉 ACTIVE → 才開放其餘角色
 

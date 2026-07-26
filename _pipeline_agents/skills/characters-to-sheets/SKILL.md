@@ -1,28 +1,28 @@
 ---
 name: characters-to-sheets
-description: 【產線第 2 段·中游】把上游角色資料新建或刷新成成對一致的角色參考包——同一輪、同一來源同步寫入 CHARACTER_SPEC.md（版本 ID、Body Metrics、hex 色票、身份鎖、Kinship）與 PROMPTS.md（01–07 完整英文提示詞），禁止只更新其中一份。當使用者要「把角色檔產成設定圖提示詞」「依角色總表刷新角色包」「同步 SPEC 與 PROMPTS」「建角色包」「/characters-to-sheets」時使用。不生圖。上游接 scene-to-characters，下游接 sheets-to-codex。
+description: 【產線第 2 段·中游】把上游指定角色的資料逐一建立成角色參考包——同一來源、同一輪寫入 CHARACTER_SPEC.md（版本 ID、Body Metrics、hex 色票、身份鎖、Kinship）與 PROMPTS.md（人形 01–07／非人形 01–06 的完整英文提示詞），禁止只產其中一份。當使用者要「替每個角色產設定圖提示詞」「把指定角色檔建成角色包」「產生 SPEC 與 PROMPTS」「/characters-to-sheets」時使用。不生圖、不掃描或批次刷新既有角色包。上游接 scene-to-characters，下游接 sheets-to-codex。
 ---
 
 # characters-to-sheets —【中游】角色檔 → SPEC ＋ 7 張制 PROMPTS
 
-產線三段的第 2 段。輸入上游的每角色抽取檔或權威角色總表，新建或刷新每角色資料夾中的 `CHARACTER_SPEC.md`＋`PROMPTS.md`（01–07）。**兩份文件必須成對更新；只產 MD，不生圖**。
+產線三段的第 2 段。輸入上游指定的一份角色抽取檔或該角色的權威資料，逐角色建立資料夾中的 `CHARACTER_SPEC.md`＋`PROMPTS.md`（人形 01–07／非人形 01–06）。**每次只處理指定角色；兩份文件必須成對產生；只產 MD，不生圖**。
 
 ```
 (上游) scene-to-characters → [本段] 角色檔 → SPEC ＋ PROMPTS  →  (下游) sheets-to-codex → Codex 生圖
 ```
 
-> **兩階段分清楚**：本段只做 **產 MD（Phase A）**——此時專案裡沒有任何圖。PROMPTS 對「首角色 01」的引用是**檔名前向引用**，不要求該檔當下存在。生圖先後是下游（Phase B）的事。產 MD 可一次全寫完。
+> **兩階段分清楚**：本段只做 **產 MD（Phase A）**——此時指定角色可以尚未有圖。PROMPTS 對「首角色 01」的引用是**檔名前向引用**，不要求該檔當下存在。生圖先後是下游（Phase B）的事。若輸入含多個新角色，依核准清單逐一建立；不得掃描專案並刷新未指定角色。
 
 ## SPEC／PROMPTS 成對同步契約（最高優先）
 
 1. 先把本輪權威來源整理成每角色一份 `Canonical Fact Map`，至少包含：名稱／別名、版本、外貌、體型、服裝、色彩、道具、關係、時期與 PENDING。
 2. 同一角色的 `CHARACTER_SPEC.md` 與 `PROMPTS.md` 必須只從同一份 Fact Map 產生，並在同一輪一起寫入；禁止只修改其中一份。
-3. 刷新既有角色包時，直接把新權威事實整合進原欄位並移除衝突舊值；不得只在檔頭追加「最高優先 override」而保留正文互相矛盾。
+3. 預設只建立尚無角色包的指定角色。只有使用者明確點名某一既有角色並授權修正時，才可把新權威事實成對整合進該角色兩份文件並移除衝突舊值；不得擴大到其他角色，也不得只在檔頭追加 override。
 4. 權威來源未提及的舊設計只可在不衝突時保留並標 `DESIGN-PROPOSAL`；不得繼續標成 `CANON`。無法判定時標 `PENDING-USER-INPUT`。
 5. 任一份文件寫入或驗證失敗，該角色即為 `PAIR-SYNC-FAILED`；不得把單邊更新視為完成。
-6. 有正式 PNG 的角色預設凍結。只有使用者明確授權「同步已有圖片角色的文件」時，才可成對更新 SPEC／PROMPTS；若新文字與已核准圖片衝突，標記 `IMAGE-DRIFT-REVIEW-REQUIRED` 並等待使用者決定，絕不自動修改圖片。
+6. 有正式 PNG 的角色預設凍結。只有使用者明確點名該角色並授權「同步已有圖片角色的文件」時，才可成對更新 SPEC／PROMPTS；若新文字與已核准圖片衝突，標記 `IMAGE-DRIFT-REVIEW-REQUIRED` 並等待使用者決定，絕不自動修改圖片。
 
-批次刷新既有角色包時，先確認每份舊 `PROMPTS.md` 都已有經人工／LLM 核對、來源指向權威總表的 `MASTER-TABLE-CANON-REFRESH` 區塊。Windows PowerShell 5.1 須以 UTF-8 讀取腳本再執行：`$s = Get-Content scripts/rebuild_pairs.ps1 -Raw -Encoding UTF8; & ([scriptblock]::Create($s)) -RepoRoot <repo-root> -Apply`。腳本只負責把已核對的 Fact Map 確定性重建成雙檔，不負責猜測或翻譯新的 Canon。
+本 Skill 不提供全專案重建或批次刷新指令。不得用目錄掃描、萬用字元或角色總表自動改寫既有角色包；每次輸出範圍只能來自使用者明確指定的角色檔或角色清單。
 
 ## 路徑/檔名約定（交接契約）
 - **`<repo-root>` ＝生圖 repo 根目錄**：直接 clone `Codex_Image_Agent` 時就是 clone 出來的資料夾；從外層 `claude-Godzilla-z` 專案使用時是 `output/`。**不要**兩者相加。
@@ -32,9 +32,9 @@ description: 【產線第 2 段·中游】把上游角色資料新建或刷新�
 ---
 
 ## 執行前先確認（強制，core.md §10）
-1. **輸入角色檔**：上游 `characters_extracted/` 的哪些角色檔？全部或指定？
+1. **輸入角色檔**：確認本次指定的單一角色檔。若使用者給多個新角色，先固定清單，再逐一處理；不得自行把「全部」解讀成掃描並刷新既有角色包。
 2. **權威來源與優先序**：指定本輪唯一來源組合（例如 `全角色總表.md` 高於舊角色包）；同一輪不得讓 SPEC 與 PROMPTS 各自採用不同來源。
-3. **操作模式**：`CREATE`（新建）或 `REFRESH-PAIR`（成對刷新）。已有角色包時不得退化成單檔 patch。
+3. **操作模式**：預設 `CREATE-CHARACTER`。只有使用者明確點名既有角色並授權修正時，使用 `UPDATE-ONE-PAIR`；不得使用批次刷新模式，也不得退化成單檔 patch。
 4. **專案名**：決定 `<repo-root>/<專案名>/`。
 5. **首角色**：若使用者已指定要先製作的零圖片角色，直接採用；尚未指定時保留 `PENDING-FIRST-REQUEST`，不得自行挑選。
 6. **首角色畫風 bootstrap 依據**：畫風參考圖路徑，或文字畫風描述。
@@ -59,8 +59,8 @@ description: 【產線第 2 段·中游】把上游角色資料新建或刷新�
 - ACTIVE 規則：後續角色只認首角色 01，不得直接引用 bootstrap 依據。
 ```
 
-### 步驟 2｜逐角色寫入或刷新 CHARACTER_SPEC.md
-先建立該角色的 Canonical Fact Map，再從 Fact Map 逐欄填寫。`REFRESH-PAIR` 模式須重寫所有受權威來源影響的欄位，清除相反舊值，不得只加註解覆蓋：
+### 步驟 2｜為指定角色寫入 CHARACTER_SPEC.md
+先建立該角色的 Canonical Fact Map，再從 Fact Map 逐欄填寫。若是明確授權的 `UPDATE-ONE-PAIR`，須重寫該角色所有受權威來源影響的欄位，清除相反舊值，不得只加註解覆蓋：
 1. **角色版本 ID** `<NAME>-V1-<描述>`（描述取自故事時期/服裝版本，例 `KRITZ-V1-1587-EXPEDITION`）。不同時期/服裝＝不同版本，不得混包。
 2. **身份正本欄**：鎖 `01-<name>-front-fullbody.png`，生成前填 `PENDING-GENERATION`。
 3. **Body Metrics Lock**：身高 cm、頭身比、肩寬（頭寬倍數）、左右不對稱特徵。上游有數值就用；沒有就提案並標 `DESIGN-PROPOSAL`（可覆蓋）；無不對稱寫「無，全對稱」。
@@ -72,7 +72,7 @@ description: 【產線第 2 段·中游】把上游角色資料新建或刷新�
 9. **八表情**：用上游情緒線索把八格角色化（自然/輕笑/露齒/開懷/驚訝/憤怒/悲傷/眨眼）。
 10. **禁止特徵、正典衝突與待確認**：把上游 PENDING 收進「待確認」。
 
-### 步驟 3｜用同一份 Fact Map 寫入或刷新 PROMPTS.md（檔頭 → 七張 → 文末）
+### 步驟 3｜用同一份 Fact Map 寫入 PROMPTS.md（檔頭 → 七張 → 文末）
 
 PROMPTS 的每個 Identity／Body／Costume／Color／Prop／Kinship invariants 必須由步驟 2 使用的同一份 Fact Map 產生。不得從舊 PROMPTS 複製與新 SPEC 衝突的正文；不得用檔頭 override 掩蓋正文衝突。
 
@@ -137,7 +137,8 @@ PROMPTS 的每個 Identity／Body／Costume／Color／Prop／Kinship invariants 
 - 所有角色 PROMPTS 只引用 `STYLE_ANCHOR.md`；不得直接出現 bootstrap 圖檔名或寫死首角色路徑。
 - hex：SPEC 色票每項有值；PROMPTS 用到的顏色與 SPEC 一致。
 - Kinship 成對：本角色與親屬互列。
-- 成對更新：本輪每個被修改的 `PROMPTS.md` 都必須有同角色的 `CHARACTER_SPEC.md` 修改，反之亦然；檔案集合不相等即失敗。
+- 成對輸出：本輪每個被建立或明確修正的 `PROMPTS.md` 都必須有同角色的 `CHARACTER_SPEC.md`，反之亦然；檔案集合不相等即失敗。
+- 範圍隔離：Git diff 只能包含本輪指定角色、首次建立專案時的 `STYLE_ANCHOR.md`，以及使用者另行授權的文件；出現未指定角色包即失敗。
 - Canon 對齊：名稱／別名、外貌、體型、服裝、道具、關係與時期逐欄比對；SPEC 與 PROMPTS 不得存在互斥敘述。
 - 舊值清理：搜尋本輪被權威來源取代的舊詞；若仍以 `CANON` 或鎖定正文存在，判定 `PAIR-SYNC-FAILED`。
 - 圖片保護：已有正式 PNG 而獲授權刷新文件者，若文字與圖片身份衝突，必須列出 `IMAGE-DRIFT-REVIEW-REQUIRED`，不得宣告整包完成。
@@ -148,9 +149,9 @@ PROMPTS 的每個 Identity／Body／Costume／Color／Prop／Kinship invariants 
 相似度由 SPEC 的 Kinship Lock 與提示詞的 Kinship invariants 控制，不引用親屬圖片。只鎖骨架級（臉型/下顎/眉弓/鼻形/眼型）與明文色彩承襲；髮型/表情/年齡/體格不鎖。成對一致。家族錨點的 01 先核准，其他成員才進生成。文本無明載的承襲＝PENDING-USER-INPUT。
 
 ## 完成後回報
-結論先行：專案路徑、操作模式、SPEC／PROMPTS 成對更新數、成對檔案集合是否完全相等、完成角色清單＋版本 ID、每角色條數齊否、PENDING-USER-INPUT 與 IMAGE-DRIFT-REVIEW-REQUIRED 總表。提醒下游 sheets-to-codex 執行兩階段產圖。
+結論先行：專案路徑、指定角色、操作模式、SPEC／PROMPTS 是否成對產出、完成角色＋版本 ID、條數齊否、PENDING-USER-INPUT 與 IMAGE-DRIFT-REVIEW-REQUIRED。若輸入有多個新角色，逐角色列結果，不以全專案刷新統計代替。提醒下游 sheets-to-codex 執行兩階段產圖。
 
 ## 鐵律
 **張號只有一種：人形 01–07、非人形 01–06。從故事文字建立新角色時直接使用此格式。**
 
-不生圖；SPEC 與 PROMPTS 必須同源、同輪、成對更新，禁止單邊 patch；產出的 PROMPTS 必須寫入「一次要求只生一張、技術檢查不自動重生」；不刪不覆蓋 PNG；已有正式 PNG 的角色包預設凍結，只有使用者明確授權才可成對刷新文件；辨識關鍵分歧 PENDING-USER-INPUT 並鎖「未定案不得生成 01」，不自決；非人形跳 A-pose 與 07；不發明文本沒有的數值（hex/身高標 DESIGN-PROPOSAL 可覆蓋）。
+不生圖；每次只處理使用者指定角色，不掃描、不批次刷新既有角色包；SPEC 與 PROMPTS 必須同源、同輪、成對產出，禁止單邊 patch；產出的 PROMPTS 必須寫入「一次要求只生一張、技術檢查不自動重生」；不刪不覆蓋 PNG；已有正式 PNG 的角色包預設凍結，只有使用者明確點名並授權才可成對修正；辨識關鍵分歧 PENDING-USER-INPUT 並鎖「未定案不得生成 01」，不自決；非人形跳 A-pose 與 07；不發明文本沒有的數值（hex/身高標 DESIGN-PROPOSAL 可覆蓋）。
