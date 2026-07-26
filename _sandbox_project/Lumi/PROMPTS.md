@@ -17,7 +17,7 @@
 
 **(b) 兩階段閘門**
 - 第一階段：只生 `01-lumi-front-fullbody.png` → **停止，等使用者核准**。
-- **Lumi 核准後，01 登記為專案畫風錨**（更新 `../STYLE_ANCHOR.md` 為 REGISTERED），並解鎖第二階段。
+- **Lumi 核准後，01 登記為專案畫風錨**（更新 `../STYLE_ANCHOR.md` 狀態為 ACTIVE），並解鎖第二階段。
 - 第二階段：核准後才生 02–07。
 - 血緣角色順序：不適用（Kinship=無）。
 
@@ -173,8 +173,10 @@
 ## 交給 Codex 的一鍵指令
 
 ```
-專案資料夾：output/_sandbox_project/
-角色資料夾：output/_sandbox_project/Lumi/
+專案資料夾：<repo-root>/_sandbox_project/
+角色資料夾：<repo-root>/_sandbox_project/Lumi/
+（<repo-root>＝生圖 repo 根目錄。直接 clone Codex_Image_Agent 時就是 clone 根目錄；
+　從外層 claude-Godzilla-z 執行時是 output/。）
 規格檔：CHARACTER_SPEC.md
 提示詞檔：PROMPTS.md
 
@@ -182,7 +184,7 @@
 生成後停止，交還使用者核准。
 
 【使用者核准 01 後】：
-1. 更新 output/_sandbox_project/STYLE_ANCHOR.md 為 REGISTERED，畫風錨＝Lumi/01-lumi-front-fullbody.png。
+1. 更新 <repo-root>/_sandbox_project/STYLE_ANCHOR.md 狀態為 ACTIVE，畫風錨＝Lumi/01-lumi-front-fullbody.png。
 2. 依序生成 02–07（依 PROMPTS.md 對應章節），每張生成後先過文末 REJECT 驗收清單再進下一張。
 3. 全數通過後，Lumi 參考包視為完成，Garo 可開始生成。
 ```

@@ -1,4 +1,4 @@
-# 加爾雷斯 Galreth — Image Generation Prompts（範本 v2 FULL package: 00–10）
+# 加爾雷斯 Galreth — Image Generation Prompts（新版七張制 01–07）
 
 > **用途聲明（必讀）**
 > 這套圖片是 **3D 建模參考包（modeling reference pack）**，不是完成的 3D 模型。
@@ -6,102 +6,66 @@
 
 > **角色版本 ID：`GALRETH-V1-ARCADIA-COUNCIL-OFFICER`**（阿卡迪亞圓桌廳決裂場軍官甲版；其他時期／服裝需另立版本，不得混用）
 
-> **綬帶側別提案（必讀，稽核 §7）**：指揮綬帶鎖定為自角色解剖學**右肩**斜掛至**左腰**；制式配劍佩於**左腰**。此為 Claude 提出的 `DESIGN-PROPOSAL`，供使用者核准或覆蓋；覆蓋時須同步修改本檔全部視圖，不得只改單張。
+> **綬帶側別提案（必讀）**：指揮綬帶鎖定為自角色解剖學**右肩**斜掛至**左腰**；制式配劍佩於**左腰**。此為 `DESIGN-PROPOSAL`，供使用者核准或覆蓋；覆蓋時須同步修改本檔全部視圖，不得只改單張。
 
-> **兩階段規則（強制）**：第一階段只生成 `00-galreth-character-identity-anchor.png`（三視圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，缺一即 REJECT 重生成），生成後停止等待使用者核准。核准後 00 成為 01–10 的 Image 1 身份／服裝唯一正本。三張 style 圖永遠只控制畫風。
+> **兩階段規則（強制）**：第一階段只生成 `01-galreth-front-fullbody.png`（三視圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，缺一即 REJECT 重生成），生成後停止等待使用者核准。核准後 01 成為 02–07 的 Image 1 身份／服裝唯一正本。畫風輸入一律依 `../../STYLE_ANCHOR.md` 決定。
 > **檔案安全**：不得刪除或覆蓋現有 PNG；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
+> **既有 PNG 狀態**：本角色 01–07（非人形 01–06）全部為 `PENDING-GENERATION`。
 
-共用畫風參考（style only, do not copy their characters）：
-- `../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- `../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- `../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+畫風參考唯一正本：
+- `../../STYLE_ANCHOR.md`
+- 若本角色是 `PENDING-FIRST-REQUEST` 登記的首角色，01 才使用 STYLE_ANCHOR 的三張 bootstrap 圖。
+- 若畫風錨已為 `ACTIVE` 且本角色不是首角色，01 只引用已核准的首角色 01 作為畫風參考。
+- 02–07（非人形至 06）使用自己的 01 作為身份參考；非首角色另加首角色 01 作為畫風參考。
 
-生成順序與檔名（FULL package：00–10，人形角色不豁免任何一張）：
+生成順序與檔名（新版七張制 01–07）：
 
 | 編號 | 檔案 | 內容 |
 | --- | --- | --- |
-| 00 | `00-galreth-character-identity-anchor.png` | 身份母圖：A-pose 正面全身＋正面頭肩＋45° 頭肩，零道具 |
-| 01 | `01-galreth-front-fullbody.png` | 正面全身，A-pose，零道具 |
-| 02 | `02-galreth-left-profile-fullbody.png` | 相機位於角色解剖學左側全身，A-pose，零道具 |
-| 03 | `03-galreth-right-profile-fullbody.png` | 相機位於角色解剖學右側全身，A-pose，零道具 |
-| 04 | `04-galreth-back-fullbody.png` | 背面全身，A-pose，零道具 |
-| 05 | `05-galreth-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
-| 06 | `06-galreth-expression-sheet.png` | 八表情臉部表，4×2 網格 |
-| 07 | `07-galreth-costume-detail-sheet.png` | 服裝細節表（含綬帶拆解與無綬帶軀幹視圖） |
-| 08 | `08-galreth-color-material-sheet.png` | 色票／材質表（固定 hex） |
-| 09 | `09-galreth-prop-construction-sheet.png` | 道具表：制式佩劍（唯一出現位置）＋軍徽＋綬帶扣件拆解 |
-| 10 | `10-galreth-body-reference-sheet.png` | 素體參考圖（SMPL-X／人體擬合用） |
+| 01 | `01-galreth-front-fullbody.png` | 身份錨點：正面全身，A-pose，零道具（**STAGE 1，先生成並等核准**） |
+| 02 | `02-galreth-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
+| 03 | `03-galreth-expression-sheet.png` | 表情表 |
+| 04 | `04-galreth-costume-detail-sheet.png` | 服裝細節 |
+| 05 | `05-galreth-color-material-sheet.png` | 色彩與材質 |
+| 06 | `06-galreth-prop-construction-sheet.png` | 道具結構 |
+| 07 | `07-galreth-body-reference-sheet.png` | 身體參考（SMPL-X） |
 
 ---
 
-## 00 — `00-galreth-character-identity-anchor.png`（STAGE 1 — 只先生成這張，停止等核准）
+## 01 — `01-galreth-front-fullbody.png`（STAGE 1 — 只先生成這張，停止等核准）
+
 
 ```text
 Use case: stylized-concept
-Asset type: new-character identity anchor sheet (three views)
+Asset type: single front-view full-body identity anchor (STAGE 1, identity authority for all later sheets)
 
 Input images:
-- Image 1: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 2: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 3: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
+- Resolve all style inputs from `../../STYLE_ANCHOR.md`.
+- If this role is being registered as the first anchor while status is `PENDING-APPROVAL`, use the three bootstrap images listed there for this 01 only.
+- If status is `ACTIVE` and this role is not the anchor, use the approved anchor 01 as Image 2 for style only; do not copy its character identity.
+- Do not directly reuse bootstrap images after the anchor becomes `ACTIVE`.
+
 
 Character definition:
 Galreth, a senior Hector army officer (apparent age mid-40s, battle-hardened), height LOCKED at approximately 182 cm, solid, steady, well-trained officer build. CANON facial identity: a solemn, composed, steady mature officer face - grave and calm, dignified but not scene-stealing, clearly middle-aged and NOT youthful. Locked identity: gray-flecked graying military short hair with slightly grizzled temples (#5A5A5E), a short trimmed grizzled beard, deep-gray eyes with a calm sharp gaze (#4A4A50), tanned weathered skin (#B98A63). Costume (locked): standard-issue Hector OFFICER armor - finer than common infantry armor, with rank identification - cloth/leather inner layer under regulation matte-steel officer plate (#6B6B70), a standard high steel gorget, officer steel shoulder guards with dark-gold rank trim (#8A6F45), an officer matte-steel breastplate faintly bearing an embossed Hector army insignia (no gemstones), deep-brown leather bracers (#3C2E24), a regulation leather belt with an empty scabbard loop at the LEFT hip only (no visible sword), regulation steel greaves, deep-brown officer long boots, and a CANON command sash worn diagonally from his anatomical RIGHT shoulder down to his LEFT hip, locked to dark-gold woven cloth (#8F7038). Materials: matte steel plate with restrained dark-gold rank trim, deep-brown leather, dark-gold woven sash cloth - no gemstones, no jewels. He carries NO weapon and NO props of any kind.
-
-Body metrics:
-Height approximately 182 cm. Approximately 7.5 heads tall (solid steady officer proportions). Shoulder width approximately 2.6 head-widths (solid, steady, well-trained officer build). Asymmetric feature (locked, do not mirror): the command sash is worn diagonally from the character's own anatomical RIGHT shoulder to his LEFT hip; the empty scabbard loop for his side sword sits at his LEFT hip. This exact side assignment must remain identical in every later view.
-
-Kinship invariants:
-none.
-
-Primary request:
-Design one new and visually distinct character from the written specification. Create an identity-anchor sheet containing exactly three views of the same character — all three are mandatory; missing any view = REJECT:
-1. one neutral straight-on full-body front view in a standard A-pose (standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread);
-2. one large straight-on head-and-shoulders portrait;
-3. one 45-degree three-quarter head-and-shoulders portrait (for video-generation reference).
-Suggested layout: full-body view on the left ~45% of the canvas, straight-on portrait top-right, three-quarter portrait bottom-right. All three views must have identical facial identity, hairstyle, colors and costume. The straight-on head-and-shoulders portrait is the facial identity authority for later generations. Character and costume only — no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields.
-
-Style:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, precise material separation for matte steel, leather and woven cloth, restrained highlights, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, ragged appearance, tattered clothing, common low-rank soldier look, no rank insignia, peasant clothing, youthful teenage face, gemstones, ornate gemstones, shining jewels, gold pauldrons, gilded pauldrons, mirrored sash direction, sash on left shoulder, sword on right hip, reference character face, copying any style-image character, blending the three reference characters, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting
-
-Constraints:
-- The three input images control visual style only; do not reproduce or blend their characters.
-- Follow all CANON facts exactly (solemn steady mature officer face, ~182 cm solid build, standard officer armor with a command sash).
-- Follow approved DESIGN-PROPOSAL items consistently, including the locked sash direction (right shoulder to left hip) and sword side (left hip).
-- Do not invent unresolved PENDING-USER-INPUT details.
-- Character and costume only: no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields. All weapons and props belong exclusively to the prop construction sheet (09).
-- Flat even ambient lighting, no cast shadows, no strong highlights, no rim light.
-- Neutral front-facing presentation, plain warm light-gray background, no scene or action pose.
-- No text, labels, logo, signature or watermark.
-- Exactly one character identity shown three times; no identity drift between the three views. Missing any of the three views = invalid sheet, REJECT and regenerate.
-```
-
----
-
-## 01 — `01-galreth-front-fullbody.png`（STAGE 2）
-
-```text
-Use case: identity-preserve
-Asset type: single front-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-galreth-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
 Render Galreth as ONE full-body front view (0 degrees) in true orthographic projection, in the standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose.
 
 Identity invariants:
-Identical character from Image 1: same solemn, composed, mature officer face, gray-flecked graying short hair (#5A5A5E), grizzled short beard, deep-gray eyes (#4A4A50), tanned weathered skin (#B98A63).
+Per the Character definition above (no prior identity image exists; this sheet establishes it): same solemn, composed, mature officer face, gray-flecked graying short hair (#5A5A5E), grizzled short beard, deep-gray eyes (#4A4A50), tanned weathered skin (#B98A63).
+
+Kinship invariants:
+none.
 
 Body metrics:
 Height approximately 182 cm. Approximately 7.5 heads tall. Shoulder width approximately 2.6 head-widths. Locked asymmetry: command sash from RIGHT shoulder to LEFT hip; sword scabbard loop at LEFT hip (visible faintly in front view).
 
 Costume invariants:
-Identical officer regalia from Image 1: standard-issue Hector officer matte-steel plate (#6B6B70), high steel gorget, officer shoulder guards with dark-gold rank trim (#8A6F45), matte-steel breastplate with embossed Hector insignia (no gems), deep-brown leather bracers (#3C2E24), regulation leather belt with an empty scabbard loop at the LEFT hip only (no sword), steel greaves, deep-brown officer long boots, command sash (dark-gold woven cloth #8F7038) draped from right shoulder to left hip. NO weapon anywhere; the officer's side sword is reserved for prop sheet 09.
+Identical officer regalia per the Character definition above: standard-issue Hector officer matte-steel plate (#6B6B70), high steel gorget, officer shoulder guards with dark-gold rank trim (#8A6F45), matte-steel breastplate with embossed Hector insignia (no gems), deep-brown leather bracers (#3C2E24), regulation leather belt with an empty scabbard loop at the LEFT hip only (no sword), steel greaves, deep-brown officer long boots, command sash (dark-gold woven cloth #8F7038) draped from right shoulder to left hip. NO weapon anywhere; the officer's side sword is reserved for prop sheet 06.
+
+Identity authority:
+The face must be rendered clearly, sharply and identifiably at full detail — this single front view is the sole identity/costume authority for sheets 02 onward.
 
 Composition:
 Single figure centered, entire body from hair to boot soles inside frame, flat even ambient lighting with no cast shadows, warm light-gray low-contrast background, no props, no grid lines, no labels.
@@ -113,7 +77,7 @@ Negative prompt:
 photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, gemstones, gold pauldrons, youthful teenage face, mirrored sash direction, sash on left shoulder, sword on right hip, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, side view, profile, back view, three-quarter view
 
 Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- Preserve the exact identity per the Character definition above; the input images are style only.
 - Character and costume only; zero props; flat lighting; true orthographic front view.
 - Sash direction and sword side must match the locked asymmetry exactly.
 - No text or watermark. Do not invent missing canonical details.
@@ -121,135 +85,18 @@ Constraints:
 
 ---
 
-## 02 — `02-galreth-left-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學左側）
-
-```text
-Use case: identity-preserve
-Asset type: single anatomical-left-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-galreth-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Galreth as ONE full-body view with the camera positioned at the character's anatomical LEFT side (the camera looks directly at the character's left flank; the character's left side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical left, away from the camera's direct line; no head turn back toward the lens. On this anatomical-left side, the empty sword scabbard loop at the left hip and the sash's lower terminus (at the left hip) are both visible on the near side facing the camera.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, gray-flecked graying short hair (#5A5A5E), grizzled short beard, tanned weathered skin (#B98A63).
-
-Body metrics:
-Height approximately 182 cm. Approximately 7.5 heads tall. Shoulder width approximately 2.6 head-widths. Locked asymmetry: command sash from RIGHT shoulder to LEFT hip; sword scabbard loop at LEFT hip.
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-left camera position: matte-steel armor silhouette (#6B6B70), dark-gold rank trim (#8A6F45), the command sash's lower terminus and empty scabbard loop clearly visible at the near (left) hip, deep-brown leather bracers and boots (#3C2E24). NO weapon anywhere; the officer's side sword is reserved for prop sheet 09.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, precise material separation for matte steel, leather and woven cloth, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, gemstones, gold pauldrons, youthful teenage face, mirrored sash direction, sash appearing on far side, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical right side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical LEFT side only (do not describe this as merely "facing left").
-- The empty scabbard loop and sash terminus at the left hip must be visible and correctly placed; no mirroring.
-- No text or watermark. Do not invent missing canonical details.
-```
-
 ---
 
-## 03 — `03-galreth-right-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學右側）
+## 02 — `02-galreth-four-view-master.png`（STAGE 2 — 四視圖總表：正面→左→右→背）
 
-```text
-Use case: identity-preserve
-Asset type: single anatomical-right-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-galreth-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Galreth as ONE full-body view with the camera positioned at the character's anatomical RIGHT side (the camera looks directly at the character's right flank; the character's right side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical right, away from the camera's direct line; no head turn back toward the lens. On this anatomical-right side, the sash's upper origin point at the right shoulder is visible on the near side facing the camera; the empty scabbard loop at the left hip is on the FAR side and must NOT be duplicated onto this side.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, gray-flecked graying short hair (#5A5A5E), grizzled short beard, tanned weathered skin (#B98A63).
-
-Body metrics:
-Height approximately 182 cm. Approximately 7.5 heads tall. Shoulder width approximately 2.6 head-widths. Locked asymmetry: command sash from RIGHT shoulder to LEFT hip; sword scabbard loop at LEFT hip (not visible on this near side).
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-right camera position: matte-steel armor silhouette (#6B6B70), dark-gold rank trim (#8A6F45), the command sash's upper origin clearly visible at the near (right) shoulder, deep-brown leather bracers and boots (#3C2E24). NO weapon anywhere; the officer's side sword is reserved for prop sheet 09.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, precise material separation for matte steel, leather and woven cloth, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, gemstones, gold pauldrons, youthful teenage face, mirrored sash direction, scabbard loop visible on right hip, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical left side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical RIGHT side only (do not describe this as merely "facing right").
-- Do not show the scabbard loop on this side; it belongs at the left hip only. No mirroring of the left-side view.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 04 — `04-galreth-back-fullbody.png`（STAGE 2）
-
-```text
-Use case: identity-preserve
-Asset type: single back-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-galreth-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Galreth as ONE full-body BACK view (180 degrees) in true orthographic projection, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. Head faces exactly away from the viewer.
-
-Identity invariants:
-Identical character from Image 1: same gray-flecked graying short hair seen from behind (#5A5A5E), same build and proportions.
-
-Body metrics:
-Height approximately 182 cm. Approximately 7.5 heads tall. Shoulder width approximately 2.6 head-widths. Locked asymmetry: command sash crosses the back diagonally from the right shoulder down to the left hip.
-
-Costume invariants:
-Identical attire from Image 1 seen from behind: matte-steel officer back plate (#6B6B70), the command sash (#8F7038) crossing the back diagonally from the right shoulder to the left hip, dark-gold rank trim on the shoulder guards (#8A6F45), deep-brown leather boots and belt (#3C2E24) seen from behind. NO weapon anywhere; the officer's side sword is reserved for prop sheet 09.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, precise material separation for matte steel, leather and woven cloth, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, gemstones, gold pauldrons, mirrored sash direction, sash crossing from left shoulder to right hip, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, face visible, profile, three-quarter view
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic back view.
-- Sash must cross from right shoulder to left hip on the back panel, matching the front view exactly (not mirrored).
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 05 — `05-galreth-four-view-master.png`（STAGE 2）
 
 ```text
 Use case: identity-preserve
 Asset type: four-view orthographic master turnaround sheet
 
 Input images:
-- Image 1: the approved 00-galreth-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-galreth-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render a single master turnaround sheet of Galreth containing four full-body orthographic views of the SAME character in one row on one shared ground line, in this exact left-to-right order: FRONT (0 degrees), LEFT profile (camera at anatomical left, 90 degrees), RIGHT profile (camera at anatomical right, 90 degrees), BACK (180 degrees). All four views use the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, identical height, identical head-to-body ratio, identical arm angles and foot spacing in every view, true orthographic projection, no contrapposto, no action pose, no T-pose.
@@ -264,7 +111,7 @@ Kinship invariants:
 none.
 
 Costume invariants:
-Every view wears the identical officer regalia from Image 1: standard-issue Hector officer matte-steel plate (#6B6B70), high steel gorget, officer shoulder guards with dark-gold rank trim (#8A6F45), matte-steel breastplate with embossed Hector insignia (no gems, visible in the front view), deep-brown leather bracers (#3C2E24), regulation leather belt with an empty scabbard loop at the LEFT hip only (no sword), steel greaves, deep-brown officer long boots, and the command sash (dark-gold woven cloth #8F7038) draped diagonally from right shoulder to left hip - its back panel and shoulder crossing must be clearly shown in the back view. Same accessory count, positions, colors and materials in all four views. NO weapon anywhere; the officer's side sword is reserved for prop sheet 09.
+Every view wears the identical officer regalia from Image 1: standard-issue Hector officer matte-steel plate (#6B6B70), high steel gorget, officer shoulder guards with dark-gold rank trim (#8A6F45), matte-steel breastplate with embossed Hector insignia (no gems, visible in the front view), deep-brown leather bracers (#3C2E24), regulation leather belt with an empty scabbard loop at the LEFT hip only (no sword), steel greaves, deep-brown officer long boots, and the command sash (dark-gold woven cloth #8F7038) draped diagonally from right shoulder to left hip - its back panel and shoulder crossing must be clearly shown in the back view. Same accessory count, positions, colors and materials in all four views. NO weapon anywhere; the officer's side sword is reserved for prop sheet 06.
 
 Composition:
 A single ultra-wide horizontal banner, four full-body figures in ONE row at equal scale, evenly spaced, none cropped, no second row, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no grid lines, no labels.
@@ -284,15 +131,18 @@ Constraints:
 
 ---
 
-## 06 — `06-galreth-expression-sheet.png`（STAGE 2 — 八表情臉部表）
+---
+
+## 03 — `03-galreth-expression-sheet.png`（STAGE 2 — 八表情臉部表）
+
 
 ```text
 Use case: identity-preserve
 Asset type: professional eight-expression anime character face sheet (also serves as expression keyframe reference for video generation)
 
 Input images:
-- Image 1: use only as the character identity, hairstyle, beard, costume-collar and color reference (the approved 00-galreth-character-identity-anchor.png). Ignore its original pose, framing and composition.
-- Images 2-4: shared visual-style references only. Do not copy their character identities, faces, hairstyles, costumes or anatomy.
+- Image 1: use only as the character identity, hairstyle, beard, costume-collar and color reference (the approved 01-galreth-front-fullbody.png). Ignore its original pose, framing and composition.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Recompose Galreth into standardized head-and-shoulders studio portraits. Create exactly eight portraits arranged neatly in a 4-column by 2-row grid on a pure white seamless background. Every portrait must use a straight-on front view at 0 degrees. Crop from just below the collarbones to slightly above the top of the hair. The head must occupy approximately 70-75 percent of each panel.
@@ -325,15 +175,18 @@ photorealistic, 3D render, western comic style, chibi, super-deformed, thick out
 
 ---
 
-## 07 — `07-galreth-costume-detail-sheet.png`（STAGE 2 — 服裝細節表，含綬帶拆解）
+---
+
+## 04 — `04-galreth-costume-detail-sheet.png`（STAGE 2 — 服裝細節表，含綬帶拆解）
+
 
 ```text
 Use case: identity-preserve
 Asset type: costume construction detail sheet with outer-accessory separation
 
 Input images:
-- Image 1: the approved 00-galreth-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-galreth-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a professional costume construction sheet for Galreth's officer regalia, organized as callout panels on one sheet:
@@ -348,7 +201,7 @@ Identity invariants:
 All partial-figure panels depict the same character body from Image 1; skin may appear at neck/face edges only as needed. No full standalone face portrait panels.
 
 Costume invariants:
-Exact colors and materials: matte steel plate (#6B6B70), dark-gold rank trim (#8A6F45), deep-brown leather (#3C2E24), dark-gold woven sash cloth (#8F7038) - no gemstones. Sash direction and scabbard-loop side must match the locked asymmetry exactly (sash right-shoulder-to-left-hip; scabbard loop at left hip). Same construction as Image 1; no redesign; NO weapon anywhere (the officer's side sword belongs to sheet 09).
+Exact colors and materials: matte steel plate (#6B6B70), dark-gold rank trim (#8A6F45), deep-brown leather (#3C2E24), dark-gold woven sash cloth (#8F7038) - no gemstones. Sash direction and scabbard-loop side must match the locked asymmetry exactly (sash right-shoulder-to-left-hip; scabbard loop at left hip). Same construction as Image 1; no redesign; NO weapon anywhere (the officer's side sword belongs to sheet 06).
 
 Composition:
 Clean production-sheet layout on warm light-gray background, panels evenly arranged with generous spacing, flat even ambient lighting, no text labels, no annotation arrows with letters.
@@ -367,15 +220,18 @@ Constraints:
 
 ---
 
-## 08 — `08-galreth-color-material-sheet.png`（STAGE 2 — 色票／材質表，固定 hex）
+---
+
+## 05 — `05-galreth-color-material-sheet.png`（STAGE 2 — 色票／材質表，固定 hex）
+
 
 ```text
 Use case: identity-preserve
 Asset type: color palette and material reference sheet
 
 Input images:
-- Image 1: the approved 00-galreth-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-galreth-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a production color-and-material sheet for Galreth: a medium-size neutral A-pose front figure (character and costume only, no weapon) on the left, and on the right a column of large clean color swatches with material rendering patches for each locked color:
@@ -412,15 +268,18 @@ Constraints:
 
 ---
 
-## 09 — `09-galreth-prop-construction-sheet.png`（STAGE 2 — 道具表：佩劍唯一出現位置）
+---
+
+## 06 — `06-galreth-prop-construction-sheet.png`（STAGE 2 — 道具表：佩劍唯一出現位置）
+
 
 ```text
 Use case: stylized-concept
 Asset type: prop and construction sheet (props only)
 
 Input images:
-- Image 1: the approved 00-galreth-character-identity-anchor.png — use ONLY to match the matte-steel/dark-gold/deep-brown material language and craftsmanship level; do not depict the character.
-- Images 2-4: shared style references only; do not copy their characters.
+- Image 1: the approved 01-galreth-front-fullbody.png — use ONLY to match the matte-steel/dark-gold/deep-brown material language and craftsmanship level; do not depict the character.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a props-only construction sheet for Galreth's equipment items:
@@ -447,15 +306,18 @@ Constraints:
 
 ---
 
-## 10 — `10-galreth-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+---
+
+## 07 — `07-galreth-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+
 
 ```text
 Use case: identity-preserve
 Asset type: body reference sheet for parametric human-body fitting (SMPL-X)
 
 Input images:
-- Image 1: the approved 00-galreth-character-identity-anchor.png and sole identity authority (face, hair, skin tone, body proportions).
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-galreth-front-fullbody.png and sole identity authority (face, hair, skin tone, body proportions).
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render Galreth WITHOUT armor, sash or any outer garment - wearing only a plain tight dark-gray bodysuit (form-fitting underlayer, no folds, no accessories) - as TWO full-body views on one sheet: straight-on FRONT view and LEFT profile view (camera at the character's anatomical left side). Both views in the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, true orthographic projection, no contrapposto, no action pose, no T-pose. The body silhouette must be fully visible and unobstructed: no sash, no armor, no loose clothing.
@@ -484,19 +346,21 @@ Constraints:
 
 ---
 
+---
+
 ## 逐張驗收清單（強制 — 任一項漂移即 REJECT，不得繼續下一張）
 
-生成順序：00 →（使用者核准）→ 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10。
+生成順序：01 →（使用者核准）→ 02 → 03 → 04 → 05 → 06 → 07。
 每張生成後逐項檢查；REJECT 的圖不覆蓋既有檔案，存入 `rejects/` 後重生成本張。
 
 **每張圖共同檢查項：**
 
-- [ ] 臉型與臉部身份與 00 號正本一致（06–08 的人像面板亦同）
+- [ ] 臉型與臉部身份與 01 號正本一致（03–05 的人像面板亦同）
 - [ ] 髮型、鬢角斑白程度、鬍鬚樣式一致
 - [ ] 身材比例：約 182cm／約 7.5 頭身／肩寬約 2.6 倍頭寬
 - [ ] 服裝結構與 Costume Lock 一致（層次、扣件數量、軍徽位置、綬帶方向）
 - [ ] 左右位置正確：綬帶自右肩斜掛至左腰、配劍佩於左腰，跨圖未鏡像翻轉
-- [ ] 色票未漂移（對照 08：#6B6B70／#8A6F45／#8F7038／#3C2E24／#C9C2B4／#5A5A5E／#4A4A50／#B98A63）
+- [ ] 色票未漂移（對照 05：#6B6B70／#8A6F45／#8F7038／#3C2E24／#C9C2B4／#5A5A5E／#4A4A50／#B98A63）
 - [ ] 該張圖片自身的構圖規則（視圖數量、順序、A-pose、零道具、平光）全部滿足
 - [ ] 血緣相似：不適用（本角色無血緣親屬）
 
@@ -504,14 +368,10 @@ Constraints:
 
 | 張 | 額外驗收 |
 | --- | --- |
-| 00 | 三視圖齊全（A-pose 正面全身＋正面頭肩＋45° 頭肩），缺一即 REJECT |
-| 01 | 正面、A-pose、正交 |
-| 02 | 相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；左腰扣環與綬帶下端可見 |
-| 03 | 相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；不得出現左腰扣環 |
-| 04 | 背面、A-pose、正交；綬帶自右肩斜過背至左腰 |
-| 05 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊；綬帶方向未鏡像 |
-| 06 | 恰好 8 格 4×2、順序正確、只有表情改變 |
-| 07 | 綬帶拆解面板＋無綬帶軀幹視圖必須存在 |
-| 08 | 色票方塊與鎖定 hex 完全一致 |
-| 09 | 佩劍唯一出現於此；無角色、無臉、無人物剪影 |
-| 10 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖；無綬帶、無軍徽 |
+| 01 | 正面、A-pose、正交；**臉部須清晰可辨——本張為身份／服裝唯一正本** |
+| 02 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊；綬帶方向未鏡像；相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；左腰扣環與綬帶下端可見；相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；不得出現左腰扣環；背面、A-pose、正交；綬帶自右肩斜過背至左腰 |
+| 03 | 恰好 8 格 4×2、順序正確、只有表情改變 |
+| 04 | 綬帶拆解面板＋無綬帶軀幹視圖必須存在 |
+| 05 | 色票方塊與鎖定 hex 完全一致 |
+| 06 | 佩劍唯一出現於此；無角色、無臉、無人物剪影 |
+| 07 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖；無綬帶、無軍徽 |

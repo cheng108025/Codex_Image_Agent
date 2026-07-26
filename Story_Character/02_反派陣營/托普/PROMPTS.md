@@ -1,4 +1,4 @@
-# 托普 Top — Image Generation Prompts（範本 v2 FULL package: 00–10）
+# 托普 Top — Image Generation Prompts（新版七張制 01–07）
 
 > **用途聲明（必讀）**
 > 這套圖片是 **3D 建模參考包（modeling reference pack）**，不是完成的 3D 模型。
@@ -6,101 +6,66 @@
 
 > **角色版本 ID：`TOP-V1-STOCHIA-ROOFTOP-CHASE`**（斯托奇雅屋頂追逐戰版；其他時期／服裝需另立版本，不得混用）
 
-> **兩階段規則（強制）**：第一階段只生成 `00-top-character-identity-anchor.png`（三視圖，缺一不可），生成後停止等待使用者核准。核准後 00 成為 01–10 的 Image 1 身份／服裝唯一正本。三張 style 圖永遠只控制畫風。
+> **兩階段規則（強制）**：第一階段只生成 `01-top-front-fullbody.png`（正面全身單視圖，臉部須清晰可辨），生成後停止等待使用者核准。核准後 01 成為 02–07 的 Image 1 身份／服裝唯一正本。畫風輸入一律依 `../../STYLE_ANCHOR.md` 決定。
 > **檔案安全**：不得刪除或覆蓋現有 PNG；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
-> **左右不對稱鎖定（必讀，本次重寫新定案）**：短披主扣正式鎖定於角色解剖學**左肩**。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側。禁止只寫「朝左／朝右」。
-> **無固定武器**：托普沒有固定武器（其能力為場地操控），09 道具表改放小型工具袋、短披肩扣與軟底短靴等特殊構造細節。
+> **既有 PNG 狀態**：本角色 01–07（非人形 01–06）全部為 `PENDING-GENERATION`。
+> **左右不對稱鎖定（必讀）**：短披主扣正式鎖定於角色解剖學**左肩**。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側。禁止只寫「朝左／朝右」。
+> **無固定武器**：托普沒有固定武器（其能力為場地操控），06 道具結構表改放小型工具袋、短披肩扣與軟底短靴等特殊構造細節。
 
-共用畫風參考（style only, do not copy their characters）：
-- `../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- `../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- `../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+畫風參考唯一正本：
+- `../../STYLE_ANCHOR.md`
+- 若本角色是 `PENDING-FIRST-REQUEST` 登記的首角色，01 才使用 STYLE_ANCHOR 的三張 bootstrap 圖。
+- 若畫風錨已為 `ACTIVE` 且本角色不是首角色，01 只引用已核准的首角色 01 作為畫風參考。
+- 02–07（非人形至 06）使用自己的 01 作為身份參考；非首角色另加首角色 01 作為畫風參考。
 
-生成順序與檔名（FULL package：00–10，人形角色不豁免任何一張）：
+生成順序與檔名（新版七張制 01–07）：
 
 | 編號 | 檔案 | 內容 |
 | --- | --- | --- |
-| 00 | `00-top-character-identity-anchor.png` | 身份母圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，零道具 |
-| 01 | `01-top-front-fullbody.png` | 正面全身，A-pose，零道具 |
-| 02 | `02-top-left-profile-fullbody.png` | 相機位於角色解剖學左側全身，A-pose，零道具（呈現短披左肩扣） |
-| 03 | `03-top-right-profile-fullbody.png` | 相機位於角色解剖學右側全身，A-pose，零道具 |
-| 04 | `04-top-back-fullbody.png` | 背面全身，A-pose，零道具 |
-| 05 | `05-top-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
-| 06 | `06-top-expression-sheet.png` | 八表情臉部表，4×2 網格 |
-| 07 | `07-top-costume-detail-sheet.png` | 服裝細節表（短披拆解＋無披軀幹視圖） |
-| 08 | `08-top-color-material-sheet.png` | 色票／材質表（已補固定 hex） |
-| 09 | `09-top-prop-construction-sheet.png` | 特殊構造表：小型工具袋＋短披肩扣硬體＋軟底短靴／露指手套細節（無固定武器） |
-| 10 | `10-top-body-reference-sheet.png` | 素體參考圖（SMPL-X／人體擬合用） |
+| 01 | `01-top-front-fullbody.png` | 身份錨點：正面全身，A-pose，零道具（**STAGE 1，先生成並等核准**） |
+| 02 | `02-top-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
+| 03 | `03-top-expression-sheet.png` | 表情表 |
+| 04 | `04-top-costume-detail-sheet.png` | 服裝細節 |
+| 05 | `05-top-color-material-sheet.png` | 色彩與材質 |
+| 06 | `06-top-prop-construction-sheet.png` | 道具結構 |
+| 07 | `07-top-body-reference-sheet.png` | 身體參考（SMPL-X） |
 
 ---
 
-## 00 — `00-top-character-identity-anchor.png`（STAGE 1 — 只先生成這張，停止等核准）
+## 01 — `01-top-front-fullbody.png`（STAGE 1 — 只先生成這張，停止等核准）
+
 
 ```text
 Use case: stylized-concept
-Asset type: new-character identity anchor sheet (three views)
+Asset type: single front-view full-body identity anchor (STAGE 1, identity authority for all later sheets)
 
 Input images:
-- Image 1: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 2: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 3: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
+- Resolve all style inputs from `../../STYLE_ANCHOR.md`.
+- If this role is being registered as the first anchor while status is `PENDING-APPROVAL`, use the three bootstrap images listed there for this 01 only.
+- If status is `ACTIVE` and this role is not the anchor, use the approved anchor 01 as Image 2 for style only; do not copy its character identity.
+- Do not directly reuse bootstrap images after the anchor becomes `ACTIVE`.
+
 
 Character definition:
 Top, a lithe agile young male enemy esper, height read ~175cm, slender-and-light honed seven-heads proportions built for high-speed rooftop movement. CANON facial identity: he ALWAYS wears a mischievous, mocking, playful grin - his signature expression, relaxed and self-assured. Messy short hair in dark charcoal, near-black (#1D1B1A), tousled boyish cut. Neutral fair skin (#E8C9A8), narrow lively eyes with a teasing glint and cool silver-gray irises (#A9AFB5). Posture is loose and languid, the leisurely stance of a hunter who has already reversed the roles with his prey. Costume version: Stochia rooftop-chase attire (DESIGN-PROPOSAL direction) - a dark, lightweight action outfit built for parkour across bell towers and roof tiles: a snug elastic bodysuit (#2A2E36) as the base layer, a short shoulder cape fastened with a clasp on his anatomical LEFT shoulder (LOCKED side), and only minimal light armor plating (#6E747C); low or standing collar; light leather belt (#3A322C) with a small tool pouch; snug long sleeves or fingerless gloves for climbing and gripping; slim trousers with soft-soled short boots for silent leaps. Palette: dark charcoal to deep blue-gray dominant with restrained cold-gray metal plating accents, aligned with the whole story's converged gold / silver-blue / dark scheme. He carries no fixed weapon; his power is terrain manipulation, not a blade. Primary materials: tight dark stretch-cloth and leather action bodysuit plus a short lightweight woven cape - no rigid armor shell. Character and costume only - no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields.
-
-Body metrics:
-Height read ~175cm. Approximately 7.0 heads tall, slender-and-light build. Shoulder width approximately 2.1 head-widths. Asymmetric feature (LOCKED): the short cape's shoulder clasp is fixed on his anatomical LEFT shoulder.
-
-Kinship invariants:
-None. Top has no established blood relatives in the family registry; no kinship resemblance constraints apply.
-
-Primary request:
-Design one new and visually distinct character from the written specification. Create an identity-anchor sheet containing exactly three views of the same character - all three are mandatory, the sheet is invalid if any view is missing:
-1. one neutral straight-on full-body front view in a standard A-pose (standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread);
-2. one large straight-on head-and-shoulders portrait;
-3. one 45-degree three-quarter head-and-shoulders portrait (for video-generation reference).
-Suggested layout: full-body view on the left ~45% of the canvas, straight-on portrait top-right, three-quarter portrait bottom-right. All three views must have identical facial identity, hairstyle, colors and costume. The straight-on head-and-shoulders portrait is the facial identity authority for later generations. Character and costume only - no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields.
-
-Style:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, polished metal, leather material separation, restrained highlights, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, heavy armor, plate armor, bulky build, muscular hulking build, wings, horns, tail, crown, large weapon, greatsword, elderly face, gemstones, gold pauldrons, cape clasp on the right shoulder, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, white-gold pale-purple clergy robe, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting
-
-Constraints:
-- The three input images control visual style only; do not reproduce or blend their characters.
-- Follow all CANON facts exactly (perpetual mischievous playful grin, messy short hair, lithe light build, dark lightweight action outfit, left-shoulder cape clasp).
-- Materials are tight dark cloth/leather bodysuit plus a short cape only; no heavy armor, plate, gemstones or gold pauldrons.
-- Character and costume only: no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields. All accessories (tool pouch, cape clasp, boots) belong exclusively to the prop construction sheet (09).
-- Flat even ambient lighting, no cast shadows, no strong highlights, no rim light.
-- Neutral front-facing presentation, plain warm light-gray background, no scene or action pose.
-- No text, labels, logo, signature or watermark.
-- Exactly one character identity shown three times; no identity drift between the three views. Missing any of the three views = invalid sheet, REJECT and regenerate.
-```
-
----
-
-## 01 — `01-top-front-fullbody.png`（STAGE 2 — 00 核准後）
-
-```text
-Use case: identity-preserve
-Asset type: single front-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-top-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
 Render Top as ONE full-body front view (0 degrees) in true orthographic projection, in the standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose.
 
 Identity invariants:
-Identical character from Image 1: same mischievous playful grin, narrow lively eyes with a teasing glint and cool silver-gray irises (#A9AFB5), messy short tousled near-black hair (#1D1B1A), neutral fair skin (#E8C9A8).
+Per the Character definition above (no prior identity image exists; this sheet establishes it): same mischievous playful grin, narrow lively eyes with a teasing glint and cool silver-gray irises (#A9AFB5), messy short tousled near-black hair (#1D1B1A), neutral fair skin (#E8C9A8).
+
+Kinship invariants:
+None. Top has no established blood relatives in the family registry; no kinship resemblance constraints apply.
 
 Body metrics:
 Height read ~175cm. Approximately 7.0 heads tall. Shoulder width approximately 2.1 head-widths.
 
 Costume invariants:
-Identical rooftop-chase attire from Image 1: snug elastic bodysuit (#2A2E36) base layer, short shoulder cape fastened on the LEFT shoulder, minimal light armor plating (#6E747C), low/standing collar, light leather belt (#3A322C), snug sleeves or fingerless gloves, slim trousers, soft-soled short boots. NO weapon anywhere.
+Identical rooftop-chase attire per the Character definition above: snug elastic bodysuit (#2A2E36) base layer, short shoulder cape fastened on the LEFT shoulder, minimal light armor plating (#6E747C), low/standing collar, light leather belt (#3A322C), snug sleeves or fingerless gloves, slim trousers, soft-soled short boots. NO weapon anywhere.
+
+Identity authority:
+The face must be rendered clearly, sharply and identifiably at full detail — this single front view is the sole identity/costume authority for sheets 02 onward.
 
 Composition:
 Single figure centered, entire body from hair to boot soles inside frame, flat even ambient lighting with no cast shadows, warm light-gray low-contrast background, no props, no grid lines, no labels.
@@ -112,146 +77,28 @@ Negative prompt:
 photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, heavy armor, plate armor, bulky build, muscular hulking build, wings, horns, tail, crown, large weapon, gemstones, gold pauldrons, cape clasp on the right shoulder, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, side view, profile, back view, three-quarter view
 
 Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- Preserve the exact identity per the Character definition above; the input images are style only.
 - Character and costume only; zero props; flat lighting; true orthographic front view.
 - No text or watermark. Do not invent missing canonical details.
 ```
 
 ---
 
-## 02 — `02-top-left-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學左側；呈現短披左肩扣）
-
-```text
-Use case: identity-preserve
-Asset type: single anatomical-left-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-top-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Top as ONE full-body view with the camera positioned at the character's anatomical LEFT side (the camera looks directly at the character's left flank; the character's left side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical left, away from the camera's direct line; no head turn back toward the lens. This is the primary view for reading the short cape's shoulder clasp on the left shoulder.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, messy short tousled near-black hair (#1D1B1A), neutral fair skin (#E8C9A8).
-
-Body metrics:
-Height read ~175cm. Approximately 7.0 heads tall. Shoulder width approximately 2.1 head-widths.
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-left camera position: the short cape's shoulder clasp clearly visible fastened on the near (left) shoulder, snug bodysuit silhouette (#2A2E36), minimal light armor plating (#6E747C), light belt (#3A322C), soft-soled boot. NO weapon anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished metal, leather material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, heavy armor, plate armor, gemstones, gold pauldrons, cape clasp missing on this shoulder, cape clasp on the right shoulder instead, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical right side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical LEFT side only (do not describe this as merely "facing left").
-- The cape's shoulder clasp must read clearly on this (left) shoulder.
-- No text or watermark. Do not invent missing canonical details.
-```
-
 ---
 
-## 03 — `03-top-right-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學右側）
+## 02 — `02-top-four-view-master.png`（STAGE 2 — 四視圖總表：正面→左→右→背）
 
-```text
-Use case: identity-preserve
-Asset type: single anatomical-right-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-top-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Top as ONE full-body view with the camera positioned at the character's anatomical RIGHT side (the camera looks directly at the character's right flank; the character's right side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical right, away from the camera's direct line; no head turn back toward the lens. The right shoulder has no cape clasp (the clasp is on the left, per sheet 02); the cape drapes cleanly over the right shoulder without a visible fastener on this side.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, messy short tousled near-black hair (#1D1B1A), neutral fair skin (#E8C9A8).
-
-Body metrics:
-Height read ~175cm. Approximately 7.0 heads tall. Shoulder width approximately 2.1 head-widths.
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-right camera position: snug bodysuit silhouette (#2A2E36), minimal light armor plating (#6E747C), light belt (#3A322C), soft-soled boot, cape draping over the right shoulder without a fastener on this side. NO weapon anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished metal, leather material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, heavy armor, plate armor, gemstones, gold pauldrons, cape clasp visible on this (right) shoulder, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical left side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical RIGHT side only (do not describe this as merely "facing right").
-- No cape clasp should read on this (right) shoulder, mirror-consistent with sheet 02.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 04 — `04-top-back-fullbody.png`（STAGE 2 — 背面）
-
-```text
-Use case: identity-preserve
-Asset type: single back-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-top-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Top as ONE full-body BACK view (180 degrees) in true orthographic projection, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. Head faces exactly away from the viewer.
-
-Identity invariants:
-Identical character from Image 1: same messy short tousled near-black hair seen from behind (#1D1B1A), same build and proportions.
-
-Body metrics:
-Height read ~175cm. Approximately 7.0 heads tall. Shoulder width approximately 2.1 head-widths.
-
-Costume invariants:
-Identical attire from Image 1 seen from behind: short cape covering the upper back, the left-shoulder clasp visible from behind, snug bodysuit back panel (#2A2E36), light belt (#3A322C), soft-soled boots seen from behind. NO weapon anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished metal, leather material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, heavy armor, plate armor, gemstones, gold pauldrons, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, face visible, profile, three-quarter view
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic back view.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 05 — `05-top-four-view-master.png`（STAGE 2 — 00 核准後）
 
 ```text
 Use case: identity-preserve
 Asset type: four-view orthographic master turnaround sheet
 
 Input images:
-- Image 1: the approved 00-top-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 01-top-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
-Render a single master turnaround sheet of Top containing four full-body orthographic views of the SAME character in one row on one shared ground line, in this exact left-to-right order: FRONT (0 degrees), LEFT profile (90 degrees), RIGHT profile (90 degrees), BACK (180 degrees). All four views use the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, identical height, identical head-to-body ratio, identical arm angles and foot spacing in every view, true orthographic projection, no contrapposto, no action pose, no T-pose.
+Render a single master turnaround sheet of Top containing four full-body orthographic views of the SAME character in one row on one shared ground line, in this exact left-to-right order: FRONT (0 degrees), LEFT profile (camera on the character's anatomical LEFT side, 90 degrees), RIGHT profile (camera on the character's anatomical RIGHT side, 90 degrees), BACK (180 degrees). All four views use the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, identical height, identical head-to-body ratio, identical arm angles and foot spacing in every view, true orthographic projection, no contrapposto, no action pose, no T-pose.
 
 Identity invariants:
 All four figures are the identical character from Image 1: same face, mischievous playful grin, narrow lively eyes with a teasing glint and cool silver-gray irises (#A9AFB5), messy short tousled near-black hair (#1D1B1A), neutral fair skin (#E8C9A8), lithe light seven-heads proportions. Head-top line and foot line perfectly horizontally aligned across all four views; silhouettes must be mutually alignable.
@@ -283,15 +130,18 @@ Constraints:
 
 ---
 
-## 06 — `06-top-expression-sheet.png`（STAGE 2 — 00 核准後；八表情臉部表）
+---
+
+## 03 — `03-top-expression-sheet.png`（STAGE 2 — 01 核准後；八表情臉部表）
+
 
 ```text
 Use case: identity-preserve
 Asset type: professional eight-expression anime character face sheet (also serves as expression keyframe reference for video generation)
 
 Input images:
-- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 00-top-character-identity-anchor.png). Ignore its original pose, framing and composition.
-- Images 2-4: shared visual-style references only. Do not copy their character identities, faces, hairstyles, costumes or anatomy.
+- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 01-top-front-fullbody.png). Ignore its original pose, framing and composition.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Recompose Top into standardized head-and-shoulders studio portraits. Create exactly eight portraits arranged neatly in a 4-column by 2-row grid on a pure white seamless background. Every portrait must use a straight-on front view at 0 degrees. Crop from just below the collarbones to slightly above the top of the hair. The head must occupy approximately 70-75 percent of each panel.
@@ -324,17 +174,18 @@ photorealistic, 3D render, western comic style, chibi, super-deformed, thick out
 
 ---
 
-## 07 — `07-top-costume-detail-sheet.png`（STAGE 2 — 00 核准後；服裝細節表，含外層拆解）
+---
+
+## 04 — `04-top-costume-detail-sheet.png`（STAGE 2 — 01 核准後；服裝細節表，含外層拆解）
+
 
 ```text
 Use case: identity-preserve
 Asset type: costume construction detail sheet with outer-layer separation
 
 Input images:
-- Image 1: the approved 00-top-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 01-top-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a professional costume construction sheet for Top's rooftop-chase attire, organized as clean callout panels on one sheet:
@@ -370,17 +221,18 @@ Constraints:
 
 ---
 
-## 08 — `08-top-color-material-sheet.png`（STAGE 2 — 00 核准後；色票／材質表）
+---
+
+## 05 — `05-top-color-material-sheet.png`（STAGE 2 — 01 核准後；色票／材質表）
+
 
 ```text
 Use case: identity-preserve
 Asset type: color palette and material reference sheet
 
 Input images:
-- Image 1: the approved 00-top-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 01-top-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a production color-and-material sheet for Top: a medium-size neutral A-pose front figure (character and costume only, no weapon) on the left, and on the right a column of large clean color swatches with material rendering patches for each locked color: dark charcoal-to-deep-blue-gray bodysuit #2A2E36, cold-gray metal plating accents #6E747C, dark leather (belt, gloves, boots) #3A322C, near-black tousled hair #1D1B1A, neutral fair skin #E8C9A8, cool silver-gray iris #A9AFB5. Each swatch pairs a flat color block with a small material patch showing how that surface reads (stretch cloth, cold metal plate, leather grain).
@@ -411,17 +263,18 @@ Constraints:
 
 ---
 
-## 09 — `09-top-prop-construction-sheet.png`（STAGE 2 — 00 核准後；特殊構造表：無固定武器，改放飾品／構造）
+---
+
+## 06 — `06-top-prop-construction-sheet.png`（STAGE 2 — 01 核准後；特殊構造表：無固定武器，改放飾品／構造）
+
 
 ```text
 Use case: stylized-concept
 Asset type: accessory and construction sheet (props only, no fixed weapon)
 
 Input images:
-- Image 1: the approved 00-top-character-identity-anchor.png - use ONLY to match the dark charcoal/cold-gray material language and craftsmanship level; do not depict the character.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 01-top-front-fullbody.png - use ONLY to match the dark charcoal/cold-gray material language and craftsmanship level; do not depict the character.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Top has no fixed weapon; this sheet presents his non-weapon accessories and functional construction details only:
@@ -458,17 +311,18 @@ Constraints:
 
 ---
 
-## 10 — `10-top-body-reference-sheet.png`（STAGE 2 — 00 核准後；素體參考圖，SMPL-X／人體擬合用）
+---
+
+## 07 — `07-top-body-reference-sheet.png`（STAGE 2 — 01 核准後；素體參考圖，SMPL-X／人體擬合用）
+
 
 ```text
 Use case: identity-preserve
 Asset type: body reference sheet for parametric human-body fitting (SMPL-X)
 
 Input images:
-- Image 1: the approved 00-top-character-identity-anchor.png and sole identity authority (face, hair, skin tone, body proportions).
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 01-top-front-fullbody.png and sole identity authority (face, hair, skin tone, body proportions).
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render Top WITHOUT the cape, plating or any outer garment - wearing only a plain tight dark-gray bodysuit (form-fitting underlayer, no folds, no accessories) - as TWO full-body views on one sheet: straight-on FRONT view and LEFT profile view. Both views in the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, true orthographic projection, no contrapposto, no action pose, no T-pose. The body silhouette must be fully visible and unobstructed: no cape, no plating, no loose clothing; the short hair already does not cover the neck or shoulder outline.
@@ -499,34 +353,32 @@ Constraints:
 
 ---
 
+---
+
 ## 逐張驗收清單（強制 — 任一項漂移即 REJECT，不得繼續下一張）
 
-生成順序：00 →（使用者核准）→ 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10。
+生成順序：01 →（使用者核准）→ 02 → 03 → 04 → 05 → 06 → 07。
 每張生成後逐項檢查；REJECT 的圖不覆蓋既有檔案，存入 `rejects/` 後重生成本張。
 
 **每張圖共同檢查項：**
 
-- [ ] 臉型與臉部身份與 00 號正本一致（06–08 的人像面板亦同）
+- [ ] 臉型與臉部身份與 01 號正本一致（03–05 的人像面板亦同）
 - [ ] 髮型、髮色（近黑蓬亂短髮）一致；招牌玩世不恭笑容一致
 - [ ] 身材比例：約 175cm／7.0 頭身／肩寬約 2.1 倍頭寬、輕盈精瘦體型
 - [ ] 服裝結構與 Costume Lock 一致（緊身衣＋短披＋少甲片層次、扣件數量）
 - [ ] 左右不對稱特徵位置正確：**短披主扣＝左肩**，未鏡像翻轉
 - [ ] 色票未漂移：#2A2E36／#6E747C／#3A322C／#1D1B1A／#E8C9A8／#A9AFB5
-- [ ] 無任何固定武器出現於任一圖（09 亦僅飾品／構造，非武器）；平光無投影陰影（06 攝影棚柔光除外）
+- [ ] 無任何固定武器出現於任一圖（06 亦僅飾品／構造，非武器）；平光無投影陰影（03 攝影棚柔光除外）
 - [ ] 血緣相似：不適用（本角色無血緣親屬，見 §13，跳過）
 
 **單張額外檢查項：**
 
 | 張 | 額外驗收 |
 | --- | --- |
-| 00 | 三視圖齊全（A-pose 正面全身＋正面頭肩＋45° 頭肩），缺一即 REJECT |
-| 01 | 正面、A-pose、正交 |
-| 02 | 相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；短披左肩扣清楚可辨 |
-| 03 | 相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；右肩無扣件 |
-| 04 | 背面、A-pose、正交 |
-| 05 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊 |
-| 06 | 恰好 8 格 4×2、順序正確、只有表情改變（嘴角仍隱含玩味） |
-| 07 | 短披拆解面板＋無披軀幹視圖必須存在 |
-| 08 | 色票方塊與鎖定色系（暗炭黑／深藍灰／冷灰金屬／冷銀瞳）完全一致 |
-| 09 | 只有工具袋、披肩扣、手套、短靴等構造；無任何武器、無角色、無人物剪影 |
-| 10 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖；短髮不遮頸肩線 |
+| 01 | 正面、A-pose、正交；**臉部須清晰可辨——本張為身份／服裝唯一正本** |
+| 02 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊；相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；短披左肩扣清楚可辨；相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；右肩無扣件；背面、A-pose、正交 |
+| 03 | 恰好 8 格 4×2、順序正確、只有表情改變（嘴角仍隱含玩味） |
+| 04 | 短披拆解面板＋無披軀幹視圖必須存在 |
+| 05 | 色票方塊與鎖定色系（暗炭黑／深藍灰／冷灰金屬／冷銀瞳）完全一致 |
+| 06 | 只有工具袋、披肩扣、手套、短靴等構造；無任何武器、無角色、無人物剪影 |
+| 07 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖；短髮不遮頸肩線 |

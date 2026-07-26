@@ -1,6 +1,15 @@
 # STYLE_ANCHOR.md — 專案畫風錨登記
 
-> 本檔記錄本專案（`_sandbox_project`）的畫風錨狀態，依 `SCHEMA_7SHEET.md` §2、§4 維護。
+> 本檔記錄本專案（`_sandbox_project`）的畫風錨狀態。7 張制與畫風錨規則正本見
+> [`../Story_Character/Story_Character_skill/README.md`](../Story_Character/Story_Character_skill/README.md)
+> 與 [`../Story_Character/Story_Character_skill/characters-to-sheets/SKILL.md`](../Story_Character/Story_Character_skill/characters-to-sheets/SKILL.md) 步驟 1。
+
+## 狀態定義（僅此兩種）
+
+| 狀態 | 意義 |
+| --- | --- |
+| `PENDING-APPROVAL` | 首角色 01 尚未生成或尚未核准，畫風錨未確立。此時只能生首角色的 01，其餘全部擋住 |
+| `ACTIVE` | 首角色 01 已經使用者核准並成為正式畫風錨。角色 2..N 開放生成，一律只認此圖為畫風參考 |
 
 ## 目前狀態
 
@@ -10,7 +19,7 @@
 
 - 角色名：**Lumi**
 - 畫風錨圖（生成並核准後）：`Lumi/01-lumi-front-fullbody.png`
-- 登記時機：Lumi 的 01 經使用者核准後，本檔更新為 **REGISTERED**，並記錄核准日期。
+- 登記時機：Lumi 的 01 經使用者核准後，本檔狀態更新為 **ACTIVE**，並記錄核准日期。
 
 ## Bootstrap 畫風依據（僅首角色使用一次）
 

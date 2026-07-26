@@ -24,7 +24,7 @@
 **(c) 生成清單與各節標題檔名一致**：上列 (a) 七個檔名與下方 `## 01`–`## 07` 各節標題一一對應，無增減。
 
 **(d) 雙層錨點 input images 說明（角色 2..N）**
-- 本角色**不引用**專案 bootstrap 文字畫風描述，也**不引用**任何舊制三張 style 參考圖。
+- 本角色**不引用**專案 bootstrap 文字畫風描述或 bootstrap 圖片。
 - 01：Image 1 = 空（本角色尚無自己的 01）；Image 2 = **`../Lumi/01-lumi-front-fullbody.png`**（專案畫風錨，僅供畫風參考，非身份參考）。
 - 02–07：Image 1 = **Garo 自己的 `01-garo-front-fullbody.png`**（角色身份錨，鎖臉/髮/服裝身份）；Image 2 = **`../Lumi/01-lumi-front-fullbody.png`**（專案畫風錨，鎖線條/上色/材質/光影風格）。
 
@@ -51,7 +51,7 @@
 - **Body metrics**（01 必填）：身高 182cm；7.5 頭身；肩寬＝頭寬×1.8；全對稱，無不對稱特徵。
 - **Costume invariants**：深棕皮甲（主色 #5A3A22）、焦棕滾邊縫線（#3E2814）、暗鐵灰扣具（#6B6B6B）、深灰麻布內襯（#4A4A4A）。**無長劍、無劍鞘、無任何佩掛武器**（武器僅於 06 出現）。
 - **Composition**：Single character, centered, full body from head to feet visible, plain neutral flat background, orthographic front camera, no perspective distortion.
-- **Positive style**：畫風完全對照 Image 2（Lumi 01）：refined Japanese anime fantasy character design, clean linework, soft cel shading, flat even ambient lighting. **不得引用 bootstrap 文字畫風描述或任何舊制 style 參考圖。**
+- **Positive style**：畫風完全對照 Image 2（Lumi 01）：refined Japanese anime fantasy character design, clean linework, soft cel shading, flat even ambient lighting. **不得引用 bootstrap 文字畫風描述或 bootstrap 圖片。**
 - **Negative prompt**：`action pose, contrapposto, hands on hips, crossed arms, T-pose, weapon-holding stance, weapon, sword, scabbard, sheath, staff, shield, prop object, holding weapon, weapon in hand, cast shadows, strong highlights, rim light`
 - **Constraints**：
   ```
@@ -170,8 +170,10 @@
 ## 交給 Codex 的一鍵指令
 
 ```
-專案資料夾：output/_sandbox_project/
-角色資料夾：output/_sandbox_project/Garo/
+專案資料夾：<repo-root>/_sandbox_project/
+角色資料夾：<repo-root>/_sandbox_project/Garo/
+（<repo-root>＝生圖 repo 根目錄。直接 clone Codex_Image_Agent 時就是 clone 根目錄；
+　從外層 claude-Godzilla-z 執行時是 output/。）
 規格檔：CHARACTER_SPEC.md
 提示詞檔：PROMPTS.md
 

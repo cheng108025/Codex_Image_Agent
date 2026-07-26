@@ -1,4 +1,4 @@
-# 皇后阿格妮絲 Agnes — Image Generation Prompts（範本 v2 FULL package: 00–10）
+# 皇后阿格妮絲 Agnes — Image Generation Prompts（新版七張制 01–07）
 
 > **用途聲明（必讀）**
 > 這套圖片是 **3D 建模參考包（modeling reference pack）**，不是完成的 3D 模型。
@@ -6,101 +6,67 @@
 
 > **角色版本 ID：`AGNES-V1-COUP-NIGHT-BEDCHAMBER`**（政變之夜寢房版；文檔唯一明載造型，不得混用其他時期／服裝）
 
-> **無既有 PNG 說明**：本角色資料夾目前無任何已核准圖片。00 號圖為本角色的第一張生成圖，`Character definition` 全數依 `CHARACTER_SPEC.md` 之 `CANON` 與 `DESIGN-PROPOSAL` 鎖定值撰寫；hex 色票為依色名描述推定之近似值，使用者可於核准 00 時一併覆蓋。
+> **無既有 PNG 說明**：本角色資料夾目前無任何已核准圖片。01 號圖為本角色的第一張生成圖，`Character definition` 全數依 `CHARACTER_SPEC.md` 之 `CANON` 與 `DESIGN-PROPOSAL` 鎖定值撰寫；hex 色票為依色名描述推定之近似值，使用者可於核准 01 時一併覆蓋。
 
-> **兩階段規則（強制）**：第一階段只生成 `00-agnes-character-identity-anchor.png`（三視圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，缺一即 REJECT 重生成），生成後停止等待使用者核准。核准後 00 成為 01–10 的 Image 1 身份／服裝唯一正本。三張 style 圖永遠只控制畫風。
+> **兩階段規則（強制）**：第一階段只生成 `01-agnes-front-fullbody.png`（三視圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，缺一即 REJECT 重生成），生成後停止等待使用者核准。核准後 01 成為 02–07 的 Image 1 身份／服裝唯一正本。畫風輸入一律依 `../../STYLE_ANCHOR.md` 決定。
 > **檔案安全**：不得刪除或覆蓋現有 PNG；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
-> **家族生成順序（§13）**：本角色屬 `ROYAL` 家族，家族錨點為**克里茲**。克里茲的 00 已核准（既有 `01-kritz-front-fullbody.png` 等）；本角色的 00 現在才進入生成階段。
+> **既有 PNG 狀態**：本角色 01–07（非人形 01–06）全部為 `PENDING-GENERATION`。
+> **家族生成順序（§13）**：本角色屬 `ROYAL` 家族，家族錨點為**克里茲**。克里茲的 01 已核准（既有 `01-kritz-front-fullbody.png` 等）；本角色的 01 現在才進入生成階段。
 
-共用畫風參考（style only, do not copy their characters）：
-- `../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- `../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- `../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+畫風參考唯一正本：
+- `../../STYLE_ANCHOR.md`
+- 若本角色是 `PENDING-FIRST-REQUEST` 登記的首角色，01 才使用 STYLE_ANCHOR 的三張 bootstrap 圖。
+- 若畫風錨已為 `ACTIVE` 且本角色不是首角色，01 只引用已核准的首角色 01 作為畫風參考。
+- 02–07（非人形至 06）使用自己的 01 作為身份參考；非首角色另加首角色 01 作為畫風參考。
 
-生成順序與檔名（FULL package：00–10，人形角色不豁免任何一張）：
+生成順序與檔名（新版七張制 01–07）：
 
 | 編號 | 檔案 | 內容 |
 | --- | --- | --- |
-| 00 | `00-agnes-character-identity-anchor.png` | 身份母圖：A-pose 正面全身＋正面頭肩＋45° 頭肩，零道具 |
-| 01 | `01-agnes-front-fullbody.png` | 正面全身，A-pose，零道具 |
-| 02 | `02-agnes-left-profile-fullbody.png` | 相機位於角色解剖學左側全身，A-pose，零道具 |
-| 03 | `03-agnes-right-profile-fullbody.png` | 相機位於角色解剖學右側全身，A-pose，零道具 |
-| 04 | `04-agnes-back-fullbody.png` | 背面全身，A-pose，零道具 |
-| 05 | `05-agnes-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
-| 06 | `06-agnes-expression-sheet.png` | 八表情臉部表，4×2 網格 |
-| 07 | `07-agnes-costume-detail-sheet.png` | 服裝細節表（單層寢衣，無外層可拆解） |
-| 08 | `08-agnes-color-material-sheet.png` | 色票／材質表（已補固定 hex） |
-| 09 | `09-agnes-prop-construction-sheet.png` | 構造表：褪色金線繡與寢衣構造細節（本角色無武器無飾品） |
-| 10 | `10-agnes-body-reference-sheet.png` | 素體參考圖（SMPL-X／人體擬合用） |
+| 01 | `01-agnes-front-fullbody.png` | 身份錨點：正面全身，A-pose，零道具（**STAGE 1，先生成並等核准**） |
+| 02 | `02-agnes-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
+| 03 | `03-agnes-expression-sheet.png` | 表情表 |
+| 04 | `04-agnes-costume-detail-sheet.png` | 服裝細節 |
+| 05 | `05-agnes-color-material-sheet.png` | 色彩與材質 |
+| 06 | `06-agnes-prop-construction-sheet.png` | 道具結構 |
+| 07 | `07-agnes-body-reference-sheet.png` | 身體參考（SMPL-X） |
 
 ---
 
-## 00 — `00-agnes-character-identity-anchor.png`（STAGE 1 — 只先生成這張，停止等核准）
+## 01 — `01-agnes-front-fullbody.png`（STAGE 1 — 只先生成這張，停止等核准）
+
 
 ```text
 Use case: stylized-concept
-Asset type: new-character identity anchor sheet (three views)
+Asset type: single front-view full-body identity anchor (STAGE 1, identity authority for all later sheets)
 
 Input images:
-- Image 1: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 2: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 3: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
+- Resolve all style inputs from `../../STYLE_ANCHOR.md`.
+- If this role is being registered as the first anchor while status is `PENDING-APPROVAL`, use the three bootstrap images listed there for this 01 only.
+- If status is `ACTIVE` and this role is not the anchor, use the approved anchor 01 as Image 2 for style only; do not copy its character identity.
+- Do not directly reuse bootstrap images after the anchor becomes `ACTIVE`.
+
 
 Character definition:
 Agnes, a frail and sickly adult queen (apparent age around 30), height ~168cm but often appearing smaller and diminished from illness and a slightly hunched posture, slender-but-gaunt proportions with thin shoulders and a fragile neck. Locked facial identity: a wan, hollow-cheeked worn face marked by past trauma; HOLLOW GOLD eyes (#C9AD5E) with an empty, unfocused gaze and faint bluish shadows beneath - these gold eyes are the origin of her son Kritz's gold. Pale-gold / light-blonde WAIST-LENGTH hair (#E8D9A0) worn loose and disheveled, with the bangs and stray strands pushed aside so the hollow gold eyes stay fully clear and legible. Translucent, near-transparent pale skin (#F5EDE6) with a cold candlelit pallor. Costume (locked, the night-of-the-coup bedchamber attire, the only documented look): a single thin white/off-white nightgown (#F5F2EC), soft and simple, with faded dark-gold thread embroidery (#B8A063) at the collar and cuffs signifying a former grandeur now shattered; loose long sleeves; a floor-length soft-draping gown; no armor, no belt hardware, bare feet or plain soft slippers. She is unarmed and carries no props of any kind.
-
-Body metrics:
-Height approximately 168 cm. Approximately 7.5 heads tall, slender-but-gaunt proportions with thin, fragile shoulders. Shoulder width approximately 1.8 head-widths (frail, sickly build). Fully symmetric design: single-layer nightgown with no asymmetric accessory.
-
-Kinship invariants:
-She is the mother of Kritz (family ROYAL; family resemblance anchor = Kritz, whose identity is already approved). Her hollow gold eyes are the origin of Kritz's warm red-gold eyes - the eye shape may echo his. Distinguishing traits that must NOT be confused with her son: pure hollow, unfocused gold (never Kritz's warmer red-gold with a cold, sharp gaze); pale-gold waist-length loose hair (never Kritz's dark-gold short hair); a frail, translucent pale build (never Kritz's healthy cool-toned complexion).
-
-Primary request:
-Design one new and visually distinct character from the written specification. Create an identity-anchor sheet containing exactly three views of the same character — all three are mandatory; missing any view = REJECT:
-1. one neutral straight-on full-body front view in a standard A-pose (standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread);
-2. one large straight-on head-and-shoulders portrait, rendering the hollow gold eyes clearly and unobscured;
-3. one 45-degree three-quarter head-and-shoulders portrait (for video-generation reference).
-Suggested layout: full-body view on the left ~45% of the canvas, straight-on portrait top-right, three-quarter portrait bottom-right. All three views must have identical facial identity, hairstyle, colors and costume. The straight-on head-and-shoulders portrait is the facial identity authority for later generations. Character and costume only - no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields.
-
-Style:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, fabric-focused material separation with minimal fittings, restrained luminous highlights, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, armor, plate armor, weapon, sword, shield, wings, horns, tail, crown, robust healthy build, rosy cheeks, plump figure, athletic vigor, red-gold eyes, blue eyes, green eyes, vibrant saturated gown, ornate jewelry, gemstones, shining jewels, gold pauldrons, metal armor, reference character face, copying any style-image character, blending the three reference characters, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting
-
-Constraints:
-- The three input images control visual style only; do not reproduce or blend their characters.
-- Follow the locked identity exactly (hollow gold eyes #C9AD5E as the source of Kritz's gold, pale-gold disheveled waist-length hair #E8D9A0, translucent pale skin #F5EDE6, thin white nightgown #F5F2EC with faded gold-thread trim #B8A063, frail sickly build).
-- Character and costume only: no weapons, no handheld items, no standalone props. All construction/material studies belong exclusively to sheet 09.
-- Full-body view MUST use the standard neutral A-pose defined above; the two portraits are unaffected by the A-pose rule.
-- Flat even ambient lighting, no cast shadows, no strong highlights, no rim light.
-- Exactly one character identity shown three times; no identity drift between the three views. Missing any of the three views = invalid sheet, REJECT and regenerate.
-- Plain warm light-gray background. No text, labels, logo, signature or watermark.
-```
-
----
-
-## 01 — `01-agnes-front-fullbody.png`（STAGE 2 — 正面）
-
-```text
-Use case: identity-preserve
-Asset type: single front-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-agnes-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
 Render Agnes as ONE full-body front view (0 degrees) in true orthographic projection, in the standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose, while keeping her frail, slightly diminished posture.
 
 Identity invariants:
-Identical character from Image 1: same gaunt worn face, hollow gold eyes (#C9AD5E) with an empty unfocused gaze, pale-gold/light-blonde loose disheveled waist-length hair (#E8D9A0), translucent near-transparent pale skin (#F5EDE6).
+Per the Character definition above (no prior identity image exists; this sheet establishes it): same gaunt worn face, hollow gold eyes (#C9AD5E) with an empty unfocused gaze, pale-gold/light-blonde loose disheveled waist-length hair (#E8D9A0), translucent near-transparent pale skin (#F5EDE6).
+
+Kinship invariants:
+She is the mother of Kritz (family ROYAL; family resemblance anchor = Kritz, whose identity is already approved). Her hollow gold eyes are the origin of Kritz's warm red-gold eyes - the eye shape may echo his. Distinguishing traits that must NOT be confused with her son: pure hollow, unfocused gold (never Kritz's warmer red-gold with a cold, sharp gaze); pale-gold waist-length loose hair (never Kritz's dark-gold short hair); a frail, translucent pale build (never Kritz's healthy cool-toned complexion).
 
 Body metrics:
 Height approximately 168 cm. Approximately 7.5 heads tall. Shoulder width approximately 1.8 head-widths. Fully symmetric design.
 
 Costume invariants:
-Identical night-of-the-coup attire from Image 1: single thin white/off-white nightgown (#F5F2EC) with faded dark-gold thread embroidery (#B8A063) at collar and cuffs, loose long sleeves, floor-length soft-draping gown, bare feet or plain soft slippers. No armor, no belt hardware, NO weapon anywhere.
+Identical night-of-the-coup attire per the Character definition above: single thin white/off-white nightgown (#F5F2EC) with faded dark-gold thread embroidery (#B8A063) at collar and cuffs, loose long sleeves, floor-length soft-draping gown, bare feet or plain soft slippers. No armor, no belt hardware, NO weapon anywhere.
+
+Identity authority:
+The face must be rendered clearly, sharply and identifiably at full detail — this single front view is the sole identity/costume authority for sheets 02 onward.
 
 Composition:
 Single figure centered, entire body from hair to feet inside frame, flat even ambient lighting with no cast shadows, warm light-gray low-contrast background, no props, no grid lines, no labels.
@@ -112,139 +78,25 @@ Negative prompt:
 photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, armor, plate armor, weapon, sword, shield, wings, horns, tail, crown, robust healthy build, rosy cheeks, red-gold eyes, blue eyes, ornate jewelry, gemstones, gold pauldrons, reference character face, copying any style-image character, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, side view, profile, back view, three-quarter view
 
 Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- Preserve the exact identity per the Character definition above; the input images are style only.
 - Character and costume only; zero props; flat lighting; true orthographic front view.
 - No text or watermark. Do not invent missing canonical details.
 ```
 
 ---
 
-## 02 — `02-agnes-left-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學左側）
-
-```text
-Use case: identity-preserve
-Asset type: single anatomical-left-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-agnes-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Agnes as ONE full-body view with the camera positioned at the character's anatomical LEFT side (the camera looks directly at the character's left flank; the character's left side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view, keeping her frail, slightly hunched posture consistent. The character's head faces exactly 90 degrees toward their own anatomical left, away from the camera's direct line; no head turn back toward the lens.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, pale-gold loose disheveled hair (#E8D9A0), translucent pale skin (#F5EDE6).
-
-Body metrics:
-Height approximately 168 cm. Approximately 7.5 heads tall. Shoulder width approximately 1.8 head-widths. Fully symmetric design.
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-left camera position: thin white/off-white nightgown silhouette (#F5F2EC), faded gold-thread cuff embroidery (#B8A063) visible on the near sleeve, floor-length soft drape. NO weapon anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, fabric-focused material separation with minimal fittings, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, armor, plate armor, weapon, sword, shield, wings, horns, tail, crown, robust healthy build, rosy cheeks, red-gold eyes, blue eyes, ornate jewelry, gemstones, reference character face, copying any style-image character, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical right side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical LEFT side only (do not describe this as merely "facing left").
-- No text or watermark. Do not invent missing canonical details.
-```
-
 ---
 
-## 03 — `03-agnes-right-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學右側）
+## 02 — `02-agnes-four-view-master.png`（STAGE 2 — 四視圖總表：正面→左→右→背）
 
-```text
-Use case: identity-preserve
-Asset type: single anatomical-right-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-agnes-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Agnes as ONE full-body view with the camera positioned at the character's anatomical RIGHT side (the camera looks directly at the character's right flank; the character's right side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view, keeping her frail, slightly hunched posture consistent. The character's head faces exactly 90 degrees toward their own anatomical right, away from the camera's direct line; no head turn back toward the lens. The design is fully symmetric, so this anatomical-right view mirrors the anatomical-left view (sheet 02) exactly.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, pale-gold loose disheveled hair (#E8D9A0), translucent pale skin (#F5EDE6).
-
-Body metrics:
-Height approximately 168 cm. Approximately 7.5 heads tall. Shoulder width approximately 1.8 head-widths. Fully symmetric design.
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-right camera position: thin white/off-white nightgown silhouette (#F5F2EC), faded gold-thread cuff embroidery (#B8A063) visible on the near sleeve, floor-length soft drape. NO weapon anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, fabric-focused material separation with minimal fittings, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, armor, plate armor, weapon, sword, shield, wings, horns, tail, crown, robust healthy build, rosy cheeks, red-gold eyes, blue eyes, ornate jewelry, gemstones, reference character face, copying any style-image character, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical left side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical RIGHT side only (do not describe this as merely "facing right").
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 04 — `04-agnes-back-fullbody.png`（STAGE 2 — 背面）
-
-```text
-Use case: identity-preserve
-Asset type: single back-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-agnes-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Agnes as ONE full-body BACK view (180 degrees) in true orthographic projection, in the same standard neutral A-pose as the front view, keeping her frail, slightly hunched posture consistent. Head faces exactly away from the viewer.
-
-Identity invariants:
-Identical character from Image 1: same pale-gold/light-blonde loose disheveled hair seen from behind (#E8D9A0), falling down the back, same frail build and proportions.
-
-Body metrics:
-Height approximately 168 cm. Approximately 7.5 heads tall. Shoulder width approximately 1.8 head-widths. Fully symmetric design.
-
-Costume invariants:
-Identical attire from Image 1 seen from behind: plain nightgown back panel (#F5F2EC), no fastenings shown, floor-length soft drape falling to the ground, bare feet or plain soft slippers. NO weapon anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, fabric-focused material separation with minimal fittings, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, armor, plate armor, weapon, sword, shield, wings, horns, tail, crown, robust healthy build, ornate jewelry, gemstones, reference character face, copying any style-image character, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, face visible, profile, three-quarter view
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic back view.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 05 — `05-agnes-four-view-master.png`（STAGE 2）
 
 ```text
 Use case: identity-preserve
 Asset type: four-view orthographic master turnaround sheet
 
 Input images:
-- Image 1: the approved 00-agnes-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-agnes-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render a single master turnaround sheet of Agnes containing four full-body orthographic views of the SAME character in one row on one shared ground line, in this exact left-to-right order: FRONT (0 degrees), LEFT profile (camera at anatomical left, 90 degrees), RIGHT profile (camera at anatomical right, 90 degrees), BACK (180 degrees). All four views use the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, identical height, identical head-to-body ratio, identical arm angles and foot spacing in every view, true orthographic projection, no contrapposto, no action pose, no T-pose, while keeping her frail, slightly diminished posture consistent across all four views.
@@ -279,15 +131,18 @@ Constraints:
 
 ---
 
-## 06 — `06-agnes-expression-sheet.png`（STAGE 2 — 八表情臉部表）
+---
+
+## 03 — `03-agnes-expression-sheet.png`（STAGE 2 — 八表情臉部表）
+
 
 ```text
 Use case: identity-preserve
 Asset type: professional eight-expression anime character face sheet (also serves as expression keyframe reference for video generation)
 
 Input images:
-- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 00-agnes-character-identity-anchor.png). Ignore its original pose, framing and composition.
-- Images 2-4: shared visual-style references only. Do not copy their character identities, faces, hairstyles, costumes or anatomy.
+- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 01-agnes-front-fullbody.png). Ignore its original pose, framing and composition.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Recompose Agnes into standardized head-and-shoulders studio portraits. Create exactly eight portraits arranged neatly in a 4-column by 2-row grid on a pure white seamless background. Every portrait must use a straight-on front view at 0 degrees. Crop from just below the collarbones to slightly above the top of the hair. The head must occupy approximately 70-75 percent of each panel.
@@ -320,15 +175,18 @@ full body, half body, waist-up, upper body, bust portrait, half-bust, zoomed out
 
 ---
 
-## 07 — `07-agnes-costume-detail-sheet.png`（STAGE 2 — 服裝細節表；單層寢衣，無外層可拆解）
+---
+
+## 04 — `04-agnes-costume-detail-sheet.png`（STAGE 2 — 服裝細節表；單層寢衣，無外層可拆解）
+
 
 ```text
 Use case: identity-preserve
 Asset type: costume construction detail sheet
 
 Input images:
-- Image 1: the approved 00-agnes-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-agnes-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Note: Agnes wears a single-layer nightgown with no outer garment (no cloak/coat to separate); this sheet documents the one garment's construction directly, without an outer-layer-removed panel.
 
@@ -358,15 +216,18 @@ Constraints:
 
 ---
 
-## 08 — `08-agnes-color-material-sheet.png`（STAGE 2 — 色票／材質表，已補固定 hex）
+---
+
+## 05 — `05-agnes-color-material-sheet.png`（STAGE 2 — 色票／材質表，已補固定 hex）
+
 
 ```text
 Use case: identity-preserve
 Asset type: color palette and material reference sheet
 
 Input images:
-- Image 1: the approved 00-agnes-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-agnes-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a production color-and-material sheet for Agnes: a medium-size neutral A-pose front figure (character and costume only, no accessories) on the left, and on the right a column of large clean color swatches with material rendering patches for each locked color:
@@ -400,15 +261,18 @@ Constraints:
 
 ---
 
-## 09 — `09-agnes-prop-construction-sheet.png`（STAGE 2 — 構造表；本角色無武器無飾品）
+---
+
+## 06 — `06-agnes-prop-construction-sheet.png`（STAGE 2 — 構造表；本角色無武器無飾品）
+
 
 ```text
 Use case: stylized-concept
 Asset type: garment construction and material detail sheet (no weapons or jewelry exist for this character)
 
 Input images:
-- Image 1: the approved 00-agnes-character-identity-anchor.png — use ONLY to match the white/faded-gold material language; do not depict the character's face.
-- Images 2-4: shared style references only; do not copy their characters.
+- Image 1: the approved 01-agnes-front-fullbody.png — use ONLY to match the white/faded-gold material language; do not depict the character's face.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Note: Agnes carries no weapon, no jewelry and no handheld props (CANON: unarmed, frail, no documented accessories). This sheet therefore documents garment construction and embroidery motif only, in place of a weapon/jewelry study.
 
@@ -440,15 +304,18 @@ Constraints:
 
 ---
 
-## 10 — `10-agnes-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+---
+
+## 07 — `07-agnes-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+
 
 ```text
 Use case: identity-preserve
 Asset type: body reference sheet for parametric human-body fitting (SMPL-X)
 
 Input images:
-- Image 1: the approved 00-agnes-character-identity-anchor.png and sole identity authority (face, hair, skin tone, body proportions).
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-agnes-front-fullbody.png and sole identity authority (face, hair, skin tone, body proportions).
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render Agnes WITHOUT the nightgown or any garment - wearing only a plain tight dark-gray bodysuit (form-fitting underlayer, no folds, no accessories) - as TWO full-body views on one sheet: straight-on FRONT view and LEFT profile view (camera at the character's anatomical left side). Both views in the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, true orthographic projection, no contrapposto, no action pose, no T-pose. The body silhouette must be fully visible and unobstructed: no gown, no loose clothing; the long hair must be gathered back and tied so it does not cover the neck or shoulder outline.
@@ -477,34 +344,32 @@ Constraints:
 
 ---
 
+---
+
 ## 逐張驗收清單（強制 — 任一項漂移即 REJECT，不得繼續下一張）
 
-生成順序：00 →（使用者核准）→ 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10。
+生成順序：01 →（使用者核准）→ 02 → 03 → 04 → 05 → 06 → 07。
 每張生成後逐項檢查；REJECT 的圖不覆蓋既有檔案，存入 `rejects/` 後重生成本張。
 
 **每張圖共同檢查項：**
 
-- [ ] 臉型與臉部身份與 00 號正本一致（06 的人像面板亦同）
+- [ ] 臉型與臉部身份與 01 號正本一致（03 的人像面板亦同）
 - [ ] 髮型、瀏海、髮色 #E8D9A0（淺金／亞麻金及腰散髮）一致
 - [ ] 身材比例：約 168cm／約 7.5 頭身／肩寬約 1.8 倍頭寬
 - [ ] 服裝結構與 Costume Lock 一致（單薄白色寢衣、褪色金線繡領口與袖口）
 - [ ] 左右位置正確、未鏡像翻轉（本角色無左右不對稱配件）
 - [ ] 色票未漂移：#F5F2EC／#B8A063／#F5EDE6／#E8D9A0／#C9AD5E
 - [ ] 該張圖片自身的構圖規則（視圖數量、順序、A-pose、零道具、平光）全部滿足
-- [ ] 血緣相似：空洞金瞳與克里茲已核准 00 的紅金瞳可辨識地同源；刻意區分特徵（純金瞳無焦、淺金長髮、蒼白病弱）未與克里茲混淆
+- [ ] 血緣相似：空洞金瞳與克里茲已核准 01 的紅金瞳可辨識地同源；刻意區分特徵（純金瞳無焦、淺金長髮、蒼白病弱）未與克里茲混淆
 
 **單張額外檢查項：**
 
 | 張 | 額外驗收 |
 | --- | --- |
-| 00 | 三視圖齊全（A-pose 正面全身＋正面頭肩＋45° 頭肩），缺一即 REJECT |
-| 01 | 正面、A-pose、正交 |
-| 02 | 相機位於解剖學左側、A-pose、正交（不得只寫「朝左」） |
-| 03 | 相機位於解剖學右側、A-pose、正交（不得只寫「朝右」） |
-| 04 | 背面、A-pose、正交 |
-| 05 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊 |
-| 06 | 恰好 8 格 4×2、順序正確、只有表情改變 |
-| 07 | 單層寢衣構造細節完整（領口、袖口、裙擺、背面）；本角色無外層可拆解，已於檔頭註明 |
-| 08 | 色票方塊與鎖定 hex 完全一致 |
-| 09 | 僅呈現寢衣刺繡紋樣與構造研究；本角色無武器無飾品，不得無故新增；無角色、無臉、無人物剪影 |
-| 10 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖；長髮須收攏於背後 |
+| 01 | 正面、A-pose、正交；**臉部須清晰可辨——本張為身份／服裝唯一正本** |
+| 02 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊；相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；背面、A-pose、正交 |
+| 03 | 恰好 8 格 4×2、順序正確、只有表情改變 |
+| 04 | 單層寢衣構造細節完整（領口、袖口、裙擺、背面）；本角色無外層可拆解，已於檔頭註明 |
+| 05 | 色票方塊與鎖定 hex 完全一致 |
+| 06 | 僅呈現寢衣刺繡紋樣與構造研究；本角色無武器無飾品，不得無故新增；無角色、無臉、無人物剪影 |
+| 07 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖；長髮須收攏於背後 |

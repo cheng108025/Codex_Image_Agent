@@ -1,26 +1,44 @@
-# Codex_Image_Agent — Story Character 參考包
+# Story Character 角色參考包
 
-## 這是什麼
+本資料夾提供角色文字設定、圖片提示詞、專案畫風錨與正式三段式產圖流程。
 
-每個角色資料夾是一套 **3D 建模參考包（modeling reference pack）**——不是完成的 3D 模型。
-純 AI img2vid 無法保證跨鏡頭的角色完全一致；**正式影片必須先以參考包建立同一個經核准的 Blender／VRM 角色模型，並以該模型作為唯一角色正本驅動所有鏡頭。**
+## 目前可生圖範圍
 
-## 規範正本
+- 26 位尚無正式 PNG 的角色已使用 01–07 格式；巨龍、夜光馬使用非人形 01–06。
+- 奧德里奇、伊普拉新、克里茲、班尼迪克、蕾瓦娜斯已有正式 PNG，整個角色包凍結，不修改也不重新生成。
+- 新角色從故事文字建立時，直接產生 01–07／01–06。
 
-所有規則的唯一正本：[CLAUDE_CHARACTER_PROMPT_HANDOFF.md](CLAUDE_CHARACTER_PROMPT_HANDOFF.md)
+## 正式流程
 
-重點規則（詳見正本）：
+1. [`scene-to-characters`](Story_Character_skill/scene-to-characters/SKILL.md)：故事場次整理成每角色抽取檔。
+2. [`characters-to-sheets`](Story_Character_skill/characters-to-sheets/SKILL.md)：建立 `CHARACTER_SPEC.md` 與 `PROMPTS.md`。
+3. [`sheets-to-codex`](Story_Character_skill/sheets-to-codex/SKILL.md)：按兩階段閘門生成圖片並逐張驗收。
 
-- **兩階段**：先生成 00 三視圖身份母圖（A-pose 正面全身＋正面頭肩＋45° 頭肩，缺一不可）→ 使用者核准 → 再生成 01–10
-- **視圖順序**：01 正面、02 左、03 右、04 背；05 四視圖總表依「正面→左→右→背」同高度同尺寸正交排列
-- **零道具**：00–05、10 不出現任何武器道具（含佩掛）；武器唯一出現位置是 09 道具表
-- **10 素體圖**：所有人形角色必產；無鎧甲外層、身體輪廓完全可見，供 SMPL-X／參數化人體擬合
-- **版本鎖定**：每位角色鎖定版本 ID、故事時期、服裝版本、身高、頭身比、肩寬、左右不對稱特徵與固定色票（hex）；不同時期／服裝不得混入同一版本
-- **逐張驗收**：臉型、髮型、身材、服裝結構、左右位置或色票漂移即 REJECT，不得繼續下一張；REJECT 圖存 `rejects/`
-- **檔案安全**：不刪除、不覆蓋現有 PNG；改規格前舊版 Markdown 備份到角色資料夾的 `_archive_template_v1/`
-- **正典不明**：一律標記 `PENDING-USER-INPUT`，不得自行決定
+流程總覽見 [`Story_Character_skill/README.md`](Story_Character_skill/README.md)。
 
-## 範本角色
+## 畫風與身份錨
 
-範本 v2 首例：[01_主角陣營/奧德里奇/](01_主角陣營/奧德里奇/)（CHARACTER_SPEC.md＋PROMPTS.md，完整 00–10 包）。
-其他角色待範本驗收後批次套用。
+- 專案畫風狀態唯一正本：[`STYLE_ANCHOR.md`](STYLE_ANCHOR.md)。
+- 第一次被要求生成的零圖片角色，自動成為首角色候選。
+- 只先生成首角色 01；使用者核准後，該圖成為全專案唯一畫風錨。
+- 每位角色自己的 01 是該角色的身份正本。
+- 後續角色不得直接引用 bootstrap 畫風圖。
+
+## 圖片編號
+
+| 張號 | 內容 |
+| --- | --- |
+| 01 | 正面全身身份錨 |
+| 02 | 四視圖總表 |
+| 03 | 八表情／非人形頭部狀態表 |
+| 04 | 服裝或體表細節 |
+| 05 | 色彩與材質 |
+| 06 | 道具或非人形構造 |
+| 07 | 人形素體參考；非人形不產 |
+
+## 安全規則
+
+- 不覆蓋、不重新命名既有 PNG。
+- 失敗候選圖放進角色 `rejects/`。
+- 第一張 01 完成後停止，等待使用者核准。
+- `PENDING-USER-INPUT` 不得自行改成 `CANON`。

@@ -1,4 +1,4 @@
-# 阿爾伯特 Albert — Image Generation Prompts（FULL v2 package: 00–10）
+# 阿爾伯特 Albert — Image Generation Prompts（新版七張制 01–07）
 
 > **用途聲明（必讀）**
 > 這套圖片是 **3D 建模參考包（modeling reference pack）**，不是完成的 3D 模型。
@@ -6,98 +6,65 @@
 
 > **角色版本 ID：`ALBERT-V1-DISCIPLINE-ENFORCER`**（紀律執法騎士版；文檔唯一明載造型，本包單一版本）
 
-> **兩階段規則（強制）**：第一階段只生成 `00-albert-character-identity-anchor.png`（三視圖，缺一不可），生成後停止等待使用者核准。核准後 00 成為 01–10 的 Image 1 身份／服裝唯一正本。三張 style 圖永遠只控制畫風。
+> **兩階段規則（強制）**：第一階段只生成 `01-albert-front-fullbody.png`（正面全身單視圖，臉部須清晰可辨），生成後停止等待使用者核准。核准後 01 成為 02–07 的 Image 1 身份／服裝唯一正本。畫風輸入一律依 `../../STYLE_ANCHOR.md` 決定。
 > **檔案安全**：不得刪除或覆蓋現有 PNG；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
+> **既有 PNG 狀態**：本角色 01–07（非人形 01–06）全部為 `PENDING-GENERATION`。
 > **佩劍側／綬帶側鎖定（已同步進 CHARACTER_SPEC.md，供使用者覆蓋）**：紀律綬帶／肩章固定於**解剖學左肩**，騎士劍佩於**解剖學右腰**。SPEC 原文僅要求「左右須跨圖一致」未指定側別；此側別為設計提案，現已正式同步進 SPEC，非既有正典，使用者可事後覆蓋。
 
-共用畫風參考（style only, do not copy their characters）：
-- `../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- `../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- `../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+畫風參考唯一正本：
+- `../../STYLE_ANCHOR.md`
+- 若本角色是 `PENDING-FIRST-REQUEST` 登記的首角色，01 才使用 STYLE_ANCHOR 的三張 bootstrap 圖。
+- 若畫風錨已為 `ACTIVE` 且本角色不是首角色，01 只引用已核准的首角色 01 作為畫風參考。
+- 02–07（非人形至 06）使用自己的 01 作為身份參考；非首角色另加首角色 01 作為畫風參考。
 
-生成順序與檔名（FULL package：00–10，人形角色不豁免任何一張）：
+生成順序與檔名（新版七張制 01–07）：
 
 | 編號 | 檔案 | 內容 |
 | --- | --- | --- |
-| 00 | `00-albert-character-identity-anchor.png` | 身份母圖：A-pose 正面全身＋正面頭肩＋45° 頭肩，零道具 |
-| 01 | `01-albert-front-fullbody.png` | 正面全身，A-pose，零道具 |
-| 02 | `02-albert-left-profile-fullbody.png` | 相機位於角色解剖學左側全身，A-pose，零道具 |
-| 03 | `03-albert-right-profile-fullbody.png` | 相機位於角色解剖學右側全身，A-pose，零道具 |
-| 04 | `04-albert-back-fullbody.png` | 背面全身，A-pose，零道具 |
-| 05 | `05-albert-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
-| 06 | `06-albert-expression-sheet.png` | 八表情臉部表，4×2 網格 |
-| 07 | `07-albert-costume-detail-sheet.png` | 服裝細節表（含板甲拆解與無外層軀幹視圖） |
-| 08 | `08-albert-color-material-sheet.png` | 色票／材質表（已補固定 hex） |
-| 09 | `09-albert-prop-construction-sheet.png` | 道具表：騎士劍唯一出現位置＋綬帶／肩章拆解＋徽記 |
-| 10 | `10-albert-body-reference-sheet.png` | 素體參考圖（SMPL-X／人體擬合用） |
+| 01 | `01-albert-front-fullbody.png` | 身份錨點：正面全身，A-pose，零道具（**STAGE 1，先生成並等核准**） |
+| 02 | `02-albert-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
+| 03 | `03-albert-expression-sheet.png` | 表情表 |
+| 04 | `04-albert-costume-detail-sheet.png` | 服裝細節 |
+| 05 | `05-albert-color-material-sheet.png` | 色彩與材質 |
+| 06 | `06-albert-prop-construction-sheet.png` | 道具結構 |
+| 07 | `07-albert-body-reference-sheet.png` | 身體參考（SMPL-X） |
 
 ---
 
-## 00 — `00-albert-character-identity-anchor.png`（STAGE 1 — 只先生成這張，停止等核准）
+## 01 — `01-albert-front-fullbody.png`（STAGE 1 — 只先生成這張，停止等核准）
+
 
 ```text
 Use case: stylized-concept
-Asset type: new-character identity anchor sheet (three views)
+Asset type: single front-view full-body identity anchor (STAGE 1, identity authority for all later sheets)
 
 Input images:
-- Image 1: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 2: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 3: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
+- Resolve all style inputs from `../../STYLE_ANCHOR.md`.
+- If this role is being registered as the first anchor while status is `PENDING-APPROVAL`, use the three bootstrap images listed there for this 01 only.
+- If status is `ACTIVE` and this role is not the anchor, use the approved anchor 01 as Image 2 for style only; do not copy its character identity.
+- Do not directly reuse bootstrap images after the anchor becomes `ACTIVE`.
+
 
 Character definition:
-Albert, a tall, cold disciplinarian knight (apparent age around 30), height 186cm, lean and trim with an honed, upright, rigid-postured build. CANON facial identity: a hard, expressionless face with sharp angular lines and a cutting jaw; a cold, emotionless sharp gaze with locked cool-gray eyes (#9BA3AC). Dark, near-black short hair (#161412) slicked straight back, immaculate and perfectly neat with not a strand out of place. Healthy cool-toned skin (#E8D2BC). Costume (locked, version ALBERT-V1-DISCIPLINE-ENFORCER): immaculate, highly polished DARK plate armor (#1C1C1E), worn spotless and fully fastened, with a gorget / standing armored collar closed completely; dark plate pauldrons, vambraces and greaves all buckled tight; a discipline sash / enforcement epaulet worn on his anatomical LEFT shoulder, dark base (#2A2A2C) with restrained muted-gold trim (#A8863E), marking his authority of law and discipline; the sash/breastplate bears the Hector holy-knight order's enforcement crest, muted-gold relief on the dark breastplate. He carries NO weapon and NO props of any kind - the knight's sword he duels with belongs exclusively to the prop sheet (09) and is worn at his anatomical RIGHT hip when equipped, but no sword, belt or scabbard is shown here. Character contrast note: he is COLD, precise and meticulous - his armor is always immaculate and fully buckled, his hair perfectly slicked, the deliberate opposite of a sloppy, unfastened, disheveled soldier.
-
-Body metrics:
-Height 186 cm. Approximately 7.25 heads tall. Shoulder width approximately 2.3 head-widths. Lean, trim, upright build. Locked asymmetric feature: the discipline sash/epaulet sits on the anatomical LEFT shoulder only; when equipped, the sword hangs at the anatomical RIGHT hip only. Never mirror either side.
-
-Kinship invariants:
-None.
-
-Primary request:
-Design one new and visually distinct character from the written specification. Create an identity-anchor sheet containing exactly THREE views of the same character - all three are mandatory, the sheet is invalid if any view is missing:
-1. one neutral straight-on full-body front view in a standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose;
-2. one large straight-on head-and-shoulders portrait;
-3. one 45-degree three-quarter head-and-shoulders portrait (for video-generation reference).
-Suggested layout: full-body view on the left ~45% of the canvas, straight-on portrait top-right, three-quarter portrait bottom-right. All three views must have identical facial identity, hairstyle, colors and costume. The straight-on head-and-shoulders portrait is the facial identity authority for later generations. Character and costume only - no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields.
-
-Style:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished dark metal and woven-sash material separation, restrained highlights, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, twin swords, dual swords, sloppy armor, unfastened armor, unbuckled straps, loose plate, worn battered armor, messy hair, disheveled hair, stray hair strands, warm friendly smile, casual slouch, gemstone finery, ornate jewels, gaudy gold ornament, sash mirrored to right shoulder, sword on left hip, reference character face, copying any style-image character, blending the three reference characters, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting
-
-Constraints:
-- The three input images control visual style only; do not reproduce or blend their characters.
-- Follow all CANON facts exactly (dark slicked-back neat short hair #161412, cool-gray eyes #9BA3AC, hard expressionless face, immaculate polished dark plate armor #1C1C1E fully fastened, discipline sash/epaulet on the LEFT shoulder, lean tall build).
-- Character and costume only: no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields. All weapons belong exclusively to sheet 09.
-- Armor must read as spotless, high-gloss and fully buckled; hair must read as perfectly neat.
-- Flat even ambient lighting, no cast shadows, no strong highlights, no rim light.
-- Exactly one character identity shown three times; no identity drift between the three views. Missing any of the three views = invalid sheet.
-```
-
----
-
-## 01 — `01-albert-front-fullbody.png`（STAGE 2 — 正面全身）
-
-```text
-Use case: identity-preserve
-Asset type: single front-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-albert-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+Albert, a tall, cold disciplinarian knight (apparent age around 30), height 186cm, lean and trim with an honed, upright, rigid-postured build. CANON facial identity: a hard, expressionless face with sharp angular lines and a cutting jaw; a cold, emotionless sharp gaze with locked cool-gray eyes (#9BA3AC). Dark, near-black short hair (#161412) slicked straight back, immaculate and perfectly neat with not a strand out of place. Healthy cool-toned skin (#E8D2BC). Costume (locked, version ALBERT-V1-DISCIPLINE-ENFORCER): immaculate, highly polished DARK plate armor (#1C1C1E), worn spotless and fully fastened, with a gorget / standing armored collar closed completely; dark plate pauldrons, vambraces and greaves all buckled tight; a discipline sash / enforcement epaulet worn on his anatomical LEFT shoulder, dark base (#2A2A2C) with restrained muted-gold trim (#A8863E), marking his authority of law and discipline; the sash/breastplate bears the Hector holy-knight order's enforcement crest, muted-gold relief on the dark breastplate. He carries NO weapon and NO props of any kind - the knight's sword he duels with belongs exclusively to the prop sheet (06) and is worn at his anatomical RIGHT hip when equipped, but no sword, belt or scabbard is shown here. Character contrast note: he is COLD, precise and meticulous - his armor is always immaculate and fully buckled, his hair perfectly slicked, the deliberate opposite of a sloppy, unfastened, disheveled soldier.
 
 Primary request:
 Render Albert as ONE full-body front view (0 degrees) in true orthographic projection, in the standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose.
 
 Identity invariants:
-Identical character from Image 1: same hard expressionless angular face, cold sharp cool-gray eyes (#9BA3AC), dark short hair slicked straight back and immaculate (#161412), healthy cool-toned skin (#E8D2BC).
+Per the Character definition above (no prior identity image exists; this sheet establishes it): same hard expressionless angular face, cold sharp cool-gray eyes (#9BA3AC), dark short hair slicked straight back and immaculate (#161412), healthy cool-toned skin (#E8D2BC).
+
+Kinship invariants:
+None.
 
 Body metrics:
 Height 186 cm. Approximately 7.25 heads tall. Shoulder width approximately 2.3 head-widths. The discipline sash/epaulet sits on the anatomical LEFT shoulder only.
 
 Costume invariants:
-Identical ALBERT-V1-DISCIPLINE-ENFORCER attire from Image 1: immaculate polished dark plate armor (#1C1C1E), fully fastened with a closed standing gorget, discipline sash / enforcement epaulet on the LEFT shoulder (dark base #2A2A2C, muted-gold trim #A8863E), dark pauldrons, vambraces and greaves buckled tight. NO weapon anywhere; the knight's sword is reserved for prop sheet 09.
+Identical ALBERT-V1-DISCIPLINE-ENFORCER attire per the Character definition above: immaculate polished dark plate armor (#1C1C1E), fully fastened with a closed standing gorget, discipline sash / enforcement epaulet on the LEFT shoulder (dark base #2A2A2C, muted-gold trim #A8863E), dark pauldrons, vambraces and greaves buckled tight. NO weapon anywhere; the knight's sword is reserved for prop sheet 06.
+
+Identity authority:
+The face must be rendered clearly, sharply and identifiably at full detail — this single front view is the sole identity/costume authority for sheets 02 onward.
 
 Composition:
 Single figure centered, entire body from hair to boot soles inside frame, flat even ambient lighting with no cast shadows, warm light-gray low-contrast background, no props, no grid lines, no labels.
@@ -109,141 +76,25 @@ Negative prompt:
 photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, twin swords, sloppy armor, unfastened armor, unbuckled straps, loose plate, messy hair, disheveled hair, gemstone finery, sash mirrored to right shoulder, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, side view, profile, back view, three-quarter view
 
 Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- Preserve the exact identity per the Character definition above; the input images are style only.
 - Character and costume only; zero props; flat lighting; true orthographic front view.
 - No text or watermark. Do not invent missing canonical details.
 ```
 
 ---
 
-## 02 — `02-albert-left-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學左側）
-
-```text
-Use case: identity-preserve
-Asset type: single anatomical-left-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-albert-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Albert as ONE full-body view with the camera positioned at the character's anatomical LEFT side (the camera looks directly at the character's left flank; the character's left side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical left, away from the camera's direct line; no head turn back toward the lens.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, dark short hair slicked back and immaculate (#161412), healthy cool-toned skin (#E8D2BC).
-
-Body metrics:
-Height 186 cm. Approximately 7.25 heads tall. Shoulder width approximately 2.3 head-widths.
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-left camera position: dark plate armor silhouette (#1C1C1E), the discipline sash / enforcement epaulet clearly visible on this near (left) shoulder with its muted-gold trim (#A8863E), pauldron and gorget in profile. The sword-belt attachment point at the right hip is on the far side and should read as empty or only faintly suggested at the silhouette edge - no sword is shown anywhere. NO weapon anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished dark metal and woven-sash material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, twin swords, sloppy armor, unfastened armor, messy hair, gemstone finery, sash missing, sash mirrored to right shoulder, weapon, sword, scabbard, sheath, shield, reference character face, copying any style-image character, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical right side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical LEFT side only (do not describe this as merely "facing left").
-- The discipline sash/epaulet must be clearly visible on this near (left) side.
-- No text or watermark. Do not invent missing canonical details.
-```
-
 ---
 
-## 03 — `03-albert-right-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學右側）
+## 02 — `02-albert-four-view-master.png`（STAGE 2 — 四視圖總表：正面→左→右→背）
 
-```text
-Use case: identity-preserve
-Asset type: single anatomical-right-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-albert-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Albert as ONE full-body view with the camera positioned at the character's anatomical RIGHT side (the camera looks directly at the character's right flank; the character's right side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical right, away from the camera's direct line; no head turn back toward the lens.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, dark short hair slicked back and immaculate (#161412), healthy cool-toned skin (#E8D2BC).
-
-Body metrics:
-Height 186 cm. Approximately 7.25 heads tall. Shoulder width approximately 2.3 head-widths.
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-right camera position: dark plate armor silhouette (#1C1C1E), gorget and pauldron in profile. The discipline sash/epaulet is on the LEFT shoulder, which is now the FAR side from this right-side camera - it must read as only faintly suggested at the silhouette edge or largely hidden by the body; do not draw it prominently on this near (right) side and never mirror it here. The empty sword-belt attachment point at the right hip is on this near side (no sword shown; the sword itself belongs exclusively to prop sheet 09). NO weapon anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished dark metal and woven-sash material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, twin swords, sloppy armor, unfastened armor, messy hair, gemstone finery, sash prominent on right shoulder, sash mirrored, weapon, sword, scabbard, sheath, shield, reference character face, copying any style-image character, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical left side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical RIGHT side only (do not describe this as merely "facing right").
-- The discipline sash/epaulet is on the far (left) side from this camera; do not mirror it onto the near (right) shoulder.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 04 — `04-albert-back-fullbody.png`（STAGE 2 — 背面全身）
-
-```text
-Use case: identity-preserve
-Asset type: single back-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-albert-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Albert as ONE full-body BACK view (180 degrees) in true orthographic projection, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. Head faces exactly away from the viewer.
-
-Identity invariants:
-Identical character from Image 1: same dark short hair slicked back and immaculate seen from behind (#161412), same lean trim upright build.
-
-Body metrics:
-Height 186 cm. Approximately 7.25 heads tall. Shoulder width approximately 2.3 head-widths.
-
-Costume invariants:
-Identical attire from Image 1 seen from behind: dark plate armor back panel (#1C1C1E), fully polished and fastened, the discipline sash/epaulet's rear attachment strap visible crossing from the LEFT shoulder toward the back, dark backplate seams and buckles all fully fastened with none loose or askew. NO weapon anywhere; the knight's sword is reserved for prop sheet 09.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished dark metal and woven-sash material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, twin swords, sloppy armor, unfastened armor, unbuckled straps, loose plate, messy hair, gemstone finery, weapon, sword, scabbard, sheath, shield, reference character face, copying any style-image character, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, face visible, profile, three-quarter view
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic back view.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 05 — `05-albert-four-view-master.png`（STAGE 2）
 
 ```text
 Use case: identity-preserve
 Asset type: four-view orthographic master turnaround sheet
 
 Input images:
-- Image 1: the approved 00-albert-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-albert-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render a single master turnaround sheet of Albert containing four full-body orthographic views of the SAME character in this exact left-to-right order: FRONT (0 degrees), LEFT profile (camera at anatomical left, 90 degrees), RIGHT profile (camera at anatomical right, 90 degrees), BACK (180 degrees). All four views use the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, identical height, head-to-body ratio, arm angles and foot spacing in every view, true orthographic projection, no contrapposto, no action pose, no T-pose, cold and precise bearing kept consistent.
@@ -258,7 +109,7 @@ Body metrics:
 Height 186 cm. Approximately 7.25 heads tall. Shoulder width approximately 2.3 head-widths.
 
 Costume invariants:
-Every view wears the identical disciplinary enforcer-knight attire from Image 1: immaculate polished dark plate armor (#1C1C1E), fully fastened with a closed standing gorget, discipline sash / enforcement epaulet on the anatomical LEFT shoulder (dark base #2A2A2C, muted-gold trim #A8863E) - visible front-on in the front view, near-side in the left profile, far-side (faint/hidden) in the right profile, and its rear strap visible in the back view. The empty sword-belt attachment point at the right hip is near-side in the right profile, far-side in the left profile - no sword itself shown anywhere. Dark pauldrons, vambraces and greaves buckled tight in every view. NO weapon anywhere; the knight's sword is reserved for prop sheet 09.
+Every view wears the identical disciplinary enforcer-knight attire from Image 1: immaculate polished dark plate armor (#1C1C1E), fully fastened with a closed standing gorget, discipline sash / enforcement epaulet on the anatomical LEFT shoulder (dark base #2A2A2C, muted-gold trim #A8863E) - visible front-on in the front view, near-side in the left profile, far-side (faint/hidden) in the right profile, and its rear strap visible in the back view. The empty sword-belt attachment point at the right hip is near-side in the right profile, far-side in the left profile - no sword itself shown anywhere. Dark pauldrons, vambraces and greaves buckled tight in every view. NO weapon anywhere; the knight's sword is reserved for prop sheet 06.
 
 Composition:
 A single ultra-wide horizontal banner, four full-body figures in ONE row at equal scale, evenly spaced, none cropped, no second row, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no grid lines, no labels.
@@ -278,15 +129,18 @@ Constraints:
 
 ---
 
-## 06 — `06-albert-expression-sheet.png`（STAGE 2 — 八表情臉部表）
+---
+
+## 03 — `03-albert-expression-sheet.png`（STAGE 2 — 八表情臉部表）
+
 
 ```text
 Use case: identity-preserve
 Asset type: professional eight-expression anime character face sheet
 
 Input images:
-- Image 1: use only as the character identity, hairstyle, armor-collar and color reference (the approved 00-albert-character-identity-anchor.png). Ignore its original pose, framing and composition.
-- Images 2-4: shared visual-style references only. Do not copy their character identities, faces, hairstyles, costumes or anatomy.
+- Image 1: use only as the character identity, hairstyle, armor-collar and color reference (the approved 01-albert-front-fullbody.png). Ignore its original pose, framing and composition.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Recompose Albert into standardized head-and-shoulders studio portraits. Create exactly eight portraits arranged neatly in a 4-column by 2-row grid on a pure white seamless background. Every portrait must use a straight-on front view at 0 degrees. Crop from just below the collarbones to slightly above the top of the hair. The head must occupy approximately 70-75 percent of each panel.
@@ -319,15 +173,18 @@ photorealistic, 3D render, western comic style, chibi, super-deformed, thick out
 
 ---
 
-## 07 — `07-albert-costume-detail-sheet.png`（STAGE 2 — 服裝細節表，含拆解）
+---
+
+## 04 — `04-albert-costume-detail-sheet.png`（STAGE 2 — 服裝細節表，含拆解）
+
 
 ```text
 Use case: identity-preserve
 Asset type: costume construction detail sheet with outer-layer separation
 
 Input images:
-- Image 1: the approved 00-albert-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-albert-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a professional costume construction sheet for Albert's disciplinary enforcer-knight armor, organized as clean callout panels on one sheet:
@@ -342,7 +199,7 @@ Identity invariants:
 All partial-figure panels depict the same character body from Image 1; skin may appear at neck/face edges only as needed. No full standalone face portrait panels.
 
 Costume invariants:
-Exact colors and materials: dark near-black polished plate (#1C1C1E), muted-gold trim and crest relief (#A8863E), dark woven sash (#2A2A2C) on the LEFT shoulder. Same construction as Image 1; no redesign; NO weapon anywhere (knight's sword belongs to sheet 09).
+Exact colors and materials: dark near-black polished plate (#1C1C1E), muted-gold trim and crest relief (#A8863E), dark woven sash (#2A2A2C) on the LEFT shoulder. Same construction as Image 1; no redesign; NO weapon anywhere (knight's sword belongs to sheet 06).
 
 Composition:
 Clean production-sheet layout on warm light-gray background, panels evenly arranged with generous spacing, flat even ambient lighting, no text labels, no annotation arrows with letters.
@@ -361,15 +218,18 @@ Constraints:
 
 ---
 
-## 08 — `08-albert-color-material-sheet.png`（STAGE 2 — 色票／材質表，已補固定 hex）
+---
+
+## 05 — `05-albert-color-material-sheet.png`（STAGE 2 — 色票／材質表，已補固定 hex）
+
 
 ```text
 Use case: identity-preserve
 Asset type: color palette and material reference sheet
 
 Input images:
-- Image 1: the approved 00-albert-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-albert-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a production color-and-material sheet for Albert: a medium-size neutral A-pose front figure (character and costume only, no weapon) on the left, and on the right a column of large clean color swatches with material rendering patches for each locked color:
@@ -406,15 +266,18 @@ Constraints:
 
 ---
 
-## 09 — `09-albert-prop-construction-sheet.png`（STAGE 2 — 道具表：騎士劍唯一出現位置）
+---
+
+## 06 — `06-albert-prop-construction-sheet.png`（STAGE 2 — 道具表：騎士劍唯一出現位置）
+
 
 ```text
 Use case: stylized-concept
 Asset type: prop and construction sheet (props only)
 
 Input images:
-- Image 1: the approved 00-albert-character-identity-anchor.png — use ONLY to match dark-metal/gold-trim material language and craftsmanship level; do not depict the character.
-- Images 2-4: shared style references only; do not copy their characters.
+- Image 1: the approved 01-albert-front-fullbody.png — use ONLY to match dark-metal/gold-trim material language and craftsmanship level; do not depict the character.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a props-only construction sheet for Albert's equipment:
@@ -441,15 +304,18 @@ Constraints:
 
 ---
 
-## 10 — `10-albert-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+---
+
+## 07 — `07-albert-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+
 
 ```text
 Use case: identity-preserve
 Asset type: body reference sheet for parametric human-body fitting (SMPL-X)
 
 Input images:
-- Image 1: the approved 00-albert-character-identity-anchor.png and sole identity authority (face, hair, skin tone, body proportions).
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-albert-front-fullbody.png and sole identity authority (face, hair, skin tone, body proportions).
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render Albert WITHOUT armor, sash or any outer garment - wearing only a plain tight dark-gray bodysuit (form-fitting underlayer, no folds, no accessories) - as TWO full-body views on one sheet: straight-on FRONT view and LEFT profile view. Both views in the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, true orthographic projection, no contrapposto, no action pose, no T-pose. The body silhouette must be fully visible and unobstructed: no armor, no sash, no loose clothing; short hair does not cover the neck or shoulder outline.
@@ -477,34 +343,32 @@ Constraints:
 
 ---
 
+---
+
 ## 逐張驗收清單（強制 — 任一項漂移即 REJECT，不得繼續下一張）
 
-生成順序：00 →（使用者核准）→ 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10。
+生成順序：01 →（使用者核准）→ 02 → 03 → 04 → 05 → 06 → 07。
 每張生成後逐項檢查；REJECT 的圖不覆蓋既有檔案，存入 `rejects/` 後重生成本張。
 
 **每張圖共同檢查項：**
 
-- [ ] 臉型與臉部身份與 00 號正本一致（06–08 的人像面板亦同）
+- [ ] 臉型與臉部身份與 01 號正本一致（03–05 的人像面板亦同）
 - [ ] 髮型、髮色（深色近黑向後梳 #161412）一致；瞳色冷灰 #9BA3AC
 - [ ] 身材比例：186cm／約 7.25 頭身／肩寬約 2.3 倍頭寬
 - [ ] 服裝結構與 Costume Lock 一致（板甲全扣合、綬帶固定於解剖學左肩）
-- [ ] 左右位置正確：綬帶／肩章固定左肩、佩劍固定右腰（09 出現時），無新增單側特徵、無鏡像錯亂
+- [ ] 左右位置正確：綬帶／肩章固定左肩、佩劍固定右腰（06 出現時），無新增單側特徵、無鏡像錯亂
 - [ ] 色票未漂移：#1C1C1E／#2A2A2C／#A8863E／#8C97A3／#33261C／#9BA3AC／#161412／#E8D2BC
-- [ ] 無任何武器道具出現（09 除外）；平光無投影陰影（06 攝影棚柔光除外）
+- [ ] 無任何武器道具出現（06 除外）；平光無投影陰影（03 攝影棚柔光除外）
 - [ ] 血緣相似：不適用（無血緣角色）
 
 **單張額外檢查項：**
 
 | 張 | 額外驗收 |
 | --- | --- |
-| 00 | 三視圖齊全（A-pose 正面全身＋正面頭肩＋45° 頭肩），缺一即 REJECT |
-| 01 | 正面、A-pose、正交 |
-| 02 | 相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；綬帶／肩章於近側可見 |
-| 03 | 相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；綬帶／肩章在遠側，不得鏡像至近側 |
-| 04 | 背面、A-pose、正交；綬帶後段連接可見 |
-| 05 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊 |
-| 06 | 恰好 8 格 4×2、順序正確、只有表情改變 |
-| 07 | 綬帶拆解面板＋無綬帶胸甲視圖必須存在 |
-| 08 | 色票方塊與鎖定 hex 完全一致 |
-| 09 | 騎士劍唯一出現於此；無角色、無臉、無人物剪影 |
-| 10 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖 |
+| 01 | 正面、A-pose、正交；**臉部須清晰可辨——本張為身份／服裝唯一正本** |
+| 02 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊；相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；綬帶／肩章於近側可見；相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；綬帶／肩章在遠側，不得鏡像至近側；背面、A-pose、正交；綬帶後段連接可見 |
+| 03 | 恰好 8 格 4×2、順序正確、只有表情改變 |
+| 04 | 綬帶拆解面板＋無綬帶胸甲視圖必須存在 |
+| 05 | 色票方塊與鎖定 hex 完全一致 |
+| 06 | 騎士劍唯一出現於此；無角色、無臉、無人物剪影 |
+| 07 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖 |

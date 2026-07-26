@@ -1,8 +1,8 @@
-# 阿達瑪 Adama — Image Generation Prompts（範本 v2 FULL package: 00–10）
+# 阿達瑪 Adama — Image Generation Prompts（新版七張制 01–07）
 
 > ## 身份辨識關鍵已定案（2026-07-23）
 > 阿達瑪曾有兩項會直接改變辨識度的重大分歧，已於 2026-07-23 由使用者核准定案：**髮型＝短銀灰髮 short silver-gray hair**（原 B 案「無髮結晶化頭部」未採用）；**固定武器＝無固定武器**，近戰倚賴再生利爪、遠程倚賴控龍（原 B 案「結晶刃」未採用）。詳見 `CHARACTER_SPEC.md` 對應專節。
-> 下方全部 00–10 號提示詞已依定案值撰寫，可依序生成。
+> 下方全部 01–07 號提示詞已依定案值撰寫，可依序生成。
 
 > **用途聲明（必讀）**
 > 這套圖片是 **3D 建模參考包（modeling reference pack）**，不是完成的 3D 模型。
@@ -10,102 +10,65 @@
 
 > **角色版本 ID：`ADAMA-V1-STOCHIA-BATTLEFIELD`**（斯托奇雅戰場版；其他時期／服裝需另立版本，不得混用；髮型與武器兩項已於 2026-07-23 核准定案，見上方）
 
-> **兩階段規則（強制）**：第一階段只生成 `00-adama-character-identity-anchor.png`（三視圖，缺一不可），生成後停止等待使用者核准。核准後 00 成為 01–10 的 Image 1 身份／服裝唯一正本。三張 style 圖永遠只控制畫風。
+> **兩階段規則（強制）**：第一階段只生成 `01-adama-front-fullbody.png`（正面全身單視圖，臉部須清晰可辨），生成後停止等待使用者核准。核准後 01 成為 02–07 的 Image 1 身份／服裝唯一正本。畫風輸入一律依 `../../STYLE_ANCHOR.md` 決定。
 > **檔案安全**：不得刪除或覆蓋現有 PNG；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
-> **核心辨識特徵（不可抹平）**：半透明結晶與裸露再生血肉是阿達瑪**自己的身體本身**，不是外部裝備——所有圖（含 10 號素體圖）都必須保留，絕不可畫成完整無瑕的一般人類皮膚。結晶分布正式鎖定於**右前臂與手、左肩與鎖骨、右側肋腹**。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側。禁止只寫「朝左／朝右」。
+> **既有 PNG 狀態**：本角色 01–07（非人形 01–06）全部為 `PENDING-GENERATION`。
+> **核心辨識特徵（不可抹平）**：半透明結晶與裸露再生血肉是阿達瑪**自己的身體本身**，不是外部裝備——所有圖（含 07 號身體參考圖）都必須保留，絕不可畫成完整無瑕的一般人類皮膚。結晶分布正式鎖定於**右前臂與手、左肩與鎖骨、右側肋腹**。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側。禁止只寫「朝左／朝右」。
 
-共用畫風參考（style only, do not copy their characters）：
-- `../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- `../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- `../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+畫風參考唯一正本：
+- `../../STYLE_ANCHOR.md`
+- 若本角色是 `PENDING-FIRST-REQUEST` 登記的首角色，01 才使用 STYLE_ANCHOR 的三張 bootstrap 圖。
+- 若畫風錨已為 `ACTIVE` 且本角色不是首角色，01 只引用已核准的首角色 01 作為畫風參考。
+- 02–07（非人形至 06）使用自己的 01 作為身份參考；非首角色另加首角色 01 作為畫風參考。
 
-生成順序與檔名（FULL package：00–10，人形角色不豁免任何一張；髮型／武器已定案，可依序生成）：
+生成順序與檔名（新版七張制 01–07）：
 
 | 編號 | 檔案 | 內容 |
 | --- | --- | --- |
-| 00 | `00-adama-character-identity-anchor.png` | 身份母圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，零道具（髮型：短銀灰髮；武器：無固定武器，已定案） |
-| 01 | `01-adama-front-fullbody.png` | 正面全身，A-pose，零道具 |
-| 02 | `02-adama-left-profile-fullbody.png` | 相機位於角色解剖學左側全身，A-pose，零道具（呈現左肩／鎖骨結晶） |
-| 03 | `03-adama-right-profile-fullbody.png` | 相機位於角色解剖學右側全身，A-pose，零道具（呈現右前臂／右肋腹結晶） |
-| 04 | `04-adama-back-fullbody.png` | 背面全身，A-pose，零道具 |
-| 05 | `05-adama-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
-| 06 | `06-adama-expression-sheet.png` | 八表情臉部表，4×2 網格（保留臉頸部結晶與裸露肌理） |
-| 07 | `07-adama-costume-detail-sheet.png` | 服裝細節表（殘破纏布拆解＋裸露結晶軀幹視圖） |
-| 08 | `08-adama-color-material-sheet.png` | 色票／材質表（已補固定 hex） |
-| 09 | `09-adama-prop-construction-sheet.png` | 特殊構造表：控龍銀色墜飾拆解＋半透明結晶／裸露再生肌理構造研究（已定案：無固定武器） |
-| 10 | `10-adama-body-reference-sheet.png` | 素體參考圖（SMPL-X／人體擬合用；貼身素體衣，無墜飾／無 accessories/jewelry；結晶與裸露肌理視為身體解剖的一部分，保留） |
+| 01 | `01-adama-front-fullbody.png` | 身份錨點：正面全身，A-pose，零道具（**STAGE 1，先生成並等核准**） |
+| 02 | `02-adama-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
+| 03 | `03-adama-expression-sheet.png` | 表情表 |
+| 04 | `04-adama-costume-detail-sheet.png` | 服裝細節 |
+| 05 | `05-adama-color-material-sheet.png` | 色彩與材質 |
+| 06 | `06-adama-prop-construction-sheet.png` | 道具結構 |
+| 07 | `07-adama-body-reference-sheet.png` | 身體參考（SMPL-X） |
 
 ---
 
-## 00 — `00-adama-character-identity-anchor.png`（STAGE 1 — 髮型／武器已於 2026-07-23 核准定案）
+## 01 — `01-adama-front-fullbody.png`（STAGE 1 — 只先生成這張，停止等核准）
+
 
 ```text
 Use case: stylized-concept
-Asset type: new-character identity anchor sheet (three views)
+Asset type: single front-view full-body identity anchor (STAGE 1, identity authority for all later sheets)
 
 Input images:
-- Image 1: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 2: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 3: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
+- Resolve all style inputs from `../../STYLE_ANCHOR.md`.
+- If this role is being registered as the first anchor while status is `PENDING-APPROVAL`, use the three bootstrap images listed there for this 01 only.
+- If status is `ACTIVE` and this role is not the anchor, use the approved anchor 01 as Image 2 for style only; do not copy its character identity.
+- Do not directly reuse bootstrap images after the anchor becomes `ACTIVE`.
+
 
 Character definition:
 Adama, a non-human regenerating enemy in a wiry-strong male humanoid form, baseline height ~188cm, lean-and-honed seven-heads proportions whose body shifts as it regenerates. CANON identity - this is his defining, non-negotiable feature: his healing wounds are visibly rendered as semi-translucent CRYSTAL growth (#CFE3EA) combined with exposed, raw regenerating flesh (#7A2020); his limbs and torso show translucent crystalline formations and exposed muscle texture LOCKED to the right forearm and hand, the left shoulder and collarbone, and along the right ribs and flank, reading as a body that is broken and growing back at once. This crystal-and-flesh feature is HIS OWN body (not external adornment) and must be present and clearly visible in every view - never replace it with intact ordinary human skin, and never negate it. CANON: he wears a SILVER pendant (#C7CBCE) on a chain at his neck, the artifact he uses to control the great dragon. Overall body base tone: silver-gray (#B9BEC2) with dark-red exposed flesh and healing wounds. Face: a lean, sharp humanoid face wearing a cold, oppressive smile, with narrow cold eyes of dark-red irises (#6B2020, locked default). CANON, user-approved 2026-07-23: short silver-gray hair (#C7CBCE). Costume version: Stochia battlefield state - a battered, half-bare humanoid frame covered only by limited torn cloth wraps (#4A3527) and broken armor fragments (#6E747C), deliberately leaving the regenerating crystal and exposed tissue visible; low or open collar to reveal the silver dragon-control pendant against the crystalline chest. CANON, user-approved 2026-07-23: he carries no handheld weapon; his threat is his own regenerating claws/knuckles in melee and his control of the great dragon through the pendant at range. Primary materials: his own semi-translucent crystalline body plus exposed regenerating flesh, and a silver neck pendant - NOT ordinary intact skin, not a clergy robe, not gold pauldrons. Character and costume only - no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields.
-
-Body metrics:
-Height read ~188cm. Approximately 7.0 heads tall, lean-and-honed wiry-strong build. Shoulder width approximately 2.3 head-widths. Left-right asymmetric feature (LOCKED): crystal/exposed-flesh concentration on the right forearm and hand, left shoulder and collarbone, and right ribs/flank - this distribution must stay on the same side across all sheets once rendered in the approved 00.
-
-Kinship invariants:
-None. Adama has no established blood relatives in the family registry; no kinship resemblance constraints apply.
-
-Primary request:
-Design one new and visually distinct character from the written specification. Create an identity-anchor sheet containing exactly three views of the same character - all three are mandatory, the sheet is invalid if any view is missing:
-1. one neutral straight-on full-body front view in a standard A-pose (standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread);
-2. one large straight-on head-and-shoulders portrait;
-3. one 45-degree three-quarter head-and-shoulders portrait (for video-generation reference).
-Suggested layout: full-body view on the left ~45% of the canvas, straight-on portrait top-right, three-quarter portrait bottom-right. All three views must have identical facial identity, hairstyle, colors, costume and the identical placement of the semi-translucent crystal growth and exposed regenerating flesh. The straight-on head-and-shoulders portrait is the facial identity authority for later generations. Character and costume only - no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields.
-
-Style:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, polished metal and organic material separation, restrained highlights, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, fully intact ordinary human skin only, smooth unbroken skin covering the whole body, no crystal, no exposed flesh, cute, chibi, wings, horns, tail, crown, gold pauldrons, clergy robe, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, white-gold pale-purple clergy robe, weapon, sword, greatsword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting
-
-Constraints:
-- Hairstyle (short silver-gray hair) and fixed-weapon (none) are user-approved CANON decisions as of 2026-07-23, per CHARACTER_SPEC.md; not placeholders.
-- The three input images control visual style only; do not reproduce or blend their characters.
-- Follow all CANON facts exactly (semi-translucent crystal growth plus exposed regenerating flesh at healing wounds, silver dragon-control pendant, silver-gray and dark-red palette, cold smile). Never negate the crystalline / exposed-flesh feature.
-- The crystalline body and exposed flesh are HIS OWN canon anatomy: the "Revanas ice-crystal horns / crystalline wings / tail" exclusions refer to those specific external structures (which he lacks) and must never be read as negating his own crystal body or exposed flesh.
-- Character and costume only: no weapons, no handheld items, no standalone props. All accessories (silver pendant construction, crystal/flesh anatomical studies) belong in detail on sheet 09.
-- Follow approved DESIGN-PROPOSAL items consistently.
-- Flat even ambient lighting, no cast shadows, no strong highlights, no rim light.
-- Neutral front-facing presentation, plain warm light-gray background, no scene or action pose.
-- No text, labels, logo, signature or watermark.
-- Exactly one character identity shown three times; no identity drift between the three views. Missing any of the three views = invalid sheet, REJECT and regenerate.
-```
-
----
-
-## 01 — `01-adama-front-fullbody.png`（STAGE 2 — 00 核准後；髮型／武器已定案）
-
-```text
-Use case: identity-preserve
-Asset type: single front-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-adama-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
 Render Adama as ONE full-body front view (0 degrees) in true orthographic projection, in the standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose.
 
 Identity invariants:
-Identical character from Image 1: same lean sharp face with cold smile, dark-red iris (#6B2020), silver-gray body base tone (#B9BEC2), and the SAME semi-translucent crystal growth (#CFE3EA) and exposed dark-red flesh (#7A2020) on the right forearm/hand, left shoulder/collarbone and right ribs/flank - never replaced by intact ordinary skin.
+Per the Character definition above (no prior identity image exists; this sheet establishes it): same lean sharp face with cold smile, dark-red iris (#6B2020), silver-gray body base tone (#B9BEC2), and the SAME semi-translucent crystal growth (#CFE3EA) and exposed dark-red flesh (#7A2020) on the right forearm/hand, left shoulder/collarbone and right ribs/flank - never replaced by intact ordinary skin.
+
+Kinship invariants:
+None. Adama has no established blood relatives in the family registry; no kinship resemblance constraints apply.
 
 Body metrics:
 Height read ~188cm. Approximately 7.0 heads tall. Shoulder width approximately 2.3 head-widths.
 
 Costume invariants:
-Identical battlefield state from Image 1: battered half-bare frame with limited torn cloth wraps (#4A3527) and broken armor fragments (#6E747C), low/open collar, and the SILVER dragon-control pendant (#C7CBCE) on a chain at the neck. NO weapon anywhere.
+Identical battlefield state per the Character definition above: battered half-bare frame with limited torn cloth wraps (#4A3527) and broken armor fragments (#6E747C), low/open collar, and the SILVER dragon-control pendant (#C7CBCE) on a chain at the neck. NO weapon anywhere.
+
+Identity authority:
+The face must be rendered clearly, sharply and identifiably at full detail — this single front view is the sole identity/costume authority for sheets 02 onward.
 
 Composition:
 Single figure centered, entire body from head to feet inside frame, flat even ambient lighting with no cast shadows, warm light-gray low-contrast background, no props, no grid lines, no labels.
@@ -117,7 +80,7 @@ Negative prompt:
 photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, fully intact ordinary human skin only, smooth unbroken skin, no crystal, no exposed flesh, cute, chibi, wings, horns, tail, crown, gold pauldrons, clergy robe, reference character face, copying any style-image character, weapon, sword, greatsword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, side view, profile, back view, three-quarter view
 
 Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- Preserve the exact identity per the Character definition above; the input images are style only.
 - The crystalline body and exposed flesh are canon anatomy and must stay visible.
 - Character and costume only; zero props; flat lighting; true orthographic front view.
 - No text or watermark. Do not invent missing canonical details.
@@ -125,137 +88,18 @@ Constraints:
 
 ---
 
-## 02 — `02-adama-left-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學左側；呈現左肩／鎖骨結晶）
-
-```text
-Use case: identity-preserve
-Asset type: single anatomical-left-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-adama-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Adama as ONE full-body view with the camera positioned at the character's anatomical LEFT side (the camera looks directly at the character's left flank; the character's left side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical left, away from the camera's direct line; no head turn back toward the lens. This is the primary view for reading the crystal growth and exposed flesh on the left shoulder and collarbone.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, silver-gray body base tone (#B9BEC2), and the crystal growth/exposed flesh on the left shoulder and collarbone clearly visible and readable from this side.
-
-Body metrics:
-Height read ~188cm. Approximately 7.0 heads tall. Shoulder width approximately 2.3 head-widths.
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-left camera position: torn cloth wraps (#4A3527) and broken armor fragments (#6E747C), the silver pendant chain visible at the neck, the crystal/flesh construction on the left shoulder/collarbone clearly readable. NO weapon anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished metal and organic material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, fully intact ordinary human skin only, no crystal, no exposed flesh, cute, chibi, wings, horns, tail, crystal moved to the wrong shoulder, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical right side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical LEFT side only (do not describe this as merely "facing left").
-- The left shoulder/collarbone crystal and exposed flesh must be clearly readable on this view.
-- No text or watermark. Do not invent missing canonical details.
-```
-
 ---
 
-## 03 — `03-adama-right-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學右側；呈現右前臂／右肋腹結晶）
+## 02 — `02-adama-four-view-master.png`（STAGE 2 — 四視圖總表：正面→左→右→背）
 
-```text
-Use case: identity-preserve
-Asset type: single anatomical-right-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-adama-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Adama as ONE full-body view with the camera positioned at the character's anatomical RIGHT side (the camera looks directly at the character's right flank; the character's right side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical right, away from the camera's direct line; no head turn back toward the lens. This is the primary view for reading the crystal growth and exposed flesh on the right forearm/hand and right ribs/flank.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, silver-gray body base tone (#B9BEC2), and the crystal growth/exposed flesh on the right forearm/hand and right ribs/flank clearly visible and readable from this side.
-
-Body metrics:
-Height read ~188cm. Approximately 7.0 heads tall. Shoulder width approximately 2.3 head-widths.
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-right camera position: torn cloth wraps (#4A3527) and broken armor fragments (#6E747C), the silver pendant chain visible at the neck, the crystal/flesh construction on the right forearm/hand and right ribs/flank clearly readable. NO weapon anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished metal and organic material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, fully intact ordinary human skin only, no crystal, no exposed flesh, cute, chibi, wings, horns, tail, crystal moved to the wrong side, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical left side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical RIGHT side only (do not describe this as merely "facing right").
-- The right forearm/hand and right ribs/flank crystal and exposed flesh must be clearly readable on this view.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 04 — `04-adama-back-fullbody.png`（STAGE 2 — 背面）
-
-```text
-Use case: identity-preserve
-Asset type: single back-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-adama-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Adama as ONE full-body BACK view (180 degrees) in true orthographic projection, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. Head faces exactly away from the viewer.
-
-Identity invariants:
-Identical character from Image 1: same silver-gray body base tone (#B9BEC2) seen from behind, same build and proportions, crystal/exposed-flesh growth on the left shoulder (visible from behind) and right ribs/flank (visible from behind at the side of the back).
-
-Body metrics:
-Height read ~188cm. Approximately 7.0 heads tall. Shoulder width approximately 2.3 head-widths.
-
-Costume invariants:
-Identical attire from Image 1 seen from behind: torn cloth wraps (#4A3527) and broken armor fragments (#6E747C) on the back, some scattered smaller crystal/healing-wound patches on the back consistent with Image 1. NO weapon anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished metal and organic material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, fully intact ordinary human skin only, no crystal, no exposed flesh, cute, chibi, wings, horns, tail, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, face visible, profile, three-quarter view
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- The crystalline body and exposed flesh are canon anatomy and must stay visible where established on the back.
-- Character and costume only; zero props; flat lighting; true orthographic back view.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 05 — `05-adama-four-view-master.png`（STAGE 2 — 00 核准後）
 
 ```text
 Use case: identity-preserve
 Asset type: four-view orthographic master turnaround sheet
 
 Input images:
-- Image 1: the approved 00-adama-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 01-adama-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render a single master turnaround sheet of Adama containing four full-body orthographic views of the SAME character in one row on one shared ground line, in this exact left-to-right order: FRONT (0 degrees), LEFT profile (camera at anatomical left, 90 degrees), RIGHT profile (camera at anatomical right, 90 degrees), BACK (180 degrees). All four views use the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, identical height, identical head-to-body ratio, identical arm angles and foot spacing in every view, true orthographic projection, no contrapposto, no action pose, no T-pose.
@@ -291,15 +135,18 @@ Constraints:
 
 ---
 
-## 06 — `06-adama-expression-sheet.png`（STAGE 2 — 00 核准後；八表情臉部表）
+---
+
+## 03 — `03-adama-expression-sheet.png`（STAGE 2 — 01 核准後；八表情臉部表）
+
 
 ```text
 Use case: identity-preserve
 Asset type: professional eight-expression anime character face sheet (also serves as expression keyframe reference for video generation)
 
 Input images:
-- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 00-adama-character-identity-anchor.png). Ignore its original pose, framing and composition.
-- Images 2-4: shared visual-style references only. Do not copy their character identities, faces, hairstyles, costumes or anatomy.
+- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 01-adama-front-fullbody.png). Ignore its original pose, framing and composition.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Recompose Adama into standardized head-and-shoulders studio portraits. Create exactly eight portraits arranged neatly in a 4-column by 2-row grid on a pure white seamless background. Every portrait must use a straight-on front view at 0 degrees. Crop from just below the collarbones to slightly above the top of the head. The head must occupy approximately 70-75 percent of each panel.
@@ -332,17 +179,18 @@ photorealistic, 3D render, western comic style, chibi, super-deformed, thick out
 
 ---
 
-## 07 — `07-adama-costume-detail-sheet.png`（STAGE 2 — 00 核准後；服裝細節表，含外層拆解）
+---
+
+## 04 — `04-adama-costume-detail-sheet.png`（STAGE 2 — 01 核准後；服裝細節表，含外層拆解）
+
 
 ```text
 Use case: identity-preserve
 Asset type: costume construction detail sheet with outer-layer separation
 
 Input images:
-- Image 1: the approved 00-adama-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 01-adama-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a professional costume construction sheet for Adama's battlefield state, organized as clean callout panels on one sheet:
@@ -378,17 +226,18 @@ Constraints:
 
 ---
 
-## 08 — `08-adama-color-material-sheet.png`（STAGE 2 — 00 核准後；色票／材質表，已補固定 hex）
+---
+
+## 05 — `05-adama-color-material-sheet.png`（STAGE 2 — 01 核准後；色票／材質表，已補固定 hex）
+
 
 ```text
 Use case: identity-preserve
 Asset type: color palette and material reference sheet
 
 Input images:
-- Image 1: the approved 00-adama-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 01-adama-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a production color-and-material sheet for Adama: a medium-size neutral A-pose front figure (character and costume only, no weapon) on the left, and on the right a column of large clean color swatches with material rendering patches for each locked color: silver-gray body skin #B9BEC2, dark-red exposed regenerating flesh #7A2020, semi-translucent crystal growth #CFE3EA, silver pendant metal #C7CBCE, torn cloth wrap fabric #4A3527, dark-red iris #6B2020. Each swatch pairs a flat color block with a small material patch showing how that surface reads (translucent crystal, raw flesh sheen, brushed silver metal, worn cloth).
@@ -420,17 +269,18 @@ Constraints:
 
 ---
 
-## 09 — `09-adama-prop-construction-sheet.png`（STAGE 2 — 00 核准後；特殊構造表：已定案無固定武器，放墜飾＋結晶構造研究）
+---
+
+## 06 — `06-adama-prop-construction-sheet.png`（STAGE 2 — 01 核准後；特殊構造表：已定案無固定武器，放墜飾＋結晶構造研究）
+
 
 ```text
 Use case: stylized-concept
 Asset type: accessory and anatomical construction sheet (props only, per user-approved decision: no fixed weapon)
 
 Input images:
-- Image 1: the approved 00-adama-character-identity-anchor.png - use ONLY to match the silver-metal/crystal-flesh material language and craftsmanship level; do not depict the full character.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 01-adama-front-fullbody.png - use ONLY to match the silver-metal/crystal-flesh material language and craftsmanship level; do not depict the full character.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 This sheet presents Adama's signature dragon-control pendant and his crystal/flesh anatomical construction as separate studies (user-approved decision: no handheld weapon):
@@ -466,17 +316,18 @@ Constraints:
 
 ---
 
-## 10 — `10-adama-body-reference-sheet.png`（STAGE 2 — 00 核准後；素體參考圖，SMPL-X／人體擬合用；貼身素體衣，無墜飾／無 accessories/jewelry；結晶與裸露肌理保留）
+---
+
+## 07 — `07-adama-body-reference-sheet.png`（STAGE 2 — 01 核准後；素體參考圖，SMPL-X／人體擬合用；貼身素體衣，無墜飾／無 accessories/jewelry；結晶與裸露肌理保留）
+
 
 ```text
 Use case: identity-preserve
 Asset type: body reference sheet for parametric human-body fitting (SMPL-X)
 
 Input images:
-- Image 1: the approved 00-adama-character-identity-anchor.png and sole identity authority (face, hair, skin tone, body proportions, and crystal/exposed-flesh placement).
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 01-adama-front-fullbody.png and sole identity authority (face, hair, skin tone, body proportions, and crystal/exposed-flesh placement).
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render Adama WITHOUT the torn cloth wraps, broken armor fragments, silver dragon-control pendant, or any other accessory or jewelry - wearing ONLY a tight plain bodysuit (tight plain bodysuit / underlayer, no ornamentation, no pattern, no seams treated as decoration) - as TWO full-body views on one sheet: straight-on FRONT view and LEFT profile view. Both views in the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, true orthographic projection, no contrapposto, no action pose, no T-pose. The body silhouette must be fully visible and unobstructed through the tight bodysuit: no cloth wraps, no armor fragments, no loose clothing, no cape, no pendant, no necklace, no jewelry, no accessories of any kind. IMPORTANT: the semi-translucent crystal growth (#CFE3EA) and exposed dark-red regenerating flesh (#7A2020) on the right forearm/hand, left shoulder/collarbone and right ribs/flank are HIS OWN anatomical structure, not an accessory or garment - the tight bodysuit does not cover these areas (or is itself torn/absent over them) so they remain fully visible in both views; do not smooth them into ordinary intact skin.
@@ -491,7 +342,7 @@ Body metrics:
 Height read ~188cm. Approximately 7.0 heads tall, lean-and-honed wiry-strong build. Identical height and proportions in both views; head-top and foot lines horizontally aligned across the two views.
 
 Costume invariants:
-Tight plain bodysuit only (no ornamentation), no cloth wraps, no armor fragments, no pendant, no necklace, no jewelry, no accessories of any kind. This sheet intentionally excludes the neck pendant that appears in 00-09; the pendant is costume-layer, not body anatomy, and does not belong on a body-reference sheet.
+Tight plain bodysuit only (no ornamentation), no cloth wraps, no armor fragments, no pendant, no necklace, no jewelry, no accessories of any kind. This sheet intentionally excludes the neck pendant that appears in 01-06; the pendant is costume-layer, not body anatomy, and does not belong on a body-reference sheet.
 
 Composition:
 Two figures side by side (front, then left profile), equal scale, shared ground line, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no accessories, no labels.
@@ -505,43 +356,41 @@ photorealistic, 3D render, western comic style, chibi, thick outlines, sketchy l
 Constraints:
 - Preserve the exact approved identity from Image 1; Images 2-4 are style only.
 - The crystal growth and exposed regenerating flesh are canon anatomy, not costume or accessory - they MUST remain visible.
-- No pendant, no jewelry, no accessories anywhere on this sheet - the neck pendant from 00-09 is costume, not body anatomy, and must be excluded here per the body-reference rule (all accessories stripped, only the tight bodysuit remains).
+- No pendant, no jewelry, no accessories anywhere on this sheet - the neck pendant from 01-06 is costume, not body anatomy, and must be excluded here per the body-reference rule (all accessories stripped, only the tight bodysuit remains).
 - Body silhouette fully visible through the tight plain bodysuit; zero cloth wraps/armor/cape/jewelry; flat lighting; true orthographic.
 - No text or watermark.
 ```
 
 ---
 
+---
+
 ## 逐張驗收清單（強制 — 任一項漂移即 REJECT，不得繼續下一張）
 
-生成順序：00 →（使用者核准）→ 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10。髮型／武器已於 2026-07-23 核准定案，不再是生成前置條件。
+生成順序：01 →（使用者核准）→ 02 → 03 → 04 → 05 → 06 → 07。髮型／武器已於 2026-07-23 核准定案，不再是生成前置條件。
 每張生成後逐項檢查；REJECT 的圖不覆蓋既有檔案，存入 `rejects/` 後重生成本張。
 
 **每張圖共同檢查項：**
 
 - [ ] 髮型與固定武器與已核准定案值一致（短銀灰髮；無固定武器）
-- [ ] 臉型與臉部身份與 00 號正本一致（06–08 的人像面板亦同）
+- [ ] 臉型與臉部身份與 01 號正本一致（03–05 的人像面板亦同）
 - [ ] 髮型、髮色與定案值一致；冷笑神情一致
 - [ ] 身材比例：約 188cm／7.0 頭身／肩寬約 2.3 倍頭寬，精瘦結實的異形人形
-- [ ] **半透明結晶與裸露再生血肉在右前臂與手、左肩與鎖骨、右側肋腹清楚可見，未被抹平為完整人皮**（此為核心辨識特徵，違反即 REJECT，含 10 號素體圖）
-- [ ] 服裝結構與 Costume Lock 一致（殘破纏布／甲片殘片層次與位置；**10 號除外**，10 號為貼身素體衣，不適用此項）
+- [ ] **半透明結晶與裸露再生血肉在右前臂與手、左肩與鎖骨、右側肋腹清楚可見，未被抹平為完整人皮**（此為核心辨識特徵，違反即 REJECT，含 07 號身體參考圖）
+- [ ] 服裝結構與 Costume Lock 一致（殘破纏布／甲片殘片層次與位置；**07 號除外**，07 號為貼身素體衣，不適用此項）
 - [ ] 左右不對稱特徵位置正確：結晶分布側須跨圖一致（右前臂／右肋腹、左肩／鎖骨），未鏡像翻轉
-- [ ] 色票未漂移：#B9BEC2／#7A2020／#CFE3EA／#C7CBCE／#4A3527／#6E747C／#6B2020（10 號不含 #C7CBCE 墜飾色，因無墜飾）
-- [ ] 與定案武器結果一致出現於任一圖（09 除外，且 09 依定案結果調整）；平光無投影陰影（06 攝影棚柔光除外）
+- [ ] 色票未漂移：#B9BEC2／#7A2020／#CFE3EA／#C7CBCE／#4A3527／#6E747C／#6B2020（07 號不含 #C7CBCE 墜飾色，因無墜飾）
+- [ ] 與定案武器結果一致出現於任一圖（06 除外，且 06 依定案結果調整）；平光無投影陰影（03 攝影棚柔光除外）
 - [ ] 血緣相似：不適用（本角色無血緣親屬，見 §13，跳過）
 
 **單張額外檢查項：**
 
 | 張 | 額外驗收 |
 | --- | --- |
-| 00 | 三視圖齊全（A-pose 正面全身＋正面頭肩＋45° 頭肩），缺一即 REJECT；髮型（短銀灰髮）／武器（無固定武器）與定案值一致 |
-| 01 | 正面、A-pose、正交 |
-| 02 | 相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；左肩／鎖骨結晶清楚可辨 |
-| 03 | 相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；右前臂／右肋腹結晶清楚可辨 |
-| 04 | 背面、A-pose、正交 |
-| 05 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊 |
-| 06 | 恰好 8 格 4×2、順序正確、只有表情改變；臉頸結晶與裸露肌理全部保留 |
-| 07 | 殘破纏布拆解面板＋裸露結晶軀幹視圖必須存在 |
-| 08 | 色票方塊與鎖定 hex 完全一致 |
-| 09 | 只有銀色墜飾與結晶／裸露肌理構造研究（局部肢體裁切，依定案武器結果調整）；無完整全身角色、無臉、無人物剪影 |
-| 10 | 素體無任何纏布／甲片外層、**無銀色墜飾、無任何 accessories/jewelry**，僅著貼身素體衣（tight plain bodysuit）；結晶與裸露肌理保留可見（屬身體解剖，非服裝）；正面＋左側兩視圖 |
+| 01 | 正面、A-pose、正交；**臉部須清晰可辨——本張為身份／服裝唯一正本** |
+| 02 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊；相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；左肩／鎖骨結晶清楚可辨；相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；右前臂／右肋腹結晶清楚可辨；背面、A-pose、正交 |
+| 03 | 恰好 8 格 4×2、順序正確、只有表情改變；臉頸結晶與裸露肌理全部保留 |
+| 04 | 殘破纏布拆解面板＋裸露結晶軀幹視圖必須存在 |
+| 05 | 色票方塊與鎖定 hex 完全一致 |
+| 06 | 只有銀色墜飾與結晶／裸露肌理構造研究（局部肢體裁切，依定案武器結果調整）；無完整全身角色、無臉、無人物剪影 |
+| 07 | 素體無任何纏布／甲片外層、**無銀色墜飾、無任何 accessories/jewelry**，僅著貼身素體衣（tight plain bodysuit）；結晶與裸露肌理保留可見（屬身體解剖，非服裝）；正面＋左側兩視圖 |

@@ -1,6 +1,6 @@
 # 加爾雷斯 Galreth
 
-> Tier C — 傳說與背景人物／赫克托軍資深軍官。本檔為文字版身份規格（範本 v2 FULL package），供 `00-galreth-character-identity-anchor.png` 與 01–10 全套參考圖生成／校對之依據。
+> Tier C — 傳說與背景人物／赫克托軍資深軍官。本檔為文字版身份規格（新版七張制 01–07），供 `01-galreth-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
 > 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
 > 角色文檔 heading：`### 加爾雷斯（Galreth）與軍官`。
 > **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
@@ -21,17 +21,15 @@
 - 身高（cm）：**182**（`CANON`）
 - 頭身比：**7.5**（`DESIGN-PROPOSAL`，既有規格鎖定值延續）
 - 肩寬（頭寬倍數）：**約 2.6 倍頭寬**（結實沉穩、久經訓練的軍官體格，較克里茲寬闊；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**指揮綬帶斜掛方向**——綬帶自角色解剖學**右肩**斜掛至**左腰**；制式配劍佩於**左腰**（呼應右手拔劍的實戰配置，綬帶與劍柄不重疊）。此側別為 `DESIGN-PROPOSAL` 提案（原稽核 §7 列為「綬帶斜掛側未定」的 `PENDING-USER-INPUT`，現由 Claude 提出具體側別供使用者核准或覆蓋；覆蓋時須同步更新本檔與 PROMPTS.md 全部視圖）
+- 左右不對稱特徵：**指揮綬帶斜掛方向**——綬帶自角色解剖學**右肩**斜掛至**左腰**；制式配劍佩於**左腰**（呼應右手拔劍的實戰配置，綬帶與劍柄不重疊）。此側別為 `DESIGN-PROPOSAL`，使用者可核准或覆蓋；覆蓋時須同步更新本檔與 PROMPTS.md 全部視圖
 
 ## 血緣關係鎖定 Kinship Lock
 - **無**——本角色無血緣親屬關係
 
 ## 參考圖片
 - 初始角色外觀圖片：無
-- 核准後的角色身份正本：`00-galreth-character-identity-anchor.png`（`PENDING-GENERATION`）
-- 共用畫風參考 1：`../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- 共用畫風參考 2：`../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- 共用畫風參考 3：`../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+- 核准後的角色身份正本：`01-galreth-front-fullbody.png`（`PENDING-GENERATION`）
+- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
 
 ## 設計來源標記
 - `CANON`：角色文檔明確記載的外觀事實
@@ -54,7 +52,7 @@
 - 肩部：制式軍官肩甲，較步兵略有階級識別（`DESIGN-PROPOSAL`）
 - 胸前：制式軍官胸甲，隱約可見赫克托軍徽（無寶石）（`DESIGN-PROPOSAL`）
 - 袖口／手部：皮革護臂或軍官手套（`DESIGN-PROPOSAL`）
-- 腰部：制式腰帶，配劍側掛於左腰（空鞘扣環於 00–05／10，實劍僅見於 09）（`DESIGN-PROPOSAL`）
+- 腰部：制式腰帶，配劍側掛於左腰（空鞘扣環於 01–02／07，實劍僅見於 06）（`DESIGN-PROPOSAL`）
 - 下襬／披風：**右肩斜掛至左腰的指揮用綬帶**為核心識別（`CANON` 綬帶存在；側別 `DESIGN-PROPOSAL`）；可有短披或無披風（`DESIGN-PROPOSAL`）
 - 腿部／鞋靴：制式護脛、軍官長靴（`DESIGN-PROPOSAL`）
 - 背面結構：制式軍官甲背片，綬帶自右肩斜過肩背至左腰（`DESIGN-PROPOSAL`）
@@ -69,8 +67,8 @@
 - 特殊材質：無
 - 膚色／髮色／瞳色（hex）：膚 **#B98A63**（偏深、風霜歷練）／髮 **#5A5A5E**（深灰摻白，鬢角略斑白）／瞳 **#4A4A50**（深灰、沉著銳利）（`DESIGN-PROPOSAL`）
 
-## 道具與特殊構造（僅出現在 09 道具表）
-- 武器：**制式軍官配劍**——佩於左腰，霧面鋼劍身＋暗金劍柄劍格＋深棕皮革握把（`DESIGN-PROPOSAL`）。**00–05 與 10 一律不出現**，僅腰帶留空鞘扣環
+## 道具與特殊構造（僅 06 出現（道具結構表））
+- 武器：**制式軍官配劍**——佩於左腰，霧面鋼劍身＋暗金劍柄劍格＋深棕皮革握把（`DESIGN-PROPOSAL`）。**01–02 與 07 一律不出現**，僅腰帶留空鞘扣環
 - 飾品：指揮用綬帶＋階級章（`CANON` 綬帶；章 `DESIGN-PROPOSAL`）
 - 隨身道具：赫克托軍徽（`DESIGN-PROPOSAL`）
 - 翅膀／角／尾巴／其他特殊構造：無（人類軍官）
@@ -101,7 +99,7 @@
   - 髮色／斑白程度、鬍鬚、眼睛顏色已鎖定具體值（見「外貌鎖定」與「色票與材質」）。
   - 指揮綬帶顏色鎖定暗金織布 `#8F7038`；軍官甲主色鎖定霧面鋼灰 `#6B6B70`。
   - 固定色票 hex 值已補全（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-- **`PENDING-USER-INPUT`（稽核 §7 指定，已提出 DESIGN-PROPOSAL 供核准或覆蓋）**：
+- **`PENDING-USER-INPUT`（已提出 DESIGN-PROPOSAL 供核准或覆蓋）**：
   - **綬帶斜掛側**：本檔提案右肩斜掛至左腰、配劍佩於左腰；若使用者要求相反側別，需同步覆蓋 CHARACTER_SPEC.md 與 PROMPTS.md 全部視圖，不得只改單張。
-- **`PENDING-USER-INPUT`（次要，不阻擋 00 生成）**：
-  - 制式軍官甲的確切樣式與軍徽紋樣細節（文檔未給圖形，目前依既有 09 道具描述為簡化壓印徽記）。
+- **`PENDING-USER-INPUT`（次要，不阻擋 01 生成）**：
+  - 制式軍官甲的確切樣式與軍徽紋樣細節（文檔未給圖形，目前依既有 06 道具描述為簡化壓印徽記）。

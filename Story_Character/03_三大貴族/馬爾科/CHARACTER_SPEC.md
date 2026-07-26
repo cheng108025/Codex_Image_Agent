@@ -1,6 +1,6 @@
 # 馬爾科（Marco）— 獒犬家、軍權
 
-> Tier A — 《赫克托》三大貴族之一（軍權線）。本檔為文字版身份規格（範本 v2 FULL package），供 `00-marco-character-identity-anchor.png` 與 01–10 全套參考圖生成／校對之依據。
+> Tier A — 《赫克托》三大貴族之一（軍權線）。本檔為文字版身份規格（新版七張制 01–07），供 `01-marco-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
 > 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
 > **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
 > 服裝版本鎖定：**山谷／宮廷會議重甲版** — 獒犬家紋厚重鐵甲／禮儀重甲，會議桌旁亦不卸甲。此為「以武力當發言權」形象最一致的版本。
@@ -31,10 +31,8 @@
 
 ## 參考圖片
 - 初始角色外觀圖片：無
-- 核准後的角色身份正本：`00-marco-character-identity-anchor.png`（`PENDING-GENERATION`）
-- 共用畫風參考 1：`../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- 共用畫風參考 2：`../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- 共用畫風參考 3：`../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+- 核准後的角色身份正本：`01-marco-front-fullbody.png`（`PENDING-GENERATION`）
+- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
 
 ## 設計來源標記
 - `CANON`：角色文檔明確記載的外觀事實
@@ -57,7 +55,7 @@
 - 肩部：巨大鐵製肩甲（pauldron），鑄有獒犬頭紋樣；披風主扣固定於左肩（`DESIGN-PROPOSAL`）
 - 胸前：整片鐵製胸甲，浮雕／蝕刻**獒犬家紋**，置中（`CANON` 家紋存在；樣式為 `DESIGN-PROPOSAL`）
 - 袖口／手部：板甲護臂與鐵手套（gauntlet）（`DESIGN-PROPOSAL`）
-- 腰部：鐵扣寬腰帶，可掛闊劍／戰劍（僅 09）（`DESIGN-PROPOSAL`）
+- 腰部：鐵扣寬腰帶，可掛闊劍／戰劍（僅 06）（`DESIGN-PROPOSAL`）
 - 下襬／披風：及膝戰裙（tasset／faulds）＋厚重家紋披風，左肩扣（`DESIGN-PROPOSAL`）
 - 腿部／鞋靴：全套板甲護腿與鐵靴，踏地有聲（`CANON` 鐵靴威嚇；細節為 `DESIGN-PROPOSAL`）
 - 背面結構：披風覆背、背甲完整，肩甲與腰帶扣件可見，左肩扣延伸至背面披風固定點（`DESIGN-PROPOSAL`）
@@ -72,8 +70,8 @@
 - 特殊材質：板甲的金屬磨損與戰痕質感（`DESIGN-PROPOSAL`）
 - 膚色／髮色／瞳色（hex）：膚 **#8C6239**（深古銅）／髮與短鬚（鐵灰摻黑）**#55524C**／瞳 **#7C8088**（鋼灰）（`DESIGN-PROPOSAL` 鎖定）
 
-## 道具與特殊構造（僅出現在 09 道具表）
-- 武器：**闊劍 broadsword**，佩於腰間（`DESIGN-PROPOSAL`；文檔未指名武器，佩劍為武將合理補完）。**00–05 與 10 一律不出現**
+## 道具與特殊構造（僅 06 出現（道具結構表））
+- 武器：**闊劍 broadsword**，佩於腰間（`DESIGN-PROPOSAL`；文檔未指名武器，佩劍為武將合理補完）。**01–02 與 07 一律不出現**
 - 飾品：胸甲上的獒犬家紋為主要識別，置中（`CANON`）
 - 隨身道具：無特定隨身小物；以重甲本身為道具（`DESIGN-PROPOSAL`）
 - 翅膀／角／尾巴／其他特殊構造：無（人類角色）
@@ -96,21 +94,21 @@
 - 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
 
 ## 鎖定錨定預設值（可覆蓋）
-> 為讓 00 號圖完全確定，以下原 `PENDING-USER-INPUT` 已鎖成具體預設值，寫入 00 的 Character definition。使用者可事後覆蓋。
+> 為讓 01 號圖完全確定，以下原 `PENDING-USER-INPUT` 已鎖成具體預設值，寫入 01 的 Character definition。使用者可事後覆蓋。
 
 - **眼睛顏色**：鋼灰色 steel-gray #7C8088 — 呼應冷鐵重甲主色。
 - **獒犬（mastiff）家紋紋樣**：正面朝前、獠牙外露的獒犬頭（front-facing snarling mastiff-hound head），暗金 #8A7239 浮雕，置中。
 - **披風底色**：墨黑 ink-black #16151A。
 - **披風主扣側**：左肩（`DESIGN-PROPOSAL` 提案，可覆蓋——見「Kinship／不對稱鎖定」）。
-- **佩帶武器**：闊劍（broadsword），佩於腰間（僅 09）。
+- **佩帶武器**：闊劍（broadsword），佩於腰間（僅 06）。
 - **體型覆蓋**：共用畫風含 `slender`，本角色以 `massive heavyweight build` 覆蓋，並在負向補 `slender build / thin frame / slim youth`。
 
 ## 正典衝突與待確認事項
 - **已決定**：
   - 服裝版本採「會議重甲版」，緊扣「即使在會議桌旁也不卸甲」的正典描述。
   - 體格採 192cm 魁梧壯碩（`CANON`），畫風雖為日系纖細設定稿基準，仍以重量級武將體格為身份主軸。
-  - **披風主扣側（稽核 §7 未定項）已提案鎖定為左肩**（`DESIGN-PROPOSAL`，可覆蓋並重生對應圖片），不再留白。
+- **披風主扣側已提案鎖定為左肩**（`DESIGN-PROPOSAL`，可覆蓋並重生對應圖片），不再留白。
   - 固定色票 hex 值已鎖定（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
 - **`PENDING-USER-INPUT`**（僅存不影響核心辨識度之項）：
-  - 佩帶武器的具體形制（闊劍／戰劍／戰錘）——目前暫定闊劍，僅出現於 09。
+  - 佩帶武器的具體形制（闊劍／戰劍／戰錘）——目前暫定闊劍，僅出現於 06。
   - 腰帶扣寶石顏色（若採用）。

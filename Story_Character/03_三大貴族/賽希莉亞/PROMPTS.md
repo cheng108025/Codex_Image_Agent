@@ -1,4 +1,4 @@
-# 賽希莉亞 Cecilia — Image Generation Prompts（範本 v2 FULL package: 00–10）
+# 賽希莉亞 Cecilia — Image Generation Prompts（新版七張制 01–07）
 
 > **用途聲明（必讀）**
 > 這套圖片是 **3D 建模參考包（modeling reference pack）**，不是完成的 3D 模型。
@@ -6,97 +6,56 @@
 
 > **角色版本 ID：`CECILIA-V1-STUDY-DOORWAY`**（安德烈書房秘密行動場景版；其他時期／服裝需另立版本，不得混用）
 
-> **兩階段規則（強制）**：第一階段只生成 `00-cecilia-character-identity-anchor.png`（三視圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，缺一即 REJECT 重生成），生成後停止等待使用者核准。核准後 00 成為 01–10 的 Image 1 身份／服裝唯一正本。三張 style 圖永遠只控制畫風，不得被當成本角色的身份參考。
-> **家族生成順序（§13）**：賽希莉亞屬於家族 `ANDRE`，錨點為安德烈。**安德烈的 00 必須先核准，本角色的 00 才能進入生成階段。**
-> **重要姿態規則**：CHARACTER_SPEC.md 記載的「雙手於身前交握」姿態**不得出現於任何 A-pose 全身圖**（00、01–05、07、10）。所有全身圖一律使用標準 A-pose（雙臂自然垂放於身側、手掌張開），她的不安與遲疑**只能透過臉部神情**（眉眼低垂、眼神猶疑）傳達，絕不可用交握雙手取代 A-pose。
+> **兩階段規則（強制）**：第一階段只生成 `01-cecilia-front-fullbody.png`（三視圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，缺一即 REJECT 重生成），生成後停止等待使用者核准。核准後 01 成為 02–07 的 Image 1 身份／服裝唯一正本。三張 style 圖永遠只控制畫風，不得被當成本角色的身份參考。
+> **家族生成順序（§13）**：賽希莉亞屬於家族 `ANDRE`，錨點為安德烈。**安德烈的 01 必須先核准，本角色的 01 才能進入生成階段。**
+> **重要姿態規則**：CHARACTER_SPEC.md 記載的「雙手於身前交握」姿態**不得出現於任何 A-pose 全身圖**（01、02、07）。所有全身圖一律使用標準 A-pose（雙臂自然垂放於身側、手掌張開），她的不安與遲疑**只能透過臉部神情**（眉眼低垂、眼神猶疑）傳達，絕不可用交握雙手取代 A-pose。
 > **血緣承襲規則**：文檔對她與父親安德烈、手足菲利浦的臉部承襲特徵無明載。**所有提示詞的 Kinship invariants 只寫已鎖定的刻意區分項，並附註「inherited facial features PENDING-USER-INPUT, do not render unapproved family resemblance」**，不得自行決定或描述具體承襲骨架。
 > **檔案安全**：不得刪除或覆蓋現有 PNG；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
-> 本包為 FULL v2 完整 11 條（00–10），每條提示詞獨立完整，勿合併。
+> **既有 PNG 狀態**：本角色 01–07（非人形 01–06）全部為 `PENDING-GENERATION`。
+> 本包為新版七張制完整 7 條（01–07），每條提示詞獨立完整，勿合併。
 
-共用畫風參考（style only, do not copy their characters）：
-- `../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- `../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- `../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+畫風參考唯一正本：
+- `../../STYLE_ANCHOR.md`
+- 若本角色是 `PENDING-FIRST-REQUEST` 登記的首角色，01 才使用 STYLE_ANCHOR 的三張 bootstrap 圖。
+- 若畫風錨已為 `ACTIVE` 且本角色不是首角色，01 只引用已核准的首角色 01 作為畫風參考。
+- 02–07（非人形至 06）使用自己的 01 作為身份參考；非首角色另加首角色 01 作為畫風參考。
 
-生成順序與檔名（FULL package：00–10，人形角色不豁免任何一張）：
+生成順序與檔名（新版七張制 01–07）：
 
 | 編號 | 檔案 | 內容 |
 | --- | --- | --- |
-| 00 | `00-cecilia-character-identity-anchor.png` | 身份母圖：A-pose 正面全身（雙臂垂放，非交握）＋正面頭肩＋45° 三分之四頭肩，零道具（含 Kinship invariants） |
-| 01 | `01-cecilia-front-fullbody.png` | 正面全身，A-pose（非交握），零道具 |
-| 02 | `02-cecilia-left-profile-fullbody.png` | 相機位於角色解剖學左側全身，A-pose（非交握），零道具 |
-| 03 | `03-cecilia-right-profile-fullbody.png` | 相機位於角色解剖學右側全身，A-pose（非交握），零道具 |
-| 04 | `04-cecilia-back-fullbody.png` | 背面全身，A-pose（非交握），零道具 |
-| 05 | `05-cecilia-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具，A-pose 非交握 |
-| 06 | `06-cecilia-expression-sheet.png` | 八表情臉部表，4×2 網格，含 Kinship invariants；不安遲疑由臉部傳達 |
-| 07 | `07-cecilia-costume-detail-sheet.png` | 服裝細節表（外層拆解面板＋無外層軀幹視圖，零武器） |
-| 08 | `08-cecilia-color-material-sheet.png` | 色票／材質表（已補固定 hex） |
-| 09 | `09-cecilia-prop-construction-sheet.png` | 道具表：胸飾＋梧桐家紋徽記（無武器） |
-| 10 | `10-cecilia-body-reference-sheet.png` | 素體參考圖（SMPL-X／人體擬合用；栗色長髮紮起收於身後） |
+| 01 | `01-cecilia-front-fullbody.png` | 身份錨點：正面全身，A-pose，零道具（**STAGE 1，先生成並等核准**） |
+| 02 | `02-cecilia-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
+| 03 | `03-cecilia-expression-sheet.png` | 表情表 |
+| 04 | `04-cecilia-costume-detail-sheet.png` | 服裝細節 |
+| 05 | `05-cecilia-color-material-sheet.png` | 色彩與材質 |
+| 06 | `06-cecilia-prop-construction-sheet.png` | 道具結構 |
+| 07 | `07-cecilia-body-reference-sheet.png` | 身體參考（SMPL-X） |
 
 ---
 
-## 00 — `00-cecilia-character-identity-anchor.png`（STAGE 1 — 只先生成這張，停止等核准）
+## 01 — `01-cecilia-front-fullbody.png`（STAGE 1 — 只先生成這張，停止等核准）
+
 
 ```text
 Use case: stylized-concept
-Asset type: new-character identity anchor sheet (three views)
+Asset type: single front-view full-body identity anchor (STAGE 1, identity authority for all later sheets)
 
 Input images:
-- Image 1: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 2: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 3: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
+- Resolve all style inputs from `../../STYLE_ANCHOR.md`.
+- If this role is being registered as the first anchor while status is `PENDING-APPROVAL`, use the three bootstrap images listed there for this 01 only.
+- If status is `ACTIVE` and this role is not the anchor, use the approved anchor 01 as Image 2 for style only; do not copy its character identity.
+- Do not directly reuse bootstrap images after the anchor becomes `ACTIVE`.
+
 
 Character definition:
-Cecilia, a young noble maiden (apparent age 16-20), the daughter of the noble statesman Andre, height read ~163cm, slender and graceful proportions. CANON facial identity: a demure, delicate young noble face; her expression is persistently uneasy and hesitant, with lowered brows and doubtful eyes that voice the audience's sense that "this plan may be wrong." Fair, soft-toned skin (#F3E0CC). CANON hair: long chestnut hair (#6B3A21) falling smoothly. Locked dark-brown eyes to match (#3B2A1E, LOCKED default). Real materials: fine-woven noble dress cloth, layered fabric, a cinched cloth/leather waist sash, soft noble shoes, and small dark-silver embroidery and a small brooch only (#8C8C94), no gemstone finery. Costume: a dark noble long dress in the family's dark palette (#1E2A3F) matched to her brother Philip's attire; a demure high or squared collar with fine embroidery; a subtle Paulownia-house crest motif at the chest, centered; a cinched waist; long sleeves; a floor-length or ankle-length dark skirt draping demurely. She carries NO handheld props and wears NO weapon of any kind - the small brooch belongs exclusively to the prop construction sheet (09). Her uneasy, hesitant demeanor is conveyed through facial expression only (lowered brows, doubtful eyes) - her arms and hands must follow the standard neutral A-pose, never clasped together in front of her body.
-
-Body metrics:
-Height approximately 163 cm (DESIGN-PROPOSAL). Approximately 7.0 heads tall (DESIGN-PROPOSAL proportion). Shoulder width approximately 1.75 head-widths (slender graceful young-noble-maiden build, DESIGN-PROPOSAL, overridable). No left-right asymmetric body feature beyond the small chest brooch, which must stay centered/consistent per the Forbidden Features lock.
-
-Kinship invariants:
-Cecilia is the daughter of Andre (family anchor, house ANDRE). Her inherited facial features are PENDING-USER-INPUT - do not render unapproved family resemblance. The only locked, deliberate distinguishing features are: her long chestnut hair (#6B3A21, neither her father Andre's gray nor her brother Philip's dark-brown-near-black), and her demure, delicate facial bearing as distinct from Philip's handsome, angular one. She must not appear elderly, gray-haired or wrinkled like her father, and must not appear masculine or angular like her brother.
-
-Primary request:
-Design one new and visually distinct character from the written specification. Create an identity-anchor sheet containing exactly THREE views of the same character - all three are mandatory, the sheet is invalid if any view is missing:
-1. one neutral straight-on full-body front view in a standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose, hands NOT clasped together - her uneasy demeanor shows only in her facial expression;
-2. one large straight-on head-and-shoulders portrait (lowered brows, doubtful eyes conveying unease);
-3. one 45-degree three-quarter head-and-shoulders portrait (for video-generation reference).
-Suggested layout: full-body view on the left ~45% of the canvas, straight-on portrait top-right, three-quarter portrait bottom-right. All three views must have identical facial identity, hairstyle, colors and costume. The straight-on head-and-shoulders portrait is the facial identity authority for later generations. Character and costume only - no weapons, no handheld items, no standalone props.
-
-Style:
-refined Japanese anime fantasy character design, professional production character sheet, elegant slender proportions, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, precise embroidery, layered fabric, fabric-focused material separation with minimal dark-silver fittings, restrained luminous highlights, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, male, man, boy, elderly face, gray hair, wrinkles, angular masculine jaw, armor, plate armor, weapon, sword, gemstone finery, ornate jewels, shining gemstones, gold pauldrons, heavy metal armor, hands clasped together, hands clasped in front of body, folded hands, reference character face, copying any style-image character, blending the three reference characters, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting
-
-Constraints:
-- The three input images control visual style only; do not reproduce or blend their characters.
-- Follow all CANON facts exactly (young female noble maiden, uneasy hesitant expression conveyed via face only, long chestnut hair, dark noble long dress matched to Philip).
-- Do not invent an unapproved family-resemblance facial structure; inherited facial features stay PENDING-USER-INPUT, do not render unapproved family resemblance.
-- Character and costume only: no weapons, no handheld items, no standalone props.
-- Hands must NOT be clasped together in the full-body view; arms follow the standard neutral A-pose. Unease is conveyed only through facial expression.
-- Flat even ambient lighting, no cast shadows, no strong highlights, no rim light.
-- Exactly one character identity shown three times; no identity drift between the three views. Missing any of the three views = invalid sheet, REJECT and regenerate.
-- Plain warm light-gray background. No text, labels, logo, signature or watermark.
-```
-
----
-
-## 01 — `01-cecilia-front-fullbody.png`（STAGE 2 — 00 核准後）
-
-```text
-Use case: identity-preserve
-Asset type: single front-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-cecilia-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+Cecilia, a young noble maiden (apparent age 16-20), the daughter of the noble statesman Andre, height read ~163cm, slender and graceful proportions. CANON facial identity: a demure, delicate young noble face; her expression is persistently uneasy and hesitant, with lowered brows and doubtful eyes that voice the audience's sense that "this plan may be wrong." Fair, soft-toned skin (#F3E0CC). CANON hair: long chestnut hair (#6B3A21) falling smoothly. Locked dark-brown eyes to match (#3B2A1E, LOCKED default). Real materials: fine-woven noble dress cloth, layered fabric, a cinched cloth/leather waist sash, soft noble shoes, and small dark-silver embroidery and a small brooch only (#8C8C94), no gemstone finery. Costume: a dark noble long dress in the family's dark palette (#1E2A3F) matched to her brother Philip's attire; a demure high or squared collar with fine embroidery; a subtle Paulownia-house crest motif at the chest, centered; a cinched waist; long sleeves; a floor-length or ankle-length dark skirt draping demurely. She carries NO handheld props and wears NO weapon of any kind - the small brooch belongs exclusively to the prop construction sheet (06). Her uneasy, hesitant demeanor is conveyed through facial expression only (lowered brows, doubtful eyes) - her arms and hands must follow the standard neutral A-pose, never clasped together in front of her body.
 
 Primary request:
 Render Cecilia as ONE full-body front view (0 degrees) in true orthographic projection, in the standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, hands NOT clasped together, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. Unease is conveyed only through facial expression (lowered brows, doubtful eyes).
 
 Identity invariants:
-Identical character from Image 1: same demure delicate face, long chestnut hair falling smoothly (#6B3A21), dark-brown eyes (#3B2A1E), fair soft-toned skin (#F3E0CC).
+Per the Character definition above (no prior identity image exists; this sheet establishes it): same demure delicate face, long chestnut hair falling smoothly (#6B3A21), dark-brown eyes (#3B2A1E), fair soft-toned skin (#F3E0CC).
 
 Body metrics:
 Height approximately 163 cm. Approximately 7.0 heads tall. Shoulder width approximately 1.75 head-widths.
@@ -105,7 +64,10 @@ Kinship invariants:
 Inherited facial features PENDING-USER-INPUT, do not render unapproved family resemblance. Locked distinguishing features only: long chestnut hair (#6B3A21, not gray like Andre, not dark-brown-near-black like Philip), demure delicate bearing distinct from Philip's angular one.
 
 Costume invariants:
-Identical dark noble long dress from Image 1: deep-blue dark noble palette (#1E2A3F) matched to Philip, demure high/squared collar, subtle Paulownia-house crest at the chest, cinched waist, long sleeves, floor-length or ankle-length dark skirt. NO weapon, NO handheld prop anywhere; the small brooch is reserved for prop sheet 09.
+Identical dark noble long dress per the Character definition above: deep-blue dark noble palette (#1E2A3F) matched to Philip, demure high/squared collar, subtle Paulownia-house crest at the chest, cinched waist, long sleeves, floor-length or ankle-length dark skirt. NO weapon, NO handheld prop anywhere; the small brooch is reserved for prop sheet 06.
+
+Identity authority:
+The face must be rendered clearly, sharply and identifiably at full detail — this single front view is the sole identity/costume authority for sheets 02 onward.
 
 Composition:
 Single figure centered, entire body from hair to shoe soles inside frame, flat even ambient lighting with no cast shadows, warm light-gray low-contrast background, no props, no grid lines, no labels.
@@ -117,7 +79,7 @@ Negative prompt:
 photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, male, man, boy, elderly face, gray hair, angular masculine jaw, armor, weapon, sword, gemstone finery, gold pauldrons, hands clasped together, hands clasped in front of body, folded hands, standalone prop, handheld item, reference character face, copying any style-image character, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, side view, profile, back view, three-quarter view
 
 Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- Preserve the exact identity per the Character definition above; the input images are style only.
 - Character and costume only; zero props; flat lighting; true orthographic front view.
 - Hands must NOT be clasped together; standard neutral A-pose only.
 - No text or watermark. Do not invent missing canonical details, including facial resemblance.
@@ -125,146 +87,18 @@ Constraints:
 
 ---
 
-## 02 — `02-cecilia-left-profile-fullbody.png`（STAGE 2 — 00 核准後；相機位於角色解剖學左側）
-
-```text
-Use case: identity-preserve
-Asset type: single anatomical-left-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-cecilia-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Cecilia as ONE full-body view with the camera positioned at the character's anatomical LEFT side (the camera looks directly at the character's left flank; the character's left side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, hands NOT clasped together, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical left, away from the camera's direct line; no head turn back toward the lens.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, long chestnut hair falling smoothly (#6B3A21), fair soft-toned skin (#F3E0CC).
-
-Body metrics:
-Height approximately 163 cm. Approximately 7.0 heads tall. Shoulder width approximately 1.75 head-widths.
-
-Kinship invariants:
-Inherited facial features PENDING-USER-INPUT, do not render unapproved family resemblance. Locked distinguishing features only: long chestnut hair (#6B3A21).
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-left camera position: deep-blue dress silhouette (#1E2A3F), chest crest visible at the edge of this profile, long sleeve in profile, cinched waist, floor-length or ankle-length hem, soft noble shoe. NO weapon, NO handheld prop anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, fabric-focused material separation with minimal dark-silver fittings, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, male, man, boy, elderly face, gray hair, armor, weapon, sword, gemstone finery, gold pauldrons, hands clasped together, folded hands, reference character face, copying any style-image character, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical right side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical LEFT side only (do not describe this as merely "facing left").
-- Hands must NOT be clasped together.
-- No text or watermark. Do not invent missing canonical details, including facial resemblance.
-```
-
 ---
 
-## 03 — `03-cecilia-right-profile-fullbody.png`（STAGE 2 — 00 核准後；相機位於角色解剖學右側）
+## 02 — `02-cecilia-four-view-master.png`（STAGE 2 — 四視圖總表：正面→左→右→背）
 
-```text
-Use case: identity-preserve
-Asset type: single anatomical-right-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-cecilia-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Cecilia as ONE full-body view with the camera positioned at the character's anatomical RIGHT side (the camera looks directly at the character's right flank; the character's right side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, hands NOT clasped together, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical right, away from the camera's direct line; no head turn back toward the lens. The design is fully symmetric, so this anatomical-right view mirrors the anatomical-left view (sheet 02) exactly.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, long chestnut hair falling smoothly (#6B3A21), fair soft-toned skin (#F3E0CC).
-
-Body metrics:
-Height approximately 163 cm. Approximately 7.0 heads tall. Shoulder width approximately 1.75 head-widths.
-
-Kinship invariants:
-Inherited facial features PENDING-USER-INPUT, do not render unapproved family resemblance. Locked distinguishing features only: long chestnut hair (#6B3A21).
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-right camera position: deep-blue dress silhouette (#1E2A3F), chest crest visible at the edge of this profile, long sleeve in profile, cinched waist, floor-length or ankle-length hem, soft noble shoe. NO weapon, NO handheld prop anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, fabric-focused material separation with minimal dark-silver fittings, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, male, man, boy, elderly face, gray hair, armor, weapon, sword, gemstone finery, gold pauldrons, hands clasped together, folded hands, reference character face, copying any style-image character, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical left side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical RIGHT side only (do not describe this as merely "facing right").
-- Hands must NOT be clasped together.
-- No text or watermark. Do not invent missing canonical details, including facial resemblance.
-```
-
----
-
-## 04 — `04-cecilia-back-fullbody.png`（STAGE 2 — 00 核准後；背面）
-
-```text
-Use case: identity-preserve
-Asset type: single back-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-cecilia-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render Cecilia as ONE full-body BACK view (180 degrees) in true orthographic projection, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, hands NOT clasped together, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. Head faces exactly away from the viewer.
-
-Identity invariants:
-Identical character from Image 1: same long chestnut hair falling smoothly (#6B3A21) seen from behind, same slender graceful build.
-
-Body metrics:
-Height approximately 163 cm. Approximately 7.0 heads tall. Shoulder width approximately 1.75 head-widths.
-
-Kinship invariants:
-Inherited facial features PENDING-USER-INPUT, do not render unapproved family resemblance. Locked distinguishing features only: long chestnut hair (#6B3A21).
-
-Costume invariants:
-Identical dark noble dress from Image 1 seen from behind: deep-blue back panel (#1E2A3F), waist sash tied symmetrically at the back, floor-length or ankle-length hem draping evenly, soft noble shoes seen from behind. No chest crest visible from behind. NO weapon, NO handheld prop anywhere.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, fabric-focused material separation with minimal dark-silver fittings, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, male, man, boy, elderly face, gray hair, armor, weapon, sword, gemstone finery, gold pauldrons, hands clasped together, folded hands, visible chest crest on back, reference character face, copying any style-image character, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, face visible, profile, three-quarter view
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic back view.
-- Hands must NOT be clasped together.
-- No text or watermark. Do not invent missing canonical details, including facial resemblance.
-```
-
----
-
-## 05 — `05-cecilia-four-view-master.png`（STAGE 2 — 00 核准後）
 
 ```text
 Use case: identity-preserve
 Asset type: four-view orthographic master turnaround sheet
 
 Input images:
-- Image 1: the approved 00-cecilia-character-identity-anchor.png and sole identity/costume authority.
-- Image 2: shared style reference only; do not copy character identity.
-- Image 3: shared style reference only; do not copy character identity.
-- Image 4: shared style reference only; do not copy character identity.
+- Image 1: the approved 01-cecilia-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render a single master turnaround sheet of Cecilia containing four full-body orthographic views of the SAME character in one row on one shared ground line, in this exact left-to-right order: FRONT (0 degrees), LEFT profile (camera at anatomical left, 90 degrees), RIGHT profile (camera at anatomical right, 90 degrees), BACK (180 degrees). All four views use the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, hands NOT clasped together, shoulders level, weight evenly distributed, identical height, identical head-to-body ratio, identical arm angles and foot spacing in every view, true orthographic projection, no contrapposto, no action pose, no T-pose.
@@ -279,7 +113,7 @@ Kinship invariants:
 Inherited facial features PENDING-USER-INPUT, do not render unapproved family resemblance. Locked distinguishing features only: long chestnut hair (#6B3A21, not gray like Andre, not dark-brown-near-black like Philip).
 
 Costume invariants:
-Every view wears the identical dark noble long dress from Image 1: deep-blue palette (#1E2A3F) matched to Philip, demure high/squared collar, subtle Paulownia-house crest at the chest, cinched waist, long sleeves, floor-length or ankle-length dark skirt. Same count, positions, colors and materials in all four views. NO weapon, NO handheld prop anywhere; the small brooch is reserved for prop sheet 09.
+Every view wears the identical dark noble long dress from Image 1: deep-blue palette (#1E2A3F) matched to Philip, demure high/squared collar, subtle Paulownia-house crest at the chest, cinched waist, long sleeves, floor-length or ankle-length dark skirt. Same count, positions, colors and materials in all four views. NO weapon, NO handheld prop anywhere; the small brooch is reserved for prop sheet 06.
 
 Composition:
 A single ultra-wide horizontal banner, four full-body figures in ONE row at equal scale and equal size, evenly spaced, none cropped, no second row, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no grid lines, no labels.
@@ -300,15 +134,18 @@ Constraints:
 
 ---
 
-## 06 — `06-cecilia-expression-sheet.png`（STAGE 2 — 八表情臉部表）
+---
+
+## 03 — `03-cecilia-expression-sheet.png`（STAGE 2 — 八表情臉部表）
+
 
 ```text
 Use case: identity-preserve
 Asset type: professional eight-expression anime character face sheet (also serves as expression keyframe reference for video generation)
 
 Input images:
-- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 00-cecilia-character-identity-anchor.png). Ignore its original pose, framing and composition.
-- Images 2-4: shared visual-style references only. Do not copy their character identities, faces, hairstyles, costumes or anatomy.
+- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 01-cecilia-front-fullbody.png). Ignore its original pose, framing and composition.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Recompose Cecilia into standardized head-and-shoulders studio portraits. Create exactly eight portraits arranged neatly in a 4-column by 2-row grid on a pure white seamless background. Every portrait must use a straight-on front view at 0 degrees. Crop from just below the collarbones to slightly above the top of the hair. The head must occupy approximately 70-75 percent of each panel.
@@ -341,22 +178,25 @@ photorealistic, 3D render, western comic style, chibi, super-deformed, thick out
 
 ---
 
-## 07 — `07-cecilia-costume-detail-sheet.png`（STAGE 2 — 服裝細節表，含外層拆解，零武器）
+---
+
+## 04 — `04-cecilia-costume-detail-sheet.png`（STAGE 2 — 服裝細節表，含外層拆解，零武器）
+
 
 ```text
 Use case: identity-preserve
 Asset type: costume construction detail sheet with outer-layer separation
 
 Input images:
-- Image 1: the approved 00-cecilia-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-cecilia-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a professional costume construction sheet for Cecilia's dark noble long dress, organized as callout panels on one sheet:
 1. LAYER SEPARATION (required for 3D modeling): the outer layered dress bodice/overlay drawn SEPARATELY as a flat garment piece, AND one torso view of the character WITHOUT the outer layer so the inner dress/undergarment silhouette and body outline are fully visible.
 2. Chest crest detail: the subtle Paulownia-house crest motif at the chest, centered.
 3. Collar and sleeve detail: the demure high/squared collar with fine embroidery and long sleeves.
-4. Waist detail: the cinched waist sash (no weapon, no brooch shown here - brooch belongs to sheet 09).
+4. Waist detail: the cinched waist sash (no weapon, no brooch shown here - brooch belongs to sheet 06).
 5. Skirt and footwear detail: the floor-length or ankle-length dark skirt draping demurely, and soft noble shoes.
 6. Back structure: the dress's back drape and closure.
 
@@ -383,15 +223,18 @@ Constraints:
 
 ---
 
-## 08 — `08-cecilia-color-material-sheet.png`（STAGE 2 — 色票／材質表，已補固定 hex）
+---
+
+## 05 — `05-cecilia-color-material-sheet.png`（STAGE 2 — 色票／材質表，已補固定 hex）
+
 
 ```text
 Use case: identity-preserve
 Asset type: color palette and material reference sheet
 
 Input images:
-- Image 1: the approved 00-cecilia-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-cecilia-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a production color-and-material sheet for Cecilia: a medium-size neutral A-pose front figure (character and costume only, no props, hands NOT clasped) on the left, and on the right a column of large clean color swatches with material rendering patches for each locked color:
@@ -425,15 +268,18 @@ Constraints:
 
 ---
 
-## 09 — `09-cecilia-prop-construction-sheet.png`（STAGE 2 — 道具表：胸飾與家紋，無武器）
+---
+
+## 06 — `06-cecilia-prop-construction-sheet.png`（STAGE 2 — 道具表：胸飾與家紋，無武器）
+
 
 ```text
 Use case: stylized-concept
 Asset type: prop and construction sheet (props only)
 
 Input images:
-- Image 1: the approved 00-cecilia-character-identity-anchor.png - use ONLY to match material language and craftsmanship level; do not depict the character.
-- Images 2-4: shared style references only; do not copy their characters.
+- Image 1: the approved 01-cecilia-front-fullbody.png - use ONLY to match material language and craftsmanship level; do not depict the character.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a props-only construction sheet for Cecilia's canonical small accessory and family crest:
@@ -459,15 +305,18 @@ Constraints:
 
 ---
 
-## 10 — `10-cecilia-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+---
+
+## 07 — `07-cecilia-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+
 
 ```text
 Use case: identity-preserve
 Asset type: body reference sheet for parametric human-body fitting (SMPL-X)
 
 Input images:
-- Image 1: the approved 00-cecilia-character-identity-anchor.png and sole identity authority (face, hair, skin tone, body proportions).
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-cecilia-front-fullbody.png and sole identity authority (face, hair, skin tone, body proportions).
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render Cecilia WITHOUT the dress or any outer garment - wearing only a plain tight dark-gray bodysuit (form-fitting underlayer, no folds, no accessories) - as TWO full-body views on one sheet: straight-on FRONT view and LEFT profile view. Both views in the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, hands NOT clasped together, shoulders level, weight evenly distributed, true orthographic projection, no contrapposto, no action pose, no T-pose. Her long chestnut hair must be gathered and tied back behind the shoulders so it does not cover the body silhouette. The body silhouette must be fully visible and unobstructed: no dress, no loose clothing, no jewelry.
@@ -496,20 +345,22 @@ Constraints:
 
 ---
 
+---
+
 ## 逐張驗收清單（強制 — 任一項漂移即 REJECT，不得繼續下一張）
 
-生成順序：（安德烈 00 已核准）→ 00 →（使用者核准）→ 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10。
+生成順序：（安德烈 01 已核准）→ 01 →（使用者核准）→ 02 → 03 → 04 → 05 → 06 → 07。
 每張生成後逐項檢查；REJECT 的圖不覆蓋既有檔案，存入 `rejects/` 後重生成本張。
 
 **每張圖共同檢查項：**
 
-- [ ] 臉型與臉部身份與 00 號正本一致（端莊秀氣、眉眼低垂）
-- [ ] 髮型、髮色（栗色長髮 #6B3A21）一致（10 號素體圖須紮起收於身後）
+- [ ] 臉型與臉部身份與 01 號正本一致（端莊秀氣、眉眼低垂）
+- [ ] 髮型、髮色（栗色長髮 #6B3A21）一致（07 號身體參考圖須紮起收於身後）
 - [ ] 身材比例：163cm／約 7.0 頭身／肩寬約 1.75 倍頭寬
 - [ ] 服裝結構與 Costume Lock 一致（長裙層次、家紋位置）
 - [ ] 左右位置正確：胸飾位置一致、無鏡像錯亂
 - [ ] 色票未漂移：#1E2A3F／#6B3A21／#8C8C94／#F3E0CC／#3B2A1E
-- [ ] 無任何武器道具出現（09 除外，僅胸飾與家紋）；平光無投影陰影（06 攝影棚柔光除外）
+- [ ] 無任何武器道具出現（06 除外，僅胸飾與家紋）；平光無投影陰影（03 攝影棚柔光除外）
 - [ ] **所有全身圖雙手不得交握**——一律標準 A-pose，不安遲疑僅由臉部神情傳達
 - [ ] 血緣相似：承襲特徵為 `PENDING-USER-INPUT`，任何全身圖／表情圖不得繪出未核准的與安德烈或菲利浦的臉部相似提案；僅呈現已鎖定的刻意區分項（栗色髮、秀氣臉型），提示詞須附「inherited facial features PENDING-USER-INPUT, do not render unapproved family resemblance」
 
@@ -517,14 +368,10 @@ Constraints:
 
 | 張 | 額外驗收 |
 | --- | --- |
-| 00 | 三視圖齊全（A-pose 正面全身＋正面頭肩＋45° 頭肩），缺一即 REJECT；全身圖雙手未交握 |
-| 01 | 正面、A-pose、正交、雙手未交握 |
-| 02 | 相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）、雙手未交握 |
-| 03 | 相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）、雙手未交握 |
-| 04 | 背面、A-pose、正交、雙手未交握 |
-| 05 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊；雙手未交握 |
-| 06 | 恰好 8 格 4×2、順序正確、只有表情改變 |
-| 07 | 外層拆解面板＋無外層軀幹視圖必須存在 |
-| 08 | 色票方塊與鎖定 hex 完全一致 |
-| 09 | 胸飾與家紋唯一出現於此；無角色、無臉、無人物剪影 |
-| 10 | 素體無任何外層；長髮紮起收於身後、身體輪廓完全可見；正面＋左側兩視圖；雙手未交握 |
+| 01 | 正面、A-pose、正交、雙手未交握；**臉部須清晰可辨——本張為身份／服裝唯一正本** |
+| 02 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊；雙手未交握；相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）、雙手未交握；相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）、雙手未交握；背面、A-pose、正交、雙手未交握 |
+| 03 | 恰好 8 格 4×2、順序正確、只有表情改變 |
+| 04 | 外層拆解面板＋無外層軀幹視圖必須存在 |
+| 05 | 色票方塊與鎖定 hex 完全一致 |
+| 06 | 胸飾與家紋唯一出現於此；無角色、無臉、無人物剪影 |
+| 07 | 素體無任何外層；長髮紮起收於身後、身體輪廓完全可見；正面＋左側兩視圖；雙手未交握 |

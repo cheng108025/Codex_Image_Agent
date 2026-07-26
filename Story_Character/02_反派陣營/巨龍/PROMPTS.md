@@ -1,4 +1,4 @@
-# 巨龍 Dragon — Image Generation Prompts（範本 v2 FULL package，非人形結構：00–09，無 10 號素體圖）
+# 巨龍 Dragon — Image Generation Prompts（新版六張制 01–06，非人形：無 07 身體參考圖）
 
 > **用途聲明（必讀）**
 > 這套圖片是 **3D 建模參考包（modeling reference pack）**，不是完成的 3D 模型。
@@ -6,113 +6,69 @@
 
 > **角色版本 ID：`DRAGON-V1-STRATEGIC-WAR-BEAST`**（本角色全篇僅此單一型態；無服裝版本 N/A）
 
-> ✅ **辨識關鍵已定案（稽核 §7、§8.10；使用者於 2026-07-23 核准）**
-> `CHARACTER_SPEC.md`「辨識關鍵鎖定提案」列出的**角的數量／形狀**與**翼膜色相**是跨鏡頭身份辨識關鍵，兩項均已由使用者核准鎖定為定案值（**2 主角＋6 副棘角（頭骨後緣遞減排列）、翼膜 `#5C1B33`**）。下方 00 號提示詞已採用此定案值，可開始 STAGE 1 生成。
+> ✅ **辨識關鍵已定案（使用者於 2026-07-23 核准）**
+> `CHARACTER_SPEC.md`「辨識關鍵鎖定提案」列出的**角的數量／形狀**與**翼膜色相**是跨鏡頭身份辨識關鍵，兩項均已由使用者核准鎖定為定案值（**2 主角＋6 副棘角（頭骨後緣遞減排列）、翼膜 `#5C1B33`**）。下方 01 號提示詞已採用此定案值，可開始 STAGE 1 生成。
 
-> **非人形豁免聲明（依規範 §5.3）**：巨龍為四足有翼巨獸，不適用 A-pose，00–05 全部全身視圖改用「自然站立正交視圖」；不產 10 號素體圖（無人形骨架可供 SMPL-X 擬合）。本套件為完整 **00–09 十條**提示詞（無 10 號）。
-> - **00 三視圖調整**：改為「全身自然站立側／四分之三視圖」＋「頭部特寫（正面）」＋「45° 頭部視圖」，缺一即 REJECT。
-> - **01–04 新增獨立完整視圖**（稽核 §6 要求，取代舊版省略）：01 正面自然站立正交圖、02 相機位於**解剖學左側**、03 相機位於**解剖學右側**、04 背面自然站立正交圖。禁止只寫「朝左／朝右」，一律明寫「camera on the creature's anatomical LEFT/RIGHT side」。
-> - **05** 維持四視圖總表（正面→左→右→背）。
-> - **06 表情表調整**：巨獸無人類臉部表情；本表改為「八格頭部威嚇狀態表（head-state / threat-display sheet）」，維持 4×2 網格與固定順序，以巨獸的自然反應對應原八表情語意，非人類笑容。
-> - **07 服裝表調整**：SPEC 載明巨獸無服裝（N/A）；本表改為「體表鱗甲／特殊部位細節表」。
-> - **09 道具表調整**：巨獸自身即戰略兵器（利齒、利爪、龍息），無外部武器或飾品；本表呈現角、齒、爪、龍息光效與**展翼結構研究**的獨立解剖／效果構造，非傳統「道具」；展翼姿態僅在此出現，00–05 一律摺翼。
-> - **零道具聲明（00–05 全部全身視圖一致適用）**：no rider, no saddle, no harness, no external props anywhere on the creature.
+> **非人形豁免聲明（依規範 §5.3）**：巨龍為四足有翼巨獸，不適用 A-pose，01 與 02 的全身視圖改用「自然站立正交視圖」；不產 07 號身體參考圖（無人形骨架可供 SMPL-X 擬合）。本套件為完整 **01–06 六條**提示詞（無 07 號身體參考圖）。
+> - **03 頭部狀態表**：巨獸無人類臉部表情；本表改為「八格頭部威嚇狀態表（head-state / threat-display sheet）」，維持 4×2 網格與固定順序，以巨獸的自然反應對應原八表情語意，非人類笑容。
+> - **04 體表細節表**：SPEC 載明巨獸無服裝（N/A）；本表改為「體表鱗甲／特殊部位細節表」。
+> - **06 解剖結構表**：巨獸自身即戰略兵器（利齒、利爪、龍息），無外部武器或飾品；本表呈現角、齒、爪、龍息光效與**展翼結構研究**的獨立解剖／效果構造，非傳統「道具」；展翼姿態僅在此出現，01–02 一律摺翼。
+> - **零道具聲明（01–02 全部全身視圖一致適用）**：no rider, no saddle, no harness, no external props anywhere on the creature.
 
-> **兩階段規則（強制）**：第一階段只生成 `00-dragon-character-identity-anchor.png`（三視圖，缺一不可；角組與翼膜色相已定案，可直接送出），生成後停止等待使用者核准。核准後 00 成為 01–09 的 Image 1 解剖唯一正本。三張 style 圖永遠只控制畫風。
+> **兩階段規則（強制）**：第一階段只生成 `01-dragon-front-fullbody.png`（正面全身單視圖，臉部須清晰可辨；角組與翼膜色相已定案，可直接送出），生成後停止等待使用者核准。核准後 01 成為 02–06 的 Image 1 解剖唯一正本。畫風輸入一律依 `../../STYLE_ANCHOR.md` 決定。
 > **檔案安全**：不得刪除或覆蓋現有 PNG；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
+> **既有 PNG 狀態**：本角色 01–07（非人形 01–06）全部為 `PENDING-GENERATION`。
 
-共用畫風參考（style only, do not copy their characters）：
-- `../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- `../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- `../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+畫風參考唯一正本：
+- `../../STYLE_ANCHOR.md`
+- 若本角色是 `PENDING-FIRST-REQUEST` 登記的首角色，01 才使用 STYLE_ANCHOR 的三張 bootstrap 圖。
+- 若畫風錨已為 `ACTIVE` 且本角色不是首角色，01 只引用已核准的首角色 01 作為畫風參考。
+- 02–07（非人形至 06）使用自己的 01 作為身份參考；非首角色另加首角色 01 作為畫風參考。
 
-生成順序與檔名：
+生成順序與檔名（新版六張制 01–06，非人形無 07）：
 
 | 編號 | 檔案 | 內容 |
 | --- | --- | --- |
-| 00 | `00-dragon-character-identity-anchor.png` | 身份母圖：自然站立全身側／四分之三視圖＋正面頭部特寫＋45° 頭部視圖，零人類／騎手／道具 |
-| 01 | `01-dragon-front-fullbody.png` | 正面自然站立全身，正交，摺翼，零道具 |
-| 02 | `02-dragon-left-profile-fullbody.png` | 相機位於解剖學左側，自然站立全身，正交，摺翼，零道具 |
-| 03 | `03-dragon-right-profile-fullbody.png` | 相機位於解剖學右側，自然站立全身，正交，摺翼，零道具 |
-| 04 | `04-dragon-back-fullbody.png` | 背面自然站立全身，正交，摺翼，零道具 |
-| 05 | `05-dragon-four-view-master.png` | 四視圖總表（正面→左→右→背），自然站立正交視圖，摺翼，零道具 |
-| 06 | `06-dragon-head-state-sheet.png` | 八格頭部威嚇狀態表，4×2 網格（取代人類表情表） |
-| 07 | `07-dragon-scale-surface-detail-sheet.png` | 體表鱗甲／翼膜／特殊部位細節表（取代服裝細節表） |
-| 08 | `08-dragon-color-material-sheet.png` | 色票／材質表（固定 hex） |
-| 09 | `09-dragon-anatomy-construction-sheet.png` | 角／齒／爪解剖拆解＋龍息光效＋展翼結構研究（取代道具表；展翼姿態唯一出現位置） |
+| 01 | `01-dragon-front-fullbody.png` | 身份錨點：正面全身，A-pose，零道具（**STAGE 1，先生成並等核准**） |
+| 02 | `02-dragon-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
+| 03 | `03-dragon-head-state-sheet.png` | 表情表 |
+| 04 | `04-dragon-scale-surface-detail-sheet.png` | 服裝細節 |
+| 05 | `05-dragon-color-material-sheet.png` | 色彩與材質 |
+| 06 | `06-dragon-anatomy-construction-sheet.png` | 道具結構 |
 
 ---
 
-## 00 — `00-dragon-character-identity-anchor.png`（STAGE 1 — 只先生成這張，停止等核准；角組與翼膜色相已定案，可送出）
+## 01 — `01-dragon-front-fullbody.png`（STAGE 1 — 只先生成這張，停止等核准）
+
 
 ```text
 Use case: stylized-concept
-Asset type: new-creature identity anchor sheet (three views, non-humanoid quadruped)
+Asset type: single front-view full-body identity anchor (STAGE 1, identity authority for all later sheets)
 
 Input images:
-- Image 1: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 2: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 3: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
+- Resolve all style inputs from `../../STYLE_ANCHOR.md`.
+- If this role is being registered as the first anchor while status is `PENDING-APPROVAL`, use the three bootstrap images listed there for this 01 only.
+- If status is `ACTIVE` and this role is not the anchor, use the approved anchor 01 as Image 2 for style only; do not copy its character identity.
+- Do not directly reuse bootstrap images after the anchor becomes `ACTIVE`.
 
-Creature definition:
-A colossal strategic-weapon war-beast dragon. CANON anatomy: its body length far exceeds an ordinary dragon - its wingspan is wide enough to span an entire street, forming an extreme size contrast with humans; a black-to-dark-purple scaled hide (#150F1A base with #3B2350 cold metallic-purple sheen) covers the whole body; it is capable of a destructive breath weapon that, when it dives through the clouds, draws a vast line of light across the night sky and can light up the whole sky - the breath-light color is locked as a searing gold-white (#FFF3D6). DESIGN-PROPOSAL anatomy: a huge quadruped winged dragon with a long powerful neck (about 1/4 of body length) and long tail (about 2/5 of body length), a thick muscular torso, a dignified head (about 1/7 of body length, not oversized) with a cold fierce amber-yellow gaze (#D4C05A), strong legs with tearing claws (cold gray-black keratin #3A3A40). Horn configuration (LOCKED - user-approved 2026-07-23): one pair of symmetric large backward-swept main horns plus six smaller secondary spike-horns in a descending row along the back of the skull to the neck, fully bilaterally symmetric. Wings: immense membranous wings on strong wing-bones, wingspan approximately 1.25x body length, semi-translucent dark purple-red membrane (LOCKED hex #5C1B33 - user-approved 2026-07-23), folded naturally against the body in this sheet. Real materials only: scaled hide plus semi-translucent membranous wings; NO cloth, NO gemstones, NO metal armor plating, NO saddle, NO harness, NO external props, NO rider anywhere on the beast.
-
-Body metrics:
-Colossal strategic-weapon scale - explicitly not given a numeric height/length in the written spec; use relative proportion lock only (body length = 1.0 baseline, wingspan = 1.25x, head length = 1/7, neck length = 1/4, tail length = 2/5, standing shoulder height = 0.35x). Render it as an extreme-scale quadruped winged dragon, clearly far larger than any human figure would be, without including a human or scale-comparison figure in this sheet. Fully bilaterally symmetric design; no left-right asymmetric features.
-
-Kinship invariants:
-Not applicable - no kin relations for this creature.
-
-Primary request:
-Design one new and visually distinct CREATURE from the written specification. Create a creature identity-anchor sheet containing exactly THREE views of the SAME dragon - all three are mandatory, the sheet is invalid if any view is missing:
-1. one full-body side or three-quarter view showing the whole colossal winged silhouette in a natural, calm standing stance on all four legs (NOT an A-pose - this creature has no human arms), wings folded/resting naturally against the body, tail resting on the ground or gently curved, head held level and alert;
-2. one large straight-on head close-up (head, horn configuration, fangs, eyes and scale texture);
-3. one 45-degree head view (for video-generation reference).
-All three views must have identical anatomy, scale texture, horn configuration, wing structure and colors. The straight-on head close-up is the anatomy identity authority for later generations. No human, no rider, no saddle, no harness, no external props anywhere.
-
-Sheet layout: a single ultra-wide horizontal sheet, aspect ratio approximately 3:1 (reference 2048x672). Left ~55% of the canvas holds the full-body natural-stance view, entire creature head-to-tail inside frame. Right ~45% is split between the large straight-on head close-up and the 45-degree head view. Identical creature across all panels - no anatomy drift.
-
-Style:
-refined Japanese anime fantasy creature design, professional production creature sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed scale and membrane material separation, restrained luminous highlights, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, costume, random accessories, duplicate creature, extra limbs, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, human, person, rider, cute dragon, small dragon, baby dragon, chibi dragon, mechanical dragon, mecha dragon, robot, pastel scales, neon scales, saddle, harness, reins, armor plating, gemstones, jewelry, cloth barding, external props, handheld items, spread wings, wings extended, reference character face, copying any style-image character, blending the three reference characters, humanoid character copying, holding weapon, weapon in hand, action pose, battle stance, dynamic pose, cast shadows, strong highlights, rim light, dramatic lighting
-
-Constraints:
-- The three input images control visual style only; do not reproduce or blend their characters.
-- Follow all CANON facts exactly (colossal size, street-spanning wingspan, black-to-dark-purple scaled hide, destructive breath drawing a vast searing gold-white line of light).
-- Follow approved DESIGN-PROPOSAL items consistently.
-- Horn configuration and wing membrane hue are identification-critical items; both are LOCKED per user approval (2026-07-23): two swept-back symmetric primary horns plus six secondary spikes in diminishing size along the rear skull ridge, and wing membrane #5C1B33.
-- Natural calm standing stance only - no A-pose (this creature has no human arms), no action pose. Wings folded in this sheet; spread-wing anatomy belongs only to sheet 09.
-- Flat even ambient lighting, no cast shadows, no strong highlights, no rim light.
-- No human, rider, saddle, harness, or external props of any kind anywhere.
-- No text, labels, logo, signature or watermark.
-- Exactly one creature identity shown three times; no anatomy drift between the three views. Missing any of the three views = invalid sheet.
-```
-
----
-
-## 01 — `01-dragon-front-fullbody.png`（STAGE 2）
-
-```text
-Use case: identity-preserve
-Asset type: single front-view full-body orthographic reference (non-humanoid quadruped)
-
-Input images:
-- Image 1: the approved 00-dragon-character-identity-anchor.png and sole anatomy authority.
-- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
 Render the dragon as ONE full-body FRONT view (0 degrees, camera directly ahead of the creature) in true orthographic projection, in the same natural calm standing stance on all four legs as Image 1: wings folded/resting naturally against the body, tail resting or gently curved, head level and alert, weight evenly distributed on all four legs, no action pose.
 
 Identity invariants:
-Identical creature from Image 1: same head shape, horn configuration (one pair of backward-swept main horns plus six descending secondary spike-horns), fangs, eyes (#D4C05A), scale texture and pattern (#150F1A base, #3B2350 sheen).
+Per the Character definition above (no prior identity image exists; this sheet establishes it): same head shape, horn configuration (one pair of backward-swept main horns plus six descending secondary spike-horns), fangs, eyes (#D4C05A), scale texture and pattern (#150F1A base, #3B2350 sheen).
+
+Kinship invariants:
+Not applicable - no kin relations for this creature.
 
 Body metrics:
-Relative proportion lock from Image 1: body length = 1.0 baseline, wingspan = 1.25x, head length = 1/7, neck length = 1/4, tail length = 2/5, standing shoulder height = 0.35x. Fully bilaterally symmetric.
+Relative proportion lock per the Character definition above: body length = 1.0 baseline, wingspan = 1.25x, head length = 1/7, neck length = 1/4, tail length = 2/5, standing shoulder height = 0.35x. Fully bilaterally symmetric.
 
 Costume invariants:
-Not applicable - no costume. Identical bare anatomy from Image 1: black-to-dark-purple scaled hide, semi-translucent dark purple-red wing membrane (#5C1B33). No armor, no saddle, no harness, no gemstones, no external props, no rider anywhere.
+Not applicable - no costume. Identical bare anatomy per the Character definition above: black-to-dark-purple scaled hide, semi-translucent dark purple-red wing membrane (#5C1B33). No armor, no saddle, no harness, no gemstones, no external props, no rider anywhere.
+
+Identity authority:
+The face must be rendered clearly, sharply and identifiably at full detail — this single front view is the sole identity/costume authority for sheets 02 onward.
 
 Composition:
 Single creature centered, entire body from head to tail-tip inside frame, flat even ambient lighting with no cast shadows, warm light-gray low-contrast background, no props, no grid lines, no labels.
@@ -124,141 +80,25 @@ Negative prompt:
 photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different creature, costume, random accessories, duplicate creature, extra limbs, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, human, person, rider, saddle, harness, reins, armor plating, gemstones, cloth barding, external props, handheld items, spread wings, wings extended, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, dramatic lighting, side view, profile, back view, three-quarter view
 
 Constraints:
-- Preserve the exact approved anatomy from Image 1; Images 2-4 are style only.
+- Preserve the exact approved anatomy per the Character definition above; the input images are style only.
 - Creature only; zero props; flat lighting; true orthographic front view; wings folded.
 - No human, rider, saddle or harness anywhere. No text or watermark. Do not invent missing canonical details.
 ```
 
 ---
 
-## 02 — `02-dragon-left-profile-fullbody.png`（STAGE 2 — 相機位於解剖學左側）
-
-```text
-Use case: identity-preserve
-Asset type: single left-side full-body orthographic reference (non-humanoid quadruped)
-
-Input images:
-- Image 1: the approved 00-dragon-character-identity-anchor.png and sole anatomy authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render the dragon as ONE full-body view with the camera positioned on the creature's ANATOMICAL LEFT side (90 degrees, the creature's own left flank facing the viewer - not simply "facing left") in true orthographic projection, in the same natural calm standing stance on all four legs as Image 1: wings folded/resting naturally against the body, tail resting or gently curved, head level and alert, no action pose. The head faces exactly along the creature's anatomical left axis; no head turn toward the viewer.
-
-Identity invariants:
-Identical creature from Image 1: same head shape and horn configuration in side view, fangs, eyes (#D4C05A), scale texture and pattern (#150F1A base, #3B2350 sheen).
-
-Body metrics:
-Relative proportion lock from Image 1: body length = 1.0 baseline, wingspan = 1.25x, head length = 1/7, neck length = 1/4, tail length = 2/5, standing shoulder height = 0.35x. Fully bilaterally symmetric.
-
-Costume invariants:
-Not applicable - no costume. Identical bare anatomy from Image 1, folded wing silhouette visible from the creature's anatomical left side, dark purple-red membrane (#5C1B33). No armor, no saddle, no harness, no gemstones, no external props, no rider anywhere.
-
-Composition:
-Single creature centered, entire body from head to tail-tip inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy creature design, professional production creature sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed scale and membrane material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different creature, costume, random accessories, duplicate creature, extra limbs, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, human, person, rider, saddle, harness, reins, armor plating, gemstones, cloth barding, external props, handheld items, spread wings, wings extended, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, dramatic lighting, front view, right side, back view, three-quarter view, head turned toward viewer, mirrored orientation
-
-Constraints:
-- Preserve the exact approved anatomy from Image 1; Images 2-4 are style only.
-- Camera is on the creature's own anatomical LEFT side, not merely "facing left" in image space; do not mirror-flip the right-side view.
-- Creature only; zero props; flat lighting; true orthographic anatomical-left view; wings folded.
-- No human, rider, saddle or harness anywhere. No text or watermark. Do not invent missing canonical details.
-```
-
 ---
 
-## 03 — `03-dragon-right-profile-fullbody.png`（STAGE 2 — 相機位於解剖學右側）
+## 02 — `02-dragon-four-view-master.png`（STAGE 2 — 四視圖總表：正面→左→右→背）
 
-```text
-Use case: identity-preserve
-Asset type: single right-side full-body orthographic reference (non-humanoid quadruped)
-
-Input images:
-- Image 1: the approved 00-dragon-character-identity-anchor.png and sole anatomy authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render the dragon as ONE full-body view with the camera positioned on the creature's ANATOMICAL RIGHT side (90 degrees, the creature's own right flank facing the viewer - not simply "facing right") in true orthographic projection, in the same natural calm standing stance on all four legs as Image 1: wings folded/resting naturally against the body, tail resting or gently curved, head level and alert, no action pose. The head faces exactly along the creature's anatomical right axis; no head turn toward the viewer. The design is fully symmetric, so this anatomical-right view mirrors the anatomical-left view exactly.
-
-Identity invariants:
-Identical creature from Image 1: same head shape and horn configuration in side view, fangs, eyes (#D4C05A), scale texture and pattern (#150F1A base, #3B2350 sheen).
-
-Body metrics:
-Relative proportion lock from Image 1: body length = 1.0 baseline, wingspan = 1.25x, head length = 1/7, neck length = 1/4, tail length = 2/5, standing shoulder height = 0.35x. Fully bilaterally symmetric.
-
-Costume invariants:
-Not applicable - no costume. Identical bare anatomy from Image 1, folded wing silhouette visible from the creature's anatomical right side, dark purple-red membrane (#5C1B33). No armor, no saddle, no harness, no gemstones, no external props, no rider anywhere.
-
-Composition:
-Single creature centered, entire body from head to tail-tip inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy creature design, professional production creature sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed scale and membrane material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different creature, costume, random accessories, duplicate creature, extra limbs, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, human, person, rider, saddle, harness, reins, armor plating, gemstones, cloth barding, external props, handheld items, spread wings, wings extended, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, dramatic lighting, front view, left side, back view, three-quarter view, head turned toward viewer, mirrored orientation
-
-Constraints:
-- Preserve the exact approved anatomy from Image 1; Images 2-4 are style only.
-- Camera is on the creature's own anatomical RIGHT side, not merely "facing right" in image space; do not mirror-flip the left-side view file itself (regenerate a true right-side render).
-- Creature only; zero props; flat lighting; true orthographic anatomical-right view; wings folded.
-- No human, rider, saddle or harness anywhere. No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 04 — `04-dragon-back-fullbody.png`（STAGE 2）
-
-```text
-Use case: identity-preserve
-Asset type: single back-view full-body orthographic reference (non-humanoid quadruped)
-
-Input images:
-- Image 1: the approved 00-dragon-character-identity-anchor.png and sole anatomy authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render the dragon as ONE full-body BACK view (180 degrees, camera directly behind the creature) in true orthographic projection, in the same natural calm standing stance on all four legs as Image 1: wings folded/resting naturally against the body, tail resting or gently curved, head level and alert, no action pose. Head faces exactly away from the viewer.
-
-Identity invariants:
-Identical creature from Image 1: same dorsal ridge, folded wing silhouette from behind, tail shape and scale pattern (#150F1A base, #3B2350 sheen).
-
-Body metrics:
-Relative proportion lock from Image 1: body length = 1.0 baseline, wingspan = 1.25x, head length = 1/7, neck length = 1/4, tail length = 2/5, standing shoulder height = 0.35x. Fully bilaterally symmetric.
-
-Costume invariants:
-Not applicable - no costume. Identical bare anatomy from Image 1 seen from behind: folded wings resting against the back, dorsal spine ridge, dark purple-red membrane edges (#5C1B33) visible at the wing folds. No armor, no saddle, no harness, no gemstones, no external props, no rider anywhere.
-
-Composition:
-Single creature centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy creature design, professional production creature sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed scale and membrane material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different creature, costume, random accessories, duplicate creature, extra limbs, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, human, person, rider, saddle, harness, reins, armor plating, gemstones, cloth barding, external props, handheld items, spread wings, wings extended, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, dramatic lighting, front view, face visible, side view, three-quarter view
-
-Constraints:
-- Preserve the exact approved anatomy from Image 1; Images 2-4 are style only.
-- Creature only; zero props; flat lighting; true orthographic back view; wings folded.
-- No human, rider, saddle or harness anywhere. No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 05 — `05-dragon-four-view-master.png`（STAGE 2）
 
 ```text
 Use case: identity-preserve
 Asset type: four-view orthographic master turnaround sheet (non-humanoid quadruped)
 
 Input images:
-- Image 1: the approved 00-dragon-character-identity-anchor.png and sole anatomy authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-dragon-front-fullbody.png and sole anatomy authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render a single master turnaround sheet of the dragon containing four full-body orthographic views of the SAME creature in this exact left-to-right order: FRONT (0 degrees), LEFT view (camera on the creature's anatomical left side, 90 degrees), RIGHT view (camera on the creature's anatomical right side, 90 degrees), BACK (180 degrees). All four views use the exact same natural, calm standing stance on all four legs (no A-pose - this creature has no human arms): wings folded/resting naturally against the body, tail resting or gently curved, head level and alert, identical height, proportions and stance in every view, true orthographic projection, no action pose.
@@ -293,15 +133,18 @@ Constraints:
 
 ---
 
-## 06 — `06-dragon-head-state-sheet.png`（STAGE 2 — 八格頭部威嚇狀態表，取代人類表情表）
+---
+
+## 03 — `03-dragon-head-state-sheet.png`（STAGE 2 — 八格頭部威嚇狀態表，取代人類表情表）
+
 
 ```text
 Use case: identity-preserve
 Asset type: professional eight-panel creature head-state / threat-display sheet (non-human analogue of an expression sheet)
 
 Input images:
-- Image 1: use only as the creature identity, head shape, horn and color reference (the approved 00-dragon-character-identity-anchor.png). Ignore its original pose, framing and composition.
-- Images 2-4: shared visual-style references only. Do not copy their character identities, faces, hairstyles, costumes or anatomy.
+- Image 1: use only as the creature identity, head shape, horn and color reference (the approved 01-dragon-front-fullbody.png). Ignore its original pose, framing and composition.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Recompose the dragon's head into standardized close-up studio studies. Create exactly eight head studies arranged neatly in a 4-column by 2-row grid on a pure white seamless background. Every panel must use a straight-on front view at 0 degrees. Crop from just below the neck/throat to slightly above the top of the horns. The head must occupy approximately 70-75 percent of each panel. Since this is a non-human creature, each panel shows a natural head-state / threat-display analogous to the eight human expressions below, NOT a human smile.
@@ -334,15 +177,18 @@ photorealistic, 3D render, western comic style, chibi, super-deformed, thick out
 
 ---
 
-## 07 — `07-dragon-scale-surface-detail-sheet.png`（STAGE 2 — 體表鱗甲／特殊部位細節表，取代服裝細節表；SPEC 明載無服裝）
+---
+
+## 04 — `04-dragon-scale-surface-detail-sheet.png`（STAGE 2 — 體表鱗甲／特殊部位細節表，取代服裝細節表；SPEC 明載無服裝）
+
 
 ```text
 Use case: identity-preserve
 Asset type: creature body-surface (scale and membrane) detail sheet, replacing the costume detail sheet since this creature has no clothing per CANON
 
 Input images:
-- Image 1: the approved 00-dragon-character-identity-anchor.png and sole anatomy authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-dragon-front-fullbody.png and sole anatomy authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a professional body-surface construction sheet for the dragon, since it wears no costume, presenting several clean close-up studies of its scales and membrane as they appear on Image 1:
@@ -376,15 +222,18 @@ Constraints:
 
 ---
 
-## 08 — `08-dragon-color-material-sheet.png`（STAGE 2 — 色票／材質表，固定 hex）
+---
+
+## 05 — `05-dragon-color-material-sheet.png`（STAGE 2 — 色票／材質表，固定 hex）
+
 
 ```text
 Use case: identity-preserve
 Asset type: color palette and material reference sheet
 
 Input images:
-- Image 1: the approved 00-dragon-character-identity-anchor.png and sole anatomy authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-dragon-front-fullbody.png and sole anatomy authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a production color-and-material sheet for the dragon: a medium-size natural-stance full-body figure with wings folded (creature only, no rider, no props) on the left, and on the right a column of large clean color swatches with material rendering patches for each locked color:
@@ -420,15 +269,18 @@ Constraints:
 
 ---
 
-## 09 — `09-dragon-anatomy-construction-sheet.png`（STAGE 2 — 角／齒／爪解剖拆解＋龍息光效＋展翼結構研究，取代道具表；巨獸自身即武器，展翼姿態唯一出現位置）
+---
+
+## 06 — `06-dragon-anatomy-construction-sheet.png`（STAGE 2 — 角／齒／爪解剖拆解＋龍息光效＋展翼結構研究，取代道具表；巨獸自身即武器，展翼姿態唯一出現位置）
+
 
 ```text
 Use case: stylized-concept
 Asset type: anatomical construction and effect-study sheet (the dragon's own body IS its weapon - horns, teeth, claws, breath, wings - so this replaces a conventional prop sheet)
 
 Input images:
-- Image 1: the approved 00-dragon-character-identity-anchor.png — use ONLY to match scale/keratin/membrane material language; do not depict the full creature body in a standing pose.
-- Images 2-4: shared style references only; do not copy their characters.
+- Image 1: the approved 01-dragon-front-fullbody.png — use ONLY to match scale/keratin/membrane material language; do not depict the full creature body in a standing pose.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create an anatomy-and-effect construction sheet covering five isolated studies at consistent scale, with NO full standing creature body shown:
@@ -451,40 +303,38 @@ photorealistic, 3D render, western comic style, chibi, thick outlines, sketchy l
 
 Constraints:
 - This sheet documents isolated anatomical structures, the breath-weapon light effect, and one detached spread-wing study only; no full standing creature body.
-- The spread-wing panel is the sole place in the entire 00-09 package where the wing is shown extended rather than folded.
+- The spread-wing panel is the sole place in the entire 01–06 package where the wing is shown extended rather than folded.
 - Match the locked hex palette exactly (#150F1A, #3B2350, #5C1B33, #FFF3D6, #D4C05A, #3A3A40); no invented colors.
 - No human, rider or full standing creature silhouette. No text or watermark.
 ```
 
 ---
 
+---
+
 ## 逐張驗收清單（強制 — 任一項漂移即 REJECT，不得繼續下一張）
 
-生成順序：00 →（使用者核准；「辨識關鍵鎖定提案」兩項已於 2026-07-23 定案）→ 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09。本角色**不產 10 號素體圖**（非人形，無 SMPL-X 骨架適用性）。
+生成順序：01 →（使用者核准；「辨識關鍵鎖定提案」兩項已於 2026-07-23 定案）→ 02 → 03 → 04 → 05 → 06。本角色**不產 07 號身體參考圖**（非人形，無 SMPL-X 骨架適用性）。
 每張生成後逐項檢查；REJECT 的圖不覆蓋既有檔案，存入 `rejects/` 後重生成本張。
 
 **每張圖共同檢查項：**
 
-- [ ] 頭部形狀與解剖身份與 00 號正本一致
+- [ ] 頭部形狀與解剖身份與 01 號正本一致
 - [ ] 鱗甲色澤（#150F1A 深黑至暗紫底、#3B2350 冷金屬紫高光）一致
-- [ ] 角組（2 主角＋6 副棘角，或使用者已核准的覆蓋方案）、齒列、爪型與 00 號一致
-- [ ] 翼膜結構（半透明、#5C1B33 暗紫紅，或使用者已核准的覆蓋色相）與 00 號一致
+- [ ] 角組（2 主角＋6 副棘角，或使用者已核准的覆蓋方案）、齒列、爪型與 01 號一致
+- [ ] 翼膜結構（半透明、#5C1B33 暗紫紅，或使用者已核准的覆蓋色相）與 01 號一致
 - [ ] 色票未漂移（#150F1A／#3B2350／#5C1B33／#FFF3D6／#D4C05A／#3A3A40／#241626）
 - [ ] 左右完全對稱，無新增單側特徵、無鏡像錯亂
-- [ ] 零道具：no rider, no saddle, no harness, no external props（09 除外——09 僅呈現解剖／效果拆解，非人形道具）
+- [ ] 零道具：no rider, no saddle, no harness, no external props（06 除外——06 僅呈現解剖／效果拆解，非人形道具）
 - [ ] 該張圖片自身的構圖規則（視圖數量、順序、自然站立、摺翼、平光）全部滿足
 
 **單張額外檢查項：**
 
 | 張 | 額外驗收 |
 | --- | --- |
-| 00 | 三視圖齊全（全身自然站立側／四分之三視圖＋正面頭部特寫＋45° 頭部視圖），缺一即 REJECT；無人類、無騎手、無鞍具道具；角組與翼膜色相已於 2026-07-23 定案 |
-| 01 | 正面（0°）、自然站立、正交、摺翼、單一視圖 |
-| 02 | 相機位於**解剖學左側**（非鏡像翻轉的右側圖）、自然站立、正交、摺翼 |
-| 03 | 相機位於**解剖學右側**（非鏡像翻轉的左側圖）、自然站立、正交、摺翼 |
-| 04 | 背面（180°）、自然站立、正交、摺翼 |
-| 05 | 順序正面→左→右→背；四視圖同尺寸、同比例、自然站立姿態一致、皆摺翼 |
-| 06 | 恰好 8 格 4×2、順序正確（頭部威嚇狀態取代人類表情）、頭部形狀與角組維持一致 |
-| 07 | 六個體表部位（胸喉／背脊／翼膜／尾部／腹部／關節）鱗甲細節齊全，無服裝出現 |
-| 08 | 色票方塊與固定 hex 完全一致 |
-| 09 | 角／齒／爪解剖拆解、龍息光效與展翼結構研究唯一出現於此；展翼姿態僅此一張；無角色全身站立照、無人類、無騎手 |
+| 01 | 正面（0°）、自然站立、正交、摺翼、單一視圖；**臉部須清晰可辨——本張為身份／服裝唯一正本** |
+| 02 | 順序正面→左→右→背；四視圖同尺寸、同比例、自然站立姿態一致、皆摺翼；相機位於**解剖學左側**（非鏡像翻轉的右側圖）、自然站立、正交、摺翼；相機位於**解剖學右側**（非鏡像翻轉的左側圖）、自然站立、正交、摺翼；背面（180°）、自然站立、正交、摺翼 |
+| 03 | 恰好 8 格 4×2、順序正確（頭部威嚇狀態取代人類表情）、頭部形狀與角組維持一致 |
+| 04 | 六個體表部位（胸喉／背脊／翼膜／尾部／腹部／關節）鱗甲細節齊全，無服裝出現 |
+| 05 | 色票方塊與固定 hex 完全一致 |
+| 06 | 角／齒／爪解剖拆解、龍息光效與展翼結構研究唯一出現於此；展翼姿態僅此一張；無角色全身站立照、無人類、無騎手 |

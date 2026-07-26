@@ -1,6 +1,6 @@
 # 萊拉澤爾 Lazael
 
-> Tier 配角 — 克里茲童年友人。本檔為文字版身份規格（範本 v2 FULL package），供 `00-lazael-character-identity-anchor.png` 與 01–10 全套參考圖生成／校對之依據。
+> Tier 配角 — 克里茲童年友人。本檔為文字版身份規格（新版七張制 01–07），供 `01-lazael-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
 > 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
 > **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
 > 服裝版本鎖定：**居家常服版**（單薄未經戰陣的少年、柔軟的髮、書卷般清秀的臉、居家常服而非甲冑）。此為角色「非戰鬥者柔弱外形」定裝，讓克里茲揮劍的殘酷更被凸顯。本角色僅此單一服裝版本。
@@ -27,10 +27,8 @@
 
 ## 參考圖片
 - 初始角色外觀圖片：無
-- 核准後的角色身份正本：`00-lazael-character-identity-anchor.png`（`PENDING-GENERATION`）
-- 共用畫風參考 1：`../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- 共用畫風參考 2：`../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- 共用畫風參考 3：`../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+- 核准後的角色身份正本：`01-lazael-front-fullbody.png`（`PENDING-GENERATION`）
+- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
 
 ## 設計來源標記
 - `CANON`：角色文檔明確記載的外觀事實
@@ -68,10 +66,10 @@
 - 特殊材質：白色內襯 **#F2EAD8**（`DESIGN-PROPOSAL`）
 - 膚色／髮色／瞳色（hex）：膚 **#F2DCC0**（白皙健康溫調）／髮 **#8A5A34**（暖栗褐）／瞳 **#7A5230**（溫暖褐色）（`DESIGN-PROPOSAL`）
 
-## 道具與特殊構造（僅出現在 09 道具表）
+## 道具與特殊構造（僅 06 出現（道具結構表））
 - 武器：**無**（非戰鬥者，不持任何武器）（`CANON` 未經戰陣、居家常服）
 - 飾品：無或極少（`DESIGN-PROPOSAL`）
-- 隨身道具：可選一本書卷／古籍，呼應「書卷般清秀」的文雅氣質（`DESIGN-PROPOSAL`）。**00–05 與 10 一律不出現**
+- 隨身道具：可選一本書卷／古籍，呼應「書卷般清秀」的文雅氣質（`DESIGN-PROPOSAL`）。**01–02 與 07 一律不出現**
 - 翅膀／角／尾巴／其他特殊構造：無（人類角色）
 - 配戴或連接方式：僅布腰帶固定居家常服（`DESIGN-PROPOSAL`）
 
@@ -98,5 +96,5 @@
   - 辨識度關鍵項（瞳色暖褐、髮色暖栗褐、身高 160cm、頭身比 6.75、肩寬約 1.9 倍頭寬）已鎖成具體值。
   - 固定色票 hex 值已補全（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
 - **`PENDING-USER-INPUT`**（僅餘不影響辨識度或待生成後微調項）：
-  - 是否手持書卷作為隨身道具（可選 `DESIGN-PROPOSAL`，僅於 09 出現）。
+  - 是否手持書卷作為隨身道具（可選 `DESIGN-PROPOSAL`，僅於 06 出現）。
   - 居家常服的確切款式與地域風格（文檔僅載「居家常服」，未給細節）。

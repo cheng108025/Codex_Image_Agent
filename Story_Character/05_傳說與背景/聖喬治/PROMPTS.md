@@ -1,4 +1,4 @@
-# 聖喬治 St. George — Image Generation Prompts（範本 v2 FULL package: 00–10）
+# 聖喬治 St. George — Image Generation Prompts（新版七張制 01–07）
 
 > **用途聲明（必讀）**
 > 這套圖片是 **3D 建模參考包（modeling reference pack）**，不是完成的 3D 模型。
@@ -6,101 +6,65 @@
 
 > **角色版本 ID：`ST-GEORGE-V1-MURAL-ICON`**（壁畫／傳說古典屠龍聖騎士版；若未來需要「聖騎士＋腳下巨龍」壁畫構圖版，須另立版本）
 
-> **兩階段規則（強制）**：第一階段只生成 `00-st-george-character-identity-anchor.png`（三視圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，缺一即 REJECT 重生成），生成後停止等待使用者核准。核准後 00 成為 01–10 的 Image 1 身份／服裝唯一正本。三張 style 圖永遠只控制畫風。
+> **兩階段規則（強制）**：第一階段只生成 `01-st-george-front-fullbody.png`（三視圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，缺一即 REJECT 重生成），生成後停止等待使用者核准。核准後 01 成為 02–07 的 Image 1 身份／服裝唯一正本。畫風輸入一律依 `../../STYLE_ANCHOR.md` 決定。
 > **檔案安全**：不得刪除或覆蓋現有 PNG；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
-> **正典備註**：聖喬治是僅存於壁畫與傳說的信仰圖騰，非登場真人角色。本套件一律採「英勇聖騎士人物本身」為主體；長槍依 §5.3/§7 規則移出全身視圖，只在 09 道具表出現。
+> **既有 PNG 狀態**：本角色 01–07（非人形 01–06）全部為 `PENDING-GENERATION`。
+> **正典備註**：聖喬治是僅存於壁畫與傳說的信仰圖騰，非登場真人角色。本套件一律採「英勇聖騎士人物本身」為主體；長槍依 §5.3/§7 規則移出全身視圖，只在 06 道具結構表出現。
 
-共用畫風參考（style only, do not copy their characters）：
-- `../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- `../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- `../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+畫風參考唯一正本：
+- `../../STYLE_ANCHOR.md`
+- 若本角色是 `PENDING-FIRST-REQUEST` 登記的首角色，01 才使用 STYLE_ANCHOR 的三張 bootstrap 圖。
+- 若畫風錨已為 `ACTIVE` 且本角色不是首角色，01 只引用已核准的首角色 01 作為畫風參考。
+- 02–07（非人形至 06）使用自己的 01 作為身份參考；非首角色另加首角色 01 作為畫風參考。
 
-生成順序與檔名（FULL package：00–10，人形角色不豁免任何一張）：
+生成順序與檔名（新版七張制 01–07）：
 
 | 編號 | 檔案 | 內容 |
 | --- | --- | --- |
-| 00 | `00-st-george-character-identity-anchor.png` | 身份母圖：A-pose 正面全身＋正面頭肩＋45° 頭肩，零道具 |
-| 01 | `01-st-george-front-fullbody.png` | 正面全身，A-pose，零道具 |
-| 02 | `02-st-george-left-profile-fullbody.png` | 相機位於角色解剖學左側全身，A-pose，零道具 |
-| 03 | `03-st-george-right-profile-fullbody.png` | 相機位於角色解剖學右側全身，A-pose，零道具 |
-| 04 | `04-st-george-back-fullbody.png` | 背面全身，A-pose，零道具 |
-| 05 | `05-st-george-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
-| 06 | `06-st-george-expression-sheet.png` | 八表情臉部表，4×2 網格 |
-| 07 | `07-st-george-costume-detail-sheet.png` | 服裝細節表（含披風拆解與無披風軀幹視圖） |
-| 08 | `08-st-george-color-material-sheet.png` | 色票／材質表（固定 hex） |
-| 09 | `09-st-george-prop-construction-sheet.png` | 道具表：長槍（唯一出現位置）＋聖記徽章拆解 |
-| 10 | `10-st-george-body-reference-sheet.png` | 素體參考圖（SMPL-X／人體擬合用） |
+| 01 | `01-st-george-front-fullbody.png` | 身份錨點：正面全身，A-pose，零道具（**STAGE 1，先生成並等核准**） |
+| 02 | `02-st-george-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
+| 03 | `03-st-george-expression-sheet.png` | 表情表 |
+| 04 | `04-st-george-costume-detail-sheet.png` | 服裝細節 |
+| 05 | `05-st-george-color-material-sheet.png` | 色彩與材質 |
+| 06 | `06-st-george-prop-construction-sheet.png` | 道具結構 |
+| 07 | `07-st-george-body-reference-sheet.png` | 身體參考（SMPL-X） |
 
 ---
 
-## 00 — `00-st-george-character-identity-anchor.png`（STAGE 1 — 只先生成這張，停止等核准）
+## 01 — `01-st-george-front-fullbody.png`（STAGE 1 — 只先生成這張，停止等核准）
+
 
 ```text
 Use case: stylized-concept
-Asset type: new-character identity anchor sheet (three views)
+Asset type: single front-view full-body identity anchor (STAGE 1, identity authority for all later sheets)
 
 Input images:
-- Image 1: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 2: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
-- Image 3: shared visual-style reference only. Do not copy the depicted character's identity, face, hairstyle, costume or anatomy.
+- Resolve all style inputs from `../../STYLE_ANCHOR.md`.
+- If this role is being registered as the first anchor while status is `PENDING-APPROVAL`, use the three bootstrap images listed there for this 01 only.
+- If status is `ACTIVE` and this role is not the anchor, use the approved anchor 01 as Image 2 for style only; do not copy its character identity.
+- Do not directly reuse bootstrap images after the anchor becomes `ACTIVE`.
+
 
 Character definition:
 St. George, a LEGENDARY dragon-slaying holy knight preserved only in murals and legend, the faith-icon of the Hector hero festival and the Tendi Orthodox church. CANON appearance: an idealized, majestic heroic knight rendered in an idealized, heroic mural tone, height LOCKED at approximately 190cm, wearing classical GILDED full plate armor that glows with a golden sheen (#C9A227), with a radiant halo and holy backlight shining from behind his head and body (light effect #FFF3D6). Locked identity: male, apparent age around 30, tall idealized eight-heads heroic proportions, a resolute and exalted expression, steadfast deep-blue eyes (#2F4F8F), classical short, lightly-waved dark golden-brown hair (#8A6234), healthy idealized skin tone (#E8C3A0). Costume (locked): gilded / antique-gold polished full plate (#C9A227) with a high gorget and pauldrons, a Tendi Orthodox holy emblem set with a small steadfast-blue gem (#2F4F8F) on the breastplate, a warm holy-white surcoat or cloak (#F2EAD8) with gold trim (#C9A227) draped from the shoulders, silver chainmail lining (#B8BEC7), gilded arm plates and gauntlets, leg plates and armored boots, deep-brown leather inner straps (#4A3524). Materials: gilded / antique-gold polished plate, silver chainmail lining, a woven holy-white-and-gold surcoat/cloak, leather inner straps, plus a radiant halo and holy backlight as pure light effects (not physical parts) - no modern or casual fabric. He carries NO weapon and NO props of any kind; the halo and backlight are light effects only, not physical accessories. He has NO wings and NO horns.
-
-Body metrics:
-Height approximately 190 cm. Exactly 8.0 heads tall. Shoulder width approximately 2.8 head-widths (idealized broad heroic build). Fully symmetric design; no locked left-right asymmetry.
-
-Kinship invariants:
-none.
-
-Primary request:
-Design one new and visually distinct character from the written specification. Create an identity-anchor sheet containing exactly three views of the same character — all three are mandatory; missing any view = REJECT:
-1. one neutral straight-on full-body front view in a standard A-pose (standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread);
-2. one large straight-on head-and-shoulders portrait;
-3. one 45-degree three-quarter head-and-shoulders portrait (for video-generation reference).
-Suggested layout: full-body view on the left ~45% of the canvas, straight-on portrait top-right, three-quarter portrait bottom-right. All three views must have identical facial identity, hairstyle, colors and costume. The straight-on head-and-shoulders portrait is the facial identity authority for later generations. Show only the heroic knight figure himself; do NOT include the impaled dragon in this sheet. Character and costume only — no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields; the long lance is reserved exclusively for the prop construction sheet (09) and must not appear here even as a standalone prop beside the figure.
-
-Style:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, ornate but readable fantasy design, polished gilded metal, chainmail and woven-cloth material separation, restrained luminous highlights, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, balanced negative space, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, modern clothing, casual clothes, contemporary outfit, wings, horns on the knight, tail, dragon, monster, brown eyes, green eyes, blond hair, black hair, reference character face, copying any style-image character, blending the three reference characters, weapon, lance, spear, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on lance shaft, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting
-
-Constraints:
-- The three input images control visual style only; do not reproduce or blend their characters.
-- Follow all CANON facts exactly (gilded classical full plate glowing gold, radiant halo / holy backlight, idealized heroic mural tone, knight has no wings or horns).
-- Follow approved DESIGN-PROPOSAL items consistently, including the locked hex palette.
-- Do not invent unresolved PENDING-USER-INPUT details.
-- Character and costume only: no weapons, no handheld items, no standalone props, no belt-worn weapons, scabbards or slung shields. The long lance belongs exclusively to sheet 09.
-- Flat even ambient lighting, no cast shadows, no strong highlights beyond the described holy backlight/halo light effect, no rim light.
-- Neutral front-facing presentation, plain warm light-gray background, no scene or narrative action beyond the heroic standing figure.
-- No text, labels, logo, signature or watermark.
-- Exactly one character identity shown three times; no identity drift between the three views. Missing any of the three views = invalid sheet, REJECT and regenerate.
-```
-
----
-
-## 01 — `01-st-george-front-fullbody.png`（STAGE 2）
-
-```text
-Use case: identity-preserve
-Asset type: single front-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-st-george-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
 
 Primary request:
 Render St. George as ONE full-body front view (0 degrees) in true orthographic projection, in the standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose.
 
 Identity invariants:
-Identical character from Image 1: same idealized heroic face, steadfast deep-blue eyes (#2F4F8F), classical short wavy dark golden-brown hair (#8A6234), healthy idealized skin (#E8C3A0).
+Per the Character definition above (no prior identity image exists; this sheet establishes it): same idealized heroic face, steadfast deep-blue eyes (#2F4F8F), classical short wavy dark golden-brown hair (#8A6234), healthy idealized skin (#E8C3A0).
+
+Kinship invariants:
+none.
 
 Body metrics:
 Height approximately 190 cm. Exactly 8.0 heads tall. Shoulder width approximately 2.8 head-widths. Fully symmetric design.
 
 Costume invariants:
-Identical gilded regalia from Image 1: gilded / antique-gold polished plate (#C9A227) with high gorget and pauldrons, the Tendi Orthodox holy emblem with its small blue gem (#2F4F8F) on the breastplate, warm holy-white-and-gold surcoat/cloak (#F2EAD8), silver chainmail lining (#B8BEC7), gilded arm plates and gauntlets, leg plates and armored boots, deep-brown leather straps (#4A3524), the radiant halo/holy backlight as a light effect only (#FFF3D6). NO weapon anywhere; the long lance is reserved for prop sheet 09.
+Identical gilded regalia per the Character definition above: gilded / antique-gold polished plate (#C9A227) with high gorget and pauldrons, the Tendi Orthodox holy emblem with its small blue gem (#2F4F8F) on the breastplate, warm holy-white-and-gold surcoat/cloak (#F2EAD8), silver chainmail lining (#B8BEC7), gilded arm plates and gauntlets, leg plates and armored boots, deep-brown leather straps (#4A3524), the radiant halo/holy backlight as a light effect only (#FFF3D6). NO weapon anywhere; the long lance is reserved for prop sheet 06.
+
+Identity authority:
+The face must be rendered clearly, sharply and identifiably at full detail — this single front view is the sole identity/costume authority for sheets 02 onward.
 
 Composition:
 Single figure centered, entire body from hair to boot soles inside frame, flat even ambient lighting with no cast shadows, warm light-gray low-contrast background, no props, no grid lines, no labels.
@@ -112,139 +76,25 @@ Negative prompt:
 photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, modern clothing, wings, horns, tail, dragon, monster, brown eyes, blond hair, reference character face, copying any style-image character, weapon, lance, spear, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on lance shaft, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, side view, profile, back view, three-quarter view
 
 Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
+- Preserve the exact identity per the Character definition above; the input images are style only.
 - Character and costume only; zero props; flat lighting; true orthographic front view.
 - No text or watermark. Do not invent missing canonical details.
 ```
 
 ---
 
-## 02 — `02-st-george-left-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學左側）
-
-```text
-Use case: identity-preserve
-Asset type: single anatomical-left-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-st-george-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render St. George as ONE full-body view with the camera positioned at the character's anatomical LEFT side (the camera looks directly at the character's left flank; the character's left side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical left, away from the camera's direct line; no head turn back toward the lens.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, classical short wavy dark golden-brown hair (#8A6234), healthy idealized skin (#E8C3A0).
-
-Body metrics:
-Height approximately 190 cm. Exactly 8.0 heads tall. Shoulder width approximately 2.8 head-widths. Fully symmetric design.
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-left camera position: gilded plate silhouette (#C9A227), silver chainmail lining edge (#B8BEC7), surcoat/cloak in profile (#F2EAD8), deep-brown leather straps (#4A3524), the holy backlight glow visible along the profile silhouette (#FFF3D6). NO weapon anywhere; the long lance is reserved for prop sheet 09.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished gilded metal, chainmail and woven-cloth material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, modern clothing, wings, horns, tail, dragon, monster, reference character face, copying any style-image character, weapon, lance, spear, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on lance shaft, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical right side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical LEFT side only (do not describe this as merely "facing left").
-- No text or watermark. Do not invent missing canonical details.
-```
-
 ---
 
-## 03 — `03-st-george-right-profile-fullbody.png`（STAGE 2 — 相機位於角色解剖學右側）
+## 02 — `02-st-george-four-view-master.png`（STAGE 2 — 四視圖總表：正面→左→右→背）
 
-```text
-Use case: identity-preserve
-Asset type: single anatomical-right-side full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-st-george-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render St. George as ONE full-body view with the camera positioned at the character's anatomical RIGHT side (the camera looks directly at the character's right flank; the character's right side faces the lens), true orthographic projection, 90 degrees from the front view, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. The character's head faces exactly 90 degrees toward their own anatomical right, away from the camera's direct line; no head turn back toward the lens. The design is fully symmetric, so this anatomical-right view mirrors the anatomical-left view (sheet 02) exactly.
-
-Identity invariants:
-Identical character from Image 1: same face structure seen from this angle, classical short wavy dark golden-brown hair (#8A6234), healthy idealized skin (#E8C3A0).
-
-Body metrics:
-Height approximately 190 cm. Exactly 8.0 heads tall. Shoulder width approximately 2.8 head-widths. Fully symmetric design.
-
-Costume invariants:
-Identical attire from Image 1 seen from the anatomical-right camera position: gilded plate silhouette (#C9A227), silver chainmail lining edge (#B8BEC7), surcoat/cloak in profile (#F2EAD8), deep-brown leather straps (#4A3524), the holy backlight glow visible along the profile silhouette (#FFF3D6). NO weapon anywhere; the long lance is reserved for prop sheet 09.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished gilded metal, chainmail and woven-cloth material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, modern clothing, wings, horns, tail, dragon, monster, reference character face, copying any style-image character, weapon, lance, spear, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on lance shaft, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, back view, three-quarter view, head turned toward viewer, camera on anatomical left side
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic view with the camera on the anatomical RIGHT side only (do not describe this as merely "facing right").
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 04 — `04-st-george-back-fullbody.png`（STAGE 2）
-
-```text
-Use case: identity-preserve
-Asset type: single back-view full-body orthographic reference
-
-Input images:
-- Image 1: the approved 00-st-george-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
-
-Primary request:
-Render St. George as ONE full-body BACK view (180 degrees) in true orthographic projection, in the same standard neutral A-pose as the front view: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose. Head faces exactly away from the viewer.
-
-Identity invariants:
-Identical character from Image 1: same classical short wavy dark golden-brown hair seen from behind (#8A6234), same build and proportions.
-
-Body metrics:
-Height approximately 190 cm. Exactly 8.0 heads tall. Shoulder width approximately 2.8 head-widths. Fully symmetric design.
-
-Costume invariants:
-Identical attire from Image 1 seen from behind: gilded plate back panel (#C9A227), the holy-white-and-gold surcoat/cloak back panel (#F2EAD8) fully shown, silver chainmail lining edge (#B8BEC7), deep-brown leather straps (#4A3524), the radiant halo/holy backlight glowing prominently from behind the head and shoulders (#FFF3D6). NO weapon anywhere; the long lance is reserved for prop sheet 09.
-
-Composition:
-Single figure centered, entire body inside frame, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, polished gilded metal, chainmail and woven-cloth material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, modern clothing, wings, horns, tail, dragon, monster, reference character face, copying any style-image character, weapon, lance, spear, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on lance shaft, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, front view, face visible, profile, three-quarter view
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Character and costume only; zero props; flat lighting; true orthographic back view.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
-## 05 — `05-st-george-four-view-master.png`（STAGE 2）
 
 ```text
 Use case: identity-preserve
 Asset type: four-view orthographic master turnaround sheet
 
 Input images:
-- Image 1: the approved 00-st-george-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-st-george-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render a single master turnaround sheet of St. George containing four full-body orthographic views of the SAME character in one row on one shared ground line, in this exact left-to-right order: FRONT (0 degrees), LEFT profile (camera at anatomical left, 90 degrees), RIGHT profile (camera at anatomical right, 90 degrees), BACK (180 degrees). All four views use the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, identical height, identical head-to-body ratio, identical arm angles and foot spacing in every view, true orthographic projection, no contrapposto, no action pose, no T-pose.
@@ -259,7 +109,7 @@ Kinship invariants:
 none.
 
 Costume invariants:
-Every view wears the identical gilded regalia from Image 1: gilded / antique-gold polished plate (#C9A227) with high gorget and pauldrons, the Tendi Orthodox holy emblem on the breastplate (visible in the front view), warm holy-white-and-gold surcoat/cloak (#F2EAD8, its back panel fully shown in the back view), silver chainmail lining (#B8BEC7), gilded arm plates and gauntlets, leg plates and armored boots, deep-brown leather straps (#4A3524), the radiant halo/holy backlight as a light effect only (#FFF3D6). Same accessory count, positions, colors and materials in all four views. NO weapon anywhere; the long lance is reserved for prop sheet 09.
+Every view wears the identical gilded regalia from Image 1: gilded / antique-gold polished plate (#C9A227) with high gorget and pauldrons, the Tendi Orthodox holy emblem on the breastplate (visible in the front view), warm holy-white-and-gold surcoat/cloak (#F2EAD8, its back panel fully shown in the back view), silver chainmail lining (#B8BEC7), gilded arm plates and gauntlets, leg plates and armored boots, deep-brown leather straps (#4A3524), the radiant halo/holy backlight as a light effect only (#FFF3D6). Same accessory count, positions, colors and materials in all four views. NO weapon anywhere; the long lance is reserved for prop sheet 06.
 
 Composition:
 A single ultra-wide horizontal banner, four full-body figures in ONE row at equal scale, evenly spaced, none cropped, no second row, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no grid lines, no labels.
@@ -279,15 +129,18 @@ Constraints:
 
 ---
 
-## 06 — `06-st-george-expression-sheet.png`（STAGE 2 — 八表情臉部表）
+---
+
+## 03 — `03-st-george-expression-sheet.png`（STAGE 2 — 八表情臉部表）
+
 
 ```text
 Use case: identity-preserve
 Asset type: professional eight-expression anime character face sheet (also serves as expression keyframe reference for video generation)
 
 Input images:
-- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 00-st-george-character-identity-anchor.png). Ignore its original pose, framing and composition.
-- Images 2-4: shared visual-style references only. Do not copy their character identities, faces, hairstyles, costumes or anatomy.
+- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 01-st-george-front-fullbody.png). Ignore its original pose, framing and composition.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Recompose St. George into standardized head-and-shoulders studio portraits. Create exactly eight portraits arranged neatly in a 4-column by 2-row grid on a pure white seamless background. Every portrait must use a straight-on front view at 0 degrees. Crop from just below the collarbones to slightly above the top of the hair. The head must occupy approximately 70-75 percent of each panel.
@@ -320,15 +173,18 @@ photorealistic, 3D render, western comic style, chibi, super-deformed, thick out
 
 ---
 
-## 07 — `07-st-george-costume-detail-sheet.png`（STAGE 2 — 服裝細節表，含披風拆解）
+---
+
+## 04 — `04-st-george-costume-detail-sheet.png`（STAGE 2 — 服裝細節表，含披風拆解）
+
 
 ```text
 Use case: identity-preserve
 Asset type: costume construction detail sheet with outer-layer separation
 
 Input images:
-- Image 1: the approved 00-st-george-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-st-george-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a professional costume construction sheet for St. George's gilded regalia, organized as callout panels on one sheet:
@@ -343,7 +199,7 @@ Identity invariants:
 All partial-figure panels depict the same character body from Image 1; skin may appear at neck/face edges only as needed. No full standalone face portrait panels.
 
 Costume invariants:
-Exact colors and materials: gilded / antique-gold polished plate (#C9A227), silver chainmail lining (#B8BEC7), holy-white-and-gold surcoat/cloak (#F2EAD8), deep-brown leather inner straps (#4A3524). Same construction as Image 1; no redesign; NO weapon anywhere (the long lance belongs to sheet 09).
+Exact colors and materials: gilded / antique-gold polished plate (#C9A227), silver chainmail lining (#B8BEC7), holy-white-and-gold surcoat/cloak (#F2EAD8), deep-brown leather inner straps (#4A3524). Same construction as Image 1; no redesign; NO weapon anywhere (the long lance belongs to sheet 06).
 
 Composition:
 Clean production-sheet layout on warm light-gray background, panels evenly arranged with generous spacing, flat even ambient lighting, no text labels, no annotation arrows with letters.
@@ -362,15 +218,18 @@ Constraints:
 
 ---
 
-## 08 — `08-st-george-color-material-sheet.png`（STAGE 2 — 色票／材質表，固定 hex）
+---
+
+## 05 — `05-st-george-color-material-sheet.png`（STAGE 2 — 色票／材質表，固定 hex）
+
 
 ```text
 Use case: identity-preserve
 Asset type: color palette and material reference sheet
 
 Input images:
-- Image 1: the approved 00-st-george-character-identity-anchor.png and sole identity/costume authority.
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-st-george-front-fullbody.png and sole identity/costume authority.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a production color-and-material sheet for St. George: a medium-size neutral A-pose front figure (character and costume only, no weapon) on the left, and on the right a column of large clean color swatches with material rendering patches for each locked color:
@@ -407,15 +266,18 @@ Constraints:
 
 ---
 
-## 09 — `09-st-george-prop-construction-sheet.png`（STAGE 2 — 道具表：長槍唯一出現位置）
+---
+
+## 06 — `06-st-george-prop-construction-sheet.png`（STAGE 2 — 道具表：長槍唯一出現位置）
+
 
 ```text
 Use case: stylized-concept
 Asset type: prop and construction sheet (props only)
 
 Input images:
-- Image 1: the approved 00-st-george-character-identity-anchor.png — use ONLY to match the gilded/antique-gold material language and craftsmanship level; do not depict the character.
-- Images 2-4: shared style references only; do not copy their characters.
+- Image 1: the approved 01-st-george-front-fullbody.png — use ONLY to match the gilded/antique-gold material language and craftsmanship level; do not depict the character.
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Create a props-only construction sheet for St. George's legendary equipment:
@@ -442,15 +304,18 @@ Constraints:
 
 ---
 
-## 10 — `10-st-george-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+---
+
+## 07 — `07-st-george-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+
 
 ```text
 Use case: identity-preserve
 Asset type: body reference sheet for parametric human-body fitting (SMPL-X)
 
 Input images:
-- Image 1: the approved 00-st-george-character-identity-anchor.png and sole identity authority (face, hair, skin tone, body proportions).
-- Images 2-4: shared style references only; do not copy their character identities.
+- Image 1: the approved 01-st-george-front-fullbody.png and sole identity authority (face, hair, skin tone, body proportions).
+- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
 
 Primary request:
 Render St. George WITHOUT armor, surcoat/cloak or any outer garment - wearing only a plain tight dark-gray bodysuit (form-fitting underlayer, no folds, no accessories) - as TWO full-body views on one sheet: straight-on FRONT view and LEFT profile view (camera at the character's anatomical left side). Both views in the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, true orthographic projection, no contrapposto, no action pose, no T-pose. The body silhouette must be fully visible and unobstructed: no cloak, no armor, no loose clothing; no halo/backlight effect on this sheet.
@@ -479,14 +344,16 @@ Constraints:
 
 ---
 
+---
+
 ## 逐張驗收清單（強制 — 任一項漂移即 REJECT，不得繼續下一張）
 
-生成順序：00 →（使用者核准）→ 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10。
+生成順序：01 →（使用者核准）→ 02 → 03 → 04 → 05 → 06 → 07。
 每張生成後逐項檢查；REJECT 的圖不覆蓋既有檔案，存入 `rejects/` 後重生成本張。
 
 **每張圖共同檢查項：**
 
-- [ ] 臉型與臉部身份與 00 號正本一致（06–08 的人像面板亦同）
+- [ ] 臉型與臉部身份與 01 號正本一致（03–05 的人像面板亦同）
 - [ ] 髮型、髮色（深金褐 #8A6234）一致
 - [ ] 身材比例：190cm／8.0 頭身／肩寬約 2.8 倍頭寬
 - [ ] 服裝結構與 Costume Lock 一致（層次、聖記位置、披風構造）
@@ -499,14 +366,10 @@ Constraints:
 
 | 張 | 額外驗收 |
 | --- | --- |
-| 00 | 三視圖齊全（A-pose 正面全身＋正面頭肩＋45° 頭肩），缺一即 REJECT；無巨龍、無長槍 |
-| 01 | 正面、A-pose、正交 |
-| 02 | 相機位於解剖學左側、A-pose、正交（不得只寫「朝左」） |
-| 03 | 相機位於解剖學右側、A-pose、正交（不得只寫「朝右」） |
-| 04 | 背面、A-pose、正交 |
-| 05 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊 |
-| 06 | 恰好 8 格 4×2、順序正確、只有表情改變 |
-| 07 | 披風拆解面板＋無披風軀幹視圖必須存在 |
-| 08 | 色票方塊與鎖定 hex 完全一致 |
-| 09 | 長槍唯一出現於此；無角色、無臉、無人物剪影、無巨龍 |
-| 10 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖；無聖光光環 |
+| 01 | 正面、A-pose、正交；**臉部須清晰可辨——本張為身份／服裝唯一正本** |
+| 02 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊；相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；背面、A-pose、正交 |
+| 03 | 恰好 8 格 4×2、順序正確、只有表情改變 |
+| 04 | 披風拆解面板＋無披風軀幹視圖必須存在 |
+| 05 | 色票方塊與鎖定 hex 完全一致 |
+| 06 | 長槍唯一出現於此；無角色、無臉、無人物剪影、無巨龍 |
+| 07 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖；無聖光光環 |
