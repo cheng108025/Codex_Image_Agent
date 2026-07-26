@@ -13,46 +13,6 @@
 > **兩階段規則（強制）**：第一階段只生成 `00-kritz-character-identity-anchor.png`（三視圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，缺一即 REJECT 重生成），生成後停止等待使用者核准。核准後 00 成為 01–10 的 Image 1 身份／服裝唯一正本。三張 style 圖永遠只控制畫風。
 > **檔案安全**：不得刪除或覆蓋現有 PNG（含既有 01–09）；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
 
-## Codex 生成清單（機器可讀，檔頭——本節可單獨判讀，無需回頭讀交接規範）
-
-**(a) 確切檔名清單（人形 11 張，00–10，檔名含 kritz）：**
-- `00-kritz-character-identity-anchor.png`
-- `01-kritz-front-fullbody.png`
-- `02-kritz-left-profile-fullbody.png`
-- `03-kritz-right-profile-fullbody.png`
-- `04-kritz-back-fullbody.png`
-- `05-kritz-four-view-master.png`
-- `06-kritz-expression-sheet.png`
-- `07-kritz-costume-detail-sheet.png`
-- `08-kritz-color-material-sheet.png`
-- `09-kritz-prop-construction-sheet.png`
-- `10-kritz-body-reference-sheet.png`
-
-**(b) 生成順序與兩階段閘門：**
-1. 第一階段只生成 `00-kritz-character-identity-anchor.png`，生成後停止，等待使用者核准。
-2. **家族錨點閘門（ROYAL）**：克里茲是 `ROYAL` 家族（克里茲／奧德里奇／皇后阿格妮絲）的相似基準——**克里茲的 00 必須先於奧德里奇、皇后阿格妮絲的 00 生成並核准**；家族其他成員的 00 在克里茲 00 核准前不得進入生成階段。
-3. 克里茲本人的 00 核准後，才依序生成 01→02→03→04→05→06→07→08→09→10；每張逐項驗收（見檔尾「逐張驗收清單」）通過才可進下一張。
-
-**(c) 生成清單檔名與各節標題預定輸出檔名一致性：** 下表「檔案」欄與本檔各 `## 00`–`## 10` 章節標題所列輸出檔名逐一相同；Codex 可直接以章節標題檔名作為輸出檔名。
-
-**(d) 既有 PNG 標記：**
-
-| 編號 | 狀態 | 說明 |
-| --- | --- | --- |
-| 00 | `PENDING-GENERATION` | 尚未生成，STAGE 1 唯一目標 |
-| 01 | 已生成，不得覆蓋 | 檔名與 canonical 相同 |
-| 02 | 已生成，不得覆蓋 | 檔名與 canonical 相同 |
-| 03（canonical＝右側） | 已生成，不得覆蓋 | 舊檔名 `04-kritz-right-profile-fullbody.png` ↔ canonical `03-kritz-right-profile-fullbody.png`（舊↔canonical 編號相反，不得重新命名既有檔） |
-| 04（canonical＝背面） | 已生成，不得覆蓋 | 舊檔名 `03-kritz-back-fullbody.png` ↔ canonical `04-kritz-back-fullbody.png`（舊↔canonical 編號相反，不得重新命名既有檔） |
-| 05 | 已生成，不得覆蓋 | 檔名相同；既有實際視圖排列為正／左／背／右，與本文 canonical「正面→左→右→背」不同 |
-| 06 | 已生成，不得覆蓋 | 檔名與 canonical 相同 |
-| 07 | 已生成，不得覆蓋 | 檔名與 canonical 相同 |
-| 08 | 已生成，不得覆蓋 | 檔名與 canonical 相同 |
-| 09 | 已生成，不得覆蓋 | 檔名與 canonical 相同 |
-| 10 | `PENDING-GENERATION` | 尚未生成 |
-
-不得刪除、覆蓋或重新命名任一既有 PNG；重生成一律先存 `rejects/`，經使用者核准後才取代正本。
-
 共用畫風參考（style only, do not copy their characters）：
 - `../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
 - `../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
@@ -558,15 +518,3 @@ Constraints:
 | 08 | 色票方塊與鎖定 hex 完全一致 |
 | 09 | 雙生聖劍唯一出現於此；無角色、無臉、無人物剪影 |
 | 10 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖；無肩甲無鏈飾 |
-
----
-
-## 交給 Codex 的一鍵指令（可直接複製）
-
-```text
-按照 output/Story_Character/01_主角陣營/克里茲/PROMPTS.md 執行兩階段產圖。
-第一階段只生成 00-kritz-character-identity-anchor.png（三視圖：A-pose 正面全身、正面頭肩像、45° 三分之四頭肩像；零道具；缺任一視圖即 REJECT 重生成），使用 style 資料夾三張圖片鎖定共同畫風，不得把其中角色當成新角色身份。生成後停止，等待我確認。
-克里茲是 ROYAL 家族（克里茲／奧德里奇／皇后阿格妮絲）的相似錨點：克里茲的 00 必須先於奧德里奇、皇后阿格妮絲的 00 核准，家族其他成員的 00 在此之前不得進入生成階段。
-我確認克里茲 00 號圖後，再把它作為 Image 1 身份正本依序生成 01–10。每生成一張先過 PROMPTS.md 的逐張驗收清單；任一項漂移即 REJECT，存 rejects/ 後重生成本張，不得繼續下一張，也不得刪除、覆蓋或重新命名任何現有 PNG（含既有已核准的 01–09）。
-全部核准後，產出 output/Story_Character/_families/FAMILY-ROYAL-resemblance-sheet.png 供我驗證克里茲與奧德里奇、皇后阿格妮絲的家族相似度。
-```
