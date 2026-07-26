@@ -82,7 +82,7 @@ description: 【產線第 3 段·下游】把中游產好的角色包（SPEC＋P
 ---
 
 ## 完成後回報
-結論先行：專案進度（各角色 01 核准狀態、02–07 完成數）、畫風錨狀態（PENDING/ACTIVE）、REJECT 統計（哪些張重生成幾次）、仍擱置的角色（PENDING 未定案）、產出 PNG 清單。依 `rules/subagent-context.md` 摘要寫入 `.claude/context/decisions/`。
+結論先行：專案進度（各角色 01 核准狀態、02–07 完成數）、畫風錨狀態（PENDING/ACTIVE）、REJECT 統計（哪些張重生成幾次）、仍擱置的角色（PENDING 未定案）、產出 PNG 清單。
 
 ## 鐵律
 Claude 不生圖（生圖是 Codex）；不刪不覆蓋既有 PNG（重生成一律 `rejects/`）；首角色 01 未核准前不得開後續角色；有 PENDING 鎖的角色不生 01；每張過驗收才進下一張。
