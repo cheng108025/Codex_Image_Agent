@@ -1,114 +1,76 @@
-# 哈努爾 Hanul
+# 哈努爾 — CHARACTER_SPEC
 
-> Tier - 反派陣營／被俘的政變軍人。本檔為文字版身份規格（新版七張制 01–07），供 `01-hanul-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**被俘受審版**——破損甲冑、渾身傷痕、滿口鮮血、放肆惡笑。此為與角色文檔「被克里茲審問」場次唯一一致的時期，本包不混入其他服裝版本。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: hanul-F1B720F99C76
+>
+> Hanur is a Bristol mixed-heritage hunter and member of Paranoia's army. The story does not specify the face, hair, eye color, or exact age; do not infer personal traits from a population-level Bristol description. The paired daggers are the only locked weapons and appear only on sheet 06. This package represents the living pursuit-period version, not the later mutilated corpse.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：哈努爾
-- 英文名：Hanul
-- 角色版本 ID：**`HANUL-V1-CAPTURED-INTERROGATION`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男
-- 年齡／外觀年齡：粗獷的成年軍人（`CANON` 成年）
-- 身高：約 183cm（`CANON` 基準值）
-- 體型：結實、粗獷的成年軍人體格（`CANON`）
-- 故事時期：被克里茲審問／被俘時（`CANON`）
-- 服裝版本：被俘受審版——甲冑破損、渾身傷痕、滿口鮮血、放肆惡笑（`CANON` 大方向；細節 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**183**（`CANON`）
-- 頭身比：**7.0**（結實壯碩的成年軍人比例；`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.4 倍頭寬**（結實壯碩軍人體格；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**主要撕裂傷痕固定於左頰／左下顎；主要破損盔甲部位固定於左肩甲**（`DESIGN-PROPOSAL`，使用者可覆蓋；覆蓋後需同步更新 01–07）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：無
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：hanul-F1B720F99C76
+- 角色版本 ID：HANUL-V1-CAPTURED-INTERROGATION
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-hanul-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-hanul-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：粗獷成年軍人臉，**一張帶著惡意的臉**、放肆的惡笑（`CANON`）
-- 膚色：健康偏黝、風霜感（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：帶惡意、無所畏懼的眼神（`CANON` 神情）；瞳色鎖定為**深棕**（`DESIGN-PROPOSAL` 鎖定值，原 `PENDING-USER-INPUT`）
-- 髮型、髮色與固定髮束：**短硬鬚髮**（`CANON`）——短硬的頭髮與臉上的粗短鬍碴（stubble）；髮色鎖定為**深棕**（`DESIGN-PROPOSAL` 鎖定值，原 `PENDING-USER-INPUT`）
-- 身材比例：約七頭身、結實壯碩的日系奇幻設定稿比例；見 Body Metrics Lock（183cm／7.0 頭身／肩寬約 2.4 倍頭寬）
-- 標誌性輪廓：破損甲冑輪廓＋放肆惡笑、滿口鮮血＋左頰撕裂傷（`CANON` 惡笑與鮮血；輪廓構成與傷痕定位為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：短硬鬚髮／粗短鬍碴、帶惡意的放肆惡笑、嘴部傷口與鮮血、破損甲冑、左頰／左下顎撕裂傷、左肩甲破損
-- **anatomical left／right 不對稱鎖定**：主要撕裂傷痕＝角色解剖學**左頰／左下顎**；主要破損盔甲＝角色解剖學**左肩甲**（見 Body Metrics Lock）。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側；02 應清楚呈現左頰傷痕與左肩甲破損，03 呈現對側完好甲片，跨圖不得鏡像翻轉。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：破損的軍用甲冑（板甲／皮甲混合），被俘後多處破損、綁縛或脫落（`CANON` 破損甲冑；分層為 `DESIGN-PROPOSAL`）
-- 領口：破損護頸或裸露頸部，可見傷痕（`DESIGN-PROPOSAL`）
-- 肩部：左肩甲片凹陷破損、鉚釘斷裂；右肩甲片相對完好（`DESIGN-PROPOSAL`，左右不對稱鎖定）
-- 胸前：破損胸甲，凹陷刮痕、綁帶鬆脫（`CANON` 破損；細節 `DESIGN-PROPOSAL`）
-- 袖口／手部：破損護臂或裸露前臂，可見傷痕（`DESIGN-PROPOSAL`）
-- 腰部：破損腰帶，武器已被繳械（`DESIGN-PROPOSAL`；被俘狀態）
-- 下襬／披風：破損戰袍下襬或無披風，殘破（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：破損護脛與軍靴，泥污與傷痕（`DESIGN-PROPOSAL`）
-- 背面結構：破損甲冑背板，綁帶鬆脫、甲片缺損（`DESIGN-PROPOSAL`）
+- 身高（cm）：**183**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.0**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.4 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：暗沉鐵灰破損板甲 **#4B4B50**（`DESIGN-PROPOSAL`；呼應政變軍人）
-- 輔色：暗棕皮革 **#4A3527**（`DESIGN-PROPOSAL`）
-- 金屬：破損鐵灰板甲、刮痕與凹陷 **#4B4B50**；次要暗鐵灰 **#3A3A3E**（`DESIGN-PROPOSAL`）
-- 寶石：無（`DESIGN-PROPOSAL`）
-- 布料：破損戰袍布料、鬆脫綁帶 **#4A3527**（`DESIGN-PROPOSAL`）
-- 皮革：破損皮甲、腰帶、軍靴 **#4A3527**（`DESIGN-PROPOSAL`）
-- 特殊材質：滿口鮮血、渾身傷痕、暗紅血跡 **#6B1B1B**；泥污瘀傷 **#5A4A3A**（`CANON` 鮮血存在；hex `DESIGN-PROPOSAL`）
-- 膚色／髮色／瞳色（hex）：膚 **#C79A6E**（健康偏黝、風霜感）／髮 **#3B2A1E**（深棕短硬髮＋粗短鬍碴同色）／瞳 **#3B2416**（深棕）（`DESIGN-PROPOSAL` 鎖定）
-- **不具備之材質（生成時須排除）**：乾淨無損／全新光亮的甲冑、貴族華麗裝飾、寶石鑲嵌——哈努爾的實際材質僅為暗沉破損的鐵灰／暗棕金屬與皮革甲冑，帶暗紅鮮血與泥污。
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：無（被俘繳械狀態）（`DESIGN-PROPOSAL`；呼應被俘場景）。**01–02 與 07 一律不出現**
-- 飾品：無明確固定飾品（`DESIGN-PROPOSAL`）
-- 隨身道具：無（被俘）（`DESIGN-PROPOSAL`）；甲冑無可見徽記（被俘時遭刮除／剝除，`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：破損甲冑以鬆脫綁帶勉強固定（`DESIGN-PROPOSAL`）
+- CANON：Hanur is a Bristol mixed-heritage hunter and member of Paranoia's army. The story does not specify the face, hair, eye color, or exact age; do not infer personal traits from a population-level Bristol description. The paired daggers are the only locked weapons and appear only on sheet 06. This package represents the living pursuit-period version, not the later mutilated corpse.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 帶惡意、無畏的預設神情
-2. 輕笑 Gentle smile — 帶惡意的冷笑
-3. 大笑、可見牙齒 Broad smile with visible teeth — 放肆惡笑，齒縫見血
-4. 開懷大笑 Joyful open laughter — 滿口鮮血卻笑出聲
-5. 驚訝 Surprise
-6. 憤怒 Anger
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-> 表情表僅改變眉眼與嘴部；臉部身份、短硬鬚髮、左頰傷痕與嘴部鮮血跨八格一致，不可抹平為乾淨無傷的臉。
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、貴族華服
-- 不可出現的顏色：高飽和螢光色、粉彩系；乾淨無損／全新光亮的甲冑、貴族華麗裝飾（noble finery）
-- 不可改變的左右位置：左頰／左下顎傷痕與左肩甲破損不得鏡像至右側
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
+## 固定色票與材質
 
-## 鎖定錨定預設值（可覆蓋）
-> 以下為 01 錨定圖採用的具體鎖定值，避免模型隨機決定辨識度關鍵項；使用者可事後覆蓋。
-- 髮色／瞳色：深棕（短硬髮＋粗短鬍碴同色；瞳深棕）。
-- 甲冑徽記：無可見徽記（被俘時遭刮除／剝除）。
-- 主要材質：暗沉破損的鐵灰／暗棕金屬與皮革甲冑，帶暗紅鮮血與泥污；無寶石、無光亮全新板甲、無貴族華服。
-- 左右不對稱：左頰／左下顎撕裂傷＋左肩甲破損。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#4B4B50、#4A3527、#3A3A3E、#6B1B1B、#5A4A3A、#C79A6E、#3B2A1E、#3B2416
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝採被俘受審版（破損甲冑、傷痕、滿口鮮血、放肆惡笑）。
-  - 短硬鬚髮＋粗短鬍碴、帶惡意的臉為跨圖鎖定特徵。
-  - 髮色／瞳色鎖定為深棕（原 `PENDING-USER-INPUT`，本次正式定案）。
-  - 左右不對稱特徵鎖定：左頰／左下顎傷痕＋左肩甲破損。
-- **`PENDING-USER-INPUT`**（僅存不影響辨識度之項）：
-  - 甲冑的具體軍種樣式與徽記（文檔僅載「破損甲冑」）。
-  - 鮮血／傷痕的強度上限（是否需降低血腥度以符合展示用途）。
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-hanul-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

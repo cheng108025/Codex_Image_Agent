@@ -1,89 +1,76 @@
-# 夜光馬 Nightglow Horse
+# 夜光馬 — CHARACTER_SPEC
 
-> Tier 坐騎 — 克里茲的坐騎。本檔為文字版身份規格（**範本 v2 FULL，非人形結構**），供 `01-nightglow-horse-front-fullbody.png` 與 01–06 全套參考圖生成之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> 特別註記：本角色為**生物坐騎（非人形四足獸）**，豁免 A-pose 與 07 號身體參考圖（無人類骨架可供擬合），改用「自然站立正交視圖」。01 號採 CREATURE 格式——同一隻生物的全身自然站立視圖＋頭部特寫＋45° 頭部視圖；不含人類、不含騎手、不含八表情、不含服裝，改以 ANATOMY 解剖鎖定。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。純 AI img2vid 無法保證跨鏡頭的角色完全一致；正式影片必須先以本參考包建立同一個經核准的 Blender／VRM 巨獸模型，並以該模型作為唯一角色正本驅動所有鏡頭。**
-> **鞍具狀態版本說明**：本包鎖定的是**無鞍身份版** `NIGHTGLOW-HORSE-V1-BARE-MOUNT`——01–06 全部視圖一律 no rider, no saddle, no harness, no external props。若未來需要作為克里茲坐騎出鏡的「騎乘裝具版」，須另立版本 ID `NIGHTGLOW-HORSE-V2-SADDLED-MOUNT`（鞍、韁繩與連接方式屆時另案鎖定），不得混入本包。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: nightglow-horse-F1B720F99C76
+>
+> BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked nightglow horse. Do not generate sheet 01 and do not promote any legacy anatomy, glow pattern, palette, tack, or biography in this package to story canon until the user decides whether it is a unique character, an unnamed mount, or an ensemble creature.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：夜光馬
-- 英文名：Nightglow Horse
-- 角色版本 ID：**`NIGHTGLOW-HORSE-V1-BARE-MOUNT`**（本版本鎖定為無鞍具身份基準版；「騎乘裝具版」`NIGHTGLOW-HORSE-V2-SADDLED-MOUNT` 為未來另立版本，本包不建置）
-- 性別：不適用 — **N/A**（坐騎生物）
-- 年齡／外觀年觀：成年健壯駿馬（`DESIGN-PROPOSAL`）
-- 身高／體型：**體型高大健壯**，適合屋頂與城戰的敏捷衝刺（`CANON` 高大健壯、敏捷衝刺）
-- 故事時期／型態版本：全篇同一隻夜光馬、同一外觀，無服裝、無鞍具（`CANON` 單一故事階段；服裝版本不適用 **N/A**）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock（相對比例鎖 — SPEC 無公尺數值，不發明絕對數值）
-> SPEC 原文僅載「體型高大健壯」（`CANON`），未給出公尺數。以下改採**相對比例鎖**（軀幹長為基準單位 1.0），供 3D 建模與跨圖比例一致性使用；使用者可事後以實際公尺數覆蓋。
-- 尺度基準：軀幹長（肩至臀，不含頭頸尾）＝ **1.0**（相對單位，`DESIGN-PROPOSAL`）
-- 頭長 ＝ 軀幹長的 **0.4 倍**（`DESIGN-PROPOSAL`；健壯馬首比例）
-- 頸長 ＝ 軀幹長的 **0.55 倍**（`DESIGN-PROPOSAL`）
-- 尾長 ＝ 軀幹長的 **0.65 倍**（`DESIGN-PROPOSAL`；深色長尾）
-- 肩高／鬐甲高（地面至肩）＝ 軀幹長的 **1.05 倍**（`DESIGN-PROPOSAL`；高大健壯、敏捷衝刺型偏方正結構）
-- 左右不對稱特徵：**無，全對稱**——鬃毛、蹄際夜光、四肢與尾皆左右完全對稱，無單側疤痕、缺損或色斑（`DESIGN-PROPOSAL` 鎖定）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- **無**——本角色無血緣親屬關係（非人類角色，不適用家族註冊表）
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：nightglow-horse-F1B720F99C76
+- 角色版本 ID：HORSE-V1-BARE-MOUNT
+- 生成閘門：BLOCKED-PENDING-USER-INPUT
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-nightglow-horse-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-nightglow-horse-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 解剖鎖定 Anatomy Lock（取代服裝鎖定）
-- 整體輪廓：高大健壯、線條流暢的駿馬，肌肉勻稱、四肢有力（`CANON` 高大健壯）
-- 毛色：**通體毛色深**（深黑—深炭 `#17151A`），無白斑（`CANON` 通體深色）
-- 鬃毛：**鬃毛泛著微微夜光**，柔和冷光自髮絲透出（`CANON` 鬃毛夜光）；夜光色鎖定為**銀藍 silver-blue（偏青白）`#8FB8D6`**（`LOCKED`）
-- 蹄際：**蹄際泛著微微夜光**，同為銀藍色 `#8FB8D6`（`CANON` 蹄際夜光；色調 `LOCKED`）
-- 奔馳流光：**奔馳時在黑夜中拉出一道流光**（`CANON` 奔馳流光；於 01 靜態圖可以鬃毛／蹄際微光暗示，不強制畫出動態拖尾；效果研究見 06）
-- 頭部：健壯馬首、深色鬃毛、沉靜眼神，瞳色深棕近黑 `#2A2018`（`DESIGN-PROPOSAL`）
-- 四肢與蹄：強健四肢、敏捷衝刺型體格（`CANON` 敏捷衝刺）
-- 尾：深色長尾，可透微微夜光（`DESIGN-PROPOSAL` 呼應鬃毛夜光）
-- 不可改變特徵：通體深毛色、鬃毛與蹄際的微微夜光（銀藍）、高大健壯馬體、無角無翼、全對稱設計
+## Body Metrics Lock
 
-## 色票與材質（固定色票，跨全部圖片不得漂移；SPEC 原僅有色名，hex 為 `DESIGN-PROPOSAL` 近似值）
-- 主色：深黑—深炭馬毛 **`#17151A`**（`CANON` 通體深色；hex `DESIGN-PROPOSAL`）
-- 輔色：鬃毛與蹄際的冷色夜光 **`#8FB8D6`**（`CANON` 夜光；色調 `LOCKED`，呼應全書銀藍系）
-- 金屬：無（如另配鞍具屬 V2 另案）— **N/A**
-- 寶石：無 — **N/A**
-- 布料：無 — **N/A**
-- 皮革：無（鞍具屬 V2 另案）— **N/A**
-- 特殊材質：鬃毛／蹄際自發微光光效、奔馳流光（`CANON`）
-- 眼睛（hex）：深棕近黑瞳 **`#2A2018`**（`DESIGN-PROPOSAL`）
+- 身高（cm）：PENDING-USER-INPUT
+- 頭身比：PENDING-USER-INPUT
+- 肩寬（頭寬倍數）：PENDING-USER-INPUT
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
+
+## Identity Lock
+
+- CANON：BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked nightglow horse. Do not generate sheet 01 and do not promote any legacy anatomy, glow pattern, palette, tack, or biography in this package to story canon until the user decides whether it is a unique character, an unnamed mount, or an ensemble creature.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
+
+## Costume Lock
+
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
+
+## 固定色票與材質
+
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#17151A、#8FB8D6、#2A2018
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
 ## 道具與特殊構造
 
-> **本節所有道具、飾品與特殊構造一律只出現於 `06`（道具結構表）**；`01`–`05` 與 `07` 全部零道具。
-- 武器：無 — **N/A**
-- 飾品：無 — **N/A**
-- 隨身道具：無 — **N/A**
-- 翅膀／角／尾巴／其他特殊構造：**無翼、無獨角**；僅深色長尾與鬃毛／蹄際夜光（`CANON` 夜光；禁翼禁角見禁止特徵）
-- 配戴或連接方式：不適用 — **N/A**（無鞍具、無韁繩、無騎手；01–06 全部視圖零道具：**no rider, no saddle, no harness, no external props anywhere on the creature**）
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-nightglow-horse-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
 
-## 八種固定表情
-- 不適用 — 坐騎生物不製作八表情臉部表 **N/A**。01 號改以「全身自然站立視圖＋頭部特寫＋45° 頭部視圖」呈現同一生物；06 號改以「八格頭部神態表」對應原八表情語意（見 PROMPTS.md 06）。
+## Kinship Lock
 
-## 禁止特徵
-- 不可新增的配件：騎手、人類、鞍具、韁繩以外的機械裝置
-- 不可出現的構造：翅膀、獨角（非獨角獸）、機械部件
-- 不可出現的形態：卡通小馬 pony、Q版馬、chibi 馬
-- 不可出現的顏色：淺色／白色主毛色、高飽和螢光色、粉彩系
-- 不可改變的左右位置：無不對稱特徵（全對稱設計）；跨圖不得出現單側缺損等新增不對稱
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 01 號採 CREATURE 格式：全身自然站立視圖＋頭部特寫＋45° 頭部視圖，同一隻生物、無人類、無騎手。
-  - 毛色鎖定通體深色 `#17151A`，夜光鎖定銀藍 `#8FB8D6`（鬃毛與蹄際）。
-  - 非人形豁免 A-pose 與 07 號身體參考圖；02 的四視圖改為自然站立正交視圖（正面／解剖學左側／解剖學右側／背面）。
-  - 本包鎖定為無鞍身份版 `NIGHTGLOW-HORSE-V1-BARE-MOUNT`；「騎乘裝具版」`NIGHTGLOW-HORSE-V2-SADDLED-MOUNT`（鞍、韁繩、連接方式）為未來另立版本，本次不建置、不混入本包。
-- **`PENDING-USER-INPUT`（不影響 01 辨識度，可續留）**：
-  - 奔馳流光是否需另出動態版本（本 01 號為靜態身份基準）。
-  - `NIGHTGLOW-HORSE-V2-SADDLED-MOUNT`（配戴克里茲坐騎鞍具）的鞍具樣式、韁繩與連接方式——待該版本另立時再決定，不在本包範圍內。
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

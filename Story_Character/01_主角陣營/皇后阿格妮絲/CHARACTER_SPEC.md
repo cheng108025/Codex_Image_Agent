@@ -1,107 +1,76 @@
-# 皇后阿格妮絲 Agnes
+# 皇后阿格妮絲 — CHARACTER_SPEC
 
-> Tier ——《赫克托》配角，克里茲之母。本檔為文字版身份規格（新版七張制 01–07），供 `01-agnes-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**政變之夜寢房版**（單薄白色寢衣＋褪色金線繡；病弱蜷縮）。此為文檔唯一明載的登場造型。本角色目前無任何已核准 PNG，01 生成前所有非數值型辨識特徵均以下列 `DESIGN-PROPOSAL` 鎖定值為準。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: agnes-F1B720F99C76
+>
+> This character is the unnamed Queen and Kriz's mother; "Agnes" is not story canon and must remain a legacy working label only. She has smooth flowing brown hair that turns golden in candlelight, champagne-gold eyes, red lips, slender arms, a refined face, and a curvaceous figure. Her story costume is a pure-white satin nightdress. The pure-silver Pandora necklace is a removable prop and appears only on sheet 06. Her true name remains PENDING-USER-INPUT.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：皇后阿格妮絲
-- 英文名：Agnes
-- 角色版本 ID：**`AGNES-V1-COUP-NIGHT-BEDCHAMBER`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：女
-- 年齡／外觀年齡：成年女性，約 30 歲上下（`DESIGN-PROPOSAL`；文檔未載明確年齡，僅為克里茲之母、病弱憔悴）
-- 身高：約 168cm，但因病弱蜷縮而常顯得瘦小（`CANON` 身高與蜷縮）
-- 體型：纖細病弱、瘦削（`CANON`）
-- 故事時期：政變之夜（`CANON`；本版本鎖定此時期外觀，其他時期需另立版本 ID）
-- 服裝版本：政變之夜寢房版——單薄白色寢衣，領口與袖口褪色金線繡（`CANON`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**168**（`CANON`）
-- 頭身比：**7.5**（纖細病弱、修長單薄比例；`DESIGN-PROPOSAL`，可覆蓋）
-- 肩寬（頭寬倍數）：**約 1.8 倍頭寬**（肩頸單薄纖細；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**無，全對稱**——寢衣為單層素淨設計，無配件、無單側扣件（`DESIGN-PROPOSAL`）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：克里茲 `KRITZ-V1-1587-EXPEDITION` — 子
-- 家族錨點：**克里茲**（家族 `ROYAL`）——克里茲的 01 先核准，本角色的 01 才進入生成
-- 承襲特徵（向下）：子克里茲的**暖紅金瞳源自她的金色眼睛**（`CANON`「克里茲金瞳的來源」，本檔既有鎖定）；眼型可與克里茲有母子相似（`DESIGN-PROPOSAL`）
-- 刻意區分特徵：本人為**純金瞳、空洞失焦**（克里茲為偏暖紅金且眼神冷峻）；淺金及腰長髮 vs 克里茲暗金短髮；蒼白病弱 vs 克里茲健康冷調
-- 禁止混淆項：不得紅金瞳（那是克里茲的變體）；不得暗金短髮；不得健康紅潤體態
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：agnes-F1B720F99C76
+- 角色版本 ID：AGNES-V1-COUP-NIGHT-BEDCHAMBER
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：IMAGE-DRIFT-REVIEW-REQUIRED — 7 existing PNG file(s); documents refreshed by explicit user authorization, PNGs untouched.
+- 身份正本：01-agnes-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-agnes-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：憔悴消瘦的成年女性臉型，顴骨微顯、雙頰凹陷，神情帶著過往創傷（`CANON` 憔悴病弱；臉型細節 `DESIGN-PROPOSAL`）
-- 膚色：蒼白近乎透明，燭光下泛冷白（`CANON`；hex 見下）
-- 眼型與眼睛顏色：**空洞的金色眼睛**——克里茲金瞳的來源（`CANON`）。眼神空洞失焦、眼下泛青影（`CANON` 空洞；青影為 `DESIGN-PROPOSAL`）
-- 髮型、髮色與固定髮束：**淺金色長髮，散亂垂落**（`CANON`）；未經打理、幾縷黏貼於臉頰的病中散髮，瀏海與散髮撥至兩側使空洞金瞳完整清晰可辨（`CANON`＋`DESIGN-PROPOSAL`鎖定）
-- 身材比例：約七頭半身、修長纖細的日系奇幻設定稿比例，肩頸單薄；見 Body Metrics Lock（168cm／7.5 頭身／肩寬約 1.8 倍頭寬）
-- 標誌性輪廓：單薄寢衣下瘦削蜷縮的身形＋垂落散髮的剪影（`CANON` 元素；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：空洞金色瞳、淺金散亂長髮、單薄白色寢衣、褪色金線繡、蒼白透明膚色、病弱瘦削
-- **anatomical left／right 不對稱鎖定**：全對稱設計（見 Body Metrics Lock）。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側；因設計全對稱，左右兩側輪廓應互為鏡像一致，跨圖不得出現新增的單側特徵。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：單層單薄白色寢衣，無外袍無甲（`CANON`）
-- 領口：柔軟寢衣領口，綴褪色金線繡（`CANON` 金線繡；領口樣式 `DESIGN-PROPOSAL`）
-- 肩部：無肩甲，寢衣柔軟垂肩，肩線單薄（`DESIGN-PROPOSAL`）
-- 胸前：素淨寢衣前襟，無徽記無甲片（`DESIGN-PROPOSAL`）
-- 袖口／手部：寬鬆長袖，袖口綴褪色金線繡（`CANON` 袖口金線繡）；纖細蒼白的手（`DESIGN-PROPOSAL`）
-- 腰部：無腰帶或僅柔軟繫帶，寢衣自然垂落（`DESIGN-PROPOSAL`）
-- 下襬／披風：寢衣長裙及地，柔軟垂墜，無披風（`DESIGN-PROPOSAL`；「無披風」呼應病弱居家）
-- 腿部／鞋靴：赤足或素色軟履，居家病中（`DESIGN-PROPOSAL`）
-- 背面結構：寢衣背面素淨，散髮覆背，無扣件無甲（`DESIGN-PROPOSAL`）
+- 身高（cm）：**168**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.5**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 1.8 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：柔白／米白寢衣布 **#F5F2EC**（`CANON` 全書配色方向一致；hex 為 `DESIGN-PROPOSAL`）
-- 輔色：褪色暗金（領口與袖口金線繡）**#B8A063**（`CANON` 金線繡；hex `DESIGN-PROPOSAL`）
-- 金屬：無金屬配件；僅金線繡的暗澹金絲 **#B8A063**（`DESIGN-PROPOSAL`）
-- 寶石：無（`DESIGN-PROPOSAL`）
-- 布料：單薄柔軟的寢衣織物 **#F5F2EC**，輕透垂墜（`CANON` 單薄；hex `DESIGN-PROPOSAL`）
-- 皮革：無（`DESIGN-PROPOSAL`）
-- 特殊材質：褪色金線繡象徵曾經華貴已被政變之夜擊碎（`CANON`）
-- 膚色／髮色／瞳色（hex）：膚 **#F5EDE6**（半透明蒼白）／髮 **#E8D9A0**（淺金／亞麻金）／瞳 **#C9AD5E**（空洞金色，較克里茲的紅金瞳 #D9832E 更冷、更淡）（`DESIGN-PROPOSAL` 鎖定，本角色無 PNG，依色名描述推定近似值）
-- **不具備之材質（生成時須排除）**：金屬盔甲、珠寶配飾、鮮豔正色布料——阿格妮絲的實際材質僅為單薄白色寢衣布＋褪色暗金繡線。
+## Identity Lock
+
+- CANON：This character is the unnamed Queen and Kriz's mother; "Agnes" is not story canon and must remain a legacy working label only. She has smooth flowing brown hair that turns golden in candlelight, champagne-gold eyes, red lips, slender arms, a refined face, and a curvaceous figure. Her story costume is a pure-white satin nightdress. The pure-silver Pandora necklace is a removable prop and appears only on sheet 06. Her true name remains PENDING-USER-INPUT.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
+
+## Costume Lock
+
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
+
+## 固定色票與材質
+
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 命名色之候選 hex（DESIGN-PROPOSAL）：champagne gold #C8A96A、pure white #F7F7F2、golden #D4AF37、gold #C8A24A、white #F2F0EA、brown #5A3A2E、silver #C3CAD4、red #9E2F3B
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
 ## 道具與特殊構造
 
-> **本節所有道具、飾品與特殊構造一律只出現於 `06`（道具結構表）**；`01`–`05` 與 `07` 全部零道具。
-- 武器：無（`CANON` 病弱女性，無武裝）
-- 飾品：無明載飾品（`DESIGN-PROPOSAL`；可留白）
-- 隨身道具：無（`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：不適用（無配件）
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-agnes-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
 
-## 八種固定表情
-1. 自然 Neutral — 空洞失焦的病中預設神情
-2. 輕笑 Gentle smile — 脆弱而勉強的一絲柔軟
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger
-7. 悲傷 Sadness — 過往創傷浮現的哀慟
-8. 眨眼 Wink
+## Kinship Lock
 
-> 表情表僅改變眉眼與嘴部；臉部身份、憔悴消瘦感、蒼白膚色與空洞金瞳跨八格一致。
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
 
-## 禁止特徵
-- 不可新增的配件：盔甲、武器、王冠、盾、翅膀、角、尾巴、金屬肩甲、華麗珠寶
-- 不可出現的顏色：高飽和螢光色、粉彩系、與白／褪色暗金色票衝突的鮮豔色；寢衣不得改為鮮豔正色
-- 不可改變的左右位置：不適用（無左右不對稱配件，全對稱設計）
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi；不可畫成健康紅潤、豐腴或英姿颯爽
+## 八種表情／狀態
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝版本採政變之夜寢房版（單薄白色寢衣＋褪色金線繡），為文檔唯一明載造型。
-  - 眼睛以「空洞金色瞳」為外觀基準，作為克里茲金瞳的來源，跨圖鎖定。
-  - 固定色票 hex 值依色名描述推定近似值鎖定（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可於 01 核准時覆蓋。
-- **`PENDING-USER-INPUT`（僅餘瑣碎項，不影響 01 生成）**：
-  - 是否需要一個「政變前華貴皇后版」造型（文檔僅載寢房版與「曾經華貴」的過去，未給圖）——另議，不影響本 anchor 辨識度，亦不阻擋本版本 01–07 生成。
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

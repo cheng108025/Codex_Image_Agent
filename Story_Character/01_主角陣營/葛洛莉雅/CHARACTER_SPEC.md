@@ -1,120 +1,76 @@
-# 葛洛莉雅 Gloria
+# 葛洛莉雅 — CHARACTER_SPEC
 
-> Tier S ——《赫克托》情感支柱、雙面間諜。本檔為文字版身份規格（新版七張制 01–07），供 `01-gloria-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> **版本切分聲明**：貴族女裝／旅裝主版與潛入用素色斗篷屬不同鏡頭狀態，不得混在同一角色版本包中默認切換。本包鎖定單一主版 `GLORIA-V1-NOBLE-TRAVELWEAR-BADGE`；潛行斗篷版本另立為 `GLORIA-V2-STEALTH-CLOAK`（**本包未建置**，僅記錄版本 ID 供未來需要時另開一包，見文末）。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: gloria-F1B720F99C76
+>
+> Gloria has mixed silver-and-violet hair that can read as bright pink-white in sunlight, a clean fair face, large expressive water-violet eyes, and the cultivated bearing of a well-educated noblewoman. She is Benedict's daughter, Kriz and Gawain's childhood friend, and treats Levanus as a younger sister. Preserve her lively, noble, politically composed personality; expressions may include blushing, pouting, restrained delight, and calm judgment.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：葛洛莉雅
-- 英文名：Gloria
-- 角色版本 ID：**`GLORIA-V1-NOBLE-TRAVELWEAR-BADGE`**（本版本鎖定；潛行斗篷版另立 `GLORIA-V2-STEALTH-CLOAK`，不得混用）
-- 性別：女
-- 年齡／外觀年齡：青年女性，外觀年齡約 20–25 歲（`DESIGN-PROPOSAL`；文檔未明載年齡）
-- 身高：約 165cm（`CANON` 文檔載「約 165cm」）
-- 體型：中等身材、端麗清秀、體態柔中帶韌（`CANON`）
-- 故事時期：與高文互贈承諾徽章之後的主線時期（`CANON` 徽章存在時期；細部時間點文檔未再切分，`DESIGN-PROPOSAL` 統一以此為單一版本時期）
-- 服裝版本：**單一服裝版本**——利落旅裝／貴族女裝＋左胸承諾徽章（`CANON` 服裝大方向＋徽章；分層細節 `DESIGN-PROPOSAL`）。潛入間諜線的素色潛行斗篷**不屬本版本**，另立 `GLORIA-V2-STEALTH-CLOAK`（未建置）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**165**（`CANON`）
-- 頭身比：**7.5**（`DESIGN-PROPOSAL`，利於參數化人體擬合；沿用既有 STANDARD 包已使用之數值）
-- 肩寬（頭寬倍數）：**約 1.9 倍頭寬**（中等身材、修長端麗的女性比例；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**高文所贈承諾徽章固定佩於解剖學左胸**，跨圖不得鏡像至右胸（`CANON` 徽章存在；佩戴側為 `DESIGN-PROPOSAL` 鎖定值，沿用既有 STANDARD 包已鎖定的左胸佩法）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：**無**——葛洛莉雅未登錄於任何家族註冊表（`ROYAL`、`ANDRE`），無血緣親屬
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
-- **情感連結說明（非血緣，需明寫以避免誤植血緣機制）**：葛洛莉雅與高文之間是**情感／盟誓連結**（互贈承諾徽章），並非血緣親屬關係；生成提示詞中的 `Kinship invariants` 一律填 `none`，不套用 §13 血緣相似規則。
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：gloria-F1B720F99C76
+- 角色版本 ID：GLORIA-V1-NOBLE-TRAVELWEAR-BADGE
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-gloria-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-gloria-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：端麗清秀的鵝蛋／柔和瓜子臉，輪廓溫婉（`CANON` 端麗清秀；具體臉型為 `DESIGN-PROPOSAL`）
-- 膚色：白皙、暖調健康膚色（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：杏形柔和眼型，**眼神溫柔卻藏著決斷**（`CANON` 神情）；眼色鎖定**溫暖栗棕色 warm chestnut-brown**（`DESIGN-PROPOSAL`）
-- 髮型、髮色與固定髮束：**栗棕色長髮，多半束起或編辮**（`CANON`）；主版採單條側編／低束髮辮的整潔造型（`DESIGN-PROPOSAL`）
-- 身材比例：約七頭半、修長端麗的日系奇幻設定稿女性比例；見 Body Metrics Lock（165cm／7.5 頭身／肩寬約 1.9 倍頭寬）
-- 標誌性輪廓：束起／編辮的長髮線＋左胸承諾徽章的剪影（`CANON` 髮與徽章；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：栗棕長髮（束起或編辮）、溫柔藏決斷的眼神、左胸承諾徽章、約 165cm 中等柔韌體型
-- **anatomical left／right 不對稱鎖定**：02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側。承諾徽章固定佩於**解剖學左胸**：02（左側視圖）可見徽章正面／前緣，03（右側視圖）徽章位於遠側、不可見或僅隱約可見輪廓，04（背面）不可見徽章。跨圖不得將徽章鏡像至右胸或無故消失於左側視圖。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock（`GLORIA-V1-NOBLE-TRAVELWEAR-BADGE`）
-- 服裝層次：貴族質感的利落旅裝——合身上衣＋外罩短外套或旅行罩衫（`CANON` 貴族女裝／旅裝大方向；分層為 `DESIGN-PROPOSAL`）
-- 領口：端莊高至中領口，內襯柔軟布料（`DESIGN-PROPOSAL`）
-- 肩部：合身剪裁，柔和肩線，無甲片（`DESIGN-PROPOSAL`）
-- 胸前：**別著高文所贈的承諾徽章**——與高文互贈同款的騎士式徽章，佩於解剖學左胸（`CANON` 徽章存在；位置為 `DESIGN-PROPOSAL` 鎖定值）
-- 袖口／手部：合身長袖或七分袖，或搭配薄旅行手套（`DESIGN-PROPOSAL`）
-- 腰部：束腰或腰帶收出體態線條，可繫小型隨身囊袋（`DESIGN-PROPOSAL`）
-- 下襬／披風：及踝或及膝的裙擺／旅裝下襬，行動俐落（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：便於行走的低跟旅行短靴（`DESIGN-PROPOSAL`）
-- 背面結構：束起／編辮的長髮垂於背後，旅裝背面剪裁乾淨（`DESIGN-PROPOSAL`）
+- 身高（cm）：**165**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.5**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 1.9 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 替代服裝版本 — 潛行素色斗篷版（`CANON`，不屬本版本、不建置於本包）
-- `GLORIA-V2-STEALTH-CLOAK`（未建置）：潛入馬修祈禱室等間諜場次使用的素色深色潛行斗篷，附兜帽，以頸部扣件連接（`CANON` 斗篷存在）
-- 本包（`GLORIA-V1-NOBLE-TRAVELWEAR-BADGE`）之 01–07 一律不出現此斗篷；若未來需要此鏡頭狀態，須另開一份完整的 `GLORIA-V2-STEALTH-CLOAK` SPEC＋PROMPTS 包，不可在本包 07／06 內以「替代裝」名義混入
+## Identity Lock
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：柔和栗棕色布料 **#8B5E3C**＋暖米色 **#D9C4A3**（`DESIGN-PROPOSAL`；無既有 PNG 可取樣，依色名推定 hex）
-- 輔色：象牙白內襯 **#F0E6D2**、栗棕髮色 **#6B4530**（`DESIGN-PROPOSAL`）
-- 金屬：承諾徽章暖金／黃銅 **#B08D4E**（`DESIGN-PROPOSAL`；與全書金色系一致）
-- 寶石：承諾徽章中央深銀藍寶石 **#4A6C8C**（`DESIGN-PROPOSAL`，解決原「顏色 PENDING」——鎖定為深銀藍，貼合全書銀藍系）
-- 布料：貴族質感細織布主色 **#8B5E3C**、旅裝厚棉／毛料次要色為低彩度**暖酒紅 muted wine-red 輔助點綴 #6B3B42**（`DESIGN-PROPOSAL`；解決原「素色藍或酒紅」二選一——鎖定酒紅系以搭配暖金徽章，若使用者偏好藍色調可覆蓋）
-- 皮革：腰帶、短靴、旅行手套為深棕皮革 **#4A3527**（`DESIGN-PROPOSAL`）
-- 特殊材質：演間諜時「指甲刺入掌心」是表演細節，非材質（`CANON` 情節，僅供表情表參考，不列為固定配件）
-- 膚色／髮色／瞳色（hex）：膚 **#F2DFC9**（白皙暖調）／髮 **#6B4530**（溫暖中栗棕色）／瞳 **#8B5A2B**（溫暖栗棕色）（`DESIGN-PROPOSAL`，無既有 PNG 可取樣，依色名推定）
+- CANON：Gloria has mixed silver-and-violet hair that can read as bright pink-white in sunlight, a clean fair face, large expressive water-violet eyes, and the cultivated bearing of a well-educated noblewoman. She is Benedict's daughter, Kriz and Gawain's childhood friend, and treats Levanus as a younger sister. Preserve her lively, noble, politically composed personality; expressions may include blushing, pouting, restrained delight, and calm judgment.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：無（非戰鬥角色）
-- 飾品：**高文所贈的承諾徽章**——佩於解剖學左胸，是她與高文情感連結的核心信物（`CANON`）。**01–02 與 07 一律不出現徽章特寫拆解**（徽章本體仍隨服裝出現於 01–02，但拆解細節僅在 06 道具結構表）
-- 隨身道具：潛入間諜線相關的可攜帶情報文件／信件（`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：徽章以別針固定於解剖學左胸（`DESIGN-PROPOSAL`）
+## Costume Lock
 
-## 八種固定表情
-1. 自然 Neutral — 端麗沉靜的預設神情
-2. 輕笑 Gentle smile — 溫柔而克制
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger — 為「人不是籌碼」而起的冷怒（呼應掌摑克里茲）
-7. 悲傷 Sadness — 壓下的哀傷與不甘
-8. 眨眼 Wink
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-> 表情表僅改變眉眼與嘴部；臉部身份、栗棕長髮、栗棕瞳與左胸徽章跨八格一致。
+## 固定色票與材質
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、武器、板甲甲片
-- 不可出現的材質：重金屬板甲、寶石鋪鑲（gemstone encrustation）、金色肩甲（gold pauldrons）、神職絲綢長袍（clergy silk）、晶體構件（crystalline parts）
-- 不可出現的性別特徵：男性化面容與體格（此角色為女性）
-- 不可出現的顏色：高飽和螢光色、粉彩系、與全書金／銀藍／深色系衝突的鮮豔色
-- 不可改變的左右位置：承諾徽章固定佩於解剖學左胸，跨圖一致，不得鏡像
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
-- 不可混入本版本的元素：`GLORIA-V2-STEALTH-CLOAK` 潛行斗篷（另立版本，不得出現於本包任何一張圖）
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 命名色之候選 hex（DESIGN-PROPOSAL）：white #F2F0EA、silver #C3CAD4
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-## 鎖定錨定預設值（可覆蓋）
-> 以下為 01 錨定圖採用的具體鎖定值，避免模型隨機決定辨識度關鍵項；使用者可事後覆蓋。
-- 眼色：**溫暖栗棕色 #8B5A2B**（鎖定預設，可覆蓋）
-- 髮色（確切色階）：**溫暖中栗棕色 #6B4530** 長髮，束起／單條側編辮
-- 承諾徽章紋樣：小型圓形暖金／黃銅騎士徽章，刻「雙人盟誓（交握之手）」浮雕紋，中央鑲一顆小型深銀藍寶石 **#4A6C8C**，佩於解剖學左胸
-- 旅裝主色：栗棕 **#8B5E3C**＋暖米 **#D9C4A3**＋酒紅點綴 **#6B3B42**（解決原「藍或酒紅」二選一）
+## 道具與特殊構造
 
-## 正典衝突與待確認事項
-- **已決定（本版本鎖定）**：
-  - 服裝主版鎖定為單一版本 `GLORIA-V1-NOBLE-TRAVELWEAR-BADGE`（利落旅裝／貴族女裝＋左胸承諾徽章）。
-  - 潛行素色斗篷正式拆分為獨立版本 ID `GLORIA-V2-STEALTH-CLOAK`（未建置），不得作為 06 道具結構表的「替代裝附件」混入本包，亦不得在本包內任何一張圖跨鏡頭默認切換。
-  - 承諾徽章紋樣與寶石顏色鎖定（圓形暖金徽章、交握之手盟誓紋、深銀藍寶石 `#4A6C8C`）。
-  - 旅裝輔色由「低彩度藍或酒紅」二選一鎖定為酒紅 `#6B3B42`（可覆蓋）。
-  - 全部固定色票已補齊 hex（無既有 PNG 可取樣，依色名推定，標記 `DESIGN-PROPOSAL`，可覆蓋）。
-- **`PENDING-USER-INPUT`**：無（辨識度關鍵項已全數定案；若使用者未來需要 `GLORIA-V2-STEALTH-CLOAK`，屬新版本開發，非本包待辦）。
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-gloria-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

@@ -1,116 +1,76 @@
-# 阿爾伯特 Albert
+# 阿爾伯特 — CHARACTER_SPEC
 
-> Tier ——《赫克托》配角，執行紀律的冷峻騎士。本檔為文字版身份規格（新版七張制 01–07），供 `01-albert-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**紀律執法騎士版**（一絲不苟擦亮的深色板甲＋執法／紀律綬帶或肩章）。文檔唯一明載造型，本包單一版本。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: albert-F1B720F99C76
+>
+> Albert Haruhurst carries himself upright and straight like a spear. He is one of the ten frontier warriors recruited by Eivis and an important Hector officer. The story does not fully specify his face, hair, eye color, age, weapon, or stable costume; all such existing details remain DESIGN-PROPOSAL and must not be promoted to CANON.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：阿爾伯特
-- 英文名：Albert
-- 角色版本 ID：**`ALBERT-V1-DISCIPLINE-ENFORCER`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男
-- 年齡／外觀年齡：成年男性，約 30 歲上下的成熟騎士（`DESIGN-PROPOSAL`；文檔未載明確年齡）
-- 身高：約 186cm，高挑（`CANON`）
-- 體型：精瘦利落、體格緊實（`CANON`）
-- 故事時期：紀律執法時期（`CANON` 唯一明載造型；未再切分其他時期）
-- 服裝版本：紀律執法騎士版 — 擦得發亮的深色板甲，配執法／紀律肩章或綬帶（`CANON`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**186**（`CANON`）
-- 頭身比：**7.25**（既有規格「精瘦利落的七至七點五頭身」鎖定為精確值；`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.3 倍頭寬**（精瘦利落但高挑緊實體格；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**紀律綬帶／肩章固定於解剖學左肩；騎士劍佩於解剖學右腰**（`DESIGN-PROPOSAL` 側別鎖定——SPEC 原文僅要求「左右須跨圖一致」未指定側別；此側別為既有 PROMPTS.md 已定案之設計提案，本次正式同步進 SPEC，使用者可事後覆蓋）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：**無**——阿爾伯特未登錄於任何家族註冊表（`ROYAL`、`ANDRE`），無血緣親屬
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：albert-F1B720F99C76
+- 角色版本 ID：ALBERT-V1-DISCIPLINE-ENFORCER
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-albert-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-albert-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：面無表情、線條硬朗的冷峻成年男性臉型，下頜銳利（`CANON` 面無表情、線條硬朗）
-- 膚色：健康偏冷的成年男性膚色（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：冷淡不帶情緒的銳利眼神（`CANON` 神情不帶一絲情緒）；眼睛顏色鎖定**冷灰色 cool-gray**（`DESIGN-PROPOSAL`）
-- 髮型、髮色與固定髮束：**深色近黑向後梳的短髮**，一絲不苟、服貼整齊（`CANON` 深色向後梳短髮）
-- 身材比例：精瘦利落的約 7.25 頭身、肩背挺直；見 Body Metrics Lock（186cm／7.25 頭身／肩寬約 2.3 倍頭寬）
-- 標誌性輪廓：挺直冷硬的立姿＋擦亮深色板甲的俐落剪影＋左肩紀律綬帶／肩章（`CANON` 元素；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：深色向後梳整齊短髮、面無表情硬朗臉、擦得發亮的深色板甲、左肩執法／紀律綬帶或肩章、精瘦挺直體格
-- **anatomical left／right 不對稱鎖定**：02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側。紀律綬帶／肩章固定佩於**解剖學左肩**，騎士劍固定佩於**解剖學右腰**：02（左側視圖）可見綬帶／肩章正面，劍柄／劍鞘位於遠側；03（右側視圖）可見劍柄／劍鞘正面，綬帶／肩章位於遠側。跨圖不得鏡像互換。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock（`ALBERT-V1-DISCIPLINE-ENFORCER`）
-- 服裝層次：擦得發亮、一絲不苟的深色全身板甲，內襯戰袍（`CANON` 深色板甲；內襯 `DESIGN-PROPOSAL`）
-- 領口：板甲護頸／立領護甲，扣合完整（`DESIGN-PROPOSAL`）
-- 肩部：深色板甲肩甲，**解剖學左肩**配執法／紀律肩章或綬帶（`CANON` 肩章／綬帶；側別與肩甲細節 `DESIGN-PROPOSAL`）
-- 胸前：擦亮深色胸甲，飾赫克托聖騎士團／執法權柄徽記，暗金浮雕（`CANON` 紀律權柄；徽記樣式 `DESIGN-PROPOSAL`）
-- 袖口／手部：深色板甲護臂與金屬護手，握劍精確（`DESIGN-PROPOSAL`；呼應「決鬥動作精確無廢招」）
-- 腰部：金屬腰甲／戰帶，騎士劍佩於**解剖學右腰**（`DESIGN-PROPOSAL` 側別鎖定）
-- 下襬／披風：無披風，深色收斂的腰甲垂片（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：深色板甲護腿與金屬戰靴，扣合整齊（`DESIGN-PROPOSAL`）
-- 背面結構：背甲擦亮，左肩肩章／綬帶連接處可見，扣件完整無鬆脫（`DESIGN-PROPOSAL`；「無鬆脫」對照艾維斯的散漫不扣齊）
+- 身高（cm）：**186**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.25**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.3 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：深色／近黑的拋光板甲 **#1C1C1E**（`CANON` 深色板甲；hex 無既有 PNG 可取樣，依色名推定，`DESIGN-PROPOSAL`）
-- 輔色：紀律綬帶／肩章深色底 **#2A2A2C**＋暗金滾邊 **#A8863E**（`DESIGN-PROPOSAL`，解決原「暫定深色鑲金或深紅」二選一——鎖定深色鑲暗金）
-- 金屬：拋光深色鋼板甲 **#1C1C1E**；冷鋼劍身 **#8C97A3**（僅 06 出現）；扣件暗金點綴 **#A8863E**（`DESIGN-PROPOSAL`）
-- 寶石：無鑲嵌（`DESIGN-PROPOSAL`）
-- 布料：綬帶織物 **#2A2A2C**、內襯戰袍深炭色 **#25211D**（`DESIGN-PROPOSAL`）
-- 皮革：戰帶、護具皮革內襯 **#33261C**（`DESIGN-PROPOSAL`）
-- 特殊材質：板甲「擦得發亮」的高反光拋光質感是其標誌（`CANON`）；全書金／銀藍／深色系收斂（`CANON` 全書配色方向）
-- 膚色／髮色／瞳色（hex）：膚 **#E8D2BC**（健康偏冷）／髮 **#161412**（深色近黑）／瞳 **#9BA3AC**（冷灰色）（`DESIGN-PROPOSAL`，無既有 PNG 可取樣，依色名推定）
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：**騎士劍**——決鬥用，動作精確無廢招，佩於解剖學右腰（`CANON` 決鬥；具體劍型與側別 `DESIGN-PROPOSAL`）。**01–02 與 07 一律不出現**
-- 飾品：**執法／紀律肩章或綬帶**——固定於解剖學左肩，表示執法與紀律權柄（`CANON` 存在；側別 `DESIGN-PROPOSAL`）
-- 隨身道具：擦劍布（`CANON` 描寫「擦劍時神情不帶一絲情緒」；作為性格道具，anchor 圖不必畫出）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：肩章／綬帶固定於解剖學左肩；劍佩於解剖學右腰（`DESIGN-PROPOSAL`）
+- CANON：Albert Haruhurst carries himself upright and straight like a spear. He is one of the ten frontier warriors recruited by Eivis and an important Hector officer. The story does not fully specify his face, hair, eye color, age, weapon, or stable costume; all such existing details remain DESIGN-PROPOSAL and must not be promoted to CANON.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 面無表情、不帶一絲情緒的冷峻預設神情
-2. 輕笑 Gentle smile — 極克制、近乎不動聲色的一絲
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger — 冷硬無波的怒
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-> 表情表僅改變眉眼與嘴部；臉部身份、深色向後梳整齊短髮、硬朗冷峻輪廓與板甲護領跨八格一致。整體維持克制冷淡基調。
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、雙劍（他非雙生聖劍持有者）、機械義肢
-- 不可出現的顏色：高飽和螢光色、粉彩系、與深色冷硬騎士色衝突的鮮豔雜色
-- 不可改變的左右位置：紀律綬帶／肩章固定於解剖學左肩；佩劍固定於解剖學右腰，跨圖一致、不得鏡像互換
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi；**不可畫成散漫鬆脫的甲冑、未扣齊的板甲、凌亂散髮、痞氣邋遢**（此為與艾維斯的關鍵反差，須嚴守）
+## 固定色票與材質
 
-## 鎖定錨定預設值（可覆蓋）
-> 以下為 01 錨定圖採用的具體鎖定值，避免模型隨機決定辨識度關鍵項；使用者可事後覆蓋。
-- 瞳色：**冷灰色瞳 #9BA3AC**——鎖定。
-- 髮色：**深色近黑 #161412**，向後梳整齊短髮——鎖定。
-- 紀律綬帶／肩章顏色：**深色底 #2A2A2C、暗金滾邊 #A8863E** 的單肩綬帶／肩章——鎖定為預設，固定於左肩。
-- 綬帶／胸甲徽記：**赫克托聖騎士團／執法權柄紋章，暗金浮雕於深色胸甲**——鎖定為預設樣式。
-- 膚色：**健康偏冷的成年男性膚色 #E8D2BC**——鎖定。
-- 佩劍側：**解剖學右腰**（`DESIGN-PROPOSAL`，可覆蓋）。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#1C1C1E、#2A2A2C、#A8863E、#8C97A3、#25211D、#33261C、#E8D2BC、#161412、#9BA3AC
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝版本採紀律執法騎士版（擦亮深色板甲＋執法綬帶／肩章），為文檔唯一明載造型。
-  - 造型基調嚴守「冷、精確、一絲不苟」，與艾維斯的「熱、散漫、不扣齊」形成明確反差。
-  - 眼睛顏色鎖定冷灰瞳、髮色鎖定深色近黑、綬帶鎖定深色暗金滾邊。
-- **側別鎖定**：紀律綬帶／肩章固定於解剖學左肩，騎士劍固定佩於解剖學右腰；標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-  - 全部固定色票已補齊 hex（無既有 PNG 可取樣，依色名推定，標記 `DESIGN-PROPOSAL`，可覆蓋）。
-- **`PENDING-USER-INPUT`（僅餘瑣碎項，不影響 01 辨識度）**：
-  - 是否配短披風（文檔未載；暫定不配，見 Costume Lock「下襬／披風」）。
-  - 佩劍的具體劍型細節（文檔僅載「決鬥」，未給劍型；側別已鎖定右腰，劍型細節不影響身份辨識，留待 06 生成時自由發揮）。
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-albert-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

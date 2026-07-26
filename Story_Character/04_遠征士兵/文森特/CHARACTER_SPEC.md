@@ -1,116 +1,76 @@
-# 文森特 Vincent
+# 文森特 — CHARACTER_SPEC
 
-> Tier C — 遠征士兵（有名字的犧牲者）。本檔為文字版身份規格（新版七張制 01–07），供 `01-vincent-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 角色文檔 heading：`### 文森特（Vincent）／ 戴夫（Dave）`（同一段涵蓋文森特與戴夫兩人）。本檔為其中「一高」的文森特。
-> **簽名武器 PENDING-USER-INPUT**：文檔僅載「短劍或長矛」二選一，未定案。本檔於 06 道具結構表提出**短劍**為推薦方案（附理由，見下），但正式標記為 `PENDING-USER-INPUT`，待使用者決定；武器僅出現於 06，不阻擋 01–05／07 其他表結構生成。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: vincent-F1B720F99C76
+>
+> BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked character named Vincent. Do not generate sheet 01 and do not promote any legacy face, costume, weapon, or biography in this package to story canon until the user decides whether Vincent should be retained, renamed, merged into a named character, or absorbed into the Hector-army ensemble.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：文森特
-- 英文名：Vincent
-- 角色版本 ID：**`VINCENT-V1-EXPEDITION-INFANTRY`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男
-- 年齡／外觀年齡：青壯年步兵，約 20 多歲（`DESIGN-PROPOSAL`）
-- 身高：偏高，約 185cm（`CANON` 相對描述「身形一高一壯」中的「高」；確切數值為 `DESIGN-PROPOSAL`）
-- 體型：高瘦挺拔的尋常步兵體格（`CANON` 相對「高」；細節 `DESIGN-PROPOSAL`）
-- 故事時期：荒野戰場遠征期（`CANON`；本版本鎖定此時期外觀，其他時期需另立版本 ID）
-- 服裝版本：赫克托制式步兵甲，單一服裝版本，不與其他時期混用（`CANON`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**185**（`CANON` 相對「高」；確切數值 `DESIGN-PROPOSAL`）
-- 頭身比：**7.2**（`DESIGN-PROPOSAL`，高瘦挺拔，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（高瘦挺拔體格，較戴夫窄；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**佩劍側＝解剖學左側腰際（`DESIGN-PROPOSAL`，SPEC 原未定，本次提案；與戴夫的右側區隔，避免同組角色掛點方向雷同）**。01–02 與 07 全身視圖零道具，佩劍與劍鞘掛點不出現，故此側別僅影響 07（腰帶掛點細節）與 06（道具表）；01–02／07 的零道具全身視圖本身仍呈現對稱輪廓。
+## 同步與狀態
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-vincent-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：vincent-F1B720F99C76
+- 角色版本 ID：VINCENT-V1-EXPEDITION-INFANTRY
+- 生成閘門：BLOCKED-PENDING-USER-INPUT
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-vincent-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+## Canonical Fact Map
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：**無**——普通士兵，無血緣關係人物
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：**平凡、無英雄氣派**的普通士兵臉（`CANON`「面孔平凡、無英雄氣派」）；線條端正但不搶眼（`DESIGN-PROPOSAL`）
-- 膚色：健康自然膚色、略帶風霜（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：深棕色、樸實勇毅的眼神（`DESIGN-PROPOSAL`）
-- 髮型、髮色與固定髮束：深棕短髮、便於戴盔的俐落軍人短髮（`DESIGN-PROPOSAL`）
-- 身材比例：約七頭身、日系奇幻設定稿比例，偏高瘦；見 Body Metrics Lock（185cm／7.2 頭身／肩寬約 2.0 倍頭寬）
-- 標誌性輪廓：高而挺拔的身形剪影＋制式步兵甲肩線（`CANON` 一高；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：平凡樸實的普通臉、赫克托制式步兵甲、高瘦身形
-- **anatomical left／right 不對稱鎖定**：佩劍側鎖定為解剖學左側腰際（`DESIGN-PROPOSAL`，本次提案，見 Body Metrics Lock；與戴夫右側區隔）。01–02 與 07 全身視圖零道具，武器與掛點不出現，視覺上呈現對稱輪廓；此側別僅供 07／06 的腰帶掛點與武器佩戴細節參考。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側。
+## Body Metrics Lock
 
-## 鎖定錨定預設值（可覆蓋）
-> 以下項目原為 `PENDING-USER-INPUT`，因會影響 01 錨定圖的辨識度，已鎖成具體預設值寫入 01。使用者可事後覆蓋。
-- 髮色：深棕、便於戴盔的俐落軍人短髮
-- 眼睛顏色：深棕、樸實勇毅
-- 確切身高：約 185cm
-- 軍徽紋樣：胸甲上一枚低調壓印的簡單幾何鋼色軍徽（無寶石）
-- 主要材質：霧面鋼甲片、深棕皮革、制式布料（無寶石、無金飾）
-- Body Metrics：185cm／7.2 頭身／約 2.0 倍頭寬肩寬（`DESIGN-PROPOSAL`）
-- 佩劍側：解剖學左側腰際（`DESIGN-PROPOSAL`，見上）
+- 身高（cm）：**185**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.2**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：赫克托制式步兵甲——布／皮內襯外罩制式甲片（`CANON` 制式甲；分層 `DESIGN-PROPOSAL`）
-- 領口：制式護頸、內襯布料（`DESIGN-PROPOSAL`）
-- 肩部：制式肩甲、無指揮官綬帶或裝飾（`DESIGN-PROPOSAL`，刻意樸素以呼應「尋常步兵」）
-- 胸前：制式胸甲，可有低調的赫克托軍徽（`DESIGN-PROPOSAL`）
-- 袖口／手部：皮革護臂或制式手套（`DESIGN-PROPOSAL`）
-- 腰部：制式腰帶，左側腰際佩劍掛點（空掛點，`DESIGN-PROPOSAL`；劍本身僅入 06）
-- 下襬／披風：無披風或僅短布甲裙（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：制式護脛、軍靴（`DESIGN-PROPOSAL`）
-- 背面結構：制式甲背片，無特殊構造（`DESIGN-PROPOSAL`）
+## Identity Lock
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-> 角色文檔僅以色名描述，以下 hex 為 Claude 由色名推定之近似值，標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-- 主色：赫克托軍制式配色——鋼灰 **#63676C**（`DESIGN-PROPOSAL`；與全書金／銀藍／深色系一致）
-- 輔色：深棕皮革 **#3D2E22**、暗金軍徽配色 **#7A6A42**（`DESIGN-PROPOSAL`）
-- 金屬：制式甲片鋼、扣件 **#63676C**（`DESIGN-PROPOSAL`）
-- 寶石：無（`DESIGN-PROPOSAL`）
-- 布料：制式軍服布料 **#4A4238**（`DESIGN-PROPOSAL`）
-- 皮革：護臂、腰帶、軍靴 **#3D2E22**（`DESIGN-PROPOSAL`）
-- 特殊材質：無
-- 膚色／髮色／瞳色（hex）：膚 **#E3BB95**（健康自然、略帶風霜）／髮 **#2E2015**（深棕短髮）／瞳 **#3A2818**（深棕色）（`DESIGN-PROPOSAL`）
+- CANON：BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked character named Vincent. Do not generate sheet 01 and do not promote any legacy face, costume, weapon, or biography in this package to story canon until the user decides whether Vincent should be retained, renamed, merged into a named character, or absorbed into the Hector-army ensemble.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：**`PENDING-USER-INPUT`**——制式短劍或長矛二選一。推薦方案：**短劍（regulation short sword）**——理由：長矛屬雙手長柄兵器，與制式輕步兵單兵近戰裝備的敘事定位（近距離遠征護衛）不完全吻合，且長矛在 06 道具結構表的收納與尺寸呈現上不易與其他士兵的短刃裝備並列比較；短劍與同組戴夫（`PENDING-USER-INPUT`：短劍或斧）、鮑曼（`PENDING-USER-INPUT`：短劍或匕首）的短刃形制一致，便於同組步兵裝備語言統一。**此為推薦，非定案，待使用者決定**；06 道具結構表以短劍為主要呈現，同時保留提案理由供覆核。**01–02 與 07 一律不出現**
-- 飾品：無（刻意樸素）
-- 隨身道具：低調赫克托軍徽（`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：**無（人類尋常步兵）**
-- 配戴或連接方式：制式腰帶佩劍於左側腰際（`DESIGN-PROPOSAL`）
+## Costume Lock
 
-## 八種固定表情
-1. 自然 Neutral — 樸實的常態
-2. 輕笑 Gentle smile
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger
-7. 悲傷 Sadness
-8. 眨眼 Wink
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：**重型英雄鎧甲、翅膀、角、尾巴**、王冠、指揮官綬帶、華麗裝飾、機械義肢
-- 不可出現的顏色：高飽和螢光色、粉彩系、與全書金／銀藍／深色系衝突的鮮豔色
-- 不可改變的左右位置：制式佩劍側鎖定為左側腰際，須跨圖一致（`DESIGN-PROPOSAL`）
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
+## 固定色票與材質
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 文森特為「身形一高一壯」中的「高」，戴夫為「壯」，兩人共用同段角色文檔但分為不同角色包。
-  - 服裝定為赫克托制式步兵甲，刻意樸素無英雄裝飾，以呼應「平凡步兵」的正典描寫。
-  - Body Metrics Lock、固定 hex 色票、佩劍側（解剖學左側腰際）已鎖定為 `DESIGN-PROPOSAL`，使用者可覆蓋。
-  - 無血緣關係，Kinship Lock＝無。
-- **`PENDING-USER-INPUT`**：
-- **主武器為短劍或長矛**——本檔推薦短劍（理由見「道具與特殊構造」），但正式定案需使用者決定；不阻擋 01–05／07 生成，僅影響 06 道具結構表最終呈現。
-  - 制式步兵甲的確切樣式與軍徽紋樣（文檔未給圖形）。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#63676C、#3D2E22、#7A6A42、#4A4238、#E3BB95、#2E2015、#3A2818
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
+
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-vincent-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

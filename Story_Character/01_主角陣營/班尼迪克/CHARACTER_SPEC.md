@@ -1,121 +1,76 @@
-# 班尼迪克 Benedict
+# 班尼迪克 — CHARACTER_SPEC
 
-> Tier S ——《赫克托》恩師、託孤者。本檔為文字版身份規格（範本 v2 FULL package），供 `00-benedict-character-identity-anchor.png` 與 01–10 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> **視覺正本覆寫（必讀）**：資料夾內既有已核准 `01–09` 號 PNG 顯示的是**年輕神職／攝政男性**——淡紫／藍紫色短波浪髮、藍眼、無鬚、白色落地神職禮袍＋淡紫色縱向披帶＋古金刺繡＋金十字墜飾（鑲紫水晶）＋金腰封。此為與既有已核准圖片一致的正式版本；文檔原載之「年長攝政王、深紫鑲金長袍、樸素冠冕、泛紫光聖劍」文字設定與圖片外觀不符，已移至本檔末「未建置的另一版本」，不適用於本次 00–10 生成。
-> 服裝版本鎖定：**神職攝政禮袍版**（白袍＋淡紫縱向披帶＋古金刺繡＋金十字墜飾）。此為與資料夾內既有已核准 `01–09` 號 PNG 完全一致的唯一視覺正本。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: benedict-F1B720F99C76
+>
+> Benedict has a deep refined voice and a noble, sacred public presence; the story does not lock his face, hair, eye color, age, or body measurements. His canon clerical attire is a plain purple robe with gilded patterning over the chest and a gold-thread, jeweled high headdress. The winged-trident gold pendant and purple-glowing holy sword are removable props and appear only on sheet 06. He is Gloria's father and regards Gawain as a second child.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：班尼迪克
-- 英文名：Benedict
-- 角色版本 ID：**`BENEDICT-V1-CLERIC-REGENT`**（本版本鎖定；年長攝政王版另立版本 ID，見文末，本次不建置）
-- 性別：男
-- 年齡／外觀年齡：年輕成年男性，外觀約 20 代中後段（`DESIGN-PROPOSAL`；依既有已核准 PNG 目視判定，非文檔原載之年長設定）
-- 身高：約 180cm（`DESIGN-PROPOSAL`；依既有 PNG 修長挺拔身形推定，文檔原載 182cm 綁定於已捨棄的年長版本，不予沿用）
-- 體型：修長優雅、清瘦而挺拔的神職者體格（`DESIGN-PROPOSAL`，依既有已核准 PNG）
-- 故事時期：神職攝政時期（`DESIGN-PROPOSAL`；本版本鎖定此外觀，其他時期需另立版本 ID）
-- 服裝版本：神職攝政禮袍版——白色落地神職禮袍、淡紫色縱向披帶＋古金刺繡、金十字墜飾（鑲紫水晶）、金腰封（鑲紫水晶扣）（`CANON`＝與既有已核准 PNG 一致；細節分層 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**180**（`DESIGN-PROPOSAL`，可覆蓋）
-- 頭身比：**7.2**（修長優雅比例；`DESIGN-PROPOSAL`，可覆蓋）
-- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（清瘦挺拔的神職者體格，非戰士寬肩；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**無，全對稱**——依既有已核准 `01`、`05`、`06`、`09` 號 PNG 目視確認，淡紫披帶、胸前十字墜飾、金腰封與肩部裝飾均為雙側對稱設計，無單側主扣（`DESIGN-PROPOSAL` 鎖定，若使用者要求改為單側配飾需另行指定）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock（無血緣親屬）
-- 親屬清單：無——班尼迪克未登記於任何家族註冊表（`ROYAL`／`ANDRE`）
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：benedict-F1B720F99C76
+- 角色版本 ID：BENEDICT-V1-CLERIC-REGENT
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：IMAGE-DRIFT-REVIEW-REQUIRED — 9 existing PNG file(s); documents refreshed by explicit user authorization, PNGs untouched.
+- 身份正本：01-benedict-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`00-benedict-character-identity-anchor.png`（`PENDING-GENERATION`——00 尚未生成；資料夾內既有 `01–09` 號 PNG 為先前流程下已核准的視覺正本，本次 00/01–10 提示詞均以其實際外觀為準）
-- 共用畫風參考 1：`../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- 共用畫風參考 2：`../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- 共用畫風參考 3：`../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：清秀端正的年輕男性臉型，神情溫和沉穩，兼具恩師的溫厚與攝政的持重（`DESIGN-PROPOSAL`，依既有已核准 PNG）
-- 膚色：偏白皙、暖調（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：沉靜溫和的藍色雙眼（`DESIGN-PROPOSAL`，依既有已核准 PNG 目視取值）
-- 髮型、髮色與固定髮束：**短而柔順的紫羅蘭／藍紫色波浪髮**，帶長側瀏海（`CANON`＝與既有已核准 PNG 一致）
-- 身材比例：約七頭二身、修長優雅的日系奇幻設定稿比例；見 Body Metrics Lock（180cm／7.2 頭身／肩寬約 2.0 倍頭寬）
-- 標誌性輪廓：白色落地禮袍＋淡紫縱向披帶的修長剪影＋胸前金十字墜飾（`CANON`＝依既有已核准 PNG）
-- 不可改變特徵：紫羅蘭／藍紫波浪短髮、藍眼、無鬚、白袍＋淡紫披帶、金十字墜飾（鑲紫水晶）、金腰封
-- **anatomical left／right 不對稱鎖定**：全對稱設計（見 Body Metrics Lock）。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側；因設計全對稱，左右兩側輪廓應互為鏡像一致，跨圖不得出現新增的單側特徵。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：白色立領內襯禮袍外披淡紫色縱向披帶，古金刺繡貫穿全長，胸前金十字墜飾，腰束金色寬腰封（`CANON`＝依既有已核准 PNG）
-- 領口：高聳的立領禮袍領，鑲金邊（`DESIGN-PROPOSAL`，依既有 PNG）
-- 肩部：披帶自雙肩對稱垂下，肩部飾以古金藤蔓刺繡；肩部另有橢圓紫水晶扣飾固定披帶（`DESIGN-PROPOSAL`，依既有已核准 PNG 目視為雙肩對稱）
-- 胸前：雙層垂鏈——貼身層為金十字墜飾（鑲中央紫水晶＋墜尾金流蘇），外層為裝飾鏈條（`CANON`＝依既有已核准 PNG）
-- 袖口／手部：寬闊鐘形長袖，袖口飾古金藤蔓刺繡（`DESIGN-PROPOSAL`，依既有 PNG）
-- 腰部：金色寬腰封束於腰間，中央鑲菱形紫水晶扣（`CANON`＝依既有已核准 PNG）
-- 下襬／披風：淡紫縱向披帶垂至及踝，末端飾十字紋章＋紫水晶墜＋金流蘇；禮袍下襬及地，古金刺繡沿邊延伸（`CANON`＝依既有已核准 PNG）
-- 腿部／鞋靴：白色長靴，古金刺繡沿脛部攀升（`DESIGN-PROPOSAL`，依既有 PNG）
-- 背面結構：披帶背面中央垂掛單一十字墜飾與長流蘇，禮袍下襬金邊刺繡沿背面延伸，肩部扣飾雙側可見（`DESIGN-PROPOSAL`，依既有已核准 PNG）
+- 身高（cm）：PENDING-USER-INPUT
+- 頭身比：PENDING-USER-INPUT
+- 肩寬（頭寬倍數）：PENDING-USER-INPUT
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：白色禮袍主布 **#F7F4EE**＋古金（刺繡、墜飾、腰封、扣件）**#C9A85E**（`CANON`＝依既有已核准 PNG 目視取近似值，`DESIGN-PROPOSAL` 鎖定）
-- 輔色：淡紫／薰衣草色縱向披帶 **#C2B4DD**（`DESIGN-PROPOSAL`）
-- 金屬：亮古金（刺繡、墜飾、腰封、扣件）**#C9A85E**；次要深古金 **#B8944A**（`DESIGN-PROPOSAL`）
-- 寶石：胸前十字墜飾與腰封扣中央鑲**紫水晶 #8E63BE**（`CANON` 寶石存在；hex 鎖定 `DESIGN-PROPOSAL`）
-- 布料：白色禮袍主布 **#F7F4EE**，淡紫披帶布 **#C2B4DD**（`DESIGN-PROPOSAL`）
-- 皮革：白色長靴皮革層 **#EDE8DE**（依既有 PNG，`DESIGN-PROPOSAL`）
-- 特殊材質：無（人類角色，無翅膀角尾等特殊構造）
-- 膚色／髮色／瞳色（hex）：膚 **#F6E4D2**（偏白皙暖調）／髮 **#6E6693**（紫羅蘭／藍紫波浪短髮）／瞳 **#7FA0BE**（沉靜藍色）（`DESIGN-PROPOSAL` 鎖定，依既有已核准 PNG 目視取值）
-- **不具備之材質（生成時須排除）**：深紫鑲金厚重長袍、樸素冠冕、板金鎧甲、泛紫光聖劍發光材質——班尼迪克的實際材質僅為白色禮袍布料＋淡紫披帶布＋古金屬飾＋紫水晶點綴。
+## Identity Lock
 
-## 道具與特殊構造（僅出現在 09 道具表）
-- 武器：**PENDING-USER-INPUT——泛紫光聖劍去留**。文檔原載班尼迪克持有一柄泛紫光聖劍並交予克里茲（`CANON`，文檔明載），但既有已核准 `01–09` 號 PNG 完全不含此劍，與圖片正本衝突（見稽核 §7）。本檔 09 保留此劍作為**可選道具研究**，去留由使用者裁決；**此項不影響 00–08、10 的生成，僅限縮於 09 道具表段落**。
-- 飾品：**金十字墜飾**——貼身垂於胸前，中央鑲紫水晶，墜尾金流蘇（`CANON`＝依既有已核准 09 號 PNG）；**肩部橢圓紫水晶扣飾**——固定披帶（`CANON`＝依既有已核准 09 號 PNG）
-- 隨身道具：淡紫縱向披帶末端十字紋章墜飾（`CANON`＝依既有已核准 09 號 PNG）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：披帶自雙肩垂下，以肩部橢圓紫水晶扣飾固定；金十字墜飾以金鍊垂於領內；腰封以菱形紫水晶扣束於腰間（`DESIGN-PROPOSAL`，依既有已核准 PNG）
+- CANON：Benedict has a deep refined voice and a noble, sacred public presence; the story does not lock his face, hair, eye color, age, or body measurements. His canon clerical attire is a plain purple robe with gilded patterning over the chest and a gold-thread, jeweled high headdress. The winged-trident gold pendant and purple-glowing holy sword are removable props and appear only on sheet 06. He is Gloria's father and regards Gawain as a second child.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 沉穩溫和的預設神情
-2. 輕笑 Gentle smile — 恩師般溫厚的一絲慈藹
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger — 面對背叛與強敵的凜然怒容
-7. 悲傷 Sadness — 託孤與訣別的沉痛
-8. 眨眼 Wink
+## Costume Lock
 
-> 表情表僅改變眉眼與嘴部；臉部身份、紫羅蘭／藍紫波浪短髮、藍眼與白袍淡紫披帶跨八格一致。
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、額外武器、機械義肢
-- 不可出現的顏色：高飽和螢光色、粉彩系、與白／淡紫／古金／深紫寶石色票衝突的鮮豔雜色
-- 不可改變的左右位置：披帶雙肩對稱垂掛；十字墜飾居中貼胸；腰封扣居中，不得新增單側特徵
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi；**年長攝政王面容**（本版本鎖定為年輕神職者，不得畫成年長皺紋臉）
+## 固定色票與材質
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 視覺正本採神職攝政禮袍版（白袍＋淡紫縱向披帶＋古金刺繡＋金十字墜飾），與既有已核准 `01–09` 號 PNG 完全一致，取代文檔原載之年長攝政王版。
-  - 固定色票 hex 值依既有已核准 PNG 目視取近似值鎖定（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-  - 披帶、十字墜飾與腰封經目視既有 PNG 確認為雙肩／居中對稱設計，不留 `PENDING-USER-INPUT`。
-- **`PENDING-USER-INPUT`**：
-  - **泛紫光聖劍去留**（見「道具與特殊構造」）——文檔原載此劍，既有 PNG 不含此劍，去留由使用者裁決；**僅限於 09 道具表，不阻擋 00–08、10 之生成**。
-  - 聖劍若採用，其單手／雙手劍尺寸與是否附劍鞘尚未定案。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 命名色之候選 hex（DESIGN-PROPOSAL）：gold #C8A24A、purple #5B3B78
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-## 未建置的另一版本（文末保留，本次不生成）
+## 道具與特殊構造
 
-以下為角色文檔原載之文字設定，與既有已核准 PNG 外觀不符，不適用於本次 00–10 生成，僅作為未來可能的另一角色版本 ID 保留記錄：
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-benedict-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
 
-- **版本 ID（未建置）**：`BENEDICT-V0-ELDERLY-REGENT`
-- 年齡／外觀年齡：年長、老者，外觀約 65–75 歲
-- 身高：約 182cm，體型高瘦挺拔、清癯而不佝僂
-- 髮型／髮鬚：銀白長髮及肩或稍長，配整齊短鬚
-- 服裝：深紫鑲金的教會／攝政長袍、樸素代管冠冕、神職金墜、深紫斗篷
-- 武器：泛紫光聖劍（劍身透出柔和紫色靈光）
-- 若使用者確認需要建置此年長版本，須另立完整 `BENEDICT-V0-ELDERLY-REGENT` 之 CHARACTER_SPEC.md／PROMPTS.md 與獨立 00–10 圖片組，不得與本檔（`BENEDICT-V1-CLERIC-REGENT`）混用同一身份正本。
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

@@ -1,124 +1,76 @@
-# 克里茲 Kritz
+# 克里茲 — CHARACTER_SPEC
 
-> Tier S ——《赫克托》主角。本檔為文字版身份規格（範本 v2 FULL package），供 `00-kritz-character-identity-anchor.png` 與 01–10 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**1587 遠征／流亡實戰版**（黑金色調長袍式戰裝＋古金肩甲流蘇鏈飾＋腰佩雙生聖劍）。此為 props（雙生聖劍、母親項鍊、披風掛劍點）與「黑金披風戰裝」正典描述最一致的時期，亦與資料夾內既有已核准 `01–09` 號 PNG 的實際外觀一致。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: kritz-F1B720F99C76
+>
+> Across every story-period variant, Kriz has mist-brown curly hair with fluffy mist-brown bangs and golden eyes. His ten-year-old version has a youthful face that already suggests his later handsome features. He is the son of the unnamed Queen and Aldrich. A yellowed scripture and the holy sword are story props and may appear only on sheet 06; a later-period dark action outfit is a separate costume variant and must not be mixed into another locked version.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：克里茲
-- 英文名：Kritz
-- 角色版本 ID：**`KRITZ-V1-1587-EXPEDITION`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男
-- 年齡／外觀年齡：故事橫跨成長線；本規格採 1587 遠征期，外觀年齡約 18–19 歲（`DESIGN-PROPOSAL`；文檔載 1583 約十四五歲、1587 約十七八歲成長為精悍勻稱）
-- 身高：約 178cm（`DESIGN-PROPOSAL`；文檔外觀設定段落自述為概念提案）
-- 體型：精悍勻稱、清瘦而結實的少年—青年過渡體格（`DESIGN-PROPOSAL`）
-- 故事時期：1587 遠征／流亡時期（`CANON`；本版本鎖定此時期外觀，其他時期需另立版本 ID）
-- 服裝版本：1587 遠征／流亡實戰版——黑色長袍式戰裝、古金肩甲流蘇鏈飾、金色腰封、腰佩雙生聖劍（`CANON` 服裝大方向；細節依既有已核准 PNG 定案，`DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**178**（`DESIGN-PROPOSAL`，可覆蓋）
-- 頭身比：**7.0**（既有規格「約七頭身」鎖定為精確值；`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.2 倍頭寬**（清瘦而結實的少年—青年過渡體格，非奧德里奇的魁梧寬肩；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**無，全對稱**——雙生聖劍左右對稱佩於腰間雙劍帶（`CANON`）；披風／肩甲以雙肩對稱星形金屬扣飾＋胸背 X 型背帶固定，無單側主扣（依既有已核准 `01`、`05`、`07`、`09` 號 PNG 目視確認為雙肩對稱設計；`DESIGN-PROPOSAL` 鎖定，若使用者要求改為單側披風扣需另行指定）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：奧德里奇 `ALDRICH-V1-FOUNDER-KING` — 父；皇后阿格妮絲 — 母（版本 ID 待其 SPEC v2 補）
-- 家族錨點：**克里茲（本人）**——家族 `ROYAL` 的相似基準；本人 00 先核准，父母的 00 才進入生成
-- 承襲特徵：
-  - **暖紅金瞳 ← 母阿格妮絲的空洞金瞳**（`CANON`，本檔既有鎖定）
-  - 臉部骨架 ← 父奧德里奇：方正下顎與深眉弓的**年輕清瘦版本**（下頜線條漸趨銳利即其雛形；`DESIGN-PROPOSAL`）
-- 刻意區分特徵：髮色暗金／亞麻（父為深色近黑、母為淺金）；年輕清瘦體格（非父的魁梧壯碩）；無鬚
-- 禁止混淆項：不得蓄鬚、不得魁梧化（父的特徵）；不得淺金及腰長髮、不得病弱蒼白（母的特徵）
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：kritz-F1B720F99C76
+- 角色版本 ID：KRITZ-V1-1587-EXPEDITION
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：IMAGE-DRIFT-REVIEW-REQUIRED — 9 existing PNG file(s); documents refreshed by explicit user authorization, PNGs untouched.
+- 身份正本：01-kritz-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`00-kritz-character-identity-anchor.png`（`PENDING-GENERATION`——00 尚未生成；資料夾內既有 `01–09` 號 PNG 為先前流程下已核准的視覺正本，本次 00/01–10 提示詞均以其實際外觀為準）
-- 共用畫風參考 1：`../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- 共用畫風參考 2：`../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- 共用畫風參考 3：`../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：清瘦少年—青年臉型，下頜線條漸趨銳利；神情冷峻壓抑（`DESIGN-PROPOSAL`，呼應「用理性人格壓下情感」`CANON` 描寫）
-- 膚色：偏白皙、健康冷調（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：**紅金瞳（red-gold／amber-orange，鎖定值）**——承母親金瞳、偏暖紅金色調，依既有已核准 PNG 為外觀正本。異化後眼神漸冷、眼下生出陰影（`CANON`）
-- 髮型、髮色與固定髮束：**暗金／亞麻色短髮**（`CANON`；依既有已核准 PNG 實際呈色為暖棕帶古銅調的蓬鬆短髮，略帶凌亂、遮不住的少年感，`DESIGN-PROPOSAL` 鎖定實際 hex）
-- 身材比例：約七頭身、修長纖細的日系奇幻設定稿比例；見 Body Metrics Lock（178cm／7.0 頭身／肩寬約 2.2 倍頭寬）
-- 標誌性輪廓：腰間左右對稱的雙生聖劍剪影＋黑金長袍披風輪廓＋古金肩甲流蘇（`CANON` 佩劍；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：紅金瞳、暗金／亞麻短髮、嘴唇乾裂血痕、腰佩雙生聖劍、母親項鍊、古金肩甲流蘇鏈飾
-- **anatomical left／right 不對稱鎖定**：全對稱設計（見 Body Metrics Lock）。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側；因設計全對稱，左右兩側輪廓應互為鏡像一致，跨圖不得出現新增的單側特徵。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：白色立領內襯衫外罩黑色長袍式大衣，外掛古金肩甲＋胸前鏈飾，腰束金色寬腰封（`CANON` 大方向；分層依既有已核准 PNG 定案，`DESIGN-PROPOSAL`）
-- 領口：黑色立領高護頸，內襯白色／米白襯衫立領外翻（`DESIGN-PROPOSAL`，依既有 PNG）
-- 肩部：雙肩對稱古金星形肩甲，垂掛多條古金流蘇墜飾，肩甲中央鑲嵌深紫寶石；胸背以 X 型皮革背帶連接雙肩（`CANON` 佩飾大方向；細節依既有已核准 PNG，`DESIGN-PROPOSAL`）
-- 胸前：雙層古金鏈飾垂於胸前（貼身層即母親項鍊，外層為裝飾鏈，鏈上點綴深紫與少量藍色寶石）；隱約可見赫克托王室徽記的收斂化戰時版本（`CANON` 項鍊與徽記存在；鏈飾樣式為 `DESIGN-PROPOSAL`）
-- 袖口／手部：黑色長袖袖口飾古金星紋刺繡（`DESIGN-PROPOSAL`，依既有 PNG）
-- 腰部：金色寬腰封束於腰間，雙劍帶交叉固定於腰／腰背，左右各掛一柄聖劍（`CANON` 佩劍；掛法依既有已核准 PNG，`DESIGN-PROPOSAL`）
-- 下襬／披風：黑金色調長袍下襬及踝，古金鋸齒狀滾邊與菱形垂墜吊飾，背面完整可展（`CANON` 披風／長袍方向；長度與滾邊細節為 `DESIGN-PROPOSAL`，依既有已核准 PNG）
-- 腿部／鞋靴：黑色長靴，古金十字交叉繫帶與滾邊裝飾，便於行軍與奔逃（`DESIGN-PROPOSAL`；依既有已核准 PNG；呼應屋頂追逐場）
-- 背面結構：長袍下襬呈尖角分裂垂墜，雙肩星形扣飾與 X 型背帶完整可見，雙劍帶固定於腰背（依既有已核准 PNG，`DESIGN-PROPOSAL`）
+- 身高（cm）：PENDING-USER-INPUT
+- 頭身比：PENDING-USER-INPUT
+- 肩寬（頭寬倍數）：PENDING-USER-INPUT
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：黑色大衣主布 **#1B1B1D**＋古金（肩甲、鏈飾、腰封、劍柄飾）**#B08D4E**（`CANON` 黑金色調；hex 依既有已核准 PNG 目視取近似值，`DESIGN-PROPOSAL` 鎖定）
-- 輔色：深棕炭黑皮革 **#3C2E24**、次要深古銅金 **#8A6F45**（`DESIGN-PROPOSAL`）
-- 金屬：亮古金（肩甲、鏈飾、腰封、滾邊）**#B08D4E**；次要深古銅金 **#8A6F45**；聖劍冷鋼劍身 **#8C97A3**（僅 09 出現）（`DESIGN-PROPOSAL`）
-- 寶石：肩甲與胸鏈點綴**收斂深紫／紫水晶 #7B4FA0**（`CANON` 寶石存在；hex 鎖定 `DESIGN-PROPOSAL`）；胸鏈另有極少量點綴的藍色小寶石 **#4E8FA0**（依既有 PNG 目視，次要點綴，`DESIGN-PROPOSAL`）；母親項鍊主石為琥珀／黃玉色 **#C97B2E**（依既有 PNG 目視，`DESIGN-PROPOSAL`）
-- 布料：黑色大衣主布 **#1B1B1D**，內襯米白／象牙色襯衫 **#EDE3D0**（`DESIGN-PROPOSAL`）
-- 皮革：深棕炭黑皮革（腰帶、雙劍帶、靴、內襯層）**#3C2E24**（`CANON` 皮甲元素殘留於腰帶／靴；材質細節 `DESIGN-PROPOSAL`）
-- 特殊材質：嘴唇乾裂血痕為皮膚質感細節，非配件（`CANON`）
-- 膚色／髮色／瞳色（hex）：膚 **#F0DAC5**（偏白皙冷調）／髮 **#6E5A47**（暖棕帶古銅調，既有 PNG 實際呈色；文檔描述「暗金／亞麻」以此 hex 為準）／瞳 **#D9832E**（紅金／琥珀橙色調）（`DESIGN-PROPOSAL` 鎖定，依既有已核准 PNG 目視取值）
-- **不具備之材質（生成時須排除）**：神職絲綢長袍、水晶／晶翼材質、冰晶結構、金屬板甲全身鎧——克里茲的實際材質僅為黑色長袍布料＋古金屬飾＋深紫（少量藍）寶石點綴＋深棕皮革。
+## Identity Lock
 
-## 道具與特殊構造（僅出現在 09 道具表）
-- 武器：**雙生聖劍 twin holy swords**——一對成雙、象徵王權，腰間左右佩帶，冷鋼劍身＋古金劍柄劍格＋深紫寶石鑲嵌，各配黑色古金滾邊劍鞘（`CANON` 存在與佩帶方式；材質細節依既有已核准 09 號 PNG，`DESIGN-PROPOSAL`）。**00–05 與 10 一律不出現**
-- 飾品：**母親留下的項鍊**——貼身佩戴，琥珀／黃玉色主石＋古金鏈條，是他核心創傷的隨身信物，曾於屋頂戰被托普奪走（`CANON` 存在與敘事意義；樣式依既有已核准 09 號 PNG，`DESIGN-PROPOSAL`）
-- 隨身道具：赫克托王室徽記（`CANON` 徽記存在；戰時版樣式為 `DESIGN-PROPOSAL`，依既有 PNG 為簡化星形紋章）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：雙劍以雙劍帶固定於腰／腰背（X 型交叉背帶，見 09 號 PNG）；肩甲以雙肩對稱扣件連接，胸背另有 X 型背帶輔助固定；項鍊貼身垂於領內，外層裝飾鏈疊加於外（`DESIGN-PROPOSAL`，依既有已核准 PNG）
+- CANON：Across every story-period variant, Kriz has mist-brown curly hair with fluffy mist-brown bangs and golden eyes. His ten-year-old version has a youthful face that already suggests his later handsome features. He is the son of the unnamed Queen and Aldrich. A yellowed scripture and the holy sword are story props and may appear only on sheet 06; a later-period dark action outfit is a separate costume variant and must not be mixed into another locked version.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 冷峻壓抑的預設神情
-2. 輕笑 Gentle smile — 罕見、克制的一絲柔軟
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger — 理性外殼崩裂的冷怒
-7. 悲傷 Sadness — 壓下卻未流的淚
-8. 眨眼 Wink
+## Costume Lock
 
-> 表情表僅改變眉眼與嘴部；臉部身份、暗金／亞麻短髮、紅金瞳與黑金古金服裝跨八格一致。
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、額外武器、機械義肢
-- 不可出現的顏色：高飽和螢光色、粉彩系、與黑／古金／深紫色票衝突的鮮豔雜色
-- 不可改變的左右位置：雙生聖劍必須成對且左右對稱佩帶；雙肩肩甲扣件與 X 型背帶須維持雙肩對稱，不得新增單側特徵
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
+## 固定色票與材質
 
-## 鎖定錨定預設值（可覆蓋）
-> 以下為 00 錨定圖採用的具體鎖定值，避免模型隨機決定辨識度關鍵項；使用者可事後覆蓋。
-- 瞳色：**紅金／琥珀橙瞳 #D9832E**——依既有已核准 PNG 為外觀正本；承母親金瞳、偏暖紅金色調鎖定為辨識基準。
-- 髮色／髮長：**暖棕帶古銅調 #6E5A47、略凌亂遮不住少年感短髮**（`CANON` 方向為「暗金／亞麻」，hex 依既有 PNG 實際呈色鎖定）。
-- 赫克托王室徽記紋樣：**簡化星形紋章，暗金浮雕**（戰時收斂版；`DESIGN-PROPOSAL` 鎖定值，依既有 09 號 PNG）。
-- 寶石色：**收斂深紫 #7B4FA0**（肩甲與胸鏈主要點綴）＋**極少量藍色小寶石 #4E8FA0**（胸鏈次要點綴）——依既有已核准 PNG 目視鎖定。
-- 母親項鍊主石色：**琥珀／黃玉色 #C97B2E**——依既有已核准 09 號 PNG 鎖定。
-- 服裝版本：**1587 遠征／流亡實戰版**（黑色長袍＋古金肩甲流蘇鏈飾＋雙生聖劍）。
-- 肩寬：**約 2.2 倍頭寬**（清瘦而結實體格，`DESIGN-PROPOSAL`，可覆蓋）。
-- 左右不對稱：**無，全對稱**（雙肩肩甲、雙劍佩帶、X 型背帶均對稱）。
-- 性別＝男；外觀年齡＝18–19 歲（1587 遠征期）。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 命名色之候選 hex（DESIGN-PROPOSAL）：mist brown #75645B、golden #D4AF37、brown #5A3A2E
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝版本採 1587 遠征／流亡實戰版（黑金披風式長袍＋深色皮革配件＋雙生聖劍），以與 09 道具表所列 props 對齊，並以既有已核准 `01–09` 號 PNG 的實際外觀為準。
-  - 眼睛鎖定為「紅金瞳（red-gold／amber-orange）」，依既有已核准 PNG 定案；承母親金瞳、偏暖紅金色調為最終辨識基準。
-  - 肩寬鎖定為約 2.2 倍頭寬（`DESIGN-PROPOSAL`，可覆蓋）。
-  - 披風／肩甲扣件經目視既有 PNG 確認為雙肩對稱設計（星形扣飾＋X 型背帶），無單側主扣，不留 `PENDING-USER-INPUT`。
-  - 固定色票 hex 值依既有已核准 PNG 目視取近似值鎖定（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-- **`PENDING-USER-INPUT`**（僅存不影響辨識度之項；辨識關鍵項已於「鎖定錨定預設值」定案）：
-  - 是否要為 00 號採 1583 少年版（約 165cm、十四五歲）而非本規格的 1587 版——屬版本偏好、非核心辨識缺口；若偏好年幼版需在核准前告知。
-  - 資料夾內既有 `05-kritz-four-view-master.png` 之視圖排列順序為「正面→左→背→右」，與本文件（及交接規範）要求的「正面→左→右→背」canonical 順序不同；因不得覆蓋既有 PNG，本次僅在 PROMPTS.md 中以 canonical 順序記錄供未來重新生成參考，是否重生成 05 號圖以修正順序，請使用者決定。
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-kritz-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

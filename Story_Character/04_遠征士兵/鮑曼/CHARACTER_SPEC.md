@@ -1,122 +1,76 @@
-# 鮑曼 Bowman
+# 鮑曼 — CHARACTER_SPEC
 
-> Tier C — 遠征士兵（有名字的犧牲者）。本檔為文字版身份規格（新版七張制 01–07），供 `01-bowman-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 角色文檔 heading：`### 鮑曼（Bowman）`。
-> **特殊正典（CANON）**：鮑曼「不以本人清晰出場」，只存在於克里茲記憶閃回裡，是一張**逐漸失去五官、模糊成空白的偵察兵臉**。這種「刻意畫不清楚的臉」本身就是設定，象徵主角遺忘他的過程與克里茲的異化——**不是瑕疵**。
-> **兩項定案（2026-07-23 使用者核准）**：
-> 1. **簽名武器＝匕首（dagger）**——短劍選項已刪除，06 道具結構表以匕首為唯一呈現。
-> 2. **06 八表情表＝八種輪廓／光影狀態版**——臉部虛化正典維持不解除，06 正常生成（不省略、不解除虛化）。詳見「正典衝突與待確認事項」與「八種輪廓／光影狀態」。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: bowman-F1B720F99C76
+>
+> Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：鮑曼
-- 英文名：Bowman
-- 角色版本 ID：**`BOWMAN-V1-FIRST-RECON`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男（`DESIGN-PROPOSAL`）
-- 年齡／外觀年齡：年輕偵察兵，約 20 出頭（`DESIGN-PROPOSAL`）
-- 身高：中等偏精瘦、適合偵察的靈活身形，約 175cm（`DESIGN-PROPOSAL`）
-- 體型：精瘦靈活的偵察兵體格（`DESIGN-PROPOSAL`）
-- 故事時期：第一次偵察任務期（`CANON`；本版本鎖定此時期外觀，其他時期需另立版本 ID）
-- 服裝版本：制式偵察輕甲，單一服裝版本，不與其他時期混用（`CANON`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**175**（`DESIGN-PROPOSAL`）
-- 頭身比：**7.0**（`DESIGN-PROPOSAL`，精瘦靈活，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（精瘦靈活的偵察兵體格，三名遠征士兵支線角色中肩寬最窄；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**佩刃側＝解剖學左側腰際（`DESIGN-PROPOSAL`，SPEC 原未定，本次提案）**。01–02 與 07 全身視圖零道具，佩刃與掛點不出現，故此側別僅影響 07（腰帶掛點細節）與 06（道具表）；01–02／07 的零道具全身視圖本身仍呈現對稱輪廓。**臉部刻意虛化為獨立正典，不計入此不對稱鎖定範疇**（見外貌鎖定）。
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：**無**——普通偵察兵，無血緣關係人物
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：bowman-F1B720F99C76
+- 角色版本 ID：BOWMAN-V1-FIRST-RECON
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-bowman-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-bowman-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：**刻意模糊、五官逐漸消退成空白的臉（CANON — 這是設定，非瑕疵）**。臉部柔和虛化、輪廓尚在但眉眼口鼻淡去，如記憶中拼湊不出的臉（`CANON`）
-- 膚色：柔和自然膚色，但因臉部虛化而不完全清晰（`DESIGN-PROPOSAL` 承 `CANON` 模糊臉；不鎖定為固定 hex，見色票說明）
-- 眼型與眼睛顏色：**刻意不明確、淡去無法辨識**（`CANON`）
-- 髮型、髮色與固定髮束：一般偵察兵短髮的模糊輪廓、髮色淡化不明確（`DESIGN-PROPOSAL` 承 `CANON` 模糊臉；不鎖定為固定 hex）
-- 身材比例：約七頭身、精瘦靈活的日系奇幻設定稿比例；見 Body Metrics Lock（175cm／7.0 頭身／肩寬約 2.0 倍頭寬）
-- 標誌性輪廓：清晰的制式偵察輕甲輪廓＋**唯獨臉部虛化空白**的對比（`CANON`）
-- 不可改變特徵：**刻意虛化／五官淡去的臉（CANON）**、制式偵察輕甲的清晰輪廓；模糊僅限臉部，身體與甲冑保持清晰
-- **anatomical left／right 不對稱鎖定**：佩刃側鎖定為解剖學左側腰際（`DESIGN-PROPOSAL`，本次提案，見 Body Metrics Lock）。01–02 與 07 全身視圖零道具，佩刃與掛點不出現，視覺上呈現對稱輪廓；此側別僅供 07／06 的腰帶掛點與佩刃細節參考。臉部虛化為獨立正典設定，不視為左右不對稱。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側（皆維持與 01 一致的臉部虛化程度，見下）。
+## Body Metrics Lock
 
-## 鎖定錨定預設值（可覆蓋）
-> 鮑曼特殊：**臉部不鎖定成任何具體五官**，而是把「刻意虛化／五官淡去的臉」鎖成正典（`CANON`）。以下其餘項目已鎖成 01 預設值，使用者可覆蓋。
-- 臉部：LOCKED 為「刻意模糊／柔和淡去、五官消退」的臉；不得替換成清晰具體五官（模糊僅限臉部）
-- 髮色：刻意保持不明確／淡化（承臉部虛化正典）
-- 確切身高／頭身比／肩寬：175cm／7.0／約 2.0 倍頭寬（`DESIGN-PROPOSAL`）
-- 軍徽紋樣：輕甲胸片上一枚低調的赫克托軍徽（無寶石）
-- 主要材質：輕量霧面鋼甲片、深棕皮革、偵察輕便布料（無寶石、無金飾、無重甲）
-- 佩刃側：解剖學左側腰際（`DESIGN-PROPOSAL`，見上）
-- 主武器：**匕首（dagger）**——已定案（2026-07-23 使用者核准），短劍選項刪除（見「道具與特殊構造」）
+- 身高（cm）：**175**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.0**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：制式偵察輕甲——輕量布／皮內襯外罩少量輕甲片，便於潛行（`CANON` 偵察輕甲；分層 `DESIGN-PROPOSAL`）
-- 領口：輕便護頸或布領（`DESIGN-PROPOSAL`）
-- 肩部：輕量肩片、無指揮官綬帶（`DESIGN-PROPOSAL`）
-- 胸前：輕甲胸片，可有低調赫克托軍徽（`DESIGN-PROPOSAL`）
-- 袖口／手部：貼身皮革護臂或手套，便於攀爬（`DESIGN-PROPOSAL`）
-- 腰部：輕便腰帶，左側腰際佩刃掛點（空掛點，`DESIGN-PROPOSAL`；刃本身僅入 06）
-- 下襬／披風：無披風、便於潛行（`DESIGN-PROPOSAL`，鎖定為無披風以簡化輪廓一致性；原「是否要有輕便斗篷」PENDING 已收斂為無披風）
-- 腿部／鞋靴：輕便護脛、軟底行軍靴（`DESIGN-PROPOSAL`）
-- 背面結構：輕甲背片，無特殊構造（`DESIGN-PROPOSAL`）
+## Identity Lock
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-> 角色文檔僅以色名描述，以下 hex 為 Claude 由色名推定之近似值，標記 `DESIGN-PROPOSAL`，使用者可覆蓋。**髮色與膚色因臉部虛化正典刻意不鎖定為固定 hex**，不視為色票漂移。
-- 主色：赫克托偵察制式配色——低調鋼灰 **#6A6E73**（`DESIGN-PROPOSAL`；與全書金／銀藍／深色系一致）
-- 輔色：深棕皮革 **#3D2E22**（`DESIGN-PROPOSAL`）
-- 金屬：少量輕甲片鋼、扣件 **#6A6E73**（`DESIGN-PROPOSAL`）
-- 寶石：無（`DESIGN-PROPOSAL`）
-- 布料：偵察輕便布料 **#4A463F**（`DESIGN-PROPOSAL`）
-- 皮革：護臂、腰帶、軟底靴 **#3D2E22**（`DESIGN-PROPOSAL`）
-- 特殊材質：臉部的**柔化虛焦質感**——記憶消退的畫面語言（`CANON` 概念；表現 `DESIGN-PROPOSAL`）
-- 膚色／髮色／瞳色（hex）：**刻意不鎖定**（`CANON`——臉部虛化正典的一部分；生成時以「柔和不明確」描述，不得指定具體色碼或清晰五官）
+- CANON：Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：**匕首（recon dagger）——已定案（2026-07-23 使用者核准）**。理由：偵察兵的敘事定位強調潛行、近身自衛而非正面交戰，匕首體積小、便於貼身收納與快速拔出，視覺上比短劍更貼合「第一次偵察任務」的輕裝潛行角色設定；短劍更接近戴夫／文森特等正規步兵的制式配置，用在鮑曼身上會削弱他與步兵組的角色區隔，故短劍選項刪除。06 道具結構表以匕首為唯一呈現。**01–02 與 07 一律不出現**
-- 飾品：無（刻意樸素）
-- 隨身道具：偵察用具（`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：**無（人類偵察兵）**
-- 配戴或連接方式：制式腰帶佩刃於左側腰際（`DESIGN-PROPOSAL`）
+## Costume Lock
 
-## 八種輪廓／光影狀態（06 定案版，2026-07-23 使用者核准）
-> **已定案**：03 放棄「表情」框架，改為八種以**頭部角度、肩頸姿態、光影方向與強度、整體氛圍**傳達情緒的「輪廓／光影狀態表」；臉部維持與 01 一致的虛化正典（soft-blurred indistinct features），不解除、不清晰化。八狀態順序與情緒對應維持全域規範 §6.3 順序，僅表現手法改為輪廓與光影。
-1. 自然 Neutral — 頭部端正、肩線平穩，中性柔光，虛化淡去的常態
-2. 輕笑 Gentle smile — 頭部微側傾、肩線放鬆下沉，柔和側光
-3. 大笑、可見牙齒 Broad smile with visible teeth — 頭部微揚、肩頸打開，光影對比略增、暖調光斜射
-4. 開懷大笑 Joyful open laughter — 頭部後仰、肩頸鬆展幅度最大，高亮暖光、輪廓明亮開闊
-5. 驚訝 Surprise — 頭部微後仰、肩頸瞬間收緊上提，冷調高對比側光
-6. 憤怒 Anger — 頭部前傾下壓、肩線緊繃前聳，強烈低角度硬光、陰影銳利
-7. 悲傷 Sadness — 頭部低垂、肩線下塌內收，冷暗調柔光、輪廓邊緣模糊
-8. 眨眼 Wink — 頭部極輕微側傾與停頓感、單肩略微提升，柔和側光帶輕微光斑
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、重型英雄鎧甲、機械義肢
-- 不可出現的特徵：**清晰完整、五官分明的臉**（違反鮑曼的刻意模糊正典）
-- 不可出現的顏色：高飽和螢光色、粉彩系、與全書金／銀藍／深色系衝突的鮮豔色
-- 不可改變的左右位置：佩刃側鎖定為左側腰際，須跨圖一致（`DESIGN-PROPOSAL`）
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
-- **模糊範圍限制**：虛化只作用於臉部；身體、甲冑、輪廓必須清晰
+## 固定色票與材質
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 01 號描繪一名標準偵察兵、制式偵察輕甲、正面全身＋頭部區域，但**臉部刻意保持虛化／柔和模糊／五官淡去**（`CANON`，象徵被遺忘的身份，非瑕疵）。
-  - 模糊僅限臉部；身體與甲冑保持清晰，以維持設定稿的可讀性。
-  - 無披風（`DESIGN-PROPOSAL`，原 PENDING 已收斂）。
-  - Body Metrics Lock、非臉部固定 hex 色票、佩刃側（解剖學左側腰際）已鎖定為 `DESIGN-PROPOSAL`，使用者可覆蓋。
-  - 無血緣關係，Kinship Lock＝無。
-  - **主武器＝匕首（dagger）**（2026-07-23 使用者核准）——短劍選項刪除，理由見「道具與特殊構造」；06 道具結構表以匕首為唯一呈現，01–05／07 不受影響（本就零道具或無需武器本身）。
-  - **06 八表情表＝八種輪廓／光影狀態**（2026-07-23 使用者核准）——臉部虛化正典維持不解除，06 正常生成（不省略、不解除虛化）；八狀態以頭部角度、肩頸姿態、光影方向與強度、氛圍傳達情緒，順序對應全域規範 §6.3；詳見「八種輪廓／光影狀態」與 PROMPTS.md 06 章節。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#6A6E73、#3D2E22、#4A463F
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
+
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-bowman-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

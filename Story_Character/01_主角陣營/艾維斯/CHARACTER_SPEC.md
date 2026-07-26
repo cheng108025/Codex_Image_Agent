@@ -1,118 +1,76 @@
-# 艾維斯 Elvis
+# 艾維斯 — CHARACTER_SPEC
 
-> Tier S ——《赫克托》主力戰將。本檔為文字版身份規格（新版七張制 01–07），供 `01-elvis-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**赫克托主力戰將實戰版**（隨便穿、不扣齊的重板甲＋磨損披風＋簽名武器）。這身「散漫重甲」正是他辨識度的核心——邋遢的穿法是刻意設定，不是要修正的瑕疵。本角色目前無任何已核准 PNG。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: elvis-F1B720F99C76
+>
+> Eivis is an older veteran who is explicitly one-eyed in the later story, with an unruly, relaxed, hard-drinking manner and exceptional combat and command judgment. Do not invent which eye is missing unless an approved image or user decision locks the side. His long blade and wineskin or leather flask are props and appear only on sheet 06.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：艾維斯
-- 英文名：Elvis
-- 角色版本 ID：**`ELVIS-V1-MAIN-FORCE-BATTLEWORN`**（本版本鎖定；西門死守焦黑重甲為特殊變體狀態，需另立版本 ID，本次不建置）
-- 性別：男
-- 年齡／外觀年齡：身經百戰的成年老將，外觀年齡約 35–45 歲（`DESIGN-PROPOSAL`）
-- 身高：約 190cm（`CANON`）
-- 體型：高大魁梧、粗獷懾人、肌肉厚實、寬肩厚背（`CANON`）
-- 故事時期：赫克托主力戰將時期（`CANON`；本版本鎖定此時期外觀）
-- 服裝版本：赫克托主力戰將實戰版——隨便穿、常不扣齊的重板甲加磨損披風，簽名武器見「PENDING-USER-INPUT」（`CANON` 大方向；分層與細節為 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**190**（`CANON`）
-- 頭身比：**7.5**（厚重壯碩比例；`DESIGN-PROPOSAL`，可覆蓋）
-- 肩寬（頭寬倍數）：**約 2.6 倍頭寬**（魁梧厚肌、寬肩厚背；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**臉上舊戰疤固定於臉部左側**（左眉—左顴，`CANON` 存在／`DESIGN-PROPOSAL` 鎖定側別，跨圖不得翻面）；**肩甲鬆脫扣帶固定於右肩**（`DESIGN-PROPOSAL` 鎖定側別，避免與戰疤同側造成過度集中，可覆蓋）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- **已登錄血緣關係紀錄：無**——目前家族註冊表（`ROYAL`、`ANDRE`）中沒有艾維斯的血緣關係紀錄（`CANON`：註冊表現狀）
-- 已登錄家族錨點：**無**
-- 已核准承襲特徵：**無**
-- 已核准刻意區分特徵：**無**
-- 已登錄禁止混淆項：**無**
-- **生成規則**：不套用任何已登錄的 Kinship invariants；`PROMPTS.md` 各張的 `Kinship invariants` 一律填 `none`，不啟用血緣相似規則
-- **是否存在未登錄的血緣親屬：`PENDING-USER-INPUT`**——文本未明載。「家族註冊表無紀錄」只證明目前沒有**已登錄**的血緣關係，**不等於**正典中完全沒有血緣親屬。此處不自行推論
-- **非阻塞**：不影響 01（正面全身）生成——已登錄承襲特徵為空，01 無須套用任何血緣相似約束。僅在日後補登血緣關係時需回頭修訂本區段
-- **一致性**：本區段與同角色 `PROMPTS.md:62`〈Kinship invariants〉的既定值 `None. Elvis has no blood relatives registered in the family tables.` 對齊——該句的語意同樣是「註冊表無紀錄」，非「正典上無親屬」
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：elvis-F1B720F99C76
+- 角色版本 ID：ELVIS-V1-MAIN-FORCE-BATTLEWORN
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-elvis-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-elvis-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：粗獷方正、下頜寬厚的成年男性臉型，飽經風霜（`CANON` 粗獷懾人；細節 `DESIGN-PROPOSAL`）
-- 膚色：偏深、風吹日曬的健康古銅／小麥色（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：深邃、目光銳利帶散漫痞氣的眼神（`DESIGN-PROPOSAL`）；瞳色鎖定深棕（`DESIGN-PROPOSAL`）
-- 髮型、髮色與固定髮束：**亂糟糟的雜髮**（`CANON`）；短—中長度、隨意撥開的深棕色雜亂短髮（`DESIGN-PROPOSAL`）
-- **標誌性面部特徵**：**亂糟糟的短鬚**（`CANON`）＋**臉上一道舊戰疤**（`CANON`）。戰疤鎖定為斜跨臉部左側（左眉—左顴）的一道舊疤，供跨圖一致
-- 身材比例：約七頭半身、厚重壯碩的日系奇幻設定稿比例，肩寬臂粗、非纖細；見 Body Metrics Lock（190cm／7.5 頭身／肩寬約 2.6 倍頭寬）
-- 標誌性輪廓：厚重寬肩的重甲剪影＋磨損披風＋簽名武器輪廓（`CANON` 元素；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：魁梧厚肌體格、亂糟糟短鬚與雜髮、臉上舊戰疤（左側）、隨便不扣齊的重板甲、磨損披風、簽名武器
-- **anatomical left／right 不對稱鎖定**：舊戰疤固定臉部左側；肩甲鬆脫扣帶固定右肩。02 號視圖＝相機位於角色解剖學左側（戰疤清晰可見）；03 號視圖＝相機位於角色解剖學右側（鬆脫肩甲扣帶清晰可見）；兩項不對稱特徵跨圖不得翻面或互換side。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：厚重全身板甲（胸甲＋肩甲＋護臂＋腿甲）外罩磨損披風，內襯厚布與皮革（`CANON` 重甲大方向；分層為 `DESIGN-PROPOSAL`）
-- **穿法（核心設定）**：板甲穿得隨便、扣帶常不扣齊、部分甲片鬆脫或歪斜、披風磨損掉邊——這份「散漫痞氣」的鬆垮穿法是刻意的辨識特徵，**不得畫成整齊筆挺的甲冑**（`CANON`）
-- 領口：無護頸或護頸鬆開、露出內襯領口（`DESIGN-PROPOSAL`，呼應散漫穿法）
-- 肩部：厚重肩甲，右肩扣帶未扣緊／略微下垂（`DESIGN-PROPOSAL` 鎖定側別）
-- 胸前：厚重胸甲，可隱約帶收斂化的赫克托陣營金色徽記（`DESIGN-PROPOSAL`）
-- 袖口／手部：厚皮革與板甲護臂、厚重護手鐵手套，便於握持大型武器（`DESIGN-PROPOSAL`）
-- 腰部：寬厚戰帶／腰帶，掛武器與雜物，扣得隨便（`DESIGN-PROPOSAL`）
-- 下襬／披風：磨損掉邊的厚披風，及膝或及踝，深色調帶戰陣污痕（`CANON` 披風磨損；長度色調 `DESIGN-PROPOSAL`）
-- 腿部／鞋靴：板甲腿甲＋厚重皮革戰靴（`DESIGN-PROPOSAL`）
-- 背面結構：披風覆背、掉邊磨損可見，武器可背掛或側掛，右肩甲扣件鬆脫（`DESIGN-PROPOSAL`）
+- 身高（cm）：**190**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.5**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.6 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：戰痕鋼灰板甲 **#6B6E72**（`DESIGN-PROPOSAL`；全書配色方向為 `CANON`）
-- 輔色：深色磨損披風（暗炭／深褐）**#3B332C**、深棕皮革 **#5C4530**（`DESIGN-PROPOSAL`）
-- 金屬：戰痕鋼 **#6B6E72**＋暗金扣件與徽記 **#8A7040**（`DESIGN-PROPOSAL`）
-- 寶石：無或極少（粗獷務實的戰將，不佩華飾）（`DESIGN-PROPOSAL`）
-- 布料：厚織磨損披風 **#3B332C**、內襯厚布（`DESIGN-PROPOSAL`）
-- 皮革：護臂、戰帶、戰靴、甲下皮墊 **#5C4530**（`DESIGN-PROPOSAL`）
-- 特殊材質：臉上舊戰疤為皮膚質感細節，非配件（`CANON`）；西門死守一戰另有「重甲被燒得焦黑」的變體狀態（`CANON`，非本規格預設狀態，見文末）
-- 膚色／髮色／瞳色（hex）：膚 **#C08856**（風吹日曬古銅／小麥色）／髮 **#4A3A2E**（深棕雜髮）／瞳 **#3E2A1E**（深棕）（`DESIGN-PROPOSAL` 鎖定，本角色無 PNG，依色名描述推定近似值）
-- **不具備之材質（生成時須排除）**：整齊筆挺的鏡面拋光甲冑、鮮豔華麗珠寶——艾維斯的實際材質僅為戰痕鋼灰板甲＋磨損布料披風＋深棕皮革＋暗金扣件。
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：**PENDING-USER-INPUT——大型闊劍 vs 戰斧二選一**。文檔載「大型闊劍或戰斧」，兩者尚未定案為唯一簽名武器（見「正典衝突」之推薦與理由）；**此項僅限縮於 06 道具結構表，不阻擋 01–05、07 之生成**
-- 飾品：無明顯飾品（粗獷務實）（`DESIGN-PROPOSAL`）
-- 隨身道具：戰帶上的雜物袋、備用武器掛點（`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：武器以背帶或腰側掛點固定；披風以肩甲扣件連接（右肩刻意鬆脫）（`DESIGN-PROPOSAL`）
+- CANON：Eivis is an older veteran who is explicitly one-eyed in the later story, with an unruly, relaxed, hard-drinking manner and exceptional combat and command judgment. Do not invent which eye is missing unless an approved image or user decision locks the side. His long blade and wineskin or leather flask are props and appear only on sheet 06.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 散漫痞氣的預設神情
-2. 輕笑 Gentle smile — 粗豪中一絲隨性笑意
-3. 大笑、可見牙齒 Broad smile with visible teeth — 大剌剌咧嘴
-4. 開懷大笑 Joyful open laughter — 豪邁大笑
-5. 驚訝 Surprise
-6. 憤怒 Anger — 將領怒吼、份量翻出的怒
-7. 悲傷 Sadness — 粗獷外表下罕見的沉痛
-8. 眨眼 Wink
+## Costume Lock
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、機械義肢、華麗珠寶
-- 不可出現的顏色：高飽和螢光色、粉彩系、與全書金／銀藍／深色系衝突的鮮豔色
-- 不可改變的左右位置：臉上舊戰疤固定在左側，跨圖不得翻面；肩甲鬆脫扣帶固定於右肩，跨圖不得互換side
-- 不可改變的體格：不得畫成纖細、清瘦或標準身形——必須維持魁梧厚肌
-- 不可改變的穿法：不得畫成整齊、筆挺、嶄新無瑕的甲冑——鬆垮不扣齊的穿法是刻意設定
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝版本採「主力戰將散漫重甲版」（不扣齊的重板甲＋磨損披風），與 06 道具結構表所列 props 對齊。
-  - 舊戰疤鎖定臉部左側，肩甲鬆脫扣帶鎖定右肩，避免兩項不對稱特徵集中同側；跨圖一致。
-  - 固定色票 hex 值依色名描述推定近似值鎖定（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可於 01 核准時覆蓋。
-  - 西門焦黑重甲為特殊變體狀態，非本版本預設。
-- **`PENDING-USER-INPUT`（不阻擋 01–05、07，僅限縮於 06 道具結構表）**：
-  - **簽名武器二選一：大型闊劍 vs 大型戰斧**。推薦意見：建議採**大型闊劍（broadsword）**為唯一簽名武器——理由（a）闊劍與「主力戰將」的近戰突進戰鬥風格更貼合，作為單手／雙手皆宜的百戰老將標誌性武器，在動作分鏡中辨識度較戰斧更穩定（戰斧的斧刃輪廓在遠距鏡頭易與其他戰斧類配角混淆）；（b）闊劍的長條形剪影與磨損重甲＋披風的整體垂直線條更協調，戰斧的橫向斧頭則會打斷戰甲剪影的整體感。若使用者傾向戰斧，06 可直接替換為戰斧作為唯一簽名武器，兩者不得同時列為主武器。此決定僅影響 06 道具結構表內容，01–05、07 之生成與驗收不受影響、不需等待此項決定。
+## 固定色票與材質
 
-## 未建置的另一版本（文末保留，本次不生成）
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#6B6E72、#3B332C、#5C4530、#8A7040、#C08856、#4A3A2E、#3E2A1E
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-- **版本 ID（未建置）**：`ELVIS-V2-SIEGE-OF-SIMON-SCORCHED`
-- 內容：西門死守一戰之焦黑重甲變體——同一角色身份，但板甲表面被燒得焦黑、披風可能殘破燒毀，為特殊戰鬥狀態而非日常實戰版。
-- 若使用者確認需要建置此變體，須另立完整 CHARACTER_SPEC.md／PROMPTS.md 與獨立 01–07 圖片組，不得與本檔（`ELVIS-V1-MAIN-FORCE-BATTLEWORN`）混用同一身份正本。
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-elvis-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

@@ -1,114 +1,76 @@
-# 奧德里奇 Aldrich
+# 奧德里奇 — CHARACTER_SPEC
 
-> Tier — 《赫克托》關鍵背景角色，建國君主、克里茲之父。本檔為文字版身份規格（範本 v2），供 `00-aldrich-character-identity-anchor.png` 與 01–10 全套參考圖生成之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: aldrich-F1B720F99C76
+>
+> Aldrich is Kriz's father, the unnamed Queen's husband, and the central founder-hero figure of the Hector kingdom. In the source range he appears through history, memory, expectation, and political reference rather than confirmed present-tense action. His appearance and current life/death status are not fully established; every concrete face, hair, eye color, age, body metric, costume, crown, armor, or weapon detail remains DESIGN-PROPOSAL and must not be labeled story canon.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：奧德里奇
-- 英文名：Aldrich
-- 角色版本 ID：**`ALDRICH-V1-FOUNDER-KING`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男
-- 年齡／外觀年齡：壯年（`CANON` 文檔載「壯年蓄鬚」），約 40–50 歲的成熟王者（`DESIGN-PROPOSAL` 精確歲數）
-- 身高：約 190cm，寬肩厚背、高大魁梧（`CANON`）
-- 體型：魁梧壯碩、寬肩厚背的王者體格（`CANON`）
-- 故事時期：建國神話時期——文檔明載他全篇不以真人現身、僅以肖像／雕像／壁畫存在；本版本將「肖像中的理想化王者」錨定為角色本人（the man himself）
-- 服裝版本：理想化建國王者版——沉重金冠＋金飾全身板甲＋猩紅王披風（`CANON`；巨劍為 `CANON` 道具，僅出現在 09 道具表）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**190**（`CANON` 約 190cm → 鎖定 190）
-- 頭身比：**8.0**（`CANON` 英雄式 8–8.5 頭身 → 鎖定 8.0，利於參數化人體擬合；`DESIGN-PROPOSAL`）
-- 肩寬（頭寬倍數）：**約 2.8 倍頭寬**（寬肩厚背體格；`DESIGN-PROPOSAL`）
-- 左右不對稱特徵：**無，全對稱**——披風以雙肩對稱金屬扣件固定，無單側佩章／疤痕／髮分邊（`DESIGN-PROPOSAL` 鎖定）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：克里茲 — 子（版本 ID 待其 SPEC v2 補；1587 遠征版）
-- 家族錨點：**克里茲**（家族 `ROYAL`）——克里茲的 00 先核准，本角色的 00 才進入生成；生成時以克里茲的臉部骨架反推父系來源
-- 承襲特徵（向下）：子克里茲承其**方正下顎與深眉弓**的臉部骨架（克里茲為年輕清瘦版本；`DESIGN-PROPOSAL`）
-- 刻意區分特徵：本人**深棕瞳 #3E2A1E，非金瞳**——金瞳屬母系（阿格妮絲→克里茲）；深色近黑髮鬚 vs 克里茲的暗金／亞麻髮
-- 禁止混淆項：不得金瞳、不得紅金瞳；不得暗金／亞麻髮色（子的特徵）
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：aldrich-F1B720F99C76
+- 角色版本 ID：ALDRICH-V1-FOUNDER-KING
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：IMAGE-DRIFT-REVIEW-REQUIRED — 11 existing PNG file(s); documents refreshed by explicit user authorization, PNGs untouched.
+- 身份正本：01-aldrich-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`00-aldrich-character-identity-anchor.png`（現有 PNG 為舊版雙視圖，依範本 v2 需重生成三視圖版；重生成前不得刪除舊檔）
-- 共用畫風參考 1：`../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- 共用畫風參考 2：`../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- 共用畫風參考 3：`../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：成熟威嚴的壯年王者臉型，輪廓方正、眉宇深刻，塑造「不可戰勝之王」神話（`CANON` 壯年蓄鬚、理想化；臉型細節 `DESIGN-PROPOSAL`）
-- 膚色：健康偏冷的成年男性膚色（`DESIGN-PROPOSAL`）
-- 眼型與眼睛顏色：威嚴銳利的眼神（`DESIGN-PROPOSAL`；深色沉穩瞳，見「鎖定錨定預設值」）
-- 髮型、髮色與固定髮束：**深色鬢髮**，向後梳理的成熟短髮或中短髮（`CANON` 深色鬢髮）；**壯年蓄鬚**，修整的落腮鬍／短鬚（`CANON` 蓄鬚）
-- 身材比例：見 Body Metrics Lock（190cm／8.0 頭身／肩寬 2.8 倍頭寬）
-- 標誌性輪廓：沉重金冠＋金飾全身板甲＋猩紅披風的紀念碑式立姿剪影（`CANON` 元素；立姿構成為 `DESIGN-PROPOSAL`；巨劍屬 09 道具表，不入 00–05、10 剪影）
-- 不可改變特徵：沉重金冠、深色鬢髮與蓄鬚、金飾全身板甲、猩紅王披風、魁梧高大
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：金飾全身板甲，內襯戰袍，外罩猩紅王披風（`CANON`）
-- 領口：板甲護頸／高領護甲，內襯深色戰袍（`DESIGN-PROPOSAL`）
-- 肩部：厚重金飾肩甲，猩紅披風自雙肩垂落，對稱金屬扣件固定（`CANON` 披風；肩甲細節 `DESIGN-PROPOSAL`）
-- 胸前：金飾胸甲，飾赫克托王室徽記／建國王者紋章（`CANON` 全身板甲金飾；徽記樣式 `DESIGN-PROPOSAL`）
-- 袖口／手部：板甲護臂與金屬護手（`DESIGN-PROPOSAL`；A-pose 全身圖中雙手張開、五指微張、不持物）
-- 腰部：金屬腰甲／戰帶（`DESIGN-PROPOSAL`；不佩掛巨劍——武器僅入 09 道具表）
-- 下襬／披風：猩紅王披風及地、厚重垂墜，內襯可為金色（`CANON` 猩紅披風；長度襯色 `DESIGN-PROPOSAL`）
-- 腿部／鞋靴：板甲護腿與金屬戰靴（`DESIGN-PROPOSAL`）
-- 背面結構：猩紅披風完整覆背，肩部金屬扣件可見，背甲金飾（`DESIGN-PROPOSAL`；07 服裝細節表須含披風拆解與無披風的鎧甲背面視圖）
+- 身高（cm）：PENDING-USER-INPUT
+- 頭身比：PENDING-USER-INPUT
+- 肩寬（頭寬倍數）：PENDING-USER-INPUT
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：拋光黃金 **#D4AF37**（金冠、板甲金飾）＋猩紅 **#A31621**（王披風）（`CANON` 金／猩紅；hex 鎖定值 `DESIGN-PROPOSAL`）
-- 輔色：深色戰袍 **#23262B**、深色鬢髮鬚 **#1B1B1F**（`DESIGN-PROPOSAL`）
-- 金屬：拋光黃金 #D4AF37＋銀鋼甲件 **#9BA7B0**；冷鋼巨劍劍身 **#8C97A3**（僅 09）（`CANON` 金飾；hex `DESIGN-PROPOSAL`）
-- 寶石：金冠鑲深紅／紅寶石 **#7C0A02**（`DESIGN-PROPOSAL` 鎖定為預設）
-- 布料：猩紅厚織披風 #A31621，金色內襯 **#C9A227**（`CANON` 猩紅披風；材質與襯色 `DESIGN-PROPOSAL`）
-- 皮革：戰帶、護具內襯深棕 **#4A3524**（`DESIGN-PROPOSAL`）
-- 特殊材質：全書金／銀藍／深色系收斂，奧德里奇偏金／猩紅暖調的王者神話色（`CANON` 全書配色方向）
-- 膚色／髮色／瞳色（hex）：膚 **#E6C3A5**（健康偏冷）／髮鬚 **#1B1B1F**／瞳 **#3E2A1E**（深棕近黑）（`DESIGN-PROPOSAL` 鎖定）
+## Identity Lock
 
-## 道具與特殊構造（僅出現在 09 道具表）
-- 武器：**巨劍 great sword**——象徵「不可戰勝之王」的單柄巨劍（`CANON`）；冷鋼劍身、金飾劍柄劍格（`DESIGN-PROPOSAL`）。**00–05 與 10 一律不出現**
-- 飾品：**沉重金冠 heavy gold crown**（`CANON`）——屬穿戴衣裝，隨角色出現於各圖
-- 隨身道具：赫克托王室徽記／建國紋章（胸甲浮雕，屬服裝）、征服旗海（背景敘事，不入設定圖）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：金冠戴於頭；披風以雙肩對稱金屬扣件連接；巨劍的劍鞘與佩掛結構於 09 拆解說明
+- CANON：Aldrich is Kriz's father, the unnamed Queen's husband, and the central founder-hero figure of the Hector kingdom. In the source range he appears through history, memory, expectation, and political reference rather than confirmed present-tense action. His appearance and current life/death status are not fully established; every concrete face, hair, eye color, age, body metric, costume, crown, armor, or weapon detail remains DESIGN-PROPOSAL and must not be labeled story canon.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 威嚴沉穩的王者預設神情
-2. 輕笑 Gentle smile — 克制而威嚴的一絲和煦
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter — 豪邁王者笑
-5. 驚訝 Surprise
-6. 憤怒 Anger — 帝王之怒
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-> 表情表僅改變眉眼與嘴部；臉部身份、深色鬢髮與蓄鬚、威嚴輪廓與金冠跨八格一致。
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、額外武器、機械義肢、雙劍（他是單柄巨劍，非克里茲的雙生聖劍）
-- 不可出現的顏色：高飽和螢光色、粉彩系、與金／猩紅王者色衝突的鮮豔雜色
-- 不可改變的左右位置：無不對稱特徵（全對稱設計）；跨圖不得出現單側佩章、單側披風等新增不對稱
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi；不可畫成少年、稚氣、清瘦病弱或衰老佝僂
+## 固定色票與材質
 
-## 鎖定錨定預設值（可覆蓋）
-> 以下為 00 錨定圖採用的具體鎖定值，避免模型隨機決定辨識度關鍵項；使用者可事後覆蓋。
-- 瞳色：**深色沉穩瞳（深棕／近黑 #3E2A1E）** —— 鎖定，**刻意有別於克里茲的金瞳**（避免父子金瞳混淆；若使用者要父子金瞳呼應需另行指定）。
-- 髮／鬚色：**深色（近黑 #1B1B1F）向後梳中短髮＋修整落腮短鬚** —— 鎖定。
-- 金冠鑲嵌寶石顏色：**深紅／紅寶石色 #7C0A02**（呼應猩紅王披風）—— 鎖定為預設。
-- 赫克托王室徽記／建國紋章：**盾徽上一隻程式化雄獅／王者猛獸紋樣，金線浮雕於胸甲** —— 鎖定為預設樣式。
-- 膚色：**健康偏冷的成年男性膚色 #E6C3A5** —— 鎖定。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#3E2A1E、#D4AF37、#A31621、#23262B、#1B1B1F、#9BA7B0、#8C97A3、#7C0A02、#C9A227、#4A3524、#E6C3A5
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝版本採理想化建國王者版（`ALDRICH-V1-FOUNDER-KING`），對齊文檔「肖像／雕像／壁畫」描述。
-  - anchor 圖將肖像中的理想化王者錨定為「王者本人」，作為分鏡／概念圖用的角色正本（非以肖像框、雕像基座呈現，而是完整角色本體）。
-  - 眼睛顏色鎖定為深色沉穩瞳，刻意有別於克里茲金瞳（見上「鎖定錨定預設值」）。
-  - 依零道具規則，巨劍自 00–05、10 移除，僅入 09 道具表（原 CANON「手按巨劍」的敘事意象由 09 的武器設定與未來場景插畫承載）。
-- **`PENDING-USER-INPUT`（僅餘瑣碎項）**：
-  - 是否需要一個「肖像框／雕像版」呈現（文檔強調他只以肖像／雕像存在）——本規格採「王者本人」錨定，若需框裱版另議。
-  - 固定色票 hex 值為 DESIGN-PROPOSAL 鎖定的預設；如需調整請指定。
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-aldrich-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

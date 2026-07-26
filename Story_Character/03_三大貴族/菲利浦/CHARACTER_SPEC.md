@@ -1,108 +1,76 @@
-# 菲利浦 Philip
+# 菲利浦 — CHARACTER_SPEC
 
-> Tier 配角 — 安德烈之子。本檔為文字版身份規格（新版七張制 01–07），供 `01-philip-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 角色文檔「外觀設定」段落為概念設計提案，故身高／體型／髮色／服裝細節除非另有明載，一律標記為提案。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: philip-F1B720F99C76
+>
+> Philip is Duke Andre's son and Cecilia's sibling. The story does not state his age, fixed face, hair, eye color, body metrics, complete political office, weapon, or costume. Existing visual choices remain DESIGN-PROPOSAL. Kinship resemblance to Andre and Cecilia must not be invented beyond user-approved shared traits.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：菲利浦
-- 英文名：Philip
-- 角色版本 ID：**`PHILIP-V1-STUDY-INFILTRATION`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男（`CANON`）
-- 年齡／外觀年齡：年輕貴公子，外觀約 18–22 歲（`DESIGN-PROPOSAL`）
-- 身高：約 176cm（`DESIGN-PROPOSAL`；文檔外觀設定段落為概念提案）
-- 體型：身形挺拔、勻稱的年輕貴族體格（`CANON` 挺拔；比例為 `DESIGN-PROPOSAL`）
-- 故事時期：安德烈書房秘密行動場景（`CANON`；本版本鎖定此時期外觀，其他時期需另立版本 ID）
-- 服裝版本：深色系貴族勁裝、佩劍（`CANON` 服裝大方向；細節為 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**176**（`DESIGN-PROPOSAL`，可覆蓋）
-- 頭身比：**7.0–7.5**（`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.1 倍頭寬**（挺拔勻稱的年輕貴族體格；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**側劍佩於腰間左側**（`DESIGN-PROPOSAL`，慣用右手拔劍之通用配置，可覆蓋）。因側劍僅出現於 06 道具結構表，01–02、07 全身圖不顯示佩劍或掛點造成的側別差異；06 道具結構表之劍鞘／腰帶掛點依此左側繪製，供日後合成佩劍鏡頭參照。
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：安德烈 `ANDRE-V1-SCHOLAR-ROBE` — 父；賽希莉亞 `CECILIA-V1-STUDY-DOORWAY` — 手足（非雙胞胎，長幼文檔未載）
-- 家族錨點：**安德烈**（家族 `ANDRE`）——安德烈的 01 先核准，本角色的 01 才進入生成
-- 承襲特徵：**清晰下頜線與英挺輪廓 ← 父安德烈**的貴族臉部骨架年輕版（`DESIGN-PROPOSAL`）；深琥珀棕瞳與深色髮呼應家族深色系（本檔既有 `LOCKED`）
-- 刻意區分特徵：深棕近墨黑髮——**刻意不承父之灰白**（本檔既有決定）；年輕英挺臉，無皺紋
-- 禁止混淆項：不得灰白髮、不得年長臉與皺紋（父的特徵）
-- 手足相似：與賽希莉亞同屬深色瞳系（他深琥珀棕／她深棕），臉部輪廓可帶手足相似但他英挺、她秀氣（`DESIGN-PROPOSAL`）
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：philip-F1B720F99C76
+- 角色版本 ID：PHILIP-V1-STUDY-INFILTRATION
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-philip-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-philip-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：面容英挺、輪廓清晰的年輕貴族臉型（`CANON` 英挺）
-- 膚色：偏白皙、健康調 **#F0DCC7**（`DESIGN-PROPOSAL`）
-- 眼型與眼睛顏色：聽到秘密行動時**眼神發亮、躍躍欲試**（`CANON` 神態）；瞳色鎖定為**深琥珀棕 deep amber-brown #6B4423**（`LOCKED`，與安德烈家深色系相稱）
-- 髮型、髮色與固定髮束：**深棕近墨黑短髮、俐落側分 #1C1712**（`LOCKED`，呼應父親安德烈的貴族氣質）
-- 身材比例：約七至七頭半身、修長挺拔的日系奇幻設定稿比例；見 Body Metrics Lock（176cm／7.0–7.5 頭身／肩寬約 2.1 倍頭寬）
-- 標誌性輪廓：挺拔站姿＋腰間佩劍剪影（僅 06）＋藏不住興奮的上揚眼神（`CANON` 佩劍與興奮；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：男性、英挺面容、興奮發亮的眼神、深色系貴族勁裝、腰間佩劍（僅 06）
-- **anatomical left／right 不對稱鎖定**：側劍佩於腰間**左側**（`DESIGN-PROPOSAL`，僅影響 06 道具結構表繪製；01–02、07 全身圖零道具，不顯示佩劍側別）。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：與父親同色系的深色系貴族勁裝，合身俐落、便於行動（`CANON` 深色勁裝；分層為 `DESIGN-PROPOSAL`）
-- 領口：立領或翻領深色布料，繡線收斂（`DESIGN-PROPOSAL`）
-- 肩部：合身肩線，或搭配短披掛（`DESIGN-PROPOSAL`）
-- 胸前：梧桐家紋的收斂化刺繡或釦飾（`DESIGN-PROPOSAL`；家紋存在呼應安德烈梧桐家）
-- 袖口／手部：貼身袖口、可佩皮手套（`DESIGN-PROPOSAL`）
-- 腰部：腰帶佩一柄側劍，掛於左側（`CANON` 佩劍；掛法與側別為 `DESIGN-PROPOSAL`）。**01–02、07 全身圖不出現側劍**，僅腰帶本體
-- 下襬／披風：勁裝短下襬或及膝外袍，非重甲（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：深色貴族長褲與皮靴（`DESIGN-PROPOSAL`）
-- 背面結構：合身勁裝背面，腰帶固定（劍鞘掛點僅示意於 06）（`DESIGN-PROPOSAL`）
+- 身高（cm）：**176**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.0–7.5**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.1 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：深色系貴族色 **#1E2A3F**（深藍為主，與安德烈梧桐家深色文士色調同系）（`CANON` 與父同色系；hex `DESIGN-PROPOSAL`）
-- 輔色：銀灰繡線與釦飾 **#8C8C94**（`DESIGN-PROPOSAL`）
-- 金屬：劍柄與釦件為暗銀 **#8C8C94**（`DESIGN-PROPOSAL`）
-- 寶石：可省略，或劍柄／釦飾小顆點綴（`DESIGN-PROPOSAL`；顏色 `PENDING-USER-INPUT`，僅出現於 06）
-- 布料：貴族細織布、內襯深色布料（`DESIGN-PROPOSAL`）
-- 皮革：腰帶、劍鞘、皮靴（`DESIGN-PROPOSAL`）
-- 特殊材質：無
-- 膚色／髮色／瞳色（hex）：膚 **#F0DCC7**／髮 **#1C1712**（深棕近墨黑）／瞳 **#6B4423**（深琥珀棕）（`LOCKED`）
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：**側劍 side sword** 一柄，佩於腰間左側（`CANON` 佩劍；側別為 `DESIGN-PROPOSAL`）。**01–02、07 一律不出現**
-- 飾品：貴族釦飾、可佩家紋徽記（`DESIGN-PROPOSAL`）
-- 隨身道具：無（`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）— **N/A**
-- 配戴或連接方式：側劍以腰帶／劍鞘固定於腰左側（`DESIGN-PROPOSAL`）
+- CANON：Philip is Duke Andre's son and Cecilia's sibling. The story does not state his age, fixed face, hair, eye color, body metrics, complete political office, weapon, or costume. Existing visual choices remain DESIGN-PROPOSAL. Kinship resemblance to Andre and Cecilia must not be invented beyond user-approved shared traits.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 挺拔而略帶自信的預設神情
-2. 輕笑 Gentle smile
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、重甲板甲、額外武器、機械義肢
-- 不可出現的顏色：高飽和螢光色、粉彩系、與全書金／銀藍／深色系衝突的鮮豔色
-- 不可改變的左右位置：佩劍側鎖定左側，須跨圖一致（僅 06 適用）
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
-- 不可出現的性別：女性
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝採深色系貴族勁裝＋側劍，與安德烈同色系。
-  - 髮色採深色，呼應父親貴族氣質而非承其灰白。
-  - 佩劍側鎖定為左側（`DESIGN-PROPOSAL`，可覆蓋），僅影響 06 道具結構表。
-  - 固定色票 hex 值已鎖定（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-- **已鎖為 01 預設值（`LOCKED`，可覆蓋）**：
-  - 瞳色 → 深琥珀棕 #6B4423；髮色 → 深棕近墨黑短髮側分 #1C1712。
-- **`PENDING-USER-INPUT`（不影響辨識度）**：
-  - 梧桐家紋的確切紋樣（文檔未給圖形）。
-  - 側劍是否需要更具體的形制（單手劍 vs 細劍）。
+## 固定色票與材質
+
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#F0DCC7、#6B4423、#1C1712、#1E2A3F、#8C8C94
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
+
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-philip-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

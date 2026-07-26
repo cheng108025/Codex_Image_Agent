@@ -1,117 +1,76 @@
-# 強尼·德加 Johnny Dega
+# 強尼 — CHARACTER_SPEC
 
-> Tier — 配角（遠征誘餌士兵，有名字的犧牲者）。本檔為文字版身份規格（新版七張制 01–07），供 `01-johnny-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 角色定位：克里茲點名充當誘餌的三名普通士兵之一。三人以「被念到名字時的三種反應」形成對照——強尼＝崇拜。刻意保持外形普通、無特殊裝飾，正因平凡才讓「有名字的犧牲」沉重。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: johnny-F1B720F99C76
+>
+> BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked character named Johnny. Do not generate sheet 01 and do not promote any legacy face, costume, weapon, or biography in this package to story canon until the user decides whether Johnny should be retained, renamed, merged into a named character, or absorbed into the Hector-army ensemble.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：強尼·德加
-- 英文名：Johnny Dega
-- 角色版本 ID：**`JOHNNY-V1-1587-EXPEDITION`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男
-- 年齡／外觀年齡：三人中最年輕，體格尚顯青澀，外觀年齡 19 歲（`CANON` 年輕士兵；確切歲數 `DESIGN-PROPOSAL`，見鎖定錨定預設值）
-- 身高：約 172cm（`CANON`）
-- 體型：青澀纖瘦、尚未壯實的年輕步兵體格（`CANON` 體格青澀；細節 `DESIGN-PROPOSAL`）
-- 故事時期：1587 赫克托遠征期（`CANON`；本版本鎖定此時期外觀，其他時期需另立版本 ID）
-- 服裝版本：制式遠征輕甲＋手執火炬，單一服裝版本，不與其他時期混用（`CANON`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**172**（`CANON`）
-- 頭身比：**7.0**（`DESIGN-PROPOSAL`，利於參數化人體擬合；青澀纖瘦體格，非壯碩）
-- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（青澀纖瘦、尚未壯實的年輕步兵體格，三人中肩寬最窄；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**無，全對稱**——01–02 與 07 全身視圖零道具，不出現火炬與短刀，故身體本身無不對稱特徵。**火炬慣用手（DESIGN-PROPOSAL，僅供 06 道具結構表與敘事姿態參考）**：右手持火炬、短刀掛於腰帶右側；此側別僅影響 06 道具結構表的佩掛方式說明，不影響 01–02／07 的零道具全身視圖
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：**無**——普通士兵，無血緣關係人物
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：johnny-F1B720F99C76
+- 角色版本 ID：JOHNNY-V1-1587-EXPEDITION
+- 生成閘門：BLOCKED-PENDING-USER-INPUT
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-johnny-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-johnny-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：乾淨、圓潤未脫稚氣的年輕面孔，無鬍（`CANON` 乾淨面孔）
-- 膚色：健康自然膚色、略帶紅潤（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：明亮、瞳孔放大、望向王時滿溢純粹崇拜的暖褐色眼（`CANON` 崇拜眼神；顏色 `DESIGN-PROPOSAL`）
-- 髮型、髮色與固定髮束：短髮、栗褐色、俐落規整的軍旅短髮（`CANON` 短髮；髮色 `DESIGN-PROPOSAL`）
-- 身材比例：約七頭身、修長的日系奇幻設定稿比例；見 Body Metrics Lock（172cm／7.0 頭身／肩寬約 2.0 倍頭寬）
-- 標誌性輪廓：手執火炬、身著制式輕甲的普通年輕步兵剪影（`CANON` 輕甲＋火炬；輪廓為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：年輕無鬍的乾淨臉、短髮、崇拜的眼神、制式輕甲、火炬
-- **anatomical left／right 不對稱鎖定**：全對稱設計（見 Body Metrics Lock）。01–02 與 07 全身視圖零道具，無左右不對稱；火炬持握手與短刀佩帶側僅為 06 道具結構表與敘事姿態的 `DESIGN-PROPOSAL`（右手／右側），跨圖一致但不影響零道具視圖的對稱判定。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：制式遠征輕甲——內襯軟墊束腰衣外罩輕量皮革胸甲，少量素樸鋼片點綴（`CANON` 輕甲；分層為 `DESIGN-PROPOSAL`）
-- 領口：軟墊高領，內襯深色布料（`DESIGN-PROPOSAL`）
-- 肩部：輕量皮革或素鋼小肩甲，無華飾（`DESIGN-PROPOSAL`）
-- 胸前：皮革胸片，可有小而收斂的赫克托制式徽記（`DESIGN-PROPOSAL`）
-- 袖口／手部：皮革護臂、樸素皮手套，便於握持火炬（`DESIGN-PROPOSAL`）
-- 腰部：素樸皮腰帶，或掛短刀（`DESIGN-PROPOSAL`）
-- 下襬／披風：無披風，短擺束腰衣或短外袍（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：布褲或皮褲配行軍皮靴（`DESIGN-PROPOSAL`）
-- 背面結構：素背皮甲，無披風、無徽飾（`DESIGN-PROPOSAL`）
+- 身高（cm）：**172**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.0**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-> 角色文檔僅以色名描述，以下 hex 為 Claude 由色名推定之近似值，標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-- 主色：暗棕—炭黑皮革 **#3C2E24**（`DESIGN-PROPOSAL`）
-- 輔色：暗鋼灰鋼片 **#52565C**、火炬火光的暖橘 **#E8873A**（僅 06 出現；`DESIGN-PROPOSAL`）
-- 金屬：素樸暗鋼扣件與小肩甲 **#52565C**，無拋光華彩（`DESIGN-PROPOSAL`）
-- 寶石：無（普通士兵）
-- 布料：軟墊束腰衣厚織布、內襯深色布料 **#4A3B2E**（`DESIGN-PROPOSAL`）
-- 皮革：胸甲、護臂、腰帶、行軍靴 **#3C2E24**（`CANON` 輕甲；材質細節 `DESIGN-PROPOSAL`）
-- 特殊材質：火炬木柄與麻布浸油火頭（`CANON` 火炬；僅 06 出現）
-- 膚色／髮色／瞳色（hex）：膚 **#EFCBAE**（健康自然、略帶紅潤）／髮 **#5C3A28**（栗褐色）／瞳 **#8B5A2B**（暖褐色）（`DESIGN-PROPOSAL`）
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：可佩素樸短刀（`DESIGN-PROPOSAL`；已鎖定佩帶，見鎖定錨定預設值）。**01–02 與 07 一律不出現**
-- 飾品：無（普通士兵）
-- 隨身道具：**點燃的火炬 torch**——木柄、纏麻布火頭、暖橘火光（`CANON`）。**01–02 與 07 一律不出現**
-- 翅膀／角／尾巴／其他特殊構造：無（普通人類士兵）
-- 配戴或連接方式：火炬單手（右手，`DESIGN-PROPOSAL`）握持；短刀掛於腰帶右側（`DESIGN-PROPOSAL`）
+- CANON：BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked character named Johnny. Do not generate sheet 01 and do not promote any legacy face, costume, weapon, or biography in this package to story canon until the user decides whether Johnny should be retained, renamed, merged into a named character, or absorbed into the Hector-army ensemble.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 帶著仰慕餘韻的樸實預設神情
-2. 輕笑 Gentle smile — 靦腆的一絲笑
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger
-7. 悲傷 Sadness
-8. 眨眼 Wink
-> 註：其標誌性情緒為「崇拜」——被點名時因恐懼而發白、最後轉為「遵旨！」的決然。01 號頭部基準採「望向王的崇拜眼神」為身份標記。表情表僅改變眉眼與嘴部；臉部身份、栗褐色短髮、暖褐眼與制式輕甲跨八格一致。
+## Costume Lock
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、貴族華服、華麗徽章、額外重武器、機械義肢
-- 不可出現的顏色：高飽和螢光色、粉彩系、與全書金／銀藍／深色系衝突的鮮豔色
-- 不可改變的左右位置：火炬握持手／短刀佩帶側跨圖一致（`DESIGN-PROPOSAL`，右手／右側）
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
-- 不可出現的裝備：重甲全身板甲、貴族華服、王室禮服、華麗肩鎧
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 鎖定錨定預設值（可覆蓋）
-> 為讓 01 錨定圖完全確定，以下辨識度關鍵項已由 `PENDING` 鎖成具體預設值，寫入 01 的 Character definition。使用者可事後覆蓋。
-- 髮色：栗褐色短軍髮（LOCKED）
-- 眼色：暖褐色（LOCKED）
-- 外觀年齡：19 歲（LOCKED，原 18–20 區間）
-- 短刀：佩帶一把素樸短刀、掛於腰側刀鞘（LOCKED，原「是否佩帶」待定）
-- 材質：僅赫克托制式遠征輕甲＋火炬，無重甲／華飾（LOCKED）
-- 身高／頭身比／肩寬：172cm／7.0／約 2.0 倍頭寬（LOCKED，`DESIGN-PROPOSAL`）
+## 固定色票與材質
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝採 1587 遠征制式輕甲＋火炬，與其誘餌士兵身份對齊。
-  - 以「崇拜的年輕臉」為身份核心，刻意保持普通、無華飾。
-  - 髮色／眼色／外觀年齡／短刀已鎖定（見上節）。
-  - Body Metrics Lock 與固定 hex 色票已鎖定（見上節），使用者可覆蓋。
-  - 火炬持握手／短刀佩帶側鎖定為右（`DESIGN-PROPOSAL`），僅影響 06 道具結構表與敘事姿態，不影響 01–02／07 的零道具全身視圖。
-  - 無血緣關係，Kinship Lock＝無。
-- **`PENDING-USER-INPUT`**（不影響辨識度、續留待定）：
-  - 赫克托制式徽記的確切紋樣（文檔未給圖形；建議小而收斂或省略）。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#3C2E24、#52565C、#E8873A、#4A3B2E、#EFCBAE、#5C3A28、#8B5A2B
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
+
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-johnny-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

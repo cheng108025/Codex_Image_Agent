@@ -1,375 +1,237 @@
-# 哈努爾 Hanul — Image Generation Prompts（新版七張制 01–07）
+# 哈努爾 — Image Generation Prompts
 
-> **用途聲明（必讀）**
-> 這套圖片是 **3D 建模參考包（modeling reference pack）**，不是完成的 3D 模型。
-> 純 AI img2vid 無法保證跨鏡頭的角色完全一致；正式影片必須先以本參考包建立同一個經核准的 **Blender／VRM 角色模型**，並以該模型作為**唯一角色正本**驅動所有鏡頭。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: hanul-F1B720F99C76
+>
+> Hanur is a Bristol mixed-heritage hunter and member of Paranoia's army. The story does not specify the face, hair, eye color, or exact age; do not infer personal traits from a population-level Bristol description. The paired daggers are the only locked weapons and appear only on sheet 06. This package represents the living pursuit-period version, not the later mutilated corpse.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-> **角色版本 ID：`HANUL-V1-CAPTURED-INTERROGATION`**（被俘受審版；其他時期／服裝需另立版本，不得混用）
+## Codex 生成清單
 
-> **兩階段規則（強制）**：第一階段只生成 `01-hanul-front-fullbody.png`（三視圖：A-pose 正面全身＋正面頭肩＋45° 三分之四頭肩，缺一即 REJECT 重生成），生成後停止等待使用者核准。核准後 01 成為 02–07 的 Image 1 身份／服裝唯一正本。畫風輸入一律依 `../../STYLE_ANCHOR.md` 決定。
-> **檔案安全**：不得刪除或覆蓋現有 PNG；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
-> **既有 PNG 狀態**：本角色 01–07（非人形 01–06）全部為 `PENDING-GENERATION`。
-> **左右不對稱鎖定（必讀）**：主要撕裂傷痕固定於**左頰／左下顎**，主要破損盔甲部位固定於**左肩甲**。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側。禁止只寫「朝左／朝右」。
-> **06 道具結構表調整聲明**：SPEC 明載哈努爾被俘繳械、無武器、無明確固定飾品、無隨身道具。依規則，本輪 06 **不設武器／飾品專表**，改為「破損甲冑五金拆解表」（扣具、綁帶、鉸鏈、破損甲片的構造拆解）。
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：hanul-F1B720F99C76
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 一致性：本檔與 CHARACTER_SPEC.md 使用完全相同的 Canonical Fact Map。
+- Input images：先讀 ../../STYLE_ANCHOR.md。01 依畫風錨狀態決定畫風輸入；02 之後以核准的本角色 01 作身份參考，非首角色另加專案畫風錨。
+- 單次生成：使用者每次要求最多呼叫一次圖片生成工具，只產出一張；生成後立即呈現並停止。技術檢查只回報，不自動重生。
 
-畫風參考唯一正本：
-- `../../STYLE_ANCHOR.md`
-- 若本角色是 `PENDING-FIRST-REQUEST` 登記的首角色，01 才使用 STYLE_ANCHOR 的三張 bootstrap 圖。
-- 若畫風錨已為 `ACTIVE` 且本角色不是首角色，01 只引用已核准的首角色 01 作為畫風參考。
-- 02–07（非人形至 06）使用自己的 01 作為身份參考；非首角色另加首角色 01 作為畫風參考。
+| 編號 | 確切檔名 |
+| --- | --- |
+| 01 | 01-hanul-front-fullbody.png |
+| 02 | 02-hanul-four-view-master.png |
+| 03 | 03-hanul-expression-sheet.png |
+| 04 | 04-hanul-costume-detail-sheet.png |
+| 05 | 05-hanul-color-material-sheet.png |
+| 06 | 06-hanul-prop-construction-sheet.png |
+| 07 | 07-hanul-body-reference-sheet.png |
 
-生成順序與檔名（新版七張制 01–07）：
-
-| 編號 | 檔案 | 內容 |
-| --- | --- | --- |
-| 01 | `01-hanul-front-fullbody.png` | 身份錨點：正面全身，A-pose，零道具（**STAGE 1，先生成並等核准**） |
-| 02 | `02-hanul-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
-| 03 | `03-hanul-expression-sheet.png` | 表情表 |
-| 04 | `04-hanul-costume-detail-sheet.png` | 服裝細節 |
-| 05 | `05-hanul-color-material-sheet.png` | 色彩與材質 |
-| 06 | `06-hanul-hardware-construction-sheet.png` | 道具結構 |
-| 07 | `07-hanul-body-reference-sheet.png` | 身體參考（SMPL-X） |
+第一階段只生成 01-hanul-front-fullbody.png，生成後停止等待使用者核准。核准後才逐次生成下一張；每次仍只生成一張。
 
 ---
 
-## 01 — `01-hanul-front-fullbody.png`（STAGE 1 — 只先生成這張，停止等核准）
+## 01 — **01-hanul-front-fullbody.png**
 
-
-```text
+~~~text
 Use case: stylized-concept
-Asset type: single front-view full-body identity anchor (STAGE 1, identity authority for all later sheets)
+Asset type: modeling reference sheet 01
 
-Input images:
-- Resolve all style inputs from `../../STYLE_ANCHOR.md`.
-- If this role is being registered as the first anchor while status is `PENDING-APPROVAL`, use the three bootstrap images listed there for this 01 only.
-- If status is `ACTIVE` and this role is not the anchor, use the approved anchor 01 as Image 2 for style only; do not copy its character identity.
-- Do not directly reuse bootstrap images after the anchor becomes `ACTIVE`.
-
-
-Character definition:
-Hanul, a rugged adult male soldier, height read ~183cm, solid well-built proportions. CANON facial identity: a coarse, weathered adult face wearing a malicious, reckless grin; short coarse dark-brown hair (#3B2A1E) with matching short bristly stubble on the jaw; his eyes are fearless and full of malice, dark-brown irises (#3B2416). CANON captured state: he is a captured coup soldier under interrogation - his armor is battle-damaged (dented plates, torn straps, missing pieces), his body carries wounds and bruises, and there is blood at and around his mouth (#6B1B1B); despite this he grins wildly and unbowed. A visible gash/wound sits across his LEFT cheek and jaw (locked position for cross-view consistency). Costume version: captured-interrogation state - broken military armor (mixed plate #4B4B50 and leather #4A3527), damaged high collar or exposed wounded neck, a dented, damaged plate on his LEFT pauldron/shoulder (locked position), loosened cuirass straps, torn battle tunic, broken greaves and muddy boots; disarmed (no weapon, no props). Weathered tan skin (#C79A6E). Palette: dull military iron-gray and dark brown armor with dark-red blood, bruising (#5A4A3A) and mud. He is a plain human soldier - no fantasy adornment. His armor bears no visible faction insignia, stripped or scraped off when captured (locked default). Primary materials: dull, battle-damaged, worn metal and leather armor with dark-red blood and mud - no gemstones, no pristine clean shiny plate, no noble finery.
+Canonical character facts (do not add or contradict): Hanur is a Bristol mixed-heritage hunter and member of Paranoia's army. The story does not specify the face, hair, eye color, or exact age; do not infer personal traits from a population-level Bristol description. The paired daggers are the only locked weapons and appear only on sheet 06. This package represents the living pursuit-period version, not the later mutilated corpse.
 
 Primary request:
-Render Hanul as ONE full-body front view (0 degrees) in true orthographic projection, in the standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose.
+Render exactly one complete front full-body view in a standard neutral A-pose: feet shoulder-width apart, arms straight 30-45 degrees away from the torso, open hands, even weight, true orthographic projection. Character and locked costume only; no removable prop.
 
-Identity invariants:
-Per the Character definition above (no prior identity image exists; this sheet establishes it): same rugged weathered face with malicious grin, short coarse dark-brown hair and jaw stubble (#3B2A1E), dark-brown eyes (#3B2416), weathered tan skin (#C79A6E), the left-cheek/jaw gash, wounds and blood at the mouth (#6B1B1B).
-
-Kinship invariants:
-None.
-
-Body metrics:
-Height 183 cm. Approximately 7.0 heads tall. Shoulder width approximately 2.4 head-widths.
-
-Costume invariants:
-Identical captured-interrogation attire per the Character definition above: battle-damaged military armor (mixed plate #4B4B50 and leather #4A3527), dented LEFT pauldron, damaged collar or exposed wounded neck, torn battle tunic, broken greaves and muddy boots. NO weapon anywhere.
-
-Identity authority:
-The face must be rendered clearly, sharply and identifiably at full detail — this single front view is the sole identity/costume authority for sheets 02 onward.
-
-Composition:
-Single figure centered, entire body from hair to boot soles inside frame, flat even ambient lighting with no cast shadows, warm light-gray low-contrast background, no props, no grid lines, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed damaged-armor construction, worn metal and leather material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, pristine armor, clean undamaged armor, shiny new armor, noble finery, gemstones, clean unwounded face, wound on the right side, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, side view, profile, back view, three-quarter view
-
-Constraints:
-- Preserve the exact identity per the Character definition above; the input images are style only.
-- Character and costume only; zero props; flat lighting; true orthographic front view.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
----
-
-## 02 — `02-hanul-four-view-master.png`（STAGE 2 — 四視圖總表：正面→左→右→背）
-
-
-```text
-Use case: identity-preserve
-Asset type: four-view orthographic master turnaround sheet
-
-Input images:
-- Image 1: the approved 01-hanul-front-fullbody.png and sole identity/costume authority.
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
-
-Primary request:
-Render a single master turnaround sheet of Hanul containing four full-body orthographic views of the SAME character in this exact left-to-right order: FRONT (0 degrees), LEFT profile (camera at anatomical left, 90 degrees), RIGHT profile (camera at anatomical right, 90 degrees), BACK (180 degrees). All four views use the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, identical height, head-to-body ratio, arm angles and foot spacing in every view, true orthographic projection, no contrapposto, no action pose, no T-pose.
-
-Identity invariants:
-All four figures are the identical character from Image 1: same rugged weathered face with malicious grin, short coarse hair and jaw stubble (#3B2A1E), fearless malicious dark-brown eyes (#3B2416), wounds and blood at the mouth (#6B1B1B), the same left-cheek/jaw gash, solid well-built proportions. Head-top line and foot line perfectly horizontally aligned across all four views; silhouettes must be mutually alignable.
-
-Kinship invariants:
-None.
-
-Body metrics:
-Height 183 cm. Approximately 7.0 heads tall. Shoulder width approximately 2.4 head-widths.
-
-Costume invariants:
-Every view shows the identical captured-interrogation state from Image 1: battle-damaged military armor (#4B4B50 plate, #4A3527 leather) with dented plates, torn straps and missing pieces, the same dented LEFT pauldron, damaged collar or exposed wounded neck, torn battle tunic, broken greaves and muddy boots, disarmed (no weapon). Same battle damage, wound and blood placement, same colors and materials in all four views.
-
-Composition:
-A single ultra-wide horizontal banner, four full-body figures in ONE row at equal scale, evenly spaced, none cropped, no second row, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no grid lines, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed damaged-armor construction, worn metal and leather material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, pristine armor, clean undamaged armor, shiny new armor, noble finery, gemstones, inconsistent scale between views, different height per view, mismatched armor damage between views, wound moved to the right side, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, cast shadows, strong highlights, rim light, dramatic lighting
-
-Constraints:
-- Preserve the exact approved identity from Image 1 in all four views; Images 2-4 are style only.
-- View order is fixed: front, left, right, back. Same height, same size, same body proportions, true orthographic projection in every view.
-- Character and costume only; zero props; flat lighting.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
----
-
-## 03 — `03-hanul-expression-sheet.png`（STAGE 2 — 八表情臉部表；保留嘴部傷口與鮮血）
-
-
-```text
-Use case: identity-preserve
-Asset type: professional eight-expression anime character face sheet
-
-Input images:
-- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 01-hanul-front-fullbody.png). Ignore its original pose, framing and composition.
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
-
-Primary request:
-Recompose Hanul into standardized head-and-shoulders studio portraits. Create exactly eight portraits arranged neatly in a 4-column by 2-row grid on a pure white seamless background. Every portrait must use a straight-on front view at 0 degrees. Crop from just below the collarbones to slightly above the top of the hair. The head must occupy approximately 70-75 percent of each panel.
-
-Identity invariants:
-Keep exactly the same character in all eight portraits. Preserve the identical facial identity and face proportions, short coarse hair and jaw stubble (#3B2A1E), weathered skin tone (#C79A6E), fearless malicious dark-brown eyes (#3B2416), hair length, neck proportions, damaged collar of the armor visible at the shoulders, the left-cheek/jaw gash, and the wounds and blood at and around the mouth (#6B1B1B). Use the same framing, camera distance, head size, lighting, color grading and front-facing angle in every panel. Only the facial expression may change. The mouth wound and blood and the malicious cast of the face persist in every panel, including neutral and sad.
-
-Kinship invariants:
-None.
-
-Expression order, left to right and top to bottom:
-1. neutral
-2. gentle smile
-3. broad smile with visible teeth
-4. joyful open laughter
-5. surprised
-6. angry
-7. sad
-8. wink
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
 
 Style:
-Refined Japanese anime fantasy character design, professional production expression sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, detailed eyes and hair strands, soft diffused studio lighting, consistent white balance, pure white seamless background, high-resolution polished concept art, 85mm portrait-lens framing equivalent.
-
-Hard constraints:
-Exactly eight portraits and a 4x2 grid. Straight-on 0-degree view only. Head-and-shoulders close-up only. The mouth wound and blood stay visible in all eight panels. No full body, half body, waist-up, upper-body, bust-length, half-bust or zoomed-out composition. No different person, altered face, changed hairstyle, profile, side view, three-quarter view, head rotation, inconsistent lighting, inconsistent crop, inconsistent scale, costume change or extra accessories.
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, full body, half body, waist-up, upper body, bust portrait, half-bust, zoomed out, long shot, medium shot, different composition, changed facial proportions, changed bangs, changed hair length, profile, side view, three-quarter view, head turned, tilted head, inconsistent lighting, inconsistent color grading, beauty filter, wings, horns, tail, pristine armor, clean undamaged armor, shiny new armor, noble finery, gemstones, clean unwounded face, wound on the wrong side, extra portrait, missing portrait, more than eight portraits, fewer than eight portraits, reference character face, copying any style-image character, blending the three reference characters, holding weapon, weapon in hand
-```
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
 
 ---
 
----
+## 02 — **02-hanul-four-view-master.png**
 
-## 04 — `04-hanul-costume-detail-sheet.png`（STAGE 2 — 服裝細節表，含破損甲冑拆解）
-
-
-```text
-Use case: identity-preserve
-Asset type: costume construction detail sheet with outer-layer separation
-
-Input images:
-- Image 1: the approved 01-hanul-front-fullbody.png and sole identity/costume authority.
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
-
-Primary request:
-Create a professional costume construction sheet for Hanul's battle-damaged captured-interrogation armor, organized as clean callout panels on one sheet:
-1. LAYER SEPARATION (required for 3D modeling): the damaged cuirass drawn SEPARATELY as a flat, dented plate piece with its loosened straps, AND one torso view WITHOUT the cuirass so the torn under-tunic and body silhouette are fully visible.
-2. Dented LEFT pauldron detail: the crushed/scraped plate surface and torn strap.
-3. Damaged vambrace / exposed forearm close-ups showing wounds.
-4. Broken waist-belt detail (disarmed, no weapon attachment).
-5. Broken greave and muddy boot detail.
-6. Damaged collar / exposed wounded neck close-up.
-
-Identity invariants:
-All partial-figure panels depict the same character body from Image 1; skin and wounds may appear at neck/face/limb edges only as needed. No full standalone face portrait panels.
-
-Costume invariants:
-Exact colors and materials as Image 1: dull iron-gray plate (#4B4B50) and dark-brown leather (#4A3527), dark-red blood (#6B1B1B) and mud (#5A4A3A) staining, torn straps. Same construction as Image 1; no redesign; NO weapon anywhere; no pristine or clean armor.
-
-Composition:
-Clean production-sheet layout on warm light-gray background, panels evenly arranged with generous spacing, flat even ambient lighting, no text labels, no annotation arrows with letters.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production costume sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed damaged-armor construction, worn metal and leather material separation, flat even ambient lighting, low-contrast warm light-gray background, balanced negative space, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, dramatic cinematic background, scenery, action pose, extreme perspective, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, different costume, costume redesign, random accessories, extra character, full-body pin-up, weapon, holding weapon, cast shadows, strong highlights, rim light, reference character costume, copying any style-image character, pristine armor, clean undamaged armor, shiny new armor, noble finery, gemstones
-
-Constraints:
-- Preserve the exact approved costume from Image 1; Images 2-4 are style only.
-- The cuirass separation panel and the cuirass-less torso view are mandatory.
-- No weapons on this sheet. No text or watermark. Do not invent missing canonical details.
-```
-
----
-
----
-
-## 05 — `05-hanul-color-material-sheet.png`（STAGE 2 — 色票／材質表，已補固定 hex）
-
-
-```text
-Use case: identity-preserve
-Asset type: color palette and material reference sheet
-
-Input images:
-- Image 1: the approved 01-hanul-front-fullbody.png and sole identity/costume authority.
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
-
-Primary request:
-Create a production color-and-material sheet for Hanul: a medium-size neutral A-pose front figure (character and costume only, no weapon) on the left, and on the right a column of large clean color swatches with material rendering patches for each locked color:
-- dull iron-gray #4B4B50 (damaged plate primary)
-- dark brown #4A3527 (leather / secondary armor)
-- dark-red #6B1B1B (blood)
-- mud / bruise brown #5A4A3A
-- dark brown #3B2A1E (hair and stubble)
-- dark brown #3B2416 (eyes)
-- weathered tan skin #C79A6E
-Each swatch pairs a flat color block with a small material patch showing how that surface reads (dented scratched metal, torn worn leather, dried blood texture, mud staining).
-
-Identity invariants:
-The reference figure is the identical character from Image 1; same face, hair, wound placement, proportions (183 cm, approximately seven heads).
-
-Costume invariants:
-Exact damaged armor from Image 1; no redesign; NO weapon anywhere.
-
-Composition:
-Clean layout, warm light-gray background, flat even ambient lighting, swatches aligned in a tidy vertical column, no text labels (color blocks only; hex values are for internal reference and must not be rendered as visible text on the sheet).
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production color script sheet, clean delicate linework, soft cel shading, precise material separation for damaged metal, worn leather and blood/mud texture, flat even ambient lighting, low-contrast warm light-gray background, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, thick outlines, muddy unintentional colors, dramatic background, scenery, action pose, text, labels, letters, numbers, logo, signature, watermark, low resolution, blurry, wrong palette, shifted hues, extra colors, neon colors, pastel palette, costume redesign, weapon, holding weapon, cast shadows, rim light, extra character, copying any style-image character, pristine armor, gemstones
-
-Constraints:
-- Colors must match the locked hex palette exactly; hue drift = reject.
-- Character and costume only; zero props; flat lighting.
-- No text or watermark.
-```
-
----
-
----
-
-## 06 — `06-hanul-hardware-construction-sheet.png`（STAGE 2 — 破損甲冑五金拆解表；SPEC 無武器無飾品，改以甲冑五金為唯一構造細節）
-
-
-```text
+~~~text
 Use case: stylized-concept
-Asset type: damaged-armor hardware construction sheet (no weapon, no jewelry per CANON captured state)
+Asset type: modeling reference sheet 02
 
-Input images:
-- Image 1: the approved 01-hanul-front-fullbody.png - use ONLY to match damaged-metal/leather material language and craftsmanship level; do not depict the character.
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
+Canonical character facts (do not add or contradict): Hanur is a Bristol mixed-heritage hunter and member of Paranoia's army. The story does not specify the face, hair, eye color, or exact age; do not infer personal traits from a population-level Bristol description. The paired daggers are the only locked weapons and appear only on sheet 06. This package represents the living pursuit-period version, not the later mutilated corpse.
 
 Primary request:
-Create a props-only construction sheet documenting Hanul's ARMOR HARDWARE, since CANON gives him no weapon, no jewelry and no handheld prop while captured. Show:
-1. Buckle and strap hardware from the cuirass and pauldrons: front view, side view and an exploded/disassembled study of a torn buckle and a loosened strap.
-2. The dented LEFT pauldron plate: an isolated construction study showing the crushed metal, scrape marks and broken rivets.
-3. Greave and boot hardware: broken buckle clasps and worn sole detail.
-4. A generic damaged-plate hinge/joint construction study (shoulder or elbow articulation point), showing how the battle-damaged plates were originally fastened.
+Create one four-view turnaround sheet in this exact order: front, anatomical-left profile, anatomical-right profile, back. Use the same neutral A-pose, identical scale and proportions, aligned head-top and ground lines, true orthographic views, zero removable props.
 
-Props only: no full-body character, miniature person, portrait, face or human silhouette anywhere. A blank headless tailor form is allowed only when required to explain a harness or garment attachment. Do not include a character scale inset.
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
 
-Composition:
-Clean production-sheet layout on warm light-gray background, items evenly arranged, flat even ambient lighting, no text labels.
-
-Positive style prompt:
-refined Japanese anime fantasy prop design, professional production hardware construction sheet, clean delicate linework, controlled fine outlines, soft cel shading with subtle painterly rendering, precise damaged-metal and leather rendering, flat even ambient lighting, low-contrast warm light-gray background, high-resolution concept art
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, thick outlines, sketchy lines, muddy unintentional colors, dramatic background, scenery, text, labels, letters, numbers, logo, signature, watermark, low resolution, blurry, full-body character, miniature person, portrait, face, human silhouette, character scale inset, hands, arms, weapon, sword, jewelry, gemstones, wrong palette, neon colors, pristine clean metal, cast shadows, rim light
-
-Constraints:
-- This sheet documents damaged armor hardware only; no weapon or jewelry exists for this character per CANON.
-- Match the locked damaged-material palette exactly (#4B4B50, #4A3527); no invented colors.
-- No character depiction beyond an optional headless tailor form. No text or watermark.
-```
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
 
 ---
 
----
+## 03 — **03-hanul-expression-sheet.png**
 
-## 07 — `07-hanul-body-reference-sheet.png`（STAGE 2 — 素體參考圖，SMPL-X／人體擬合用）
+~~~text
+Use case: stylized-concept
+Asset type: modeling reference sheet 03
 
-
-```text
-Use case: identity-preserve
-Asset type: body reference sheet for parametric human-body fitting (SMPL-X)
-
-Input images:
-- Image 1: the approved 01-hanul-front-fullbody.png and sole identity authority (face, hair, skin tone, body proportions).
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
+Canonical character facts (do not add or contradict): Hanur is a Bristol mixed-heritage hunter and member of Paranoia's army. The story does not specify the face, hair, eye color, or exact age; do not infer personal traits from a population-level Bristol description. The paired daggers are the only locked weapons and appear only on sheet 06. This package represents the living pursuit-period version, not the later mutilated corpse.
 
 Primary request:
-Render Hanul WITHOUT armor or any outer garment - wearing only a plain tight dark-gray bodysuit (form-fitting underlayer, no folds, no accessories) - as TWO full-body views on one sheet: straight-on FRONT view and LEFT profile view. Both views in the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, true orthographic projection, no contrapposto, no action pose, no T-pose. The body silhouette must be fully visible and unobstructed: no armor, no loose clothing; short hair does not cover the neck or shoulder outline. Visible wounds and bruises consistent with the captured state may remain on the skin, but no armor.
+Create exactly eight head-and-shoulders portrait panels in a clean 4x2 grid: neutral, gentle/relaxed, broad positive, joyful, surprised, angry, sad, alert/wink-equivalent. Change expression only; preserve identity and anatomy.
 
-Identity invariants:
-Same character as Image 1: same face, short coarse dark-brown hair and stubble (#3B2A1E), dark-brown eyes (#3B2416), weathered skin (#C79A6E), the same left-cheek/jaw gash. The body underneath must be consistent with the armored figure of the approved sheets: solid, well-built military build.
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
 
-Body metrics:
-Height 183 cm. Approximately 7.0 heads tall. Identical height and proportions in both views; head-top and foot lines horizontally aligned across the two views.
-
-Composition:
-Two figures side by side (front, then left profile), equal scale, shared ground line, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime character body reference, professional production model sheet, clean delicate linework, minimal soft cel shading, accurate consistent anatomy, flat even ambient lighting, low-contrast warm light-gray background, true orthographic presentation, high-resolution concept art
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, thick outlines, sketchy lines, muddy colors, dramatic background, scenery, text, labels, letters, numbers, logo, signature, watermark, low resolution, blurry, armor, cloak, outer garment, loose clothing, weapon, props, accessories, jewelry, boots, gauntlets, folds, drapery, nudity, different face, different hairstyle, different proportions than approved sheets, action pose, contrapposto, T-pose, bent elbows, uneven shoulders, crossed legs, cast shadows, strong highlights, rim light, three-quarter view, back view, extra views, more than two figures
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- Body silhouette fully visible; tight plain bodysuit only; zero props; flat lighting; true orthographic.
-- No text or watermark.
-```
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
 
 ---
 
+## 04 — **04-hanul-costume-detail-sheet.png**
+
+~~~text
+Use case: stylized-concept
+Asset type: modeling reference sheet 04
+
+Canonical character facts (do not add or contradict): Hanur is a Bristol mixed-heritage hunter and member of Paranoia's army. The story does not specify the face, hair, eye color, or exact age; do not infer personal traits from a population-level Bristol description. The paired daggers are the only locked weapons and appear only on sheet 06. This package represents the living pursuit-period version, not the later mutilated corpse.
+
+Primary request:
+Create a costume construction detail sheet showing only Canon garment layers, front/back construction, collar, sleeves, waist, hem, footwear, fastenings, and material close-ups. No weapons or removable props.
+
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
+
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+
+Negative prompt:
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
+
 ---
 
-## 逐張驗收清單（強制 — 任一項漂移即 REJECT，不得繼續下一張）
+## 05 — **05-hanul-color-material-sheet.png**
 
-生成順序：01 →（使用者核准）→ 02 → 03 → 04 → 05 → 06 → 07。
-每張生成後逐項檢查；REJECT 的圖不覆蓋既有檔案，存入 `rejects/` 後重生成本張。
+~~~text
+Use case: stylized-concept
+Asset type: modeling reference sheet 05
 
-**每張圖共同檢查項：**
+Canonical character facts (do not add or contradict): Hanur is a Bristol mixed-heritage hunter and member of Paranoia's army. The story does not specify the face, hair, eye color, or exact age; do not infer personal traits from a population-level Bristol description. The paired daggers are the only locked weapons and appear only on sheet 06. This package represents the living pursuit-period version, not the later mutilated corpse.
 
-- [ ] 臉型與臉部身份與 01 號正本一致（03 的人像面板亦同）
-- [ ] 髮型、髮色（深棕短硬髮＋粗短鬍碴）一致；瞳色深棕
-- [ ] 身材比例：183cm／約 7.0 頭身／肩寬約 2.4 倍頭寬、結實壯碩
-- [ ] 服裝結構與 Costume Lock 一致（破損甲冑層次、破損位置）
-- [ ] 左右不對稱特徵位置正確：左頰／左下顎傷痕、左肩甲破損，未鏡像翻轉
-- [ ] 色票未漂移：#4B4B50／#4A3527／#6B1B1B／#5A4A3A／#3B2A1E／#3B2416／#C79A6E
-- [ ] 嘴部傷口與鮮血、放肆惡笑跨圖一致；無任何武器道具出現（06 除外，且 06 僅為五金非武器）；平光無投影陰影（03 攝影棚柔光除外）
-- [ ] 血緣相似：不適用（本角色無血緣親屬，見 §13，跳過）
+Primary request:
+Create a color-and-material reference sheet using only Canon named colors plus explicitly marked SPEC design-proposal hex candidates. Include clean swatches/material patches and one neutral reference subject. Do not render visible text or hex labels.
 
-**單張額外檢查項：**
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
 
-| 張 | 額外驗收 |
-| --- | --- |
-| 01 | 正面、A-pose、正交；**臉部須清晰可辨——本張為身份／服裝唯一正本** |
-| 02 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊；相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；左頰傷痕與左肩甲破損清楚可辨；相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；右肩甲相對完好；背面、A-pose、正交 |
-| 03 | 恰好 8 格 4×2、順序正確、只有表情改變、嘴部傷口與鮮血每格皆保留 |
-| 04 | 胸甲拆解面板＋無胸甲軀幹視圖必須存在 |
-| 05 | 色票方塊與鎖定 hex 完全一致 |
-| 06 | 破損甲冑五金拆解唯一出現於此（無武器、無飾品）；無角色、無臉、無人物剪影 |
-| 07 | 素體無任何外層；身體輪廓完全可見；正面＋左側兩視圖 |
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+
+Negative prompt:
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
+
+---
+
+## 06 — **06-hanul-prop-construction-sheet.png**
+
+~~~text
+Use case: stylized-concept
+Asset type: modeling reference sheet 06
+
+Canonical character facts (do not add or contradict): Hanur is a Bristol mixed-heritage hunter and member of Paranoia's army. The story does not specify the face, hair, eye color, or exact age; do not infer personal traits from a population-level Bristol description. The paired daggers are the only locked weapons and appear only on sheet 06. This package represents the living pursuit-period version, not the later mutilated corpse.
+
+Primary request:
+Create a props/special-construction sheet containing only removable weapons, pendants, tools, tack, or special structures explicitly permitted by the Canon summary. If none are Canon, show only non-invented construction/material studies. No full character, portrait, face, text, or labels.
+
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
+
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+
+Negative prompt:
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
+
+---
+
+## 07 — **07-hanul-body-reference-sheet.png**
+
+~~~text
+Use case: stylized-concept
+Asset type: modeling reference sheet 07
+
+Canonical character facts (do not add or contradict): Hanur is a Bristol mixed-heritage hunter and member of Paranoia's army. The story does not specify the face, hair, eye color, or exact age; do not infer personal traits from a population-level Bristol description. The paired daggers are the only locked weapons and appear only on sheet 06. This package represents the living pursuit-period version, not the later mutilated corpse.
+
+Primary request:
+Create a human body-reference sheet for modeling: front and anatomical-left profile at identical scale, neutral A-pose, plain tight dark-gray bodysuit, hair secured away from the silhouette, no costume outer layers, accessories, jewelry, weapons, props, text, or labels.
+
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
+
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+
+Negative prompt:
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
+
+---
+
+## 逐張驗收清單
+
+- [ ] Canon 身份、外貌、體型、服裝、道具、關係與時期未被推測內容覆蓋。
+- [ ] SPEC 與 PROMPTS 的 Pair sync ID 完全相同。
+- [ ] 01 為單一正面身份錨；02 為四視圖；03 恰好八格；其餘構圖符合各節。
+- [ ] 所有可拆卸武器、墜飾、工具與道具只出現在 06。
+- [ ] 圖片只用 Canon 命名色；候選 hex 不得覆蓋 Canon。
+- [ ] 無文字、標籤、logo、簽名或浮水印。
+- [ ] 有 PNG 的角色已完成 IMAGE-DRIFT-REVIEW-REQUIRED 複核。
+
+驗收只回報偏差並等待使用者，不得自行移檔或重生成。只有使用者明確要求修改時，才歸檔上一張未核准候選並只生成一張新圖。

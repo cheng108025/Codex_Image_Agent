@@ -1,114 +1,76 @@
-# 安德烈（Andre）— 梧桐家、政治網絡
+# 安德烈 — CHARACTER_SPEC
 
-> Tier A — 《赫克托》三大貴族之一（政治網絡線）。本檔為文字版身份規格（新版七張制 01–07），供 `01-andre-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**深色文士學者長袍版** — 梧桐家紋文士長袍，不重甲不張揚，常手持茶盞或古籍。此為「儒雅學者外殼包裹最深城府」形象最一致的版本。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: andre-F1B720F99C76
+>
+> Duke Andre has deep-brown eyes and a calm, composed presence. His locked story costume direction is a deep-blue long robe. He leads the Wutong family and is the father of Philip and Cecilia. Tea ware and a chessboard are story props and appear only on sheet 06. Kinship resemblance must be limited to explicitly approved or user-confirmed traits.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：安德烈
-- 英文名：Andre
-- 角色版本 ID：**`ANDRE-V1-SCHOLAR-ROBE`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男
-- 年齡／外觀年齡：**年長者**——文檔明載年長清瘦，外觀約 60–70 歲（`CANON` 年長；確切歲數為 `DESIGN-PROPOSAL`）
-- 身高：約 178cm（`CANON` 文檔明載）
-- 體型：年長清瘦、姿態從容（`CANON`）
-- 故事時期：政治網絡線、家族錨點時期（`CANON`；本版本鎖定此時期外觀，其他時期需另立版本 ID）
-- 服裝版本：深色文士學者長袍版 — 梧桐家紋文士長袍（`CANON` 文士長袍大方向；分件細節為 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**178**（`CANON`）
-- 頭身比：**7.0–7.5**（`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（年長清瘦體格，非武將魁梧；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**無，全對稱**——胸前梧桐家紋置中，腰封束帶對稱（`DESIGN-PROPOSAL`）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：菲利浦 `PHILIP-V1-STUDY-INFILTRATION` — 子；賽希莉亞 `CECILIA-V1-STUDY-DOORWAY` — 女
-- 家族錨點：**安德烈（本人）**——家族 `ANDRE` 的相似基準；本人 01 先核准，子女的 01 才進入生成
-- 承襲特徵（向下）：子女承其**清晰的顴骨與下頜線**貴族臉部骨架之年輕版本（菲利浦英挺輪廓、賽希莉亞秀氣化；`DESIGN-PROPOSAL`）
-- 刻意區分特徵：本人**灰白後梳髮＋年長皺紋歲月感——灰白髮不承襲**（菲利浦深棕近墨黑、賽希莉亞栗色）
-- 禁止混淆項：不得把子女畫老、不得給子女灰白髮或皺紋；本人不得年輕化（既有禁令）
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：andre-F1B720F99C76
+- 角色版本 ID：ANDRE-V1-SCHOLAR-ROBE
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-andre-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-andre-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：**年長清瘦的臉型**，顴骨與下頜清晰，帶歲月紋路（`CANON` 年長清瘦）；沉穩內斂神情（`CANON` 沉穩內斂）
-- 膚色：偏白、略顯蒼老溫潤 **#E9D9C4**（`DESIGN-PROPOSAL`）
-- 眼型與眼睛顏色：**眼神深不見底、平靜難測**（`CANON`）——半垂沉靜的眼；顏色鎖定為**深灰色 deep-gray #4A4A4E**（`DESIGN-PROPOSAL` 鎖定，見「鎖定錨定預設值」）
-- 髮型、髮色與固定髮束：**灰白髮整齊後梳 #9B9B96**（`CANON`）；配整齊修短的灰白短鬚（`DESIGN-PROPOSAL` 鎖定）
-- 身材比例：約七至七頭半身、清瘦挺拔但年長的日系奇幻設定稿比例；見 Body Metrics Lock（178cm／7.0–7.5 頭身／肩寬約 2.0 倍頭寬）
-- 標誌性輪廓：修長文士長袍的沉靜垂墜線條（`DESIGN-PROPOSAL`）；「手持茶盞／古籍」為敘事形象定格，僅呈現於 06 道具結構表與未來場景插畫，設定圖全身視圖一律零道具
-- 不可改變特徵：**年長清瘦的臉（含皺紋與歲月感）**、灰白後梳髮、深不見底的沉靜眼神、梧桐家紋深色文士長袍、茶盞／古籍隨身道具（僅 06）
-- **anatomical left／right 不對稱鎖定**：全對稱設計（見 Body Metrics Lock）。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側；因設計全對稱，左右兩側輪廓應互為鏡像一致，跨圖不得出現新增的單側特徵。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：深色文士長袍，內袍＋外罩學者長衣（`CANON` 文士長袍；分層為 `DESIGN-PROPOSAL`）
-- 領口：交領或立領，素雅深色，鑲細緻暗紋（`DESIGN-PROPOSAL`）
-- 肩部：柔和垂肩、不加甲冑、不張揚（`CANON` 不重甲不張揚）
-- 胸前：胸襟繡**梧桐（plane-tree）家紋**，收斂低調，置中（`CANON` 家紋；紋樣鎖定見「鎖定錨定預設值」）
-- 袖口／手部：寬大文士袖，便於持書捧盞（`DESIGN-PROPOSAL`）
-- 腰部：素色腰帶／腰封，不佩武器（`DESIGN-PROPOSAL`）
-- 下襬／披風：長及腳踝的沉色長袍下襬（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：素樸文士布鞋或軟皮鞋（`DESIGN-PROPOSAL`）
-- 背面結構：長袍背面素雅完整，腰封束帶可見（`DESIGN-PROPOSAL`）
+- 身高（cm）：**178**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.0–7.5**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：深墨綠—炭灰 **#2B3A34**（呼應梧桐）與暗金家紋 **#8A7239**——與全書金／銀藍／深色系收斂一致（`DESIGN-PROPOSAL` 鎖定 hex）
-- 輔色：深褐內袍 **#3B2A22**、暗紋織布（`DESIGN-PROPOSAL`）
-- 金屬：暗金 **#8A7239**——僅家紋刺繡與少量袍緣飾線，不見甲冑金屬（`DESIGN-PROPOSAL`）
-- 寶石：無或極少，僅可一枚素雅指環（`DESIGN-PROPOSAL`）
-- 布料：沉色文士織布、內襯柔軟布料（`CANON` 文士長袍；材質細節 `DESIGN-PROPOSAL`）
-- 皮革：軟皮鞋、素色腰帶（`DESIGN-PROPOSAL`）
-- 特殊材質：長袍的暗紋織理與歲月感（`DESIGN-PROPOSAL`）
-- 膚色／髮色／瞳色（hex）：膚 **#E9D9C4**／髮與鬚（灰白）**#9B9B96**／瞳 **#4A4A4E**（深灰）（`DESIGN-PROPOSAL` 鎖定）
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：無（文士謀臣非武人）
-- 飾品：低調的梧桐家紋為主要識別（`CANON`）
-- 隨身道具：**茶盞或古籍**——手持翻閱，是其「儒雅學者」形象定格（`CANON`）。**01–02 與 07 一律不出現**
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：長袍以腰封束於腰間；茶盞／古籍持於手中（`DESIGN-PROPOSAL`）
+- CANON：Duke Andre has deep-brown eyes and a calm, composed presence. His locked story costume direction is a deep-blue long robe. He leads the Wutong family and is the father of Philip and Cecilia. Tea ware and a chessboard are story props and appear only on sheet 06. Kinship resemblance must be limited to explicitly approved or user-confirmed traits.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 沉穩內斂、深不見底的預設神情
-2. 輕笑 Gentle smile — 溫和儒雅的一絲淺笑
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger — 平靜表面下罕見的冷怒
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-> 八格皆須保留年長清瘦臉部特徵與歲月感，不得回春為年輕臉。
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、重甲、武器
-- 不可出現的顏色：與全書金／銀藍／深色系衝突的高飽和螢光色、粉彩系
-- 不可改變的左右位置：胸前梧桐家紋須置中；腰封束帶對稱
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
-- **不可年輕化**：不得將年長清瘦臉改為青壯或少年臉、不得抹除皺紋與灰白髮
+## 固定色票與材質
 
-## 鎖定錨定預設值（可覆蓋）
-> 為讓 01 號圖完全確定，以下原 `PENDING-USER-INPUT` 已鎖成具體預設值，寫入 01 的 Character definition。使用者可事後覆蓋。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 命名色之候選 hex（DESIGN-PROPOSAL）：deep brown #4B3028、deep blue #243B67、brown #5A3A2E、blue #395C8A
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-- **眼睛顏色**：深灰色 deep-gray #4A4A4E。
-- **梧桐（plane-tree）家紋紋樣**：程式化五裂梧桐（懸鈴木）葉，暗金 #8A7239 刺繡。
-- **是否蓄鬚**：有——整齊修短的灰白短鬚（neatly-trimmed short gray beard，#9B9B96）。
-- **隨身道具**：06 道具結構表主道具＝茶盞（tea cup）；古籍為可覆蓋替代。01–02 與 07 全身圖零道具、雙手不持物（A-pose）。
-- **體型覆蓋**：共用畫風含 `slender`，本角色以 `elderly aged lean frame` 覆蓋，並在負向補 `youthful face / de-aged face / smooth wrinkle-free skin`。八格表情與四視圖皆須保留年長特徵。
+## 道具與特殊構造
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝版本採「深色文士學者長袍版」，緊扣「不重甲、不張揚，常手持茶盞或翻閱古籍」的正典描述。
-  - 年齡以「年長」為身份主軸，01 與 06 皆須明確呈現老者特徵（皺紋、灰白後梳髮、清瘦），對抗畫風的年輕化傾向。
-  - 固定色票 hex 值已鎖定（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-- **`PENDING-USER-INPUT`**（僅存不影響辨識度之項）：
-  - 06 道具結構表主道具採茶盞或古籍（兩者擇一或皆備，目前預設茶盞；01–07 全身圖一律不持物）。
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-andre-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

@@ -1,116 +1,76 @@
-# 艾德里（Adri）— 鳶尾花家、商權
+# 艾德里 — CHARACTER_SPEC
 
-> Tier A — 《赫克托》三大貴族之一（商權線）。本檔為文字版身份規格（新版七張制 01–07），供 `01-adri-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**華貴商賈長袍版** — 鳶尾花家紋長袍、戒指與金飾。此為「臉上永遠掛著生意人微笑、處處顯財富」形象最一致的版本。
-> **零道具規則**：所有全身圖（01、02、07）一律明寫「character and costume only — no weapons, no handheld items, no props」；戒指、金鏈與商賈手持道具只出現在 06。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: adri-F1B720F99C76
+>
+> Duke Edri habitually wears an elegant smile and leads the Iris family. His story wardrobe has two separate contexts: luxurious noble clothing, or refined understated dark hunting clothes for reconnaissance. Keep the current package to one locked costume version and do not merge the two. The story does not lock his hair, eye color, age, or body metrics.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：艾德里
-- 英文名：Adri
-- 角色版本 ID：**`ADRI-V1-MERCHANT-ROBE`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男
-- 年齡／外觀年齡：保養得宜的中年商賈，外觀約 40–48 歲（`DESIGN-PROPOSAL`）
-- 身高：約 175cm（`CANON` 文檔明載）
-- 體型：中等身材、優雅圓滑、體態保養得宜（`CANON`）
-- 故事時期：商權線（`CANON`；本版本鎖定此時期外觀，其他時期需另立版本 ID）
-- 服裝版本：華貴商賈長袍版 — 鳶尾花家紋長袍、戒指與金飾（`CANON` 華服大方向；分件細節為 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**175**（`CANON`）
-- 頭身比：**7.0–7.5**（`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.15 倍頭寬**（中等優雅體格，非武將魁梧亦非清瘦少年；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**無，全對稱**——胸前鳶尾花家紋置中、金鏈胸飾對稱（`DESIGN-PROPOSAL`）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：無——艾德里在家族註冊表（§13）中無血緣親屬記錄
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：adri-F1B720F99C76
+- 角色版本 ID：ADRI-V1-MERCHANT-ROBE
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-adri-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-adri-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：優雅圓滑的中年臉型，線條柔和不張揚（`CANON` 優雅圓滑）
-- 膚色：保養良好、偏白皙溫潤 **#F2DFC8**（`DESIGN-PROPOSAL`）
-- 眼型與眼睛顏色：**臉上永遠掛著生意人的微笑，眼神卻在盤算**（`CANON`）——微彎笑眼、眼底精算冷光；顏色鎖定為**琥珀褐 amber-brown #8A5A2E**（`DESIGN-PROPOSAL` 鎖定）
-- 髮型、髮色與固定髮束：**梳理整齊的髮＋修飾過的短鬚**（`CANON`）；深棕微帶灰、油亮服貼後梳 **#4A3B34**（`DESIGN-PROPOSAL`）
-- 身材比例：約七至七頭半身、優雅勻稱的日系奇幻設定稿比例；見 Body Metrics Lock（175cm／7.0–7.5 頭身／肩寬約 2.15 倍頭寬）
-- 標誌性輪廓：華貴長袍的垂墜線條＋滿佩戒指的手部（僅 06）＋不變的微笑（`CANON` 微笑與華服；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：整齊梳髮與修飾短鬚、生意人微笑（笑容與內心不一致）、鳶尾花家紋華貴長袍、戒指與金飾（僅出現於 06）
-- **anatomical left／right 不對稱鎖定**：全對稱設計（見 Body Metrics Lock）。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側；因設計全對稱，左右兩側輪廓應互為鏡像一致，跨圖不得出現新增的單側特徵。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：多層華貴商賈長袍，內袍＋外罩長衣／罩袍（`CANON` 華服；分層為 `DESIGN-PROPOSAL`）
-- 領口：立領或翻領，鑲金線刺繡（`DESIGN-PROPOSAL`）
-- 肩部：柔和垂肩，肩部有金線織紋（`DESIGN-PROPOSAL`）
-- 胸前：胸襟繡**鳶尾花（iris）家紋**，置中（`CANON` 家紋；紋樣鎖定見「鎖定錨定預設值」）
-- 袖口／手部：寬袖鑲金邊；**手指佩多枚戒指僅出現於 06 道具結構表**，01–02／07 全身圖手部不佩戒指
-- 腰部：織錦寬腰帶／腰封，金扣（`DESIGN-PROPOSAL`）
-- 下襬／披風：長及腳踝的華袍下襬，或可加短罩袍（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：柔軟考究的皮靴或錦面鞋（`DESIGN-PROPOSAL`）
-- 背面結構：長袍背面織紋完整，腰封束帶可見（`DESIGN-PROPOSAL`）
+- 身高（cm）：**175**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.0–7.5**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.15 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：深鳶尾紫 **#4B2E6B**（`DESIGN-PROPOSAL` 鎖定，非靛藍）與金 **#C9A227**——與全書金／銀藍／深色系收斂一致
-- 輔色：酒紅內袍 **#6E1F2A**、金線刺繡（`DESIGN-PROPOSAL`）
-- 金屬：黃金 **#C9A227**——戒指、金鏈、腰扣、袍緣金線（`CANON` 金飾；hex `DESIGN-PROPOSAL`）
-- 寶石：戒指鑲寶石（`DESIGN-PROPOSAL`；顏色 `PENDING-USER-INPUT`，僅出現於 06）
-- 布料：織錦、絲綢、金線刺繡的高級布料（`CANON` 用料考究；材質細節 `DESIGN-PROPOSAL`）
-- 皮革：柔軟皮靴、腰帶（`DESIGN-PROPOSAL`）
-- 特殊材質：金飾與寶石的光澤、織錦的暗紋（僅 06）（`DESIGN-PROPOSAL`）
-- 膚色／髮色／瞳色（hex）：膚 **#F2DFC8**／髮與短鬚（深棕微灰）**#4A3B34**／瞳 **#8A5A2E**（琥珀褐）（`DESIGN-PROPOSAL` 鎖定）
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：無（商賈非武人）
-- 飾品：**多枚戒指與金飾／金鏈**——財富的視覺符號（`CANON`）。**01–02 與 07 一律不出現**
-- 隨身道具：帳冊、算籌或華貴摺扇等商賈道具（`DESIGN-PROPOSAL`；預設帳冊，見「鎖定錨定預設值」）。**01–02 與 07 一律不出現**
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：戒指戴於手指、金鏈垂於胸前、腰封束於腰間（僅 06；04 服裝細節表可示意佩戴方式）（`DESIGN-PROPOSAL`）
+- CANON：Duke Edri habitually wears an elegant smile and leads the Iris family. His story wardrobe has two separate contexts: luxurious noble clothing, or refined understated dark hunting clothes for reconnaissance. Keep the current package to one locked costume version and do not merge the two. The story does not lock his hair, eye color, age, or body metrics.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 生意人的招牌微笑（預設即帶笑）
-2. 輕笑 Gentle smile — 更柔和的親切笑
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger — 笑容下罕見的慍色
-7. 悲傷 Sadness
-8. 眨眼 Wink — 心照不宣的算計眨眼
+## Costume Lock
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、重甲、武器
-- 不可出現的顏色：與全書金／銀藍／深色系衝突的高飽和螢光色、粉彩系
-- 不可改變的左右位置：胸前鳶尾花家紋須置中；金鏈胸飾對稱
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
-- **不可出現道具的畫面**：01、01、02、07 全身圖一律 character and costume only，禁止戒指、金鏈、帳冊、摺扇、算籌等任何手持或佩掛道具出現；上述道具唯一出現位置為 06
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 鎖定錨定預設值（可覆蓋）
-> 為讓 01 號圖完全確定，以下原 `PENDING-USER-INPUT` 已鎖成具體預設值，寫入 01 的 Character definition。使用者可事後覆蓋。
+## 固定色票與材質
 
-- **眼睛顏色**：琥珀褐色 amber-brown #8A5A2E。
-- **鳶尾花（iris）家紋紋樣**：程式化三瓣鳶尾花（近似 fleur-de-lis 的鳶尾），金線 #C9A227 刺繡，置中。
-- **主色調鳶尾花色系**：深鳶尾紫 #4B2E6B，非靛藍。
-- **內袍色**：酒紅 #6E1F2A。
-- **金飾**：本角色允許金飾（戒指、金鏈、金扣）為正典財富符號，屬其專屬材質，但**僅限 06 道具結構表出現**。
-- **隨身商賈道具預設**：帳冊（ledger book），摺扇／算籌為可覆蓋替代，僅出現於 06。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#F2DFC8、#8A5A2E、#4A3B34、#4B2E6B、#C9A227、#6E1F2A
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝版本採「華貴商賈長袍版」，緊扣「用料考究、佩戒指與金飾、處處顯示財富」的正典描述。
-  - 表情基準以「生意人微笑」為預設神情，呼應「表情與內心不一致」的核心設定。
-- 所有全身圖（01、02、07）均為零道具；戒指／金鏈／商賈道具只出現於 06。
-  - 固定色票 hex 值已鎖定（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-- **`PENDING-USER-INPUT`**（僅存不影響辨識度之項）：
-  - 戒指寶石顏色之最終定調。
-  - 隨身商賈道具的具體種類（帳冊／摺扇／算籌，目前預設帳冊）。
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-adri-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

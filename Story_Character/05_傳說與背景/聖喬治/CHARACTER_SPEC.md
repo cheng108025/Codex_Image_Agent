@@ -1,104 +1,76 @@
-# 聖喬治 St. George
+# 聖喬治 — CHARACTER_SPEC
 
-> Tier 信仰圖騰 — 僅存於壁畫與傳說的屠龍聖騎士。本檔為文字版身份規格（新版七張制 01–07），供 `01-st-george-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> 特別註記：本角色是**傳說／壁畫圖騰**，非登場的真人角色。01 號身份基準以「英勇聖騎士人物」為主體（正面全身＋大型正面頭肩＋45° 頭肩），採理想化壁畫英雄調性。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**壁畫／傳說古典屠龍聖騎士版**（泛金光古式全身板甲＋長槍＋聖光背光）。本角色僅此單一傳說形象，不另立時期版本。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: st-george-F1B720F99C76
+>
+> Saint George appears through scripture, the hero festival, oaths, and comparisons as a heroic saint and dragon slayer in the faith. The story has not fully defined whether he is a religious-canon figure or a physically historical person in this world. Any concrete face, armor, age, weapon construction, or body measurement remains DESIGN-PROPOSAL; a removable spear or dragon-slaying prop appears only on sheet 06.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：聖喬治
-- 英文名：St. George
-- 角色版本 ID：**`ST-GEORGE-V1-MURAL-ICON`**（本版本鎖定；如未來需要「聖騎士＋腳下巨龍」壁畫構圖版，須另立版本 ID）
-- 性別：男（`DESIGN-PROPOSAL`；古典屠龍聖騎士圖騰慣例）
-- 年齡／外觀年齡：理想化壯年英雄，外觀約 30 歲上下（`DESIGN-PROPOSAL`）
-- 身高：**190cm**（`DESIGN-PROPOSAL`；英挺高大的理想化英雄比例具體化）
-- 體型：英武挺拔的騎士體格（`DESIGN-PROPOSAL`）
-- 故事時期：壁畫／傳說中的古典屠龍聖騎士（`CANON`）
-- 服裝版本：泛金光的古式全身板甲、持長槍（`CANON` 服裝大方向；細節 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**190**（`DESIGN-PROPOSAL`，理想化英雄比例，可覆蓋）
-- 頭身比：**8.0**（`LOCKED`，既有規格鎖定值延續）
-- 肩寬（頭寬倍數）：**約 2.8 倍頭寬**（理想化壯闊英雄體格，較一般人形角色寬闊；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**無，全對稱**——01–02 與 07 全身視圖零道具，長槍僅於 06 出現，不影響全對稱設計判定；持槍手於 06 鎖定為慣用右手持握（`DESIGN-PROPOSAL`，不影響 01–02／07 之全對稱身體判定）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- **無**——本角色無血緣親屬關係（信仰圖騰，不適用家族註冊表）
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：st-george-F1B720F99C76
+- 角色版本 ID：GEORGE-V1-MURAL-ICON
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-st-george-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-st-george-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：理想化、莊嚴英挺的聖騎士臉型，神情堅定崇高（`DESIGN-PROPOSAL`，呼應信仰圖騰調性）
-- 膚色：健康調、壁畫理想化光澤（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：目光堅定崇高；瞳色鎖定為**沉穩深藍 steadfast deep blue**（`LOCKED`）
-- 髮型、髮色與固定髮束：**深金褐古典短髮、微帶波浪**（`LOCKED`）
-- 身材比例：理想化英雄八頭身、莊嚴挺拔的日系奇幻設定稿比例；見 Body Metrics Lock（190cm／8.0 頭身／肩寬約 2.8 倍頭寬）
-- 標誌性輪廓：全身板甲＋長槍＋背後聖光普照的英雄剪影（`CANON` 板甲、長槍、聖光；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：古典泛金全身板甲、長槍、頭後或背後的聖光光環／背光、崇高理想化英雄調性
-- **anatomical left／right 不對稱鎖定**：全對稱設計，無鎖定不對稱特徵。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側；因設計全對稱，左右兩側輪廓應互為鏡像一致，跨圖不得出現新增的單側特徵。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：**泛金光的古式全身板甲**，內襯鎖甲與布料（`CANON` 全身板甲；分層為 `DESIGN-PROPOSAL`）
-- 領口：板甲護頸／喉甲（`DESIGN-PROPOSAL`）
-- 肩部：對稱金屬肩甲，披聖騎士戰袍（`DESIGN-PROPOSAL`）
-- 胸前：金光胸甲，鑲天諦正教十字聖記（`DESIGN-PROPOSAL`；徽記存在呼應信仰圖騰）
-- 袖口／手部：金屬臂甲與板甲手套（`DESIGN-PROPOSAL`；持長槍動作僅於 06）
-- 腰部：板甲腰甲與戰袍腰帶（`DESIGN-PROPOSAL`）
-- 下襬／披風：聖騎士披風或戰袍垂墜，理想化飄動（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：金屬腿甲與板甲戰靴（`DESIGN-PROPOSAL`）
-- 背面結構：披風覆背、背後聖光普照（`CANON` 聖光；披風為 `DESIGN-PROPOSAL`）
+- 身高（cm）：**190**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**8.0**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.8 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移；SPEC 原僅有色名，hex 為 `DESIGN-PROPOSAL` 近似值）
-- 主色：泛金光板甲金／古金 **#C9A227**（`CANON` 泛金光板甲；hex `DESIGN-PROPOSAL`）
-- 輔色：聖光白／暖金背光 **#FFF3D0**（光效，非實體）；聖騎士戰袍暖白 **#F2EAD8**（`DESIGN-PROPOSAL`）
-- 金屬：拋光金與古金板甲 **#C9A227**；鎖甲銀 **#B8BEC7**（`DESIGN-PROPOSAL`）
-- 寶石：胸甲聖記中央鑲一顆沉穩藍寶石 **#2F4F8F**（呼應瞳色；`DESIGN-PROPOSAL`）
-- 布料：聖騎士戰袍／披風厚織布暖白 **#F2EAD8**，金色滾邊 **#C9A227**（`DESIGN-PROPOSAL`）
-- 皮革：內襯皮帶與扣件深棕 **#4A3524**（`DESIGN-PROPOSAL`）
-- 特殊材質：頭後光環／背後聖光為發光光效 **#FFF3D6**，非實體配件（`CANON` 聖光普照）
-- 膚色／髮色／瞳色（hex）：膚 **#E8C3A0**（健康調、理想化光澤）／髮 **#8A6234**（深金褐）／瞳 **#2F4F8F**（沉穩深藍）（`DESIGN-PROPOSAL`）
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：**長槍 long lance** 一柄——傳說中將巨龍刺穿於腳下之武器，古金軸身配件＋長拋光槍尖＋皮革纏裹握把（`CANON` 持長槍屠龍；材質 `DESIGN-PROPOSAL`）。**01–02 與 07 一律不出現**
-- 飾品：天諦正教聖記／十字徽（`DESIGN-PROPOSAL`）
-- 隨身道具：無（`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：無（人類聖騎士）— 騎士身上**不得**有翅膀或角。頭後／背後聖光光環為光效（`CANON`）
-- 配戴或連接方式：長槍持於慣用右手；聖光自頭後／背後放射（`CANON`）
+- CANON：Saint George appears through scripture, the hero festival, oaths, and comparisons as a heroic saint and dragon slayer in the faith. The story has not fully defined whether he is a religious-canon figure or a physically historical person in this world. Any concrete face, armor, age, weapon construction, or body measurement remains DESIGN-PROPOSAL; a removable spear or dragon-slaying prop appears only on sheet 06.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 莊嚴堅定的預設神情
-2. 輕笑 Gentle smile
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、機械義肢
-- 不可出現的服裝：現代服裝、休閒服、便服、非板甲的日常裝束
-- 不可出現的顏色：高飽和螢光色、粉彩系、與泛金聖光調性衝突的鮮豔色
-- 不可改變的左右位置：全對稱設計，無鎖定不對稱特徵；06 持槍手固定右手，跨圖一致
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 01 號以英勇聖騎士人物為主體（正面全身＋大型正面頭肩＋45° 頭肩），採理想化壁畫英雄調性；不在 01 號加入被刺穿的巨龍。
-  - 服裝鎖定泛金古式全身板甲＋長槍＋聖光背光。
-  - 瞳色鎖定沉穩深藍 `#2F4F8F`；髮色鎖定深金褐 `#8A6234`。
-  - 身高鎖定 190cm、頭身比 8.0、肩寬約 2.8 倍頭寬。
-  - 固定色票 hex 值已補全（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-- **`PENDING-USER-INPUT`（不影響辨識度）**：
-  - 臉型的細部定調。
-  - 天諦正教聖記的確切紋樣（文檔僅載信仰圖騰，未給圖形）。
-  - 後續是否需要「聖騎士＋腳下巨龍」的完整壁畫構圖版本（本 01 號為單一英雄人物身份基準，若需要須另立版本 ID）。
+## 固定色票與材質
+
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#C9A227、#FFF3D0、#F2EAD8、#B8BEC7、#2F4F8F、#4A3524、#FFF3D6、#E8C3A0、#8A6234
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
+
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-st-george-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

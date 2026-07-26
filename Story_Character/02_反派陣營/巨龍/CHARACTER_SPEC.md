@@ -1,102 +1,76 @@
-# 巨龍 Dragon
+# 巨龍 — CHARACTER_SPEC
 
-> Tier 外敵兵器 — 帕拉諾雅與阿達瑪操控下的戰略級巨獸。本檔為文字版身份規格（**範本 v2 FULL，非人形結構**），供 `01-dragon-front-fullbody.png` 與 01–06 全套參考圖生成之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> 特別註記：本角色為**非人形四足有翼巨獸**，豁免 A-pose 與 07 號身體參考圖（無人類骨架可供擬合），改用「自然站立正交視圖」。01 號採 CREATURE 格式——同一隻生物的全身自然站立視圖＋頭部特寫＋45° 頭部視圖；不含人類、不含騎手、不含八表情、不含服裝，改以 ANATOMY 解剖鎖定。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。純 AI img2vid 無法保證跨鏡頭的角色完全一致；正式影片必須先以本參考包建立同一個經核准的 Blender／VRM 巨獸模型，並以該模型作為唯一角色正本驅動所有鏡頭。**
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
 >
-> ✅ **辨識關鍵已定案（使用者於 2026-07-23 核准）**：本檔「辨識關鍵鎖定提案」一節列出的**角的數量／形狀**與**翼膜色相**為跨鏡頭身份辨識關鍵，兩項均已由使用者核准鎖定，**可進入 `01-dragon-front-fullbody.png` 生成**。
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: dragon-F1B720F99C76
+>
+> This is the non-human chaos dragon from chapter 10. It is controlled by Adama, later loses control and attacks the controlling side, and finally falls dead. Whether it has a proper name, intelligence, autonomous consciousness, or stable individuality is PENDING-USER-INPUT. Do not invent humanoid anatomy, clothing, rider gear, heraldry, or a bond with Adama beyond control in battle.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：巨龍
-- 英文名：Dragon（war-beast dragon）
-- 角色版本 ID：**`DRAGON-V1-STRATEGIC-WAR-BEAST`**（本版本鎖定；本角色全篇僅此單一型態，若未來故事需要幼體、負傷型態或其他外觀，須另立新版本 ID，不得混用）
-- 性別：不適用 — **N/A**（戰略兵器巨獸）
-- 年齡／外觀年齡：成熟戰略級巨獸（`DESIGN-PROPOSAL`）
-- 故事時期／型態版本：帕拉諾雅與阿達瑪操控下的戰略巨獸期——全篇同一隻巨龍、同一外觀，無服裝、無型態切換（`CANON` 單一故事階段；服裝版本不適用 **N/A**）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock（相對比例鎖 — SPEC 無公尺數值，不發明絕對數值）
-> SPEC 原文僅載「戰略級巨獸，展翼可覆蓋整條街道，與人形成極端尺寸對比」（`CANON`），未給出公尺數。以下改採**相對比例鎖**（體長為基準單位 1.0），供 3D 建模與跨圖比例一致性使用；使用者可事後以實際公尺數覆蓋。
-- 尺度基準：體長（鼻尖至尾尖）＝ **1.0**（相對單位，`DESIGN-PROPOSAL`）
-- 翼展 ＝ 體長的 **1.25 倍**（`DESIGN-PROPOSAL`；展翼寬度足以跨越整條街道，尺寸方向為 `CANON`，倍率為提案值）
-- 頭長 ＝ 體長的 **1/7**（`DESIGN-PROPOSAL`；莊嚴巨龍頭比例，非誇張過大頭部）
-- 頸長 ＝ 體長的 **1/4**（`DESIGN-PROPOSAL`）
-- 尾長（軀幹末端至尾尖，計入體長內）＝ 體長的 **2/5**（`DESIGN-PROPOSAL`）
-- 肩高／四足站立高度 ＝ 體長的 **0.35 倍**（`DESIGN-PROPOSAL`；供自然站立視圖的地面線與畫面比例參考）
-- 左右不對稱特徵：**無，全對稱**——鱗甲紋理、雙翼、四肢、角組與爪皆左右完全對稱，無單側疤痕、缺角、色斑或損傷（`DESIGN-PROPOSAL` 鎖定）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- **無**——本角色無血緣親屬關係（非人類角色，不適用家族註冊表）
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：dragon-F1B720F99C76
+- 角色版本 ID：DRAGON-V1-STRATEGIC-WAR-BEAST
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-dragon-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-dragon-front-fullbody.png`（`PENDING-GENERATION`；「辨識關鍵鎖定提案」兩項已於 2026-07-23 經使用者核准鎖定，可進入生成）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 解剖鎖定 Anatomy Lock（取代外貌與服裝鎖定）
-- 整體輪廓：巨大四足有翼龍，長頸、長尾、厚實軀幹（`DESIGN-PROPOSAL`）
-- 鱗甲：**深黑至暗紫的鱗甲**，覆蓋全身，具半金屬般冷光（`CANON` 深黑至暗紫鱗甲）
-- 翼：**展翼可覆蓋整條街道**的巨大膜翼，翼骨強健、翼膜半透（`CANON` 展翼跨街；翼膜確切色相見下方「辨識關鍵鎖定提案」，已核准鎖定 `#5C1B33`）
-- 頭部：龍首具尖角、利齒、冷厲眼神；口部可張開噴吐龍息（角的數量／形狀見下方「辨識關鍵鎖定提案」，已核准鎖定 2 主角＋6 副棘角；噴息為 `CANON`）
-- 頸與尾：長而有力，可俯衝與盤旋（`DESIGN-PROPOSAL`）
-- 四肢與爪：強健四足、利爪，適合抓地與撕裂（`DESIGN-PROPOSAL`）
-- 龍息：**破雲俯衝時龍息在夜空拉出巨大光線**、能照亮整片夜空、於街道拉出巨大光線（`CANON` 毀滅性龍息）；龍息顏色鎖定為**熾亮金白 searing gold-white**（`LOCKED`，見「色票與材質」hex 提案）
-- 尺寸對比：與人形成極端尺寸對比，站上龍頭／鼻樑可俯瞰戰場（`CANON`）
-- 姿態基準：主視圖（01–02）一律為**摺翼自然站立**姿態；**展翼**姿態與翼膜結構研究僅出現在 06 構造拆解表，不與 01–02 混用，確保跨圖輪廓一致（`DESIGN-PROPOSAL`）
-- 不可改變特徵：深黑—暗紫鱗甲、巨大跨街膜翼、毀滅性龍息、極端巨大尺寸、全對稱設計
+## Body Metrics Lock
 
-## 辨識關鍵鎖定提案（已核准鎖定，2026-07-23）
-> 角的數量／形狀與翼膜色相會直接影響跨鏡頭身份辨識，**不得標記為「不影響辨識度」**。以下兩項為 Claude 提出的具體鎖定提案，**已於 2026-07-23 經使用者核准定案**，正式生效為角色正典設定。
+- 身高（cm）：PENDING-USER-INPUT
+- 頭身比：PENDING-USER-INPUT
+- 肩寬（頭寬倍數）：PENDING-USER-INPUT
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-- **角的數量／形狀（已核准鎖定）**：一對主角＋副棘角組——
-  - 主角：頭側後方一對對稱後掠長角（如角羚／古龍造型，光滑角質，向後上方彎曲，不分岔）。
-  - 副棘角：沿頭骨後緣中線一列 **6 根**由大至小遞減的短棘角，延伸至頸部起點。
-  - 合計固定角組合：**2 主角 + 6 副棘角**，左右完全對稱。
-  - 狀態：**已核准鎖定（2026-07-23 使用者核准）**。
-- **翼膜色相（已核准鎖定）**：暗紫紅 wing membrane，鎖定 hex **`#5C1B33`**（區別於鱗甲底色，確保半透膜翼在跨鏡頭光線下仍可辨識為同一角色）。
-  - 狀態：**已核准鎖定（2026-07-23 使用者核准）**。
+## Identity Lock
 
-## 色票與材質（固定色票，跨全部圖片不得漂移；SPEC 原僅有色名，hex 為 `DESIGN-PROPOSAL` 近似值）
-- 主色：鱗甲深黑至暗紫底色 **`#150F1A`**（`CANON` 深黑至暗紫；hex `DESIGN-PROPOSAL`）
-- 輔色：翼膜暗紫紅 **`#5C1B33`**（已核准鎖定值，見「辨識關鍵鎖定提案」，2026-07-23 使用者核准）
-- 金屬／角質：鱗甲冷紫金屬高光 **`#3B2350`**（`DESIGN-PROPOSAL`）；角與爪冷灰黑角質 **`#3A3A40`**（`DESIGN-PROPOSAL`）
-- 寶石：無 — **N/A**
-- 布料：無 — **N/A**
-- 皮革／軟組織：翼膜與軟腹的半透皮革質感，腹部略淺色調 **`#241626`**（`DESIGN-PROPOSAL`）
-- 特殊材質：龍息光效熾亮金白 **`#FFF3D6`**（`CANON` 色名「熾亮金白 searing gold-white」鎖定；hex `DESIGN-PROPOSAL` 近似值）
-- 眼睛（hex）：冷厲琥珀黃瞳 **`#D4C05A`**（`DESIGN-PROPOSAL`）
+- CANON：This is the non-human chaos dragon from chapter 10. It is controlled by Adama, later loses control and attacks the controlling side, and finally falls dead. Whether it has a proper name, intelligence, autonomous consciousness, or stable individuality is PENDING-USER-INPUT. Do not invent humanoid anatomy, clothing, rider gear, heraldry, or a bond with Adama beyond control in battle.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
+
+## Costume Lock
+
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
+
+## 固定色票與材質
+
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#5C1B33、#150F1A、#3B2350、#3A3A40、#241626、#FFF3D6、#D4C05A
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
 ## 道具與特殊構造
 
-> **本節所有道具、飾品與特殊構造一律只出現於 `06`（道具結構表）**；`01`–`05` 與 `07` 全部零道具。
-- 武器：自身即戰略兵器——利齒、利爪、毀滅性龍息（`CANON` 龍息）
-- 飾品：無（駕馭者的銀色控制墜飾屬阿達瑪／托普，不畫於龍身）— **N/A**
-- 隨身道具：無 — **N/A**
-- 翅膀／角／尾巴／其他特殊構造：巨大膜翼（`CANON`）；龍角組合與翼膜色相見「辨識關鍵鎖定提案」（已核准鎖定：2 主角＋6 副棘角，翼膜 `#5C1B33`）；長尾（`DESIGN-PROPOSAL`）
-- 配戴或連接方式：不適用 — **N/A**（無鞍具、無韁繩、無騎手；01–06 全部視圖零道具：no rider, no saddle, no harness, no external props）
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-dragon-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
 
-## 八種固定表情
-- 不適用 — 巨獸不製作人類八表情臉部表 **N/A**。01 號改以「全身自然站立視圖＋頭部特寫＋45° 頭部視圖」呈現同一生物；06 號改以「八格頭部威嚇狀態表」對應原八表情語意（見 PROMPTS.md 06）。
+## Kinship Lock
 
-## 禁止特徵
-- 不可新增的配件：騎手、人類、鞍具、韁繩以外的機械裝置
-- 不可出現的形態：可愛／幼龍／小型龍／chibi 龍、機械龍、機甲龍
-- 不可出現的顏色：高飽和螢光色、粉彩系鱗甲
-- 不可改變的左右位置：無不對稱特徵（全對稱設計）；跨圖不得出現單側缺角、單側翼損等新增不對稱
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 01 號採 CREATURE 格式：全身自然站立視圖＋頭部特寫＋45° 頭部視圖，同一隻生物、無人類、無騎手。
-  - 鱗甲鎖定深黑至暗紫，龍息鎖定毀滅性夜空光線，色名「熾亮金白」。
-  - 非人形豁免 A-pose 與 07 號身體參考圖；02 的四視圖改為自然站立正交視圖（正面／解剖學左側／解剖學右側／背面）。
-  - 主視圖姿態一律摺翼；展翼姿態與翼膜結構研究移至 06 構造拆解表，不與 01–02 混用。
-  - 龍角數量與形狀——已核准鎖定（2026-07-23 使用者核准）：2 主角＋6 副棘角，後掠造型，頭骨後緣遞減排列。
-  - 翼膜確切色相——已核准鎖定（2026-07-23 使用者核准）：暗紫紅 `#5C1B33`。
-- **`PENDING-USER-INPUT`（次要，不阻擋 01 生成）**：
-  - 是否需要展翼跨街的比例尺對照版本（本 01 號為單一生物身份基準，不含人類比例尺；若需要可另建一張比例尺對照圖，不列入本 01–06 主套件）。
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

@@ -1,124 +1,76 @@
-# 馬修 Matthew
+# 馬修 — CHARACTER_SPEC
 
-> Tier S — 《赫克托》神權反派。本檔為文字版身份規格（新版七張制 01–07），供 `01-matthew-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
 >
-> ## ⚠️ 服裝版本鎖定聲明（必讀）
-> **本包只鎖定 `MATTHEW-V1-CLERIC-ROBE`（白金高階神職法袍，日常／主要辨識形象）一個版本**；01–07 全部只呈現此版本。若需要戰前皮甲，須另建 `MATTHEW-V2-BATTLE-LEATHER` 的完整 01–07 套件，不得混入本包。
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: matthew-F1B720F99C76
+>
+> Matthew is a bishop and monastery teacher with a stern, distant expression; his habitual folded-hands posture is an acting cue, not a replacement for the mandatory neutral A-pose on modeling sheets. Hair and eye color are not stated. The church gold pendant is a removable prop and appears only on sheet 06. His later light-leather-armor appearance is a separate costume variant and must not be mixed into a locked bishop-robes version.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：馬修
-- 英文名：Matthew
-- 角色版本 ID：**`MATTHEW-V1-CLERIC-ROBE`**（白金高階神職法袍版；本包唯一版本，不混入其他服裝版本）
-- 性別：男
-- 年齡／外觀年齡：成熟優雅的中年謀士，外觀約 35–45 歲（`DESIGN-PROPOSAL`；文檔未載確切年齡，依「最危險的操縱者」「稱王野心」定位補完）
-- 身高：約 180cm，中等偏高（`DESIGN-PROPOSAL`；文檔外觀設定段落自述為概念提案）
-- 體型：頎長清瘦、姿態優雅（`DESIGN-PROPOSAL`）
-- 故事時期：神權掌權時期，日常／主要辨識形象（`CANON`）
-- 服裝版本：白金高階神職法袍（`CANON` 服裝大方向；細節為 `DESIGN-PROPOSAL`）。**本包不含戰前皮甲版本，見文末「未建置版本」專節。**
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**180**（`DESIGN-PROPOSAL`，可覆蓋）
-- 頭身比：**7.5**（頎長清瘦優雅體型；`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（頎長清瘦、非壯碩體格；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**無，胸前金墜居中垂於胸口，肩帔為雙肩對稱披覆**（`CANON` 金墜居中；`DESIGN-PROPOSAL` 鎖定為對稱披覆；若使用者要求改為不對稱單側披風，需另行指定）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：無
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：matthew-F1B720F99C76
+- 角色版本 ID：MATTHEW-V1-CLERIC-ROBE
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-matthew-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-matthew-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：**蒼白俊美、略帶蛇相的臉**（`CANON`）；下頜清晰、五官冷峻優雅（`DESIGN-PROPOSAL`）
-- 膚色：**蒼白**、冷調 **#EDE0D0**（`CANON` 蒼白；hex `DESIGN-PROPOSAL`）
-- 眼型與眼睛顏色：細長算計的眼神（`CANON` 神情算計）；瞳色鎖定為**冷調淡灰 #B8BEC4**（`DESIGN-PROPOSAL` 鎖定，原文檔載淡灰／淡金二選一，本次取淡灰以呼應冷銀髮與白金袍）
-- 髮型、髮色與固定髮束：**梳整齊的後梳長髮**（`CANON`）；髮色鎖定為**冷銀 #C9CDD1**（`DESIGN-PROPOSAL` 鎖定，原文檔載深色／銀色二選一，本次取冷銀以呼應白金法袍與「月天使」意象，深色版為可覆蓋替代）
-- 身材比例：約 7.5 頭身、修長優雅的日系奇幻設定稿比例；見 Body Metrics Lock（180cm／肩寬約 2.0 倍頭寬）
-- 標誌性輪廓：寬袖垂墜的法袍剪影＋胸前顯眼金墜（`CANON`）
-- 不可改變特徵：蒼白略帶蛇相的俊美臉、薄唇從容（略帶俯視）笑意、胸前金墜「月天使」象徵、寬袖白金法袍
-- **anatomical left／right 不對稱鎖定**：無不對稱特徵，全對稱設計（見 Body Metrics Lock）。金墜居中垂於胸口，肩帔雙肩對稱披覆。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側；因設計全對稱，左右兩側輪廓應互為鏡像一致，跨圖不得出現新增的單側特徵。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock（`MATTHEW-V1-CLERIC-ROBE`，本包唯一版本）
-- 服裝層次：**白金相間的高階神職法袍**，內外多層祭衣（`CANON` 白金法袍；分層為 `DESIGN-PROPOSAL`）
-- 領口：高神職立領／披肩式領飾，金線滾邊（`DESIGN-PROPOSAL`）
-- 肩部：披掛式肩帔／聖職披巾，雙肩對稱（`DESIGN-PROPOSAL`）
-- 胸前：**顯眼的金墜「月天使」神權象徵貼身垂於胸前居中**（`CANON`）；周圍金線繡宗教徽記（`CANON` 徽記存在；紋樣為 `DESIGN-PROPOSAL`）
-- 袖口／手部：**寬袖垂墜**、長及腕下（`CANON` 寬袖垂墜）；手指修長、常摩挲金墜（`CANON` 摩挲金墜動作）
-- 腰部：金線繡帶／聖職腰封（`DESIGN-PROPOSAL`）
-- 下襬／披風：法袍及地、垂墜厚重，背面完整可展（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：袍下深色軟履（`DESIGN-PROPOSAL`）
-- 背面結構：披巾與法袍背面完整覆背，金線滾邊延續（`DESIGN-PROPOSAL`）
+- 身高（cm）：**180**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.5**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：白 **#F2EDE2**＋金 **#D4AF37**（法袍主色，`CANON` 白金法袍；hex `DESIGN-PROPOSAL`）
-- 輔色：冷銀（髮色）**#C9CDD1**（`DESIGN-PROPOSAL`）
-- 金屬：暗金／亮金 **#D4AF37**——金墜、金線滾邊、聖職扣件（`CANON` 金墜；其餘 `DESIGN-PROPOSAL`）
-- 寶石：金墜鑲**單顆冷淡藍寶石 #A8C8E0**（`DESIGN-PROPOSAL` 鎖定；僅金墜可用金屬／寶石材質，其餘不得出現寶石）
-- 布料：厚織法袍布 **#F2EDE2**、金線刺繡 **#D4AF37**、內襯絲質祭衣 **#F5F0E6**（`DESIGN-PROPOSAL`）
-- 皮革：無（本包唯一版本為法袍，不含皮甲；皮革材質屬未建置的 V2，見文末專節）
-- 特殊材質：略帶蛇相的臉為皮膚／骨相質感，非配件（`CANON`）
-- 膚色／髮色／瞳色（hex）：膚 **#EDE0D0**（蒼白冷調）／髮 **#C9CDD1**（冷銀，整齊後梳長髮）／瞳 **#B8BEC4**（冷調淡灰）（`DESIGN-PROPOSAL` 鎖定）
-- **不具備之材質（生成時須排除）**：黑肩甲、鏈條、角、翼、重甲、皮革盔甲——馬修的實際材質僅為白金法袍布料＋金屬金墜與滾邊＋單顆淡藍寶石。
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：無隨身武器（`DESIGN-PROPOSAL`；本版本不佩武器，01–02 與 07 一律不出現）
-- 飾品：**胸前金墜「月天使」神權象徵**——貼身佩戴、反覆出現於他摩挲金墜的鏡頭，是最強辨識標誌（`CANON`）
-- 隨身道具：天諦正教宗教徽記／聖職紋章（`CANON` 徽記存在；紋樣為 `DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色；「月天使」僅為金墜上的圖像象徵，角色本體不得長出翅膀）
-- 配戴或連接方式：金墜以項鍊貼身垂於胸前居中；法袍以肩帔與腰封固定（`DESIGN-PROPOSAL`）
+- CANON：Matthew is a bishop and monastery teacher with a stern, distant expression; his habitual folded-hands posture is an acting cue, not a replacement for the mandatory neutral A-pose on modeling sheets. Hair and eye color are not stated. The church gold pendant is a removable prop and appears only on sheet 06. His later light-leather-armor appearance is a separate costume variant and must not be mixed into a locked bishop-robes version.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 從容而略帶俯視的預設神情
-2. 輕笑 Gentle smile — 偽善溫和的一絲柔軟
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger — 野心外露、優雅崩裂的冷怒
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-> 表情表僅改變眉眼與嘴部；臉部身份、冷銀後梳長髮、金墜居中皆跨八格一致。
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：**翅膀、角、尾巴、王冠**（他覬覦泰倫皇冠但尚未戴上）、光環、額外武器、機械義肢、皮甲層（本包不含 V2）
-- 不可出現的顏色：高飽和螢光色、粉彩系、與全書金／銀藍／深色系衝突的鮮豔色
-- 不可改變的左右位置：胸前金墜居中垂於胸口，不得偏移至單側；肩帔須雙肩對稱
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
+## 固定色票與材質
 
-## 鎖定錨定預設值（可覆蓋）
-> 以下辨識度關鍵項已鎖成 01 號具體預設，寫入 01 的 Character definition。使用者可一眼定案後覆蓋任一項，覆蓋後需同步更新 01–07。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 命名色之候選 hex（DESIGN-PROPOSAL）：gold #C8A24A
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-| 項目 | 鎖定預設值 | 原分歧 |
-| :--- | :--- | :--- |
-| 髮色 | 冷銀 #C9CDD1、整齊後梳長髮 | 文檔載深色／銀色二選一 |
-| 瞳色 | 冷調淡灰 #B8BEC4 | 淡灰／淡金 |
-| 金墜鑲嵌寶石顏色 | 單顆冷淡藍寶石 #A8C8E0 | 顏色未定 |
-| 「月天使」金墜紋樣 | 直立天使身形與上弦月相融的正權象徵 | 文檔僅載「月天使神權象徵」 |
-| 天諦正教徽記紋樣 | 上弦月托一顆放射星芒、外圈金線的圓形徽記 | 文檔僅載「繡宗教徽記」 |
+## 道具與特殊構造
 
-- 配色一致性：以上皆落在全書金／銀藍／深色系內（冷銀髮、淡藍寶石＝銀藍；白金袍＝金）。
-- 僅金墜可用金屬／寶石材質；角色其餘部分不得出現寶石、黑肩甲、鏈條、角、翼、重甲、皮革盔甲。
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-matthew-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 01 號身份基準與 01–07 全部採版本 1 白金高階神職法袍為唯一辨識形象；戰前皮甲版本正式移出本包（見下方「未建置版本」專節）。
-  - 金墜「月天使」象徵為跨圖不變的簽名式標誌，居中佩戴。
-  - 髮色、瞳色、寶石色、金墜紋樣、徽記紋樣全部正式鎖定（見上表）。
-- **`PENDING-USER-INPUT`**：無（辨識度關鍵分歧已全部鎖定為具體預設）。
+## Kinship Lock
 
-## 未建置版本（不得混入本包）
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
 
-**`MATTHEW-V2-BATTLE-LEATHER`（戰前皮甲版）**尚未建置。若日後需要此版本出鏡，須另開完整 `CHARACTER_SPEC.md`＋`PROMPTS.md`（01–07），不得附掛於本包（V1）任何一張圖內。
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

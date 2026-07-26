@@ -1,105 +1,76 @@
-# 加爾雷斯 Galreth
+# 加爾雷斯 — CHARACTER_SPEC
 
-> Tier C — 傳說與背景人物／赫克托軍資深軍官。本檔為文字版身份規格（新版七張制 01–07），供 `01-galreth-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> 角色文檔 heading：`### 加爾雷斯（Galreth）與軍官`。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**阿卡迪亞圓桌廳決裂場軍官甲版**（赫克托制式軍官甲＋指揮用綬帶）。本角色全篇僅此單一場次外觀；若未來故事需要其他時期／服裝，須另立版本 ID，不得混用。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: galreth-F1B720F99C76
+>
+> Gallares is an advance-party member and senior Hector officer who fights alongside Lucan and Montgomery against the mysterious impostor. The story does not state a stable face, hair color, eye color, age, body measurements, weapon, or costume. Existing visual specifics remain DESIGN-PROPOSAL; do not label them CANON.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：加爾雷斯
-- 英文名：Galreth
-- 角色版本 ID：**`GALRETH-V1-ARCADIA-COUNCIL-OFFICER`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男
-- 年齡／外觀年齡：資深軍官，約 40 多歲、歷經戰陣（`DESIGN-PROPOSAL`）
-- 身高：約 182cm（`CANON`）
-- 體型：結實沉穩、久經訓練的軍官體格（`CANON`「體格結實」）
-- 故事時期：阿卡迪亞圓桌廳決裂場（`CANON`）
-- 服裝版本：赫克托制式軍官甲＋指揮用綬帶——較步兵甲精良、有階級識別（`CANON` 大方向；細節 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**182**（`CANON`）
-- 頭身比：**7.5**（`DESIGN-PROPOSAL`，既有規格鎖定值延續）
-- 肩寬（頭寬倍數）：**約 2.6 倍頭寬**（結實沉穩、久經訓練的軍官體格，較克里茲寬闊；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**指揮綬帶斜掛方向**——綬帶自角色解剖學**右肩**斜掛至**左腰**；制式配劍佩於**左腰**（呼應右手拔劍的實戰配置，綬帶與劍柄不重疊）。此側別為 `DESIGN-PROPOSAL`，使用者可核准或覆蓋；覆蓋時須同步更新本檔與 PROMPTS.md 全部視圖
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- **無**——本角色無血緣親屬關係
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：galreth-F1B720F99C76
+- 角色版本 ID：GALRETH-V1-ARCADIA-COUNCIL-OFFICER
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-galreth-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-galreth-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：**肅穆沉穩**、線條剛硬的成熟軍官臉（`CANON`「神情肅穆」；細節 `DESIGN-PROPOSAL`）；沉著不搶戲（`CANON`「沉穩不搶戲」）
-- 膚色：偏深、風霜歷練的健康膚色（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：深灰、沉著銳利的眼神（`DESIGN-PROPOSAL` 鎖定值）
-- 髮型、髮色與固定髮束：深灰摻白的軍人短髮、鬢角略斑白，修短的斑白短鬍（`DESIGN-PROPOSAL` 鎖定值）
-- 身材比例：約七頭半身、結實挺拔的日系奇幻設定稿比例；見 Body Metrics Lock（182cm／7.5 頭身／肩寬約 2.6 倍頭寬）
-- 標誌性輪廓：結實挺拔的軍官身形＋右肩斜掛指揮綬帶剪影（`CANON` 綬帶；輪廓構成與側別為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：肅穆沉穩的成熟軍官臉、赫克托制式軍官甲、指揮用綬帶（右肩斜掛）、約 182cm 結實身形
-- **anatomical left／right 不對稱鎖定**：綬帶自角色解剖學右肩斜掛至左腰；制式配劍佩於左腰。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側；綬帶與配劍側別跨圖不得鏡像翻轉。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：赫克托制式軍官甲——布／皮內襯外罩制式軍官甲片，較步兵甲精良（`CANON` 制式軍甲；分層 `DESIGN-PROPOSAL`）
-- 領口：制式高護頸、內襯布料（`DESIGN-PROPOSAL`）
-- 肩部：制式軍官肩甲，較步兵略有階級識別（`DESIGN-PROPOSAL`）
-- 胸前：制式軍官胸甲，隱約可見赫克托軍徽（無寶石）（`DESIGN-PROPOSAL`）
-- 袖口／手部：皮革護臂或軍官手套（`DESIGN-PROPOSAL`）
-- 腰部：制式腰帶，配劍側掛於左腰（空鞘扣環於 01–02／07，實劍僅見於 06）（`DESIGN-PROPOSAL`）
-- 下襬／披風：**右肩斜掛至左腰的指揮用綬帶**為核心識別（`CANON` 綬帶存在；側別 `DESIGN-PROPOSAL`）；可有短披或無披風（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：制式護脛、軍官長靴（`DESIGN-PROPOSAL`）
-- 背面結構：制式軍官甲背片，綬帶自右肩斜過肩背至左腰（`DESIGN-PROPOSAL`）
+- 身高（cm）：**182**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.5**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.6 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移；SPEC 原僅有色名，hex 為 `DESIGN-PROPOSAL` 近似值）
-- 主色：霧面鋼灰軍官甲片 **#6B6B70**（`DESIGN-PROPOSAL`）
-- 輔色：指揮綬帶暗金織布 **#8F7038**（`DESIGN-PROPOSAL`；原「暗金或深紅」二選一，鎖定暗金）
-- 金屬：軍官甲片霧面鋼 **#6B6B70**；暗金階級章與扣件 **#8A6F45**（`DESIGN-PROPOSAL`）
-- 寶石：無 — **N/A**
-- 布料：綬帶織布 **#8F7038**、內襯米灰布料 **#C9C2B4**（`DESIGN-PROPOSAL`）
-- 皮革：深棕皮革（護臂、腰帶、靴）**#3C2E24**（`DESIGN-PROPOSAL`）
-- 特殊材質：無
-- 膚色／髮色／瞳色（hex）：膚 **#B98A63**（偏深、風霜歷練）／髮 **#5A5A5E**（深灰摻白，鬢角略斑白）／瞳 **#4A4A50**（深灰、沉著銳利）（`DESIGN-PROPOSAL`）
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：**制式軍官配劍**——佩於左腰，霧面鋼劍身＋暗金劍柄劍格＋深棕皮革握把（`DESIGN-PROPOSAL`）。**01–02 與 07 一律不出現**，僅腰帶留空鞘扣環
-- 飾品：指揮用綬帶＋階級章（`CANON` 綬帶；章 `DESIGN-PROPOSAL`）
-- 隨身道具：赫克托軍徽（`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：無（人類軍官）
-- 配戴或連接方式：綬帶自右肩斜掛至左腰；制式腰帶佩劍於左腰（`CANON` 綬帶；連接與側別 `DESIGN-PROPOSAL`）
+- CANON：Gallares is an advance-party member and senior Hector officer who fights alongside Lucan and Montgomery against the mysterious impostor. The story does not state a stable face, hair color, eye color, age, body measurements, weapon, or costume. Existing visual specifics remain DESIGN-PROPOSAL; do not label them CANON.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 肅穆沉穩的常態
-2. 輕笑 Gentle smile
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-> 表情表僅改變眉眼與嘴部；臉部身份、鬢角斑白短髮、斑白短鬍與軍官甲跨八格一致。
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、機械義肢
-- 不可出現的顏色：高飽和螢光色、粉彩系、與霧面鋼灰／暗金／深棕色票衝突的鮮豔色
-- 不可改變的左右位置：指揮綬帶須固定為右肩斜掛至左腰、制式配劍須固定佩於左腰，跨圖不得鏡像翻轉
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi；不可畫成襤褸或尋常低階步兵樣貌（他是資深軍官）
+## 固定色票與材質
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝定為赫克托制式軍官甲＋指揮用綬帶，較步兵甲精良、有階級識別，以呼應「資深軍官」正典。
-  - 神情肅穆、沉穩不搶戲，作為主角團衝突的見證背景。
-  - 髮色／斑白程度、鬍鬚、眼睛顏色已鎖定具體值（見「外貌鎖定」與「色票與材質」）。
-  - 指揮綬帶顏色鎖定暗金織布 `#8F7038`；軍官甲主色鎖定霧面鋼灰 `#6B6B70`。
-  - 固定色票 hex 值已補全（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-- **`PENDING-USER-INPUT`（已提出 DESIGN-PROPOSAL 供核准或覆蓋）**：
-  - **綬帶斜掛側**：本檔提案右肩斜掛至左腰、配劍佩於左腰；若使用者要求相反側別，需同步覆蓋 CHARACTER_SPEC.md 與 PROMPTS.md 全部視圖，不得只改單張。
-- **`PENDING-USER-INPUT`（次要，不阻擋 01 生成）**：
-  - 制式軍官甲的確切樣式與軍徽紋樣細節（文檔未給圖形，目前依既有 06 道具描述為簡化壓印徽記）。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#6B6B70、#8F7038、#8A6F45、#C9C2B4、#3C2E24、#B98A63、#5A5A5E、#4A4A50
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
+
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-galreth-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

@@ -1,113 +1,76 @@
-# 蕾瓦娜斯 Revanas
+# 蕾瓦娜斯 — CHARACTER_SPEC
 
-> Tier S ——《赫克托》女主角。本檔為文字版身份規格（FULL v2，對齊奧德里奇範本結構），供 `00-revanas-character-identity-anchor.png` 與 01–10 全套參考圖生成／重生成之依據。
-> 標記規則：`CANON`＝角色文檔或已核准視覺正本明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: revanas-F1B720F99C76
+>
+> Levanus has silver hair and cyan-luminous crystals on the body that glow in moonlight; the overall face and bearing are sweet, fantastical, and moonlike. Kriz named her, Gloria treats her as a younger sister, and her bond with Kriz is central. Her species, origin, and complete anatomy remain PENDING-USER-INPUT: do not invent or canonize new horns, wings, tail, reproductive traits, or biological structures beyond an already approved image authority.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-> **正典衝突已解決（2026-07-23，對齊 `CHARACTER_PROMPT_AUDIT_2026-07-23.md` §7）：** 本文件先前仍以「洞穴受囚版」（破舊布衣、手腕殘鏈、深色角、無尾）為主錨定，與使用者已核准的 `01–09` 視覺正本（銀白長髮＋青藍下段、雙眼同色冰藍、藍紫水晶長角、銀藍半透明龍翼、水晶尾尖鱗尾、白銀水晶戰甲禮服）完全矛盾。**本次全面改寫以已核准 PNG 為唯一視覺正本**，「洞穴受囚版」不再作為本包內容，改列為未建置的獨立版本 `REVANAS-V2-CAVE-CAPTIVE`（見文末「正典衝突與待確認事項」）。`CHARACTER_SPEC.md` 與 `PROMPTS.md` 自本版本起同步，不再有兩份互相矛盾的正本。
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 基本資料
-- 中文名：蕾瓦娜斯
-- 英文名：Revanas
-- 角色版本 ID：**`REVANAS-V1-CRYSTAL-DRAGONKIN`**（本版本鎖定；本包 01–09 已核准 PNG 皆屬本版本。其他時期／服裝需另立版本 ID，不得混用——見「洞穴受囚版」`REVANAS-V2-CAVE-CAPTIVE`，尚未建置）
-- 性別：女
-- 年齡／外觀年齡：嬌小少女，外觀年齡約 15–17 歲（`CANON` 文檔載「嬌小少女」；精確歲數 `DESIGN-PROPOSAL`）
-- 身高：約 155cm（`CANON`）
-- 體型：纖細嬌小、優雅的奇幻少女比例（`CANON` 纖細嬌小；優雅比例為已核准視覺正本呈現）
-- 故事時期：本版本（`REVANAS-V1-CRYSTAL-DRAGONKIN`）為唯一已建置版本，對應已核准 01–09 視覺正本呈現的水晶龍裔形態；此形態於原始故事情節中的具體出場時間點尚無文檔佐證，標記 `PENDING-USER-INPUT`（不影響外觀鎖定，見文末）
-- 服裝版本：白銀水晶戰甲禮服（單一服裝版本，本包唯一服裝；不與洞穴受囚版或月天使薄紗祭服等其他文字設定混用）
+## 同步與狀態
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**155**（`CANON`）
-- 頭身比：**6.5**（已核准視覺正本呈現的纖細優雅比例，鎖定為 6.5 頭身，利於參數化人體擬合；`DESIGN-PROPOSAL`）
-- 肩寬（頭寬倍數）：**約 1.9 倍頭寬**（纖細嬌小體型，明顯窄於魁梧體格角色；`DESIGN-PROPOSAL`）
-- 左右不對稱特徵：**無，全對稱**——一對水晶長角左右對稱、一對龍翼左右對稱、瀏海居中分邊對稱；尾巴為**單一中央尾巴**（非成對特徵），自下背中央延伸，不涉及左右方向性判定（`DESIGN-PROPOSAL` 鎖定）
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：revanas-F1B720F99C76
+- 角色版本 ID：REVANAS-V2-CAVE-CAPTIVE
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：IMAGE-DRIFT-REVIEW-REQUIRED — 9 existing PNG file(s); documents refreshed by explicit user authorization, PNGs untouched.
+- 身份正本：01-revanas-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：**無**——蕾瓦娜斯不在 `ROYAL`（克里茲／奧德里奇／皇后阿格妮絲）或 `ANDRE`（安德烈／菲利浦／賽希莉亞）任一家族註冊表內，全庫無明文血緣關係
-- 家族錨點：不適用
-- 承襲特徵：無
-- 刻意區分特徵：無
-- 禁止混淆項：無
+## Canonical Fact Map
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`00-revanas-character-identity-anchor.png`（**`PENDING-GENERATION`**——本版本新增，尚未生成；生成前以已核准的 `01–09` 實際外觀為準，不得憑空設計新角色）
-- 共用畫風參考 1：`../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- 共用畫風參考 2：`../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- 共用畫風參考 3：`../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 設計來源標記
-- `CANON`：角色文檔或已核准視覺正本明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+## Body Metrics Lock
 
-## 外貌鎖定 Identity Lock
-- 臉型：清冷精緻、氣質略帶疏離的奇幻少女臉型，五官纖細柔和（`CANON`，已核准視覺正本明載；與舊文字設定「單純怯懦」神情不同，本版本神情為平靜疏離）
-- 膚色：偏白冷調膚色，柔和蜜桃白（`CANON` 偏白冷調；hex 見色票，`DESIGN-PROPOSAL`）
-- 眼型與眼睛顏色：**雙眼皆為同色冰藍**（`CANON`，已核准視覺正本明載，**非異色瞳**——舊文字設定「左金右銀藍異色瞳」於本版本不適用，禁止出現）；眼型偏大、平靜略帶疏離
-- 尖耳（`CANON`，已核准視覺正本新增特徵，原文檔未載）
-- 髮型、髮色與固定髮束：銀白長直髮，髮尾（下段）漸層轉為明亮冰晶青藍色；齊瀏海置中分邊，露出額間一顆小型獨立晶尖與左右對稱的一對藍紫水晶長角（`CANON`，已核准視覺正本明載）
-- 身材比例：見 Body Metrics Lock（約 155cm／6.5 頭身／肩寬約 1.9 倍頭寬，纖細優雅比例）
-- 標誌性輪廓：頭頂一對向後彎的藍紫半透明水晶長角＋額間小晶尖、背後一對大型銀藍半透明龍翼、腰後延伸一條銀白鱗尾且尾尖聚生藍紫水晶尖刺群的剪影（`CANON`）
-- 不可改變特徵：一對藍紫水晶長角、一對銀藍半透明龍翼、銀白鱗尾＋水晶尾尖、尖耳、雙眼冰藍同色（非異色瞳）、銀白長髮＋下段冰晶青藍漸層、白銀水晶戰甲禮服＋水晶高跟鞋
+- 身高（cm）：PENDING-USER-INPUT
+- 頭身比：PENDING-USER-INPUT
+- 肩寬（頭寬倍數）：PENDING-USER-INPUT
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：白銀水晶戰甲式禮服——無袖束胸馬甲式上身＋水晶飾片裙擺＋歌劇式長手套＋雙腿水晶護腿片＋水晶高跟鞋（`CANON`，已核准視覺正本明載）
-- 領口：無領、露肩露胸口的束胸馬甲領口（`CANON`）
-- 肩部：雙肩各有一片高聳水晶尖刺肩甲（`CANON`）
-- 胸前：束胸馬甲式上身，中央鑲一顆水晶寶石，鱗紋滾邊（`CANON`）
-- 袖口／手部：歌劇式長手套至上臂，水晶滾邊袖口（`CANON`）；**手腕無殘鏈／鐐銬**（與舊文字設定「手腕殘鏈」相反，本版本嚴禁出現鏈條）
-- 腰部：水晶滾邊髖甲片覆蓋於貼身內衣之上（`CANON`）
-- 下襬／披風：水晶飾片裙擺呈不規則尖刺狀垂墜、前短後長，無披風（`CANON`）
-- 腿部／鞋靴：貼身白色腿部衣料＋雙腿水晶護腿片（附垂墜水晶吊飾）＋水晶踝甲＋水晶高跟涼鞋（`CANON`；與舊文字設定「赤足或簡陋布條纏足」相反，本版本明確著鞋）
-- 背面結構：背部開放式剪裁，鱗紋面板夾住脊椎兩側供翅膀根部穿出（`CANON`）
+## Identity Lock
 
-## 色票與材質
-> 固定色票：以下 hex 為對已核准 `01–09` PNG 目視取樣的近似值，`DESIGN-PROPOSAL` 鎖定，使用者可事後覆蓋；跨全部圖片不得漂移。
-- 主色：珍珠白（戰甲底色） **#F1F1F4**（`CANON` 白銀基調；hex `DESIGN-PROPOSAL`）
-- 輔色：冰晶青藍（髮尾／翼膜點綴） **#A9E6EC**（`CANON`；hex `DESIGN-PROPOSAL`）
-- 金屬：冷調金屬銀（戰甲滾邊、肩甲） **#C8CDD3**（`CANON`；hex `DESIGN-PROPOSAL`）
-- 寶石／水晶：藍紫水晶淺層面 **#C4B8E8**、深層刻面 **#6E74B8**（角、翼膜稜線、尾尖、垂墜飾件）（`CANON`；hex `DESIGN-PROPOSAL`）
-- 布料：貼身白色內衣打底 **#F4F5F7**（`CANON`；hex `DESIGN-PROPOSAL`）
-- 皮革：無（`DESIGN-PROPOSAL`——戰甲全為水晶／金屬構造，無皮革部件）
-- 特殊材質：冷銀鱗片（尾部與背部開口鱗紋面板） **#C7CFD6**；半透明虹彩翼膜（偏薰衣草的銀藍） **#BFDCF0**（`CANON`；hex `DESIGN-PROPOSAL`）
-- 膚色／髮色／瞳色（hex）：膚 **#F5DBCB**（柔和蜜桃白）／髮 銀白 **#F0EFEF** 漸層冰晶青藍 **#A9E6EC**／瞳 雙眼同色冰藍 **#BFE2EE**（`CANON` 色向；hex 皆 `DESIGN-PROPOSAL` 鎖定可覆蓋）
+- CANON：Levanus has silver hair and cyan-luminous crystals on the body that glow in moonlight; the overall face and bearing are sweet, fantastical, and moonlike. Kriz named her, Gloria treats her as a younger sister, and her bond with Kriz is central. Her species, origin, and complete anatomy remain PENDING-USER-INPUT: do not invent or canonize new horns, wings, tail, reproductive traits, or biological structures beyond an already approved image authority.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
+
+## Costume Lock
+
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
+
+## 固定色票與材質
+
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 命名色之候選 hex（DESIGN-PROPOSAL）：silver #C3CAD4
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
 ## 道具與特殊構造
-- 武器：無（`CANON`；蕾瓦娜斯非戰鬥外形，始終無武器）
-- 飾品：雙腿水晶垂墜吊飾、頭頂水晶角座固定飾片（`CANON`，見 09 道具表）
-- 隨身道具：無
-- 翅膀／角／尾巴／其他特殊構造：一對藍紫水晶長角（成對對稱，額間另有一顆小型獨立晶尖，非角本體）；一對銀藍半透明膜狀龍翼（成對對稱，00 預設摺疊／半收，避免遮擋軀幹輪廓）；一條銀白鱗尾，尾端聚生藍紫水晶尖刺群（單一中央尾巴，非成對特徵，無左右方向性）（`CANON`）
-- 配戴或連接方式：角自頭頂／頭側對稱長出；翼自肩胛對稱連接；尾自下背中央連接；水晶垂墜以細鏈懸掛於腿甲與角座（`CANON`／連接細節 `DESIGN-PROPOSAL`）
 
-## 八種固定表情
-1. 自然 Neutral — 平靜略帶疏離的預設神情
-2. 輕笑 Gentle smile
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger
-7. 悲傷 Sadness
-8. 眨眼 Wink
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-revanas-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
 
-> 表情表僅改變眉眼與嘴部；臉部身份、雙眼同色冰藍、銀白長髮與水晶長角跨八格一致。
+## Kinship Lock
 
-## 禁止特徵
-- 不可新增的配件：額外的角（超過一對）、額外的翅膀（超過一對）、額外的尾巴（超過一條）、王冠（非水晶角座）、武器、機械義肢、**手腕鎖鏈／鐐銬**（舊文字設定殘留，本版本嚴禁）
-- 不可出現的顏色：高飽和暖色系（尤其惡魔紅）、與白銀／冰藍／藍紫水晶主色衝突的鮮豔雜色、**深色／炭灰角色**（舊文字設定「深色犄角」於本版本禁止，角必須為藍紫水晶色）
-- 不可改變的左右位置：一對角須左右對稱；一對翼須左右對稱；雙眼須同為冰藍色，不可變回異色瞳
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
-- **CRITICAL 反向禁止**（絕不可出現）：不可畫成異色瞳（左金右銀藍）、不可加上手腕殘鏈／破舊囚服／赤足、不可去除尾巴、不可去除角或翼、不可只有單角或單翼
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
 
-## 正典衝突與待確認事項
-- **已決定**（對齊 `CHARACTER_PROMPT_AUDIT_2026-07-23.md` §7 修法）：
-  - 以使用者核准的 `01–09` 視覺正本為唯一身份與服裝正本；`CHARACTER_SPEC.md` 已全面改寫為與其一致的 `REVANAS-V1-CRYSTAL-DRAGONKIN`。
-  - 原文檔所載「洞穴受囚版」（破舊布衣、手腕殘鏈、深色角、無尾）**不得混入本包**，另立版本 ID `REVANAS-V2-CAVE-CAPTIVE`——**尚未建置**，僅作版本占位；若未來需要生成該版本，須建立獨立的 CHARACTER_SPEC／PROMPTS，不得與 V1 的任何提示詞或設定混合。
-  - 原文檔第二正典版「月天使銀藍薄紗祭服」（月冠、新月墜飾、儀式腕環）與已核准 PNG 的白銀水晶戰甲禮服**外觀不同**，本包同樣不採用；如未來需要生成薄紗祭服版本，比照 V2 另立版本 ID，不得併入 V1。
-  - 異色瞳（左金右銀藍）為舊文字設定，V1 雙眼鎖定為同色冰藍，不再有異色瞳。
-  - 尾巴：舊文字設定「無尾」已由已核准視覺正本推翻——V1 明確有一條銀白鱗尾＋水晶尾尖，鎖定為 `CANON`。
-- **`PENDING-USER-INPUT`**（不影響外觀辨識度，可後續處理）：
-  - V1（水晶龍裔禮服）於故事情節中的具體出場場景／時間點尚無原始文檔佐證；不影響本版本外觀鎖定。
-  - 固定 hex 色票為對已核准 PNG 目視取樣的 `DESIGN-PROPOSAL` 近似值；如需精準色彩管理（印刷／引擎色彩空間），請使用者以專業取色工具重新取樣後覆蓋。
-  - 既有已核准全身視圖檔名順序為 `01-front／02-left／03-back／04-right`，與後期角色（如奧德里奇）採用的 `01-front／02-left／03-right／04-back` 標準順序不同。因檔案安全規則禁止刪除或改名既有 PNG，此順序差異予以保留並在 `PROMPTS.md` 中明確註記，**非錯誤，僅為本角色早期產出的既定順序**；不得為了「對齊順序」而重新生成或覆蓋既有已核准圖片。
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

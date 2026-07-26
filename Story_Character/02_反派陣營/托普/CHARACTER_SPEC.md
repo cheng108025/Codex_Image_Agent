@@ -1,116 +1,76 @@
-# 托普 Top
+# 托普 — CHARACTER_SPEC
 
-> Tier - 反派陣營／敵方能力者。本檔為文字版身份規格（新版七張制 01–07），供 `01-top-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 角色文檔.md 的「外觀設定」段落開頭已註明為「概念設計提案」，故身高/體型/髮型/服裝細節除非場景卡另有明載，一律標記 `DESIGN-PROPOSAL`。
-> 服裝版本鎖定：**斯托奇雅屋頂追逐戰版** — 輕便暗色行動裝束（緊身衣＋短披＋少量甲片），為屋頂高速翻躍設計。此為與角色文檔「屋頂追逐、獵人與獵物顛倒」場次唯一一致的時期，本包不混入其他服裝版本。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: top-F1B720F99C76
+>
+> Top is an elderly northern commander and one of the named Seven Heroes. His story costume is a plain standardized military uniform. The spelling "top" is provisional. The story does not lock his face, hair, eye color, exact age, body measurements, or personal weapon; all such existing details remain DESIGN-PROPOSAL.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：托普
-- 英文名：Top
-- 角色版本 ID：**`TOP-V1-STOCHIA-ROOFTOP-CHASE`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男（`DESIGN-PROPOSAL`）
-- 年齡／外觀年齡：青年（`DESIGN-PROPOSAL`）
-- 身高：約 175cm（`DESIGN-PROPOSAL`；文檔外觀設定段落自述為概念提案）
-- 體型：修長靈巧、輕盈精瘦，適合高速移動的動作型體格（`DESIGN-PROPOSAL`）
-- 故事時期：斯托奇雅屋頂追逐戰（`DESIGN-PROPOSAL`；大方向源自文檔）
-- 服裝版本：斯托奇雅屋頂戰——輕便暗色行動裝束（緊身衣＋短披、少甲片），便於在鐘塔與屋瓦間翻躍（`DESIGN-PROPOSAL` 細節；輕便暗色行動裝的大方向源自文檔外觀設定）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**175**（`DESIGN-PROPOSAL`，可覆蓋）
-- 頭身比：**7.0**（修長靈巧的動作型體格；`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.1 倍頭寬**（輕盈精瘦體型；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**短披主扣正式鎖定於角色解剖學左肩**（`DESIGN-PROPOSAL`，使用者可覆蓋；覆蓋後需同步更新 01–07）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：無
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：top-F1B720F99C76
+- 角色版本 ID：TOP-V1-STOCHIA-ROOFTOP-CHASE
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-top-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-top-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：清瘦、靈動的青年臉型，線條輕巧不厚重（`DESIGN-PROPOSAL`）
-- 膚色：中性偏白、健康調（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：狹長靈動、帶戲謔笑意的眼；眼神慵懶自信（`DESIGN-PROPOSAL`）；瞳色鎖定為**冷銀灰**（`DESIGN-PROPOSAL` 鎖定值，原 `PENDING-USER-INPUT`）
-- 髮型、髮色與固定髮束：**一頭凌亂短髮**（`DESIGN-PROPOSAL`，源自文檔「一頭凌亂短髮」）；髮色鎖定為**暗炭黑、近黑**（`DESIGN-PROPOSAL` 鎖定值，原 `PENDING-USER-INPUT`）
-- 身材比例：約七頭身、修長纖細的日系奇幻設定稿比例；見 Body Metrics Lock（175cm／7.0 頭身／肩寬約 2.1 倍頭寬）
-- 標誌性輪廓：輕盈站姿＋短披肩線（左肩主扣）、慵懶餘裕、雙手鬆垂或插袋的姿態（`DESIGN-PROPOSAL`，呼應「悠閒站立、獵人與獵物顛倒」的 `CANON` 描寫）
-- 不可改變特徵：**臉上永遠掛著玩世不恭的笑**（`CANON` — 文檔反覆強調的招牌神情）、凌亂短髮、輕盈精瘦體型、輕便暗色行動裝、短披左肩主扣
-- **anatomical left／right 不對稱鎖定**：短披主扣＝角色解剖學**左肩**（見 Body Metrics Lock）。02 號視圖＝相機位於角色解剖學左側，呈現披肩扣；03 號視圖＝相機位於角色解剖學右側；跨圖不得鏡像翻轉。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：貼身緊身行動衣為底層，外罩短披，少量甲片點綴（`DESIGN-PROPOSAL`；「緊身衣＋短披、少甲片」大方向源自文檔）
-- 領口：低領或立領的貼身緊身衣領（`DESIGN-PROPOSAL`）
-- 肩部：短披固定於**左肩**扣件，輕便不累贅（`DESIGN-PROPOSAL`，左右側別本次正式鎖定）
-- 胸前：貼身緊身衣，胸口或前臂散布極少量輕甲片（`DESIGN-PROPOSAL`）
-- 袖口／手部：貼身長袖或露指手套，便於攀爬抓握（`DESIGN-PROPOSAL`）
-- 腰部：輕便腰帶，可掛小型工具袋（`DESIGN-PROPOSAL`）
-- 下襬／披風：及腰或及臀的短披，隨動作飄動（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：貼身長褲＋輕便軟底短靴，利於無聲翻躍（`DESIGN-PROPOSAL`；呼應屋頂追逐）
-- 背面結構：短披覆及上背，緊身衣背部俐落貼身，無累贅結構（`DESIGN-PROPOSAL`）
+- 身高（cm）：**175**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.0**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.1 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：暗色系緊身衣——炭黑至深藍灰 **#2A2E36**（`DESIGN-PROPOSAL`；「暗色行動裝」源自文檔）
-- 輔色：冷灰輕甲片與微暗金點綴 **#6E747C**（`DESIGN-PROPOSAL`）
-- 金屬：少量冷灰輕甲片與扣件 **#6E747C**（`DESIGN-PROPOSAL`）
-- 寶石：無（`DESIGN-PROPOSAL`）
-- 布料：貼身彈性行動布料、短披輕織布 **#2A2E36**（`DESIGN-PROPOSAL`）
-- 皮革：腰帶、手套、軟底短靴 **#3A322C**（`DESIGN-PROPOSAL`）
-- 特殊材質：無（`DESIGN-PROPOSAL`）
-- 膚色／髮色／瞳色（hex）：膚 **#E8C9A8**（中性偏白健康調）／髮 **#1D1B1A**（暗炭黑近黑，蓬亂短髮）／瞳 **#A9AFB5**（冷銀灰）（`DESIGN-PROPOSAL` 鎖定）
-- **不具備之材質（生成時須排除）**：重甲板甲、金肩甲、寶石——托普的實際材質僅為貼身暗色彈性布料＋皮革行動緊身衣＋短披，無硬質甲殼。
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：無明確固定武器（`DESIGN-PROPOSAL`；其能力為場地操控而非兵器）。**01–02 與 07 一律不出現**
-- 飾品：可掛小型工具袋（`DESIGN-PROPOSAL`）。註：曾於屋頂戰奪走克里茲母親的項鍊，但那是克里茲的道具、非托普固定佩戴物，不列入其身份正本服裝
-- 隨身道具：無固定隨身道具（`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：無（人形能力者）
-- 配戴或連接方式：短披以左肩扣件連接；腰帶固定小袋（`DESIGN-PROPOSAL`）
+- CANON：Top is an elderly northern commander and one of the named Seven Heroes. His story costume is a plain standardized military uniform. The spelling "top" is provisional. The story does not lock his face, hair, eye color, exact age, body measurements, or personal weapon; all such existing details remain DESIGN-PROPOSAL.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 慵懶自信的預設神情，嘴角仍微揚
-2. 輕笑 Gentle smile — 戲謔的一絲淺笑
-3. 大笑、可見牙齒 Broad smile with visible teeth — 玩世不恭的招牌笑
-4. 開懷大笑 Joyful open laughter — 得意的大笑
-5. 驚訝 Surprise
-6. 憤怒 Anger
-7. 悲傷 Sadness
-8. 眨眼 Wink — 挑釁式的眨眼
+## Costume Lock
 
-> 表情表僅改變眉眼與嘴部；即使自然與悲傷格，嘴角仍隱含一絲招牌玩味，不可抹平為完全嚴肅的臉。
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、重型武器、機械義肢
-- 不可出現的顏色：高飽和螢光色、粉彩系、與全書金／銀藍／深色系衝突的鮮豔色
-- 不可改變的左右位置：短披主扣須固定於左肩，不得鏡像至右肩
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
+## 固定色票與材質
 
-## 鎖定錨定預設值（可覆蓋）
-> 以下辨識度關鍵項原為 `PENDING-USER-INPUT`，為生成 01 錨定圖已鎖成具體預設值。使用者可事後一眼覆蓋。
-- 髮色：暗炭黑、近黑（tousled boyish 短髮）
-- 瞳色：冷銀灰（狹長靈動、帶戲謔笑意的眼）
-- 武器：無固定武器（能力為場地操控，非兵器）
-- 主要材質：貼身暗色彈性布料＋皮革行動緊身衣＋短披；無硬質甲殼
-- 左右不對稱：短披主扣＝左肩
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#2A2E36、#6E747C、#3A322C、#E8C9A8、#1D1B1A、#A9AFB5
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝採斯托奇雅屋頂戰的輕便暗色行動裝（緊身衣＋短披＋少甲片）。
-  - 玩世不恭的笑為跨圖鎖定的招牌神情。
-  - 髮色／瞳色鎖定為暗炭黑／冷銀灰（原 `PENDING-USER-INPUT`，本次正式定案）。
-  - 短披主扣側鎖定於左肩。
-- **`PENDING-USER-INPUT`**（僅存不影響辨識度之項）：
-  - 是否要為托普加入固定武器或特定能力視覺特效（目前設定為無固定武器）。
-  - 短披與甲片的具體形制與金屬點綴量。
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-top-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

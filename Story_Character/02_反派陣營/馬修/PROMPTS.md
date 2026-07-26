@@ -1,385 +1,237 @@
-# 馬修 Matthew — Image Generation Prompts（新版七張制 01–07）
+# 馬修 — Image Generation Prompts
 
-> **用途聲明（必讀）**
-> 這套圖片是 **3D 建模參考包（modeling reference pack）**，不是完成的 3D 模型。
-> 純 AI img2vid 無法保證跨鏡頭的角色完全一致；正式影片必須先以本參考包建立同一個經核准的 **Blender／VRM 角色模型**，並以該模型作為**唯一角色正本**驅動所有鏡頭。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: matthew-F1B720F99C76
+>
+> Matthew is a bishop and monastery teacher with a stern, distant expression; his habitual folded-hands posture is an acting cue, not a replacement for the mandatory neutral A-pose on modeling sheets. Hair and eye color are not stated. The church gold pendant is a removable prop and appears only on sheet 06. His later light-leather-armor appearance is a separate costume variant and must not be mixed into a locked bishop-robes version.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-> **角色版本 ID：`MATTHEW-V1-CLERIC-ROBE`**（白金高階神職法袍版；本包唯一版本，不混入其他服裝版本）
+## Codex 生成清單
 
-> ## ⚠️ 服裝版本聲明（必讀）
-> **本包只鎖定 `MATTHEW-V1-CLERIC-ROBE`；01–07 全部只呈現白金法袍版本。** `MATTHEW-V2-BATTLE-LEATHER` 尚未建置；若日後需要，須另開完整 01–07 套件。
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：matthew-F1B720F99C76
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 一致性：本檔與 CHARACTER_SPEC.md 使用完全相同的 Canonical Fact Map。
+- Input images：先讀 ../../STYLE_ANCHOR.md。01 依畫風錨狀態決定畫風輸入；02 之後以核准的本角色 01 作身份參考，非首角色另加專案畫風錨。
+- 單次生成：使用者每次要求最多呼叫一次圖片生成工具，只產出一張；生成後立即呈現並停止。技術檢查只回報，不自動重生。
 
-> **兩階段規則（強制）**：第一階段只生成 `01-matthew-front-fullbody.png`（正面全身單視圖，臉部須清晰可辨），生成後停止等待使用者核准。核准後 01 成為 02–07 的 Image 1 身份／服裝唯一正本。畫風輸入一律依 `../../STYLE_ANCHOR.md` 決定。
-> **檔案安全**：不得刪除或覆蓋現有 PNG；重生成先以新檔名或 `rejects/` 存放，核准後才取代正本。
-> **既有 PNG 狀態**：本角色 01–07（非人形 01–06）全部為 `PENDING-GENERATION`。
-> **簽名式標誌（跨圖不變）**：胸前金墜「月天使」神權象徵居中貼身佩戴，任何一張圖都不可省略。
+| 編號 | 確切檔名 |
+| --- | --- |
+| 01 | 01-matthew-front-fullbody.png |
+| 02 | 02-matthew-four-view-master.png |
+| 03 | 03-matthew-expression-sheet.png |
+| 04 | 04-matthew-costume-detail-sheet.png |
+| 05 | 05-matthew-color-material-sheet.png |
+| 06 | 06-matthew-prop-construction-sheet.png |
+| 07 | 07-matthew-body-reference-sheet.png |
 
-畫風參考唯一正本：
-- `../../STYLE_ANCHOR.md`
-- 若本角色是 `PENDING-FIRST-REQUEST` 登記的首角色，01 才使用 STYLE_ANCHOR 的三張 bootstrap 圖。
-- 若畫風錨已為 `ACTIVE` 且本角色不是首角色，01 只引用已核准的首角色 01 作為畫風參考。
-- 02–07（非人形至 06）使用自己的 01 作為身份參考；非首角色另加首角色 01 作為畫風參考。
-
-生成順序與檔名（新版七張制 01–07）：
-
-| 編號 | 檔案 | 內容 |
-| --- | --- | --- |
-| 01 | `01-matthew-front-fullbody.png` | 身份錨點：正面全身，A-pose，零道具（**STAGE 1，先生成並等核准**） |
-| 02 | `02-matthew-four-view-master.png` | 四視圖總表（正面→左→右→背），零道具 |
-| 03 | `03-matthew-expression-sheet.png` | 表情表 |
-| 04 | `04-matthew-costume-detail-sheet.png` | 服裝細節 |
-| 05 | `05-matthew-color-material-sheet.png` | 色彩與材質 |
-| 06 | `06-matthew-prop-construction-sheet.png` | 道具結構 |
-| 07 | `07-matthew-body-reference-sheet.png` | 身體參考（SMPL-X） |
+第一階段只生成 01-matthew-front-fullbody.png，生成後停止等待使用者核准。核准後才逐次生成下一張；每次仍只生成一張。
 
 ---
 
-## 01 — `01-matthew-front-fullbody.png`（STAGE 1 — 只先生成這張，停止等核准）
+## 01 — **01-matthew-front-fullbody.png**
 
-
-```text
+~~~text
 Use case: stylized-concept
-Asset type: single front-view full-body identity anchor (STAGE 1, identity authority for all later sheets)
+Asset type: modeling reference sheet 01
 
-Input images:
-- Resolve all style inputs from `../../STYLE_ANCHOR.md`.
-- If this role is being registered as the first anchor while status is `PENDING-APPROVAL`, use the three bootstrap images listed there for this 01 only.
-- If status is `ACTIVE` and this role is not the anchor, use the approved anchor 01 as Image 2 for style only; do not copy its character identity.
-- Do not directly reuse bootstrap images after the anchor becomes `ACTIVE`.
-
-
-Character definition:
-Matthew, a tall, lean, elegant male theocratic mastermind (apparent age 35-45), height read ~180cm, slender 7.5-heads proportions. CANON facial identity: a pale, handsome face with faintly serpentine features; thin lips wearing a composed, calculating, faintly looking-down-from-above smile; narrow calculating eyes. LOCKED anchor defaults: neatly combed long hair in cool silver (#C9CDD1), swept back; pale cool-toned skin (#EDE0D0); cold pale-grey eyes (#B8BEC4). Costume version 1 (CANON direction, sole version in this package): a high-ranking white-and-gold (#F2EDE2 / #D4AF37) silk clergy robe of layered ecclesiastical vestments, with WIDE DRAPING SLEEVES reaching below the wrists; a high clergy collar and symmetric shoulder mantle with gold-thread trim; a gold embroidered religious insignia of the orthodox church on the chest (LOCKED default emblem: a circular crest of a crescent moon cradling a single radiant star, ringed with gold thread). CANON SIGNATURE, never omit: a single prominent GOLD pendant (#D4AF37) hangs at the CENTER of the chest, a "moon-angel" religious emblem (a stylized upright angelic figure fused with an upturned crescent moon), set with one small cold pale-blue gemstone (#A8C8E0), worn close against the chest - this is his repeated recognizable signature, always centered, never offset to one side. Long elegant fingers. Palette: white and gold dominant, cool silver hair, aligned with the whole story's converged gold / silver-blue / dark scheme. He is fully human: no wings, no horns, no tail, no crown, no halo - the "moon-angel" is only the image on the pendant. Character and costume only - no weapons, no handheld items, no standalone props.
+Canonical character facts (do not add or contradict): Matthew is a bishop and monastery teacher with a stern, distant expression; his habitual folded-hands posture is an acting cue, not a replacement for the mandatory neutral A-pose on modeling sheets. Hair and eye color are not stated. The church gold pendant is a removable prop and appears only on sheet 06. His later light-leather-armor appearance is a separate costume variant and must not be mixed into a locked bishop-robes version.
 
 Primary request:
-Render Matthew as ONE full-body front view (0 degrees) in true orthographic projection, in the standard neutral A-pose: standing upright, feet shoulder-width apart, toes forward, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, no contrapposto, no action pose, no T-pose.
+Render exactly one complete front full-body view in a standard neutral A-pose: feet shoulder-width apart, arms straight 30-45 degrees away from the torso, open hands, even weight, true orthographic projection. Character and locked costume only; no removable prop.
 
-Identity invariants:
-Per the Character definition above (no prior identity image exists; this sheet establishes it): same pale faintly serpentine handsome face, thin composed calculating smile, cold pale-grey eyes (#B8BEC4), silver combed-back long hair (#C9CDD1), pale cool skin (#EDE0D0).
-
-Kinship invariants:
-None. Matthew has no established blood relatives in the family registry; no kinship resemblance constraints apply.
-
-Body metrics:
-Height read ~180cm. Approximately 7.5 heads tall. Shoulder width approximately 2.0 head-widths.
-
-Costume invariants:
-Identical white-and-gold clergy robe (V1) per the Character definition above: wide draping sleeves below the wrists, high clergy collar and symmetric shoulder mantle with gold-thread trim (#D4AF37), gold embroidered chest insignia (crescent-moon-and-star), and the prominent gold "moon-angel" chest pendant with its pale-blue gem (#A8C8E0), hanging centered. NO weapon anywhere.
-
-Identity authority:
-The face must be rendered clearly, sharply and identifiably at full detail — this single front view is the sole identity/costume authority for sheets 02 onward.
-
-Composition:
-Single figure centered, entire body from hair to hem/feet inside frame, flat even ambient lighting with no cast shadows, warm light-gray low-contrast background, no props, no grid lines, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, precise embroidery, layered fabric, polished metal and gemstone material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, halo, missing chest pendant, pendant offset to one side, leather armor, battle leather, muscular hulking build, reference character face, copying any style-image character, weapon, sword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting, side view, profile, back view, three-quarter view
-
-Constraints:
-- Preserve the exact identity per the Character definition above; the input images are style only.
-- Character and costume only; zero props; flat lighting; true orthographic front view.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
----
-
-## 02 — `02-matthew-four-view-master.png`（STAGE 2 — 四視圖總表：正面→左→右→背）
-
-
-```text
-Use case: identity-preserve
-Asset type: four-view orthographic master turnaround sheet
-
-Input images:
-- Image 1: the approved 01-matthew-front-fullbody.png and sole identity/costume authority.
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
-
-Primary request:
-Render a single master turnaround sheet of Matthew containing four full-body orthographic views of the SAME character in one row on one shared ground line, in this exact left-to-right order: FRONT (0 degrees), LEFT profile (camera on the character's anatomical LEFT side, 90 degrees), RIGHT profile (camera on the character's anatomical RIGHT side, 90 degrees), BACK (180 degrees). All four views use the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, shoulders level, weight evenly distributed, identical height, identical head-to-body ratio, identical arm angles and foot spacing in every view, true orthographic projection, no contrapposto, no action pose, no T-pose.
-
-Identity invariants:
-All four figures are the identical character from Image 1: same face, pale faintly serpentine handsome features, thin composed calculating smile, narrow cold pale-grey eyes (#B8BEC4), silver combed-back long hair (#C9CDD1), pale cool skin (#EDE0D0), lean elegant 7.5-heads proportions. Head-top line and foot line perfectly horizontally aligned across all four views; silhouettes must be mutually alignable.
-
-Kinship invariants:
-None.
-
-Body metrics:
-Height read ~180cm. Approximately 7.5 heads tall, lean elegant build.
-
-Costume invariants:
-Every view wears the identical costume version 1 from Image 1: high-ranking white-and-gold clergy robe (#F2EDE2 / #D4AF37) with wide draping sleeves below the wrists, high clergy collar and symmetric shoulder mantle with gold-thread trim, gold embroidered chest insignia (crescent-moon-and-star), and the prominent gold "moon-angel" chest pendant with its pale-blue gem (#A8C8E0), hanging centered (back panel of the robe fully shown in the back view; the pendant hangs at the front and is not visible from behind). Same count, positions, colors and materials in all four views. Character and costume only - no weapons, no handheld items, no standalone props.
-
-Composition:
-A single ultra-wide horizontal banner, four full-body figures in ONE row at equal scale and equal size, evenly spaced, none cropped, no second row, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no grid lines, no labels.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, precise embroidery, layered fabric, polished metal and gemstone material separation, flat even ambient lighting, low-contrast warm light-gray background, clean orthographic presentation, consistent scale and anatomy, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, halo, missing chest pendant, pendant offset to one side, leather armor, battle leather, elderly wrinkled face, muscular hulking build, inconsistent scale between views, different height per view, mismatched costume between views, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, black pauldrons, heavy metal plate armor, weapon, sword, greatsword, scabbard, sheath, shield, staff, prop object, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, action pose, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs, hands on hips, crossed arms, dynamic pose, walking, running, cast shadows, strong highlights, rim light, dramatic lighting
-
-Constraints:
-- Preserve the exact approved character identity from Image 1 in all four views.
-- View order is fixed: front, left, right, back. Same height, same size, same body proportions, true orthographic projection in every view.
-- Character and costume only; zero props; flat lighting.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
----
-
-## 03 — `03-matthew-expression-sheet.png`（STAGE 2 — 01 核准後；八表情臉部表）
-
-
-```text
-Use case: identity-preserve
-Asset type: professional eight-expression anime character face sheet (also serves as expression keyframe reference for video generation)
-
-Input images:
-- Image 1: use only as the character identity, hairstyle, costume-collar and color reference (the approved 01-matthew-front-fullbody.png). Ignore its original pose, framing and composition.
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
-
-Primary request:
-Recompose Matthew into standardized head-and-shoulders studio portraits. Create exactly eight portraits arranged neatly in a 4-column by 2-row grid on a pure white seamless background. Every portrait must use a straight-on front view at 0 degrees. Crop from just below the collarbones to slightly above the top of the hair. The head must occupy approximately 70-75 percent of each panel.
-
-Identity invariants:
-Keep exactly the same character in all eight portraits. Preserve the identical facial identity and face proportions, pale faintly serpentine handsome features, thin lips, narrow cold pale-grey eyes (#B8BEC4), pale cool skin tone (#EDE0D0), silver combed-back long hair (#C9CDD1), hairline and hair length, neck proportions, the high clergy collar and shoulder mantle, and the top of the gold moon-angel pendant visible at the collar, centered. Use the same framing, camera distance, head size, lighting, color grading and front-facing angle in every panel. Only the facial expression may change.
-
-Kinship invariants:
-None.
-
-Expression order, left to right and top to bottom:
-1. neutral
-2. gentle smile
-3. broad smile with visible teeth
-4. joyful open laughter
-5. surprised
-6. angry
-7. sad
-8. wink
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
 
 Style:
-Refined Japanese anime fantasy character design, professional production expression sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, detailed eyes and hair strands, soft diffused studio lighting, consistent white balance, pure white seamless background, high-resolution polished concept art, 85mm portrait-lens framing equivalent.
-
-Hard constraints:
-Exactly eight portraits and a 4x2 grid. Straight-on 0-degree view only. Head-and-shoulders close-up only. No full body, half body, waist-up, upper-body, bust-length, half-bust or zoomed-out composition. No different person, altered face, changed hairstyle, profile, side view, three-quarter view, head rotation, inconsistent lighting, inconsistent crop, inconsistent scale, costume change or extra accessories.
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, full body, half body, waist-up, upper body, bust portrait, half-bust, zoomed out, long shot, medium shot, different composition, changed facial proportions, changed hairline, changed hair length, profile, side view, three-quarter view, head turned, tilted head, inconsistent lighting, inconsistent color grading, beauty filter, wings, horns, halo, crown, elderly wrinkled face, beard, leather armor, battle leather, extra portrait, missing portrait, more than eight portraits, fewer than eight portraits, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, black pauldrons, heavy metal plate armor, holding weapon, weapon in hand, hand on sword pommel, arms touching torso, arms pressed against body, contrapposto, heroic pose, battle stance, T-pose, bent elbows, uneven shoulders, crossed legs
-```
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
 
 ---
 
----
+## 02 — **02-matthew-four-view-master.png**
 
-## 04 — `04-matthew-costume-detail-sheet.png`（STAGE 2 — 01 核准後；服裝細節表，僅 V1，不含 V2 皮甲）
-
-
-```text
-Use case: identity-preserve
-Asset type: costume construction detail sheet with outer-layer separation (V1 clergy robe only)
-
-Input images:
-- Image 1: the approved 01-matthew-front-fullbody.png and sole identity/costume authority.
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
-
-Primary request:
-Render a costume construction detail sheet for Matthew's ONE canonical costume version (V1, white-and-gold clergy robe), presenting several clean close-up detail studies at a consistent scale.
-1. LAYER SEPARATION (required for 3D modeling): the white-and-gold clergy robe with its shoulder mantle drawn SEPARATELY as a flat garment piece, AND one torso view WITHOUT the outer robe/mantle so the body silhouette is fully visible (the gold moon-angel pendant still worn against the torso in this stripped view, since it is his canon accessory, not the outer robe).
-2. Robe detail: the high clergy collar and shoulder mantle with gold-thread trim, the wide draping sleeve construction and hem, the white-and-gold layered robe fabric weave, the gold embroidered chest insignia.
-3. The gold moon-angel chest pendant, shown large enough to read its crescent-moon-and-angel form clearly, centered on the chest.
-
-Identity invariants:
-This is a costume study; do not introduce a different character. Any partial figure fragment shown must match Image 1's colors, materials and construction exactly. No face-focused portrait is required.
-
-Kinship invariants:
-None.
-
-Costume invariants:
-All details must match Image 1 exactly in count, position, color and material: white-and-gold robe palette (#F2EDE2 / #D4AF37), gold-thread embroidery, layered ecclesiastical fabric, wide draping sleeves, and the gold moon-angel pendant form centered on the chest. Do not redesign, add or remove any element; do not introduce leather armor or any second costume version. The pendant is identical in the outer-robe view and the stripped torso view.
-
-Composition:
-Several neatly arranged close-up detail callouts on a warm light-gray low-contrast background, consistent scale, balanced negative space, no connecting lines, no grid, no labels or numbers.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production character sheet, clean delicate linework, controlled fine outlines, soft cel shading blended with subtle painterly rendering, highly detailed costume construction, precise embroidery, layered fabric, polished metal and gemstone material separation, flat even ambient lighting, low-contrast warm light-gray background, balanced negative space, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, super-deformed, thick outlines, harsh lineart, sketchy unfinished lines, flat unshaded colors, muddy colors, excessive bloom, dramatic cinematic background, scenery, action pose, extreme perspective, fisheye, cropped body, inconsistent anatomy, different face, different hairstyle, costume redesign, random accessories, duplicate character, extra limbs, extra fingers, text, labels, letters, numbers, logo, signature, watermark, jpeg artifacts, low resolution, blurry, wings, horns, tail, crown, halo, invented accessory, changed color scheme, different material, changed pendant, pendant offset to one side, missing pendant in stripped torso view, leather armor, battle leather, leather pauldrons, bracers, second costume version, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, black pauldrons, heavy metal plate armor
-
-Constraints:
-- Preserve the exact approved costume from Image 1; Images 2-4 are style only.
-- The robe/mantle separation panel and the outer-layer-less torso view (pendant still worn) are mandatory.
-- This sheet documents ONLY the V1 clergy robe. Do NOT include any leather armor, pauldrons, bracers or a version-2 swap panel - the battle-leather version is a separate, unbuilt package and must never appear here.
-- No text or watermark. Do not invent missing canonical details.
-```
-
----
-
----
-
-## 05 — `05-matthew-color-material-sheet.png`（STAGE 2 — 01 核准後；色票／材質表，已補固定 hex）
-
-
-```text
-Use case: identity-preserve
-Asset type: color palette and material reference sheet
-
-Input images:
-- Image 1: the approved 01-matthew-front-fullbody.png and sole identity/costume authority.
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
-
-Primary request:
-Render a color and material reference sheet derived from Matthew in Image 1: neatly arranged color swatches and material sample chips showing the white robe primary #F2EDE2, gold-thread embroidery and pendant metal #D4AF37, pale-blue pendant gemstone #A8C8E0, inner-layer silk vestment #F5F0E6, cool silver hair color #C9CDD1, pale skin tone #EDE0D0 and cold pale-grey eye color #B8BEC4. Beside the swatches show small material studies illustrating the fabric-weave, gold polished-metal and gemstone finishes as they appear on the character.
-
-Identity invariants:
-Colors and materials must be sampled exactly from Image 1. Do not shift hues, saturation or material appearance. Keep within the story's converged gold / silver-blue / dark scheme.
-
-Kinship invariants:
-None.
-
-Costume invariants:
-Every swatch and material study corresponds to an element actually present on Image 1 (the V1 clergy robe only); do not add colors or materials not on the character, and do not add any leather-armor material swatch (that belongs to a separate, unbuilt package).
-
-Composition:
-Clean rows of color swatches plus adjacent material sample studies on a warm light-gray low-contrast background, consistent chip size, balanced negative space, no hex codes, no labels, no numbers, no text.
-
-Positive style prompt:
-refined Japanese anime fantasy character design, professional production color script sheet, clean delicate linework, soft cel shading, precise material separation for silk, gold metal and gemstone, flat even ambient lighting, low-contrast warm light-gray background, high-resolution concept art
-
-Negative prompt:
-photorealistic, 3D render, western comic style, chibi, thick outlines, muddy colors, dramatic background, scenery, action pose, text, labels, letters, numbers, logo, signature, watermark, low resolution, blurry, hex codes, neon colors, pastel colors, saturated rainbow palette, changed hue, wrong material, leather swatch, battle leather, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, black pauldrons, heavy metal plate armor
-
-Constraints:
-- Sample colors and materials exactly from Image 1.
-- Character and costume only; zero props; flat lighting.
-- This sheet documents ONLY V1 materials; no leather-armor swatches.
-- No text or watermark.
-```
-
----
-
----
-
-## 06 — `06-matthew-prop-construction-sheet.png`（STAGE 2 — 01 核准後；道具表：金墜唯一出現位置，僅 V1，不含 V2 附件）
-
-
-```text
+~~~text
 Use case: stylized-concept
-Asset type: props and construction detail sheet (V1 clergy robe only)
+Asset type: modeling reference sheet 02
 
-Input images:
-- Image 1: the approved 01-matthew-front-fullbody.png and sole authority for the props' colors, materials and construction.
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
+Canonical character facts (do not add or contradict): Matthew is a bishop and monastery teacher with a stern, distant expression; his habitual folded-hands posture is an acting cue, not a replacement for the mandatory neutral A-pose on modeling sheets. Hair and eye color are not stated. The church gold pendant is a removable prop and appears only on sheet 06. His later light-leather-armor appearance is a separate costume variant and must not be mixed into a locked bishop-robes version.
 
 Primary request:
-Render a props and construction sheet for Matthew's signature items, drawn ONLY from his single canonical costume version (V1): the gold "moon-angel" pendant shown large in front view, side view and a close detail study of the crescent-moon-and-angel emblem, its pale-blue gemstone setting and its chain; the orthodox-church religious insignia / ecclesiastical emblem (crescent moon cradling a radiant star) as a standalone study; and the V1 robe's collar/mantle/wide-sleeve fastening construction as an attachment study.
+Create one four-view turnaround sheet in this exact order: front, anatomical-left profile, anatomical-right profile, back. Use the same neutral A-pose, identical scale and proportions, aligned head-top and ground lines, true orthographic views, zero removable props.
 
-Props only: no full-body character, miniature person, portrait, face or human silhouette anywhere. A blank headless tailor form is allowed only when required to explain a garment attachment. Do not include a character scale inset.
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
 
-Identity invariants:
-Not applicable - this sheet shows objects only. All props must match Image 1's colors, materials and construction exactly.
-
-Kinship invariants:
-None.
-
-Costume/props invariants:
-The gold moon-angel pendant is a single prominent piece (a stylized angelic figure combined with a crescent moon, pale-blue gem #A8C8E0) with gold finish (#D4AF37), identical to the pendant on Image 1; the religious insignia matches the chest embroidery on Image 1; the robe fastening construction matches Image 1's V1 attire only. Do not add, remove or redesign any prop. Do NOT include any leather-armor piece, pauldron, bracer or belt from a second costume version - that version is a separate, unbuilt package and must never appear on this sheet.
-
-Composition:
-Neatly arranged prop studies and exploded views on a warm light-gray low-contrast background, consistent scale, balanced negative space, optional blank headless tailor form only for the robe attachment study, no grid, no labels, no numbers, no text.
-
-Positive style prompt:
-refined Japanese anime fantasy prop design, professional production prop sheet, clean delicate linework, controlled fine outlines, soft cel shading with subtle painterly rendering, precise embroidery, polished gold metal and gemstone rendering, flat even ambient lighting, low-contrast warm light-gray background, high-resolution concept art
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, thick outlines, sketchy lines, muddy colors, dramatic background, scenery, text, labels, letters, numbers, logo, signature, watermark, low resolution, blurry, full-body character, miniature person, portrait, face, human silhouette, character scale inset, wings, horns, tail, crown, halo, invented prop, changed material, changed pendant, leather armor piece, leather pauldron, bracer, battle-leather belt, second costume version, reference character face, copying any style-image character, blending the three reference characters, Kritz black-and-gold pauldrons, shoulder chains, purple gemstones, Revanas ice-crystal horns, crystalline wings, black pauldrons, heavy metal plate armor
-
-Constraints:
-- Match the props' exact appearance to Image 1.
-- This sheet documents ONLY V1 props. Any leather-armor attachment study belongs to a separate, unbuilt `MATTHEW-V2-BATTLE-LEATHER` package and must never appear here.
-- Props only; no character body, face or silhouette anywhere except an optional blank headless tailor form for attachment studies.
-- No text or watermark. Do not invent missing canonical details.
-```
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
 
 ---
 
----
+## 03 — **03-matthew-expression-sheet.png**
 
-## 07 — `07-matthew-body-reference-sheet.png`（STAGE 2 — 01 核准後；素體參考圖，SMPL-X／人體擬合用）
+~~~text
+Use case: stylized-concept
+Asset type: modeling reference sheet 03
 
-
-```text
-Use case: identity-preserve
-Asset type: body reference sheet for parametric human-body fitting (SMPL-X)
-
-Input images:
-- Image 1: the approved 01-matthew-front-fullbody.png and sole identity authority (face, hair, skin tone, body proportions).
-- Image 2: if this role is not the active style anchor, use the approved anchor 01 resolved from `../../STYLE_ANCHOR.md` for style only; otherwise omit Image 2.
+Canonical character facts (do not add or contradict): Matthew is a bishop and monastery teacher with a stern, distant expression; his habitual folded-hands posture is an acting cue, not a replacement for the mandatory neutral A-pose on modeling sheets. Hair and eye color are not stated. The church gold pendant is a removable prop and appears only on sheet 06. His later light-leather-armor appearance is a separate costume variant and must not be mixed into a locked bishop-robes version.
 
 Primary request:
-Render Matthew WITHOUT the robe, mantle or any outer garment - wearing only a plain tight dark-gray bodysuit (form-fitting underlayer, no folds, no accessories) - as TWO full-body views on one sheet: straight-on FRONT view and LEFT profile view. Both views in the exact same standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread and clearly separated, shoulders level, weight evenly distributed, true orthographic projection, no contrapposto, no action pose, no T-pose. The body silhouette must be fully visible and unobstructed: no robe, no mantle, no loose clothing; the long hair must be gathered back so it does not cover the neck or shoulder outline.
+Create exactly eight head-and-shoulders portrait panels in a clean 4x2 grid: neutral, gentle/relaxed, broad positive, joyful, surprised, angry, sad, alert/wink-equivalent. Change expression only; preserve identity and anatomy.
 
-Identity invariants:
-Same character as Image 1: same face, silver combed-back long hair (gathered back for this sheet, #C9CDD1), pale cool skin (#EDE0D0), cold pale-grey eyes (#B8BEC4). The body underneath must be consistent with the robed figure of the approved sheets: tall, lean, elegant.
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
 
-Kinship invariants:
-None.
-
-Body metrics:
-Height read ~180cm. Approximately 7.5 heads tall, lean elegant build. Identical height and proportions in both views; head-top and foot lines horizontally aligned across the two views.
-
-Composition:
-Two figures side by side (front, then left profile), equal scale, shared ground line, flat even ambient lighting with no cast shadows, warm light-gray background, no props, no labels.
-
-Positive style prompt:
-refined Japanese anime character body reference, professional production model sheet, clean delicate linework, minimal soft cel shading, accurate consistent anatomy, flat even ambient lighting, low-contrast warm light-gray background, true orthographic presentation, high-resolution concept art
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
 
 Negative prompt:
-photorealistic, 3D render, western comic style, chibi, thick outlines, sketchy lines, muddy colors, dramatic background, scenery, text, labels, letters, numbers, logo, signature, watermark, low resolution, blurry, armor, cape, cloak, outer garment, loose clothing, weapon, props, accessories, jewelry, crown, halo, boots, gauntlets, folds, drapery, nudity, different face, different hairstyle, different proportions than approved sheets, muscular hulking build, action pose, contrapposto, T-pose, bent elbows, uneven shoulders, crossed legs, cast shadows, strong highlights, rim light, three-quarter view, back view, extra views, more than two figures
-
-Constraints:
-- Preserve the exact approved identity from Image 1; Images 2-4 are style only.
-- No pendant, no accessories on this sheet (this is a stripped body-fitting reference).
-- Body silhouette fully visible; tight plain bodysuit only; zero props; flat lighting; true orthographic.
-- No text or watermark.
-```
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
 
 ---
 
+## 04 — **04-matthew-costume-detail-sheet.png**
+
+~~~text
+Use case: stylized-concept
+Asset type: modeling reference sheet 04
+
+Canonical character facts (do not add or contradict): Matthew is a bishop and monastery teacher with a stern, distant expression; his habitual folded-hands posture is an acting cue, not a replacement for the mandatory neutral A-pose on modeling sheets. Hair and eye color are not stated. The church gold pendant is a removable prop and appears only on sheet 06. His later light-leather-armor appearance is a separate costume variant and must not be mixed into a locked bishop-robes version.
+
+Primary request:
+Create a costume construction detail sheet showing only Canon garment layers, front/back construction, collar, sleeves, waist, hem, footwear, fastenings, and material close-ups. No weapons or removable props.
+
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
+
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+
+Negative prompt:
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
+
 ---
 
-## 逐張驗收清單（強制 — 任一項漂移即 REJECT，不得繼續下一張）
+## 05 — **05-matthew-color-material-sheet.png**
 
-生成順序：01 →（使用者核准）→ 02 → 03 → 04 → 05 → 06 → 07。
-每張生成後逐項檢查；REJECT 的圖不覆蓋既有檔案，存入 `rejects/` 後重生成本張。
+~~~text
+Use case: stylized-concept
+Asset type: modeling reference sheet 05
 
-**每張圖共同檢查項：**
+Canonical character facts (do not add or contradict): Matthew is a bishop and monastery teacher with a stern, distant expression; his habitual folded-hands posture is an acting cue, not a replacement for the mandatory neutral A-pose on modeling sheets. Hair and eye color are not stated. The church gold pendant is a removable prop and appears only on sheet 06. His later light-leather-armor appearance is a separate costume variant and must not be mixed into a locked bishop-robes version.
 
-- [ ] 臉型與臉部身份與 01 號正本一致（03–05 的人像面板亦同）
-- [ ] 髮型、髮色（冷銀後梳長髮）一致；從容俯視笑意一致
-- [ ] 身材比例：約 180cm／7.5 頭身／肩寬約 2.0 倍頭寬、頎長清瘦優雅體型
-- [ ] 服裝結構與 Costume Lock 一致（僅 V1 白金法袍層次，**不得出現 V2 皮甲任何元素**）
-- [ ] 左右位置正確：金墜居中垂於胸口，未偏移至單側；肩帔雙肩對稱
-- [ ] 色票未漂移：#F2EDE2／#D4AF37／#C9CDD1／#B8BEC4／#A8C8E0／#F5F0E6／#EDE0D0
-- [ ] 金墜「月天使」在每張圖皆貼身居中可見，未被省略
-- [ ] 無任何額外武器出現；無 V2 皮甲元素出現於 04／06（06 亦無武器僅道具構造）；平光無投影陰影（03 攝影棚柔光除外）
-- [ ] 血緣相似：不適用（本角色無血緣親屬，見 §13，跳過）
+Primary request:
+Create a color-and-material reference sheet using only Canon named colors plus explicitly marked SPEC design-proposal hex candidates. Include clean swatches/material patches and one neutral reference subject. Do not render visible text or hex labels.
 
-**單張額外檢查項：**
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
 
-| 張 | 額外驗收 |
-| --- | --- |
-| 01 | 正面、A-pose、正交；**臉部須清晰可辨——本張為身份／服裝唯一正本** |
-| 02 | 順序正面→左→右→背；四視圖同高度、同尺寸、同比例、頭頂線與腳底線水平對齊；相機位於解剖學左側、A-pose、正交（不得只寫「朝左」）；相機位於解剖學右側、A-pose、正交（不得只寫「朝右」）；背面、A-pose、正交 |
-| 03 | 恰好 8 格 4×2、順序正確、只有表情改變 |
-| 04 | 法袍拆解面板＋無外袍軀幹視圖（金墜仍在）必須存在；**不得出現 V2 皮甲替換件** |
-| 05 | 色票方塊與鎖定色系（白金／冷銀／冷灰／淡藍寶石）完全一致；不含皮革色票 |
-| 06 | 金墜「月天使」唯一出現於此供近距離拆解；無角色全身、無臉、無人物剪影；**不得出現 V2 皮甲附件** |
-| 07 | 素體無任何法袍／外層；身體輪廓完全可見；正面＋左側兩視圖；不佩戴金墜（此表為純身體擬合用） |
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+
+Negative prompt:
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
+
+---
+
+## 06 — **06-matthew-prop-construction-sheet.png**
+
+~~~text
+Use case: stylized-concept
+Asset type: modeling reference sheet 06
+
+Canonical character facts (do not add or contradict): Matthew is a bishop and monastery teacher with a stern, distant expression; his habitual folded-hands posture is an acting cue, not a replacement for the mandatory neutral A-pose on modeling sheets. Hair and eye color are not stated. The church gold pendant is a removable prop and appears only on sheet 06. His later light-leather-armor appearance is a separate costume variant and must not be mixed into a locked bishop-robes version.
+
+Primary request:
+Create a props/special-construction sheet containing only removable weapons, pendants, tools, tack, or special structures explicitly permitted by the Canon summary. If none are Canon, show only non-invented construction/material studies. No full character, portrait, face, text, or labels.
+
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
+
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+
+Negative prompt:
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
+
+---
+
+## 07 — **07-matthew-body-reference-sheet.png**
+
+~~~text
+Use case: stylized-concept
+Asset type: modeling reference sheet 07
+
+Canonical character facts (do not add or contradict): Matthew is a bishop and monastery teacher with a stern, distant expression; his habitual folded-hands posture is an acting cue, not a replacement for the mandatory neutral A-pose on modeling sheets. Hair and eye color are not stated. The church gold pendant is a removable prop and appears only on sheet 06. His later light-leather-armor appearance is a separate costume variant and must not be mixed into a locked bishop-robes version.
+
+Primary request:
+Create a human body-reference sheet for modeling: front and anatomical-left profile at identical scale, neutral A-pose, plain tight dark-gray bodysuit, hair secured away from the silhouette, no costume outer layers, accessories, jewelry, weapons, props, text, or labels.
+
+Source invariants:
+- Use only the Canon facts above.
+- Read CHARACTER_SPEC.md for the same Pair sync ID.
+- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
+- All removable props are forbidden outside sheet 06.
+- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
+
+Style:
+refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+
+Negative prompt:
+photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
+~~~
+
+---
+
+## 逐張驗收清單
+
+- [ ] Canon 身份、外貌、體型、服裝、道具、關係與時期未被推測內容覆蓋。
+- [ ] SPEC 與 PROMPTS 的 Pair sync ID 完全相同。
+- [ ] 01 為單一正面身份錨；02 為四視圖；03 恰好八格；其餘構圖符合各節。
+- [ ] 所有可拆卸武器、墜飾、工具與道具只出現在 06。
+- [ ] 圖片只用 Canon 命名色；候選 hex 不得覆蓋 Canon。
+- [ ] 無文字、標籤、logo、簽名或浮水印。
+- [ ] 有 PNG 的角色已完成 IMAGE-DRIFT-REVIEW-REQUIRED 複核。
+
+驗收只回報偏差並等待使用者，不得自行移檔或重生成。只有使用者明確要求修改時，才歸檔上一張未核准候選並只生成一張新圖。

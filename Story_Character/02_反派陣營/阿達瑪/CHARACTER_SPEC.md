@@ -1,129 +1,76 @@
-# 阿達瑪 Adama
+# 阿達瑪 — CHARACTER_SPEC
 
-> Tier - 反派陣營／再生型敵人。本檔為文字版身份規格（新版七張制 01–07），供 `01-adama-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**斯托奇雅戰場版** — 銀灰／暗紅殘破身軀、頸掛控龍銀色墜飾。此為與角色文檔「站上龍頭俯瞰戰場」場次唯一一致的時期，本包不混入其他服裝版本。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
 >
-> ## 身份辨識關鍵已定案（2026-07-23）
-> **兩項曾直接改變辨識度的重大分歧已於 2026-07-23 由使用者核准定案：髮型＝短銀灰髮（A 案）；固定武器＝無固定武器（A 案）。** 詳見下方「外貌鎖定」「道具與特殊構造」及「正典衝突與待確認事項」對應段落的 `CANON`（已核准鎖定）標記。
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: adama-F1B720F99C76
+>
+> Adama is a man in his twenties, approximately 175 cm tall, one of the named Seven Heroes and an eastern commander. His locked story costume is an extremely lavish deep-crimson silk robe with a gold phoenix motif. The jeweled dagger is a removable prop and appears only on sheet 06. He controls the chaos dragon in battle; dragon traits must never be blended into his body.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：阿達瑪
-- 英文名：Adama
-- 角色版本 ID：**`ADAMA-V1-STOCHIA-BATTLEFIELD`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用；髮型與武器兩項已於 2026-07-23 核准定案，見上方）
-- 性別：外形近男性人形（`DESIGN-PROPOSAL`；異形非人）
-- 年齡／外觀年齡：不適用（異形再生型敵人，無固定年齡）
-- 身高：基準約 188cm（`CANON` 基準值；體格會隨再生而變化）
-- 體型：精壯、精瘦而結實的異形人形；體格會隨再生變化（`CANON`）
-- 故事時期：斯托奇雅戰場，站上龍頭俯瞰戰場（`CANON` 場景）
-- 服裝版本：斯托奇雅戰場版——銀灰／暗紅殘破身軀、頸掛控龍銀色墜飾（`CANON` 大方向；細節 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**188**（`CANON`）
-- 頭身比：**7.0**（精瘦結實的異形人形比例；`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.3 倍頭寬**（精壯結實體格；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**半透明結晶與裸露再生血肉分布正式鎖定於：右前臂與手、左肩與鎖骨、右側肋腹**（`DESIGN-PROPOSAL` 鎖定值，供跨圖一致性使用；此為核心辨識特徵，不可抹平為完整人皮，見 Identity Lock）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：無
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：adama-F1B720F99C76
+- 角色版本 ID：ADAMA-V1-STOCHIA-BATTLEFIELD
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-adama-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-adama-front-fullbody.png`（`PENDING-GENERATION`；髮型與武器已定案，可依定案值生成）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：精瘦銳利的異形人形臉，掛著壓迫感的**冷笑**（`CANON` 冷笑；臉型 `DESIGN-PROPOSAL`）
-- 膚色：整體銀灰為主 **#B9BEC2**，受創／癒合處露出裸露血肉肌理 **#7A2020** 與半透明結晶 **#CFE3EA**（`CANON`）
-- 眼型與眼睛顏色：冷冽狹長眼，眼神俯瞰壓迫（`DESIGN-PROPOSAL`）；瞳色鎖定為**暗紅 #6B2020**（`DESIGN-PROPOSAL` 鎖定值，原 `PENDING-USER-INPUT`，暗紅或冷灰二選一，本次鎖定暗紅以呼應裸露血肉色調）
-- 髮型、髮色與固定髮束：**短銀灰髮 short silver-gray hair（#C7CBCE）**（`CANON` — 已核准鎖定，2026-07-23；見下方專節）
-- 身材比例：約七頭身、修長結實的日系奇幻設定稿比例；見 Body Metrics Lock（188cm／7.0 頭身／肩寬約 2.3 倍頭寬）
-- 標誌性輪廓：**受創處以晶體與血肉外顯的方式快速癒合，肢體常見半透明結晶與裸露肌理**——視覺上「壞掉又長回來」（`CANON`）
-- 不可改變特徵：**半透明結晶與裸露再生血肉的受創／癒合部位**（`CANON` — 絕不可否定或抹平為完整正常人皮）、頸間控龍用銀色墜飾、銀灰／暗紅主色、冷笑
-- **anatomical left／right 不對稱鎖定**：結晶與裸露肌理分布＝角色解剖學**右前臂與手**、**左肩與鎖骨**、**右側肋腹**（見 Body Metrics Lock）。02 號視圖＝相機位於角色解剖學左側，呈現左肩／鎖骨結晶；03 號視圖＝相機位於角色解剖學右側，呈現右前臂／右肋腹結晶；跨圖不得鏡像翻轉。
+## Body Metrics Lock
 
-### 髮型（`CANON` — 已核准鎖定，2026-07-23）
-**鎖定為短銀灰髮 short silver-gray hair（#C7CBCE）**（原提案 A，Claude 推薦，使用者已核准）。呼應 CANON 銀灰身軀主色；保留可辨識的「頭髮輪廓」錨點，利於 01–07 identity-preserve 提示詞跨圖鎖定髮型；03 表情表需要穩定的髮際線／髮長參照，短髮風險最低。
+- 身高（cm）：**188**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.0**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.3 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
+## Identity Lock
 
-### 固定武器（`CANON` — 已核准鎖定，2026-07-23）
-**鎖定為無固定武器**（原提案 A，Claude 推薦，使用者已核准）——近戰倚賴自身再生的利爪／結晶化指節，遠程威脅來自其控制的巨龍。與既有敘事定位一致（「威脅來自控龍與再生」）；不需額外新增一件武器道具的完整構造設定，06 道具結構表專注於墜飾拆解與結晶／肌理構造研究。
+- CANON：Adama is a man in his twenties, approximately 175 cm tall, one of the named Seven Heroes and an eastern commander. His locked story costume is an extremely lavish deep-crimson silk robe with a gold phoenix motif. The jeweled dagger is a removable prop and appears only on sheet 06. He controls the chaos dragon in battle; dragon traits must never be blended into his body.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
+## Costume Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：殘破半裸的異形身軀，僅覆有限的破損衣物或戰甲殘片，讓再生結晶與裸露肌理外顯（`DESIGN-PROPOSAL`；「殘破身軀」源自文檔）
-- 領口：低領或裸露頸胸，以露出頸間銀色墜飾（`DESIGN-PROPOSAL`）
-- 肩部：左肩露出結晶化肌理，右肩可有破損護肩殘片（`DESIGN-PROPOSAL`）
-- 胸前：**頸間掛控龍用的銀色墜飾**（`CANON`），貼近裸露／結晶化的胸膛
-- 袖口／手部：右前臂與手可見半透明結晶與裸露肌理，衣物殘破（`CANON` 肌理；殘破 `DESIGN-PROPOSAL`）
-- 腰部：破損腰帶或殘布纏繞（`DESIGN-PROPOSAL`）
-- 下襬／披風：殘破下襬或纏繞布條，不完整（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：腿部同樣可見些許再生結晶與裸露肌理，殘破護具（`DESIGN-PROPOSAL`）
-- 背面結構：背部亦散布些許半透明結晶與癒合中傷口，衣物殘破（`DESIGN-PROPOSAL`）
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：**銀灰 #B9BEC2**（`CANON`）——身軀基底
-- 輔色：**暗紅 #7A2020**（`CANON`）——裸露血肉、癒合傷口
-- 金屬：頸間銀色墜飾 **#C7CBCE**（`CANON`）；破損戰甲殘片冷灰金屬 **#6E747C**（`DESIGN-PROPOSAL`）
-- 寶石：控龍銀色墜飾核心，暫定冷白微光 **#DCE7EC**（`DESIGN-PROPOSAL`；顏色可覆蓋）
-- 布料：破損纏布、殘破衣物 **#4A3527**（`DESIGN-PROPOSAL`）
-- 皮革：破損護具殘片 **#3C2E24**（`DESIGN-PROPOSAL`）
-- 特殊材質：**半透明結晶（crystal）#CFE3EA ＋裸露再生肌理（exposed regenerating flesh）#7A2020**——受創／癒合處外顯，是核心辨識特徵（`CANON`）
-- 膚色／髮色／瞳色（hex）：膚（銀灰基底）**#B9BEC2**／髮 **短銀灰髮 #C7CBCE**（`CANON` — 已核准鎖定，2026-07-23）／瞳 **#6B2020**（暗紅）（`DESIGN-PROPOSAL` 鎖定）
-- **不具備之材質（生成時須排除）**：完整無瑕的一般人類皮膚（抹去結晶與再生肌理）——阿達瑪的核心辨識特徵即為結晶與裸露肌理，不得整平。
+## 固定色票與材質
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：**無固定武器**（`CANON` — 已核准鎖定，2026-07-23；見上方武器專節）
-- 飾品：**頸間控龍用銀色墜飾**（`CANON`）——操控巨龍的關鍵道具
-- 隨身道具：無其他固定道具（`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：**半透明結晶生長＋裸露再生血肉的癒合傷口**（`CANON`）；無翅膀、無尾巴
-- 配戴或連接方式：銀色墜飾以鏈掛於頸間（`DESIGN-PROPOSAL`）
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 命名色之候選 hex（DESIGN-PROPOSAL）：deep crimson #861F2E、gold #C8A24A
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-## 八種固定表情
-1. 自然 Neutral — 冷冽壓迫的預設神情
-2. 輕笑 Gentle smile
-3. 大笑、可見牙齒 Broad smile with visible teeth — 殘暴的冷笑
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## 道具與特殊構造
 
-> 註：八格表情皆須保留臉部／頸部可見的半透明結晶與裸露再生肌理，不可抹平為完整正常人皮。
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-adama-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、尾巴、王冠
-- 不可出現的特徵：**完整無瑕的一般人類皮膚（抹去結晶與再生肌理）**、可愛化（cute/chibi）
-- 不可出現的顏色：高飽和螢光色、粉彩系、與銀灰／暗紅主色衝突的鮮豔色
-- 不可改變的左右位置：右前臂／右肋腹與左肩／鎖骨的結晶分布不得鏡像互換；頸間銀色墜飾須跨圖一致
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi、可愛化
+## Kinship Lock
 
-## 鎖定錨定預設值（可覆蓋）
-> 以下為核心辨識特徵中已可鎖定的項目；髮型與武器已於 2026-07-23 核准定案，一併列入。
-- 瞳色：暗紅 #6B2020。
-- 髮型／髮色：短銀灰髮 #C7CBCE（`CANON` 已核准鎖定）。
-- 固定武器：無固定武器（`CANON` 已核准鎖定）。
-- 結晶分布（正式鎖定）：右前臂與手、左肩與鎖骨、右側肋腹；同處露出暗紅再生血肉。
-- 主要材質：半透明結晶身軀＋裸露再生血肉＋銀色頸墜（暗紅／銀灰調）；非完整人皮、非神職袍、非金肩甲。
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 半透明結晶與裸露再生肌理為核心辨識特徵，所有圖（含 03 表情表、07 素體圖）皆須保留。
-  - 頸間銀色控龍墜飾為固定道具（**不包括 07 號身體參考圖**——見下方 07 號重寫說明，該圖依 §5.5 規則禁止一切 accessories/jewelry）。
-  - 主色銀灰＋暗紅；瞳色鎖定暗紅。
-  - 結晶分布正式鎖定：右前臂與手、左肩與鎖骨、右側肋腹。
-  - **髮型／髮色（2026-07-23 核准定案）**：短銀灰髮 short silver-gray hair（#C7CBCE，原提案 A）；原 B 案（無髮結晶化頭部）未採用。
-  - **固定武器（2026-07-23 核准定案）**：無固定武器，倚賴再生利爪與控龍（原提案 A）；原 B 案（前臂結晶自體延伸的「結晶刃」）未採用。
-  - **07 號身體參考圖規格（2026-07-23 修正）**：改為貼身素體衣（tight plain bodysuit），移除銀色墜飾與一切 accessories/jewelry；體表結晶與裸露再生血肉（右前臂與手、左肩與鎖骨、右側肋腹）視為身體解剖構造，保留可見。此修正為符合總規格 §5.5 對第十張素體圖「無鎧甲、無外層服裝、僅著貼身素體衣」及負面提示詞須含 `accessories, jewelry` 的強制規則。
-- **`PENDING-USER-INPUT`（不影響辨識度的瑣碎項）**：
-  - 墜飾核心是否含發光效果、確切光色（僅影響 01–06；07 號已不含墜飾）。
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

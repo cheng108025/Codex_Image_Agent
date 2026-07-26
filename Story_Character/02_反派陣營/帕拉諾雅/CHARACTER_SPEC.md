@@ -1,121 +1,76 @@
-# 帕拉諾雅 Paranoia
+# 帕拉諾雅 — CHARACTER_SPEC
 
-> Tier S — 《赫克托》主要反派。本檔為文字版身份規格（新版七張制 01–07），供 `01-paranoia-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**篡位僭主戰裝版** — 破爛卻僭越華麗的僭主甲冑（像搶來拼湊的王者裝束），配沾血巨劍，指節與頸部爬行電弧。此為與 06 道具結構表所列 props（沾血巨劍、僭主王冠／甲冑構件、電弧特效研究）最一致的時期，本包不混入其他服裝版本。
-> **重要**：其操控的巨龍為**獨立設定表**，本角色任何一張圖都不得畫出巨龍。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: paranoia-F1B720F99C76
+>
+> Paranoia has messy long gray-silver hair, vivid cold red eyes, and blood-red lips. The locked story costume direction is an extravagant long robe combining black dragon scales with dark-red leather, decorated with pearls and totemic elements. Benedict's purple-glowing holy sword is in Paranoia's possession but must appear only on sheet 06. Preserve a cold, arrogant, cruel, mocking presence.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：帕拉諾雅
-- 英文名：Paranoia
-- 角色版本 ID：**`PARANOIA-V1-USURPER-BATTLE`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男
-- 年齡／外觀年齡：粗獷暴烈的成年梟雄，外觀年齡約 35–45 歲（`DESIGN-PROPOSAL`）
-- 身高：約 195cm（`CANON`）
-- 體型：高大暴烈、肌肉虬結、氣場壓迫的壯碩體格（`CANON`）
-- 故事時期：篡位僭主時期（`CANON`）
-- 服裝版本：篡位僭主戰裝版——破爛卻僭越華麗的僭主甲冑加沾血巨劍（`CANON` 服裝大方向；細節為 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**195**（`CANON`）
-- 頭身比：**7.2**（高大壯碩重量級體格；`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.8 倍頭寬**（肌肉虬結、寬肩厚背；`DESIGN-PROPOSAL`，可覆蓋，絕不可削瘦化）
-- 左右不對稱特徵：**搶來的華麗鍍金肩甲＝角色解剖學左肩；粗糙實戰甲片＝角色解剖學右肩**（`DESIGN-PROPOSAL`，使用者可覆蓋；覆蓋後需同步更新 01–07）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：無
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：paranoia-F1B720F99C76
+- 角色版本 ID：PARANOIA-V1-USURPER-BATTLE
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-paranoia-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-paranoia-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：粗獷方硬、帶惡意與瘋癲感的成年男性臉型；顴骨與下頜厚重，神情不可預測（`CANON` 瘋癲惡意；骨相為 `DESIGN-PROPOSAL`）
-- 膚色：偏黝黑、風霜粗糙的暖調膚色（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：**瘋癲帶血絲的眼神**（`CANON`）；虹膜鎖定為**冷調銀灰藍**、眼白布滿血絲、眼神暴戾不定（`DESIGN-PROPOSAL` 鎖定值，原 `PENDING-USER-INPUT`）
-- 髮型、髮色與固定髮束：**狂亂的長髮**（`CANON`）；粗硬、蓬亂、未經整理的**近黑暗色長髮，帶粗硬灰白挑染**（`DESIGN-PROPOSAL` 鎖定值）。搭配短硬的鬍鬚（`DESIGN-PROPOSAL`）
-- 身材比例：約 7.2 頭身、壯碩魁梧的重量級體格，寬肩厚背粗臂；見 Body Metrics Lock（195cm／肩寬約 2.8 倍頭寬）
-- 標誌性輪廓：高大壯碩剪影＋沾血巨劍＋沿指節與頸部爬行的電弧光（`CANON` 巨劍與電弧；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：高大肌肉壯碩體格（約 195cm）、狂亂長髮、瘋癲血絲眼、指節與頸部電弧、破爛華麗僭主甲冑、沾血巨劍、左肩鍍金肩甲／右肩粗糙甲片的不對稱配置
-- **anatomical left／right 不對稱鎖定**：搶來的華麗鍍金肩甲＝角色解剖學**左肩**；粗糙實戰甲片＝角色解剖學**右肩**（見 Body Metrics Lock）。02 號視圖＝相機位於角色解剖學左側，呈現鍍金肩甲；03 號視圖＝相機位於角色解剖學右側，呈現粗糙甲片；跨圖不得鏡像翻轉。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：破爛卻僭越華麗的僭主甲冑——像搶來拼湊的王者裝束，重甲外掛不成套的華貴構件（`CANON` 大方向；分層為 `DESIGN-PROPOSAL`）
-- 領口：厚重護頸與破損披肩，露出滿是電弧與傷痕的粗頸（`DESIGN-PROPOSAL`）
-- 肩部：**左肩**為搶來的華麗鍍金肩甲、**右肩**為粗糙實戰甲片（`DESIGN-PROPOSAL`，「拼湊」為 `CANON` 精神，左右側別本次正式鎖定）
-- 胸前：破損重甲胸片，勉強嵌上僭越的王室紋飾與寶石，象徵非法竊據的王權（`CANON` 僭越華麗；樣式為 `DESIGN-PROPOSAL`）
-- 袖口／手部：厚重護臂與皮革手套，指節上爬行電弧（`CANON` 電弧；護臂為 `DESIGN-PROPOSAL`）
-- 腰部：寬重腰帶／掛鉤，可懸掛或倚放沾血巨劍（`DESIGN-PROPOSAL`）
-- 下襬／披風：破爛的華麗披風或斗篷，及踝、下襬撕裂磨損，殘留金線刺繡（`DESIGN-PROPOSAL`，「破爛卻華麗」為 `CANON`）
-- 腿部／鞋靴：厚重戰靴與腿甲，磨損沾泥（`DESIGN-PROPOSAL`）
-- 背面結構：破爛披風覆背、下襬撕裂；巨劍掛鉤與拼湊甲片的背扣可見（`DESIGN-PROPOSAL`）
+- 身高（cm）：**195**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.2**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 2.8 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：發黑鏽蝕的重甲鐵灰 **#3A3A3D**＋僭越的鍍金／暗金裝飾 **#A88C4A**（`CANON` 僭主甲冑破爛卻華麗；hex `DESIGN-PROPOSAL`）
-- 輔色：血紅（巨劍與甲冑上的血污）**#6B1B1B**、暗色破損披風 **#2E2A28**（`CANON` 沾血；hex `DESIGN-PROPOSAL`）
-- 金屬：鏽蝕發黑的鋼鐵重甲 **#3A3A3D**＋搶來的鍍金／暗金華貴構件 **#A88C4A**，質感對比強烈（`DESIGN-PROPOSAL`）
-- 寶石：僭越粗暴嵌上的王室寶石，鎖定**深血紅 #7A1620**、粗糙鑲嵌（非精緻珠寶工藝）（`DESIGN-PROPOSAL`）
-- 布料：破爛厚織披風 **#2E2A28**、殘留金線刺繡 **#A88C4A**（`DESIGN-PROPOSAL`）
-- 皮革：護臂、腰帶、戰靴 **#3C2E24**（`DESIGN-PROPOSAL`）
-- 特殊材質：**電弧特效**——電流沿指節與頸部爬行，冷色電光（藍白）弧光 **#BFE3FF**，是其標誌性能力（`CANON`）；巨劍上的乾涸與新鮮血污為表面質感（`CANON`）
-- 膚色／髮色／瞳色（hex）：膚 **#B98F66**（偏黝黑風霜暖調）／髮 **#1C1C1E**（近黑）搭配灰白挑染 **#8C8C90**／瞳 **#8FA3B3**（冷調銀灰藍，眼白布滿血絲）（`DESIGN-PROPOSAL` 鎖定）
-- **材質對齊（不可誤刪）**：本角色主材質＝破爛搶來的金屬重甲（僭主甲冑）＋電弧能量特效＋沾血鋼鐵巨劍。負向須排除：華麗珠寶工藝、神職絲綢、晶體翅膀、工整黑金肩甲樣式。但**保留其粗暴鑲嵌的深血紅寶石與搶來的鍍金構件**，勿因材質負向誤刪。
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：**沾血巨劍 bloody greatsword**——大型雙手巨劍，劍身沾滿乾涸與新鮮血污（`CANON`）。**01–02 與 07 一律不出現**
-- 飾品：僭越竊據的王冠／王室甲冑構件（`CANON` 僭主裝束；確切樣式為 `DESIGN-PROPOSAL`）
-- 隨身道具：無額外道具（巨龍為獨立設定表，不在此角色任一圖出現）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）。電弧為體表能力特效，非實體構造
-- 配戴或連接方式：巨劍以腰帶掛鉤懸掛或手持；甲冑為拼湊搭配、扣件不成套；電弧為體表自然爬行（`DESIGN-PROPOSAL`）
+- CANON：Paranoia has messy long gray-silver hair, vivid cold red eyes, and blood-red lips. The locked story costume direction is an extravagant long robe combining black dragon scales with dark-red leather, decorated with pearls and totemic elements. Benedict's purple-glowing holy sword is in Paranoia's possession but must appear only on sheet 06. Preserve a cold, arrogant, cruel, mocking presence.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 暴戾不可預測的預設神情
-2. 輕笑 Gentle smile — 帶惡意的一絲玩味
-3. 大笑、可見牙齒 Broad smile with visible teeth — 放肆殘暴的笑
-4. 開懷大笑 Joyful open laughter — 近乎瘋癲的狂笑
-5. 驚訝 Surprise
-6. 憤怒 Anger — 對背叛者的暴烈狂怒
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-> 表情表僅改變眉眼與嘴部；臉部身份、狂亂長髮、瘋癲血絲眼與頸部電弧跨八格一致。
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、機械義肢、額外武器
-- 不可出現的內容：**巨龍**（獨立設定表，此角色任一圖都不得出現龍）、纖細美少年（bishonen）體型
-- 不可出現的顏色：高飽和螢光色、粉彩系、與全書深色梟雄基調衝突的鮮豔色（電弧的冷色藍白除外）
-- 不可改變的左右位置：**左肩鍍金肩甲／右肩粗糙甲片**不得鏡像互換
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
-- **注意**：肌肉虬結、高大壯碩體格為 `CANON`，**絕不可**將 muscular／hulking／壯碩列入負面排除
+## 固定色票與材質
 
-## 鎖定錨定預設值（可覆蓋）
-> 依規則：把辨識度關鍵的 `PENDING` 鎖成 01 錨定圖的具體值，避免模型隨機決定。使用者可事後一眼覆蓋。與故事配色（金／銀藍／深色）一致。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 命名色之候選 hex（DESIGN-PROPOSAL）：gray silver #A7AAB3、blood red #8C1D2C、dark red #5B1F28、cold red #A9152B、black #17181C、purple #5B3B78、silver #C3CAD4、gray #888B92、red #9E2F3B
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-| 項目 | 鎖定值 | 原狀態 |
-| :--- | :--- | :--- |
-| 虹膜顏色 | **冷調銀灰藍 #8FA3B3**（眼白布滿血絲） | 原 PENDING（灰藍 vs 琥珀 vs 血紅） |
-| 髮色 | **近黑 #1C1C1E＋粗硬灰白挑染 #8C8C90** | 原 DESIGN-PROPOSAL／PENDING（是否斑白） |
-| 甲冑基底色 | **發黑鏽蝕鐵灰 #3A3A3D**（配搶來的暗金／鍍金構件 #A88C4A） | 原已近確定，正式鎖定 |
-| 竊據寶石色 | **深血紅 #7A1620**（避免與範例克里茲的紫寶石撞色） | 原 PENDING（深紅 vs 暗紫） |
-| 不對稱肩甲側 | **左肩＝鍍金肩甲；右肩＝粗糙甲片** | 原未鎖定（PROMPTS 標「whichever side renders becomes locked」） |
+## 道具與特殊構造
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝版本採篡位僭主戰裝版（破爛華麗僭主甲冑＋沾血巨劍＋電弧），以與 06 道具結構表所列 props 對齊。
-  - 電弧以冷色藍白電光為基準，沿指節與頸部爬行，為其標誌性能力效果。
-  - 巨龍一律不在此角色任一圖出現，改由獨立巨龍設定表處理。
-- 虹膜、髮色、竊據寶石色、不對稱肩甲側全部正式鎖定（見上表），不保留影響辨識度的 `PENDING-USER-INPUT`。
-- **`PENDING-USER-INPUT`**（僅存不影響辨識度的瑣碎項）：
-  - 鬍鬚確切長度。
-  - 僭主王冠的確切圖形樣式（文檔僅載「僭越華麗、搶來拼湊的王者裝束」，未給圖形）。
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-paranoia-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

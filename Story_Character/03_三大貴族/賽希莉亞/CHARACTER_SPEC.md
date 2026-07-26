@@ -1,118 +1,76 @@
-# 賽希莉亞 Cecilia
+# 賽希莉亞 — CHARACTER_SPEC
 
-> Tier 配角 — 安德烈之女。本檔為文字版身份規格（新版七張制 01–07），供 `01-cecilia-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 角色文檔「外觀設定」段落為概念設計提案，故身高／體型／服裝細節除非另有明載，一律標記為提案。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: cecilia-F1B720F99C76
+>
+> Cecilia is Duke Andre's daughter and Philip's sibling. The story does not state her age, fixed face, hair, eye color, body metrics, or complete early interaction with Kriz. Existing visual choices remain DESIGN-PROPOSAL. Kinship resemblance to Andre and Philip must not be invented beyond user-approved shared traits.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：賽希莉亞
-- 英文名：Cecilia
-- 角色版本 ID：**`CECILIA-V1-STUDY-DOORWAY`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：女（`CANON`）
-- 年齡／外觀年齡：年輕貴族少女，外觀約 16–20 歲（`DESIGN-PROPOSAL`）
-- 身高：約 163cm（`DESIGN-PROPOSAL`；文檔外觀設定段落為概念提案）
-- 體型：纖細端莊的年輕貴族少女體格（`CANON` 纖細端莊）
-- 故事時期：安德烈書房秘密行動場景（`CANON`；本版本鎖定此時期外觀，其他時期需另立版本 ID）
-- 服裝版本：深色系貴族長裙，與菲利浦相稱（`CANON` 服裝大方向；細節為 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**163**（`DESIGN-PROPOSAL`，可覆蓋）
-- 頭身比：**7.0**（`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 1.75 倍頭寬**（纖細端莊的年輕貴族少女體格；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**無，全對稱**——胸飾位置置中／一致（`DESIGN-PROPOSAL`）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：安德烈 `ANDRE-V1-SCHOLAR-ROBE` — 父；菲利浦 `PHILIP-V1-STUDY-INFILTRATION` — 手足（非雙胞胎，長幼文檔未載）
-- 家族錨點：**安德烈**（家族 `ANDRE`）——安德烈的 01 先核准，本角色的 01 才進入生成
-- 承襲特徵：**`PENDING-USER-INPUT`**——文檔對她的親屬外貌承襲無明載（僅「與菲利浦相稱」的服裝呼應）。任何全身圖／表情圖之提示詞一律只填「inherited facial features PENDING-USER-INPUT, do not render unapproved family resemblance」，不得自行寫入具體承襲骨架描述
-- 刻意區分特徵：栗色長髮（非父之灰白、非菲利浦之深棕近墨黑）；秀氣端莊 vs 菲利浦英挺
-- 禁止混淆項：不得灰白髮與年長特徵（父）；不得英挺男相（手足）
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：cecilia-F1B720F99C76
+- 角色版本 ID：CECILIA-V1-STUDY-DOORWAY
+- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-cecilia-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-cecilia-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：端莊秀氣的少女臉型（`CANON` 端莊）
-- 膚色：偏白皙、柔和調 **#F3E0CC**（`DESIGN-PROPOSAL`）
-- 眼型與眼睛顏色：**神情始終帶著不安與遲疑**（`CANON`）；眉眼低垂、透出猶疑。瞳色鎖定為**深棕 dark brown #3B2A1E**（`LOCKED`，與栗色長髮相稱）
-- 髮型、髮色與固定髮束：**栗色長髮 #6B3A21**（`CANON`）；柔順垂落的貴族長髮（`DESIGN-PROPOSAL`）
-- 身材比例：約七頭身、纖細修長的日系奇幻設定稿比例；見 Body Metrics Lock（163cm／7.0 頭身／肩寬約 1.75 倍頭寬）
-- 標誌性輪廓：纖細身形＋長裙裙擺＋不安遲疑的神情（`CANON` 站在書房門口的不安；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：女性、栗色長髮、不安遲疑的神情、深色系貴族長裙
-- **anatomical left／right 不對稱鎖定**：全對稱設計（見 Body Metrics Lock），胸飾位置跨圖一致、不得鏡像翻轉。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側。
-- **重要姿態規則**：CHARACTER_SPEC.md 記載的「雙手於身前交握」姿態**不得出現於任何 A-pose 全身圖**（01、02、07）。所有全身圖一律使用標準 A-pose（雙臂自然垂放於身側、手掌張開），她的不安與遲疑**只能透過臉部神情**（眉眼低垂、眼神猶疑）傳達，絕不可用交握雙手取代 A-pose。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：與菲利浦相稱的深色系貴族長裙，端莊多層（`CANON` 深色貴族長裙；分層為 `DESIGN-PROPOSAL`）
-- 領口：端莊高領或收斂的方領，繡線細緻（`DESIGN-PROPOSAL`）
-- 肩部：合身肩線，或搭配薄披肩（`DESIGN-PROPOSAL`）
-- 胸前：梧桐家紋的收斂化刺繡或胸飾，置中（`DESIGN-PROPOSAL`；家紋存在呼應安德烈梧桐家）
-- 袖口／手部：長袖或及腕袖口；**A-pose 全身圖手部自然垂放，絕不交握**
-- 腰部：束腰或腰帶，收出纖細腰線（`DESIGN-PROPOSAL`）
-- 下襬／披風：深色長裙及地或及踝，端莊垂墜（`CANON` 長裙；長度為 `DESIGN-PROPOSAL`）
-- 腿部／鞋靴：長裙覆蓋，內著貴族軟鞋（`DESIGN-PROPOSAL`）
-- 背面結構：長裙背面順垂，或繫帶收腰（`DESIGN-PROPOSAL`）
+- 身高（cm）：**163**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**7.0**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 1.75 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：深色系貴族色 **#1E2A3F**（與安德烈梧桐家、與菲利浦同系，服裝版本鎖定與菲利浦相稱）（`CANON` 深色系、與菲利浦相稱；hex `DESIGN-PROPOSAL`）
-- 輔色：栗色髮 **#6B3A21**＋暗銀繡線 **#8C8C94**（`DESIGN-PROPOSAL`）
-- 金屬：胸飾、腰扣為暗銀 **#8C8C94**（`DESIGN-PROPOSAL`）
-- 寶石：可省略，或胸飾小顆點綴（`DESIGN-PROPOSAL`；顏色 `PENDING-USER-INPUT`）
-- 布料：貴族細織長裙布料、內襯深色布料（`DESIGN-PROPOSAL`）
-- 皮革：軟鞋或腰帶（`DESIGN-PROPOSAL`）
-- 特殊材質：無
-- 膚色／髮色／瞳色（hex）：膚 **#F3E0CC**／髮 **#6B3A21**（栗色）／瞳 **#3B2A1E**（深棕）（`LOCKED`）
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：無（`DESIGN-PROPOSAL`）
-- 飾品：貴族胸飾、可佩家紋小徽（`DESIGN-PROPOSAL`）。**01–02 與 07 一律不出現**
-- 隨身道具：無（`DESIGN-PROPOSAL`）
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）— **N/A**
-- 配戴或連接方式：胸飾別於領口或胸前（僅 06；04 服裝細節表可示意佩戴方式）（`DESIGN-PROPOSAL`）
+- CANON：Cecilia is Duke Andre's daughter and Philip's sibling. The story does not state her age, fixed face, hair, eye color, body metrics, or complete early interaction with Kriz. Existing visual choices remain DESIGN-PROPOSAL. Kinship resemblance to Andre and Philip must not be invented beyond user-approved shared traits.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 帶著不安遲疑的預設神情
-2. 輕笑 Gentle smile
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、重甲、武器、機械義肢
-- 不可出現的顏色：高飽和螢光色、粉彩系、與全書金／銀藍／深色系衝突的鮮豔色
-- 不可改變的左右位置：胸飾位置須跨圖一致
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi
-- 不可出現的性別：男性
-- **不可出現的姿態**：雙手於身前交握不得出現於任何 A-pose 全身圖（01、02、07）；不安遲疑僅由臉部神情傳達
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 鎖定錨定預設值（可覆蓋）
-- **已鎖為預設值（`LOCKED`，可覆蓋）**：
-  - 瞳色 → 深棕 #3B2A1E（栗色長髮 #6B3A21 已為 `CANON`）。
-  - 主要材質 → 貴族細織長裙布料＋分層布料＋束腰布/皮腰帶＋軟鞋＋暗銀細繡與小胸飾；**無寶石華飾、無甲冑、無武器**。
-- **`PENDING-USER-INPUT`（不影響 01 辨識度，可續留）**：
-  - 栗色髮的確切明暗。
-  - 梧桐家紋的確切紋樣（文檔未給圖形）。
-  - 長裙的具體時代形制（宮廷禮裙 vs 文士家常裙）。
-  - 與父親安德烈、手足菲利浦的臉部承襲特徵——文檔無明載，維持 `PENDING-USER-INPUT`，提示詞僅寫刻意區分項，不寫具體承襲骨架描述。
+## 固定色票與材質
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝採深色系貴族長裙，與菲利浦、安德烈同色系。
-  - 預設神情鎖定為不安遲疑，且一律由臉部傳達，A-pose 全身圖不得交握雙手。
-  - 固定色票 hex 值已鎖定（見「色票與材質」），標記 `DESIGN-PROPOSAL`／`LOCKED`，使用者可覆蓋。
-- **`PENDING-USER-INPUT`（不影響辨識度）**：
-  - 栗色髮的確切明暗。
-  - 梧桐家紋的確切紋樣（文檔未給圖形）。
-  - 長裙的具體時代形制（宮廷禮裙 vs 文士家常裙）。
-  - 承襲自安德烈／菲利浦的臉部骨架特徵——**維持 `PENDING-USER-INPUT`**，不得自行核准。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#F3E0CC、#3B2A1E、#6B3A21、#1E2A3F、#8C8C94
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
+
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-cecilia-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

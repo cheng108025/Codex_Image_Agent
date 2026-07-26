@@ -1,100 +1,76 @@
-# 萊拉澤爾 Lazael
+# 萊拉澤爾 — CHARACTER_SPEC
 
-> Tier 配角 — 克里茲童年友人。本檔為文字版身份規格（新版七張制 01–07），供 `01-lazael-front-fullbody.png` 與 01–07 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**居家常服版**（單薄未經戰陣的少年、柔軟的髮、書卷般清秀的臉、居家常服而非甲冑）。此為角色「非戰鬥者柔弱外形」定裝，讓克里茲揮劍的殘酷更被凸顯。本角色僅此單一服裝版本。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: lazael-F1B720F99C76
+>
+> Lailazel has long hair and a previously injured left hand. The source alternates masculine and feminine pronouns, so sex, gender presentation, chest anatomy, and gendered costume construction are PENDING-USER-INPUT and must not be silently fixed. The ceremonial sword used for the dance-like "Spirit-Sound Sword Art: Forest Dream Concerto" appears only on sheet 06.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：萊拉澤爾
-- 英文名：Lazael
-- 角色版本 ID：**`LAZAEL-V1-HOME-CASUAL`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男
-- 年齡／外觀年齡：與克里茲同齡的少年，約 14–15 歲（`CANON` 與克里茲同齡；具體歲數為 `DESIGN-PROPOSAL`，取克里茲少年期）
-- 身高：約 160cm（`DESIGN-PROPOSAL`；文檔外觀設定段落自述為概念提案）
-- 體型：**身形單薄、未經戰陣的非戰鬥者少年體格**（`CANON` 身形單薄未經戰陣）
-- 故事時期：與克里茲的童年／少年時期（`CANON` 童年友人）
-- 服裝版本：居家常服版 — 穿居家常服而非甲冑（`CANON` 服裝方向；細節為 `DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**160**（`DESIGN-PROPOSAL`，可覆蓋）
-- 頭身比：**6.75**（`DESIGN-PROPOSAL`，取既有「約六點五—七頭身」區間中點鎖定為精確值，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 1.9 倍頭寬**（單薄非戰鬥者少年體格，明顯窄於成年戰士；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**無，全對稱**——居家常服無單側配件、無兜帽、無徽章（`DESIGN-PROPOSAL` 鎖定）
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- **無**——本角色無血緣親屬關係
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：lazael-F1B720F99C76
+- 角色版本 ID：LAZAEL-V1-HOME-CASUAL
+- 生成閘門：PENDING-USER-INPUT
+- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
+- 身份正本：01-lazael-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`01-lazael-front-fullbody.png`（`PENDING-GENERATION`）
-- 專案畫風唯一正本：`../../STYLE_ANCHOR.md`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：**書卷般清秀、溫和的少年臉**（`CANON` 書卷般清秀的臉）；乾淨、柔和、無戰陣風霜（`DESIGN-PROPOSAL`）
-- 膚色：白皙、健康溫調（`DESIGN-PROPOSAL`；hex 見下）
-- 眼型與眼睛顏色：柔和溫潤的大眼、神情純真；瞳色鎖定**溫暖褐色 warm brown**（`DESIGN-PROPOSAL` 鎖定值）
-- 髮型、髮色與固定髮束：**柔軟的髮**（`CANON`）；柔順、微蓬的少年短髮，鎖定**暖栗褐色 warm chestnut-brown**（`DESIGN-PROPOSAL` 鎖定值）
-- 身材比例：約 160cm／6.75 頭身、纖細單薄的日系奇幻設定稿少年比例；見 Body Metrics Lock
-- 標誌性輪廓：**單薄非戰鬥者的柔弱少年剪影＋居家常服**（`CANON` 單薄與居家常服；剪影構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：書卷清秀的臉、柔軟的髮（暖栗褐）、單薄非戰鬥者體格、居家常服（非甲冑）
-- **anatomical left／right 不對稱鎖定**：全對稱設計，無鎖定不對稱特徵。02 號視圖＝相機位於角色解剖學左側；03 號視圖＝相機位於角色解剖學右側；因設計全對稱，左右兩側輪廓應互為鏡像一致，跨圖不得出現新增的單側特徵。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：樸素的居家常服——內襯上衣外罩簡單外衫（`CANON` 居家常服；分層為 `DESIGN-PROPOSAL`）
-- 領口：柔軟的翻領或圓領布領，無護頸（`DESIGN-PROPOSAL`）
-- 肩部：自然垂順的布料肩線，無肩甲、無扣件（`DESIGN-PROPOSAL`）
-- 胸前：素面上衣，無徽記、無甲片（`DESIGN-PROPOSAL`）
-- 袖口／手部：柔軟長袖、袖口自然，赤手或無護具（`DESIGN-PROPOSAL`）
-- 腰部：簡單布腰帶或束繩（`DESIGN-PROPOSAL`）
-- 下襬／披風：短外衫下襬或及膝布褲，無披風（`DESIGN-PROPOSAL`）
-- 腿部／鞋靴：布褲搭配樸素軟鞋或短靴（`DESIGN-PROPOSAL`）
-- 背面結構：素面外衫覆背，無裝備、無披風、無背帶（`DESIGN-PROPOSAL`）
+- 身高（cm）：**160**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 頭身比：**6.75**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 肩寬（頭寬倍數）：**約 1.9 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移；SPEC 原僅有色名，hex 為 `DESIGN-PROPOSAL` 近似值）
-- 主色：暖米色外衫／布褲 **#D8C4A0**（`DESIGN-PROPOSAL`）
-- 輔色：淺褐點綴 **#B08A5C**、柔和藍灰點綴 **#8C97A3**（`DESIGN-PROPOSAL`）
-- 金屬：無或極少樸素鈕扣（`DESIGN-PROPOSAL`）
-- 寶石：無 — **N/A**
-- 布料：柔軟棉麻居家布料 **#D8C4A0**，無刺繡、無甲片（`DESIGN-PROPOSAL`）
-- 皮革：樸素軟鞋、簡單束帶深褐 **#5A4632**（`DESIGN-PROPOSAL`）
-- 特殊材質：白色內襯 **#F2EAD8**（`DESIGN-PROPOSAL`）
-- 膚色／髮色／瞳色（hex）：膚 **#F2DCC0**（白皙健康溫調）／髮 **#8A5A34**（暖栗褐）／瞳 **#7A5230**（溫暖褐色）（`DESIGN-PROPOSAL`）
+## Identity Lock
 
-## 道具與特殊構造（僅 06 出現（道具結構表））
-- 武器：**無**（非戰鬥者，不持任何武器）（`CANON` 未經戰陣、居家常服）
-- 飾品：無或極少（`DESIGN-PROPOSAL`）
-- 隨身道具：可選一本書卷／古籍，呼應「書卷般清秀」的文雅氣質（`DESIGN-PROPOSAL`）。**01–02 與 07 一律不出現**
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：僅布腰帶固定居家常服（`DESIGN-PROPOSAL`）
+- CANON：Lailazel has long hair and a previously injured left hand. The source alternates masculine and feminine pronouns, so sex, gender presentation, chest anatomy, and gendered costume construction are PENDING-USER-INPUT and must not be silently fixed. The ceremonial sword used for the dance-like "Spirit-Sound Sword Art: Forest Dream Concerto" appears only on sheet 06.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 溫和純真的預設神情
-2. 輕笑 Gentle smile — 對克里茲友善柔軟的微笑
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise — 對照他留給觀眾的「錯愕」定格
-6. 憤怒 Anger
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、盔甲、任何武器、機械義肢、肩甲、護臂
-- 不可出現的顏色：高飽和螢光色、與全書配色衝突的鮮豔色
-- 不可改變的左右位置：全對稱設計，無鎖定不對稱特徵
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi；壯碩戰士體格
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝版本採居家常服版（樸素平民少年裝、無甲冑、無武器），以凸顯「非戰鬥者」的柔弱與克里茲揮劍的殘酷。
-  - 體格鎖定為單薄非戰鬥者，嚴禁壯碩戰士體格。
-  - 辨識度關鍵項（瞳色暖褐、髮色暖栗褐、身高 160cm、頭身比 6.75、肩寬約 1.9 倍頭寬）已鎖成具體值。
-  - 固定色票 hex 值已補全（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-- **`PENDING-USER-INPUT`**（僅餘不影響辨識度或待生成後微調項）：
-  - 是否手持書卷作為隨身道具（可選 `DESIGN-PROPOSAL`，僅於 06 出現）。
-  - 居家常服的確切款式與地域風格（文檔僅載「居家常服」，未給細節）。
+## 固定色票與材質
+
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#D8C4A0、#B08A5C、#8C97A3、#5A4632、#F2EAD8、#F2DCC0、#8A5A34、#7A5230
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
+
+## 道具與特殊構造
+
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-lazael-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。

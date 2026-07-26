@@ -1,119 +1,76 @@
-# 伊普拉新 Ipranshin
+# 伊普拉新 — CHARACTER_SPEC
 
-> Tier 配角 — 安德烈陣線的行動者。本檔為文字版身份規格（範本 v2 FULL package），供 `00-ipranshin-character-identity-anchor.png` 與 01–10 全套參考圖生成／校對之依據。
-> 標記規則：`CANON`＝角色文檔或場次卡明載的外觀事實；`DESIGN-PROPOSAL`＝在正典線索上合理補完的視覺設計；`PENDING-USER-INPUT`＝會明顯改變辨識度、文檔無法決定的重大分歧。
-> **用途聲明：本角色圖片組為 3D 建模參考包（modeling reference pack），不是完成的 3D 模型。正式影片必須以核准的 Blender／VRM 角色模型作為唯一角色正本。**
-> 服裝版本鎖定：**陰影謀士版**（深色兜帽長袍＋袖中藏經卷／密令＋半明半暗的臉）。此為角色「先聞其聲、後見其人」神職謀士形象最一致的定裝，亦與資料夾內既有已核准 `00–09` 號 PNG 的實際外觀一致。
+<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
+> **Authoritative story canon — source: <repo-root>/全角色總表.md**
+>
+> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
+> Pair sync ID: ipranshin-F1B720F99C76
+>
+> Iprashin appears silently in shadow as Andre's secret executor or ally and is ordered to bring in "reinforcements." Identity, faction, appearance, costume, body metrics, and the nature of the reinforcements are all PENDING-USER-INPUT. Do not turn concealment into a canon face, species, power, insignia, or equipment design.
+>
+> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
+<!-- MASTER-TABLE-CANON-REFRESH:END -->
 
-## 基本資料
-- 中文名：伊普拉新
-- 英文名：Ipranshin
-- 角色版本 ID：**`IPRANSHIN-V1-SHADOW-SCHEMER`**（本版本鎖定；其他時期／服裝需另立版本 ID，不得混用）
-- 性別：男（`DESIGN-PROPOSAL`；文檔以「神職謀士」描寫，性別未明載，暫定男性，依既有已核准 PNG 為外觀正本）
-- 年齡／外觀年齡：中年、城府深沉的謀士感（`DESIGN-PROPOSAL`；文檔未載明確年齡）
-- 身高：約 180cm（`DESIGN-PROPOSAL`；文檔外觀設定段落自述為概念提案）
-- 體型：被寬袍遮掩、輪廓刻意看不清的隱身身形（`CANON` 身形被寬袍遮掩看不清輪廓；分層為 `DESIGN-PROPOSAL`）
-- 故事時期：陰影謀士線（`CANON`；本版本鎖定此時期外觀，其他時期需另立版本 ID）
-- 服裝版本：陰影謀士版 — 深色兜帽長袍、袖中藏經卷或密令（`CANON` 兜帽長袍與袖藏；細節依既有已核准 PNG 定案，`DESIGN-PROPOSAL`）
+> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
 
-## 身體量化鎖定 Body Metrics Lock
-- 身高（cm）：**180**（`DESIGN-PROPOSAL`，可覆蓋）
-- 頭身比：**7.0**（`DESIGN-PROPOSAL`，利於參數化人體擬合）
-- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（修長身形，輪廓被寬袍吞沒，非厚重武將體格；`DESIGN-PROPOSAL`，可覆蓋）
-- 左右不對稱特徵：**神職紋章固定於左胸**（`CANON`／既有已核准 PNG 鎖定值照搬，跨圖不得改動側別）；其餘部位全對稱
+## 同步與狀態
 
-## 血緣關係鎖定 Kinship Lock
-- 親屬清單：無——伊普拉新在家族註冊表（§13）中無血緣親屬記錄
-- 家族錨點：不適用
-- 承襲特徵：不適用
-- 刻意區分特徵：不適用
-- 禁止混淆項：不適用
+- 操作模式：REFRESH-PAIR
+- Pair sync ID：ipranshin-F1B720F99C76
+- 角色版本 ID：IPRANSHIN-V1-SHADOW-SCHEMER
+- 生成閘門：PENDING-USER-INPUT
+- 圖片狀態：IMAGE-DRIFT-REVIEW-REQUIRED — 10 existing PNG file(s); documents refreshed by explicit user authorization, PNGs untouched.
+- 身份正本：01-ipranshin-front-fullbody.png
+- 專案畫風正本：../../STYLE_ANCHOR.md
 
-## 參考圖片
-- 初始角色外觀圖片：無
-- 核准後的角色身份正本：`00-ipranshin-character-identity-anchor.png`（**已核准**——資料夾內既有 `00–09` 號 PNG 為已核准之視覺正本，本次 00–10 提示詞均以其實際外觀為準；10 號素體圖尚未生成，`PENDING-GENERATION`）
-- 共用畫風參考 1：`../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
-- 共用畫風參考 2：`../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
-- 共用畫風參考 3：`../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+## Canonical Fact Map
 
-## 設計來源標記
-- `CANON`：角色文檔明確記載的外觀事實
-- `DESIGN-PROPOSAL`：Claude 根據角色身分、時代與故事功能提出的視覺設計
-- `PENDING-USER-INPUT`：會明顯改變角色辨識度、但無法由文檔決定的項目
+- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
+- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
+- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
 
-## 外貌鎖定 Identity Lock
-- 臉型：城府深沉的中年謀士臉，內斂沉靜；**露出的臉多半半明半暗**（`CANON` 半明半暗）。00 號身份基準圖讓臉清楚可辨、足以作為後續身份權威；半明半暗以「臉部一側柔和陰影」表現，非遮蔽五官（依既有已核准 PNG 定案）
-- 膚色：偏冷、少見日光的白皙 **#F0DECB**（`DESIGN-PROPOSAL`；依既有已核准 PNG 目視取值）
-- 眼型與眼睛顏色：沉靜銳利、深不可測的眼神（`DESIGN-PROPOSAL`）；瞳色鎖定為**深暗琥珀色 deep dark amber #6E4A17**（`DESIGN-PROPOSAL` 鎖定，依既有已核准 PNG）
-- 髮型、髮色與固定髮束：近黑深色、短至中長，前額髮際與整臉完全露出，兜帽向後推、只框臉不遮臉（`CANON` 兜帽存在；髮型髮色 **近黑 #17151A**，`DESIGN-PROPOSAL` 鎖定，依既有已核准 PNG）
-- 身材比例：約七頭身、修長的日系奇幻設定稿比例，但輪廓被寬袍吞沒；見 Body Metrics Lock（180cm／7.0 頭身／肩寬約 2.0 倍頭寬）
-- 標誌性輪廓：**寬大兜帽長袍剪影＋半遮的臉**（`CANON` 兜帽長袍與遮掩輪廓；輪廓構成為 `DESIGN-PROPOSAL`）
-- 不可改變特徵：深色兜帽長袍、袖中藏物、半明半暗的臉、被寬袍遮掩的輪廓、神職謀士氣質、左胸神職紋章
-- **anatomical left／right 不對稱鎖定**：神職紋章固定於角色解剖學**左胸**，跨全部圖片不得改動側別或鏡像翻轉。02 號視圖＝相機位於角色解剖學左側（可見紋章）；03 號視圖＝相機位於角色解剖學右側（紋章在遠側、不可見）。
+## Body Metrics Lock
 
-## 服裝鎖定 Costume Lock
-- 服裝層次：寬鬆深色神職長袍，外披可覆頭的兜帽斗篷，內襯深色布料（`CANON` 深色兜帽長袍；分層依既有已核准 PNG 定案，`DESIGN-PROPOSAL`）
-- 領口：高遮頸立領，與兜帽相連（`DESIGN-PROPOSAL`，依既有 PNG）
-- 肩部：寬袍自然垂落，肩線被布料吞沒、看不清骨架（`CANON` 輪廓遮掩；樣式依既有已核准 PNG，`DESIGN-PROPOSAL`）
-- 胸前：**左胸單一收斂的暗金刺繡圓形天諦正教神職徽記**（`DESIGN-PROPOSAL` 鎖定值，依既有已核准 PNG）
-- 袖口／手部：**寬大長袖，袖中可藏經卷或密令**（`CANON`）；手部多半隱於袖中，兩臂需與軀幹分開、雙手於全身圖中清楚可見
-- 腰部：低調束帶／繩結固定長袍（`DESIGN-PROPOSAL`，依既有 PNG）
-- 下襬／披風：長袍及地、垂墜厚重，兜帽斗篷覆背（`DESIGN-PROPOSAL`，依既有已核准 PNG）
-- 腿部／鞋靴：長袍幾乎全覆，僅隱約露出深色軟靴（`DESIGN-PROPOSAL`，依既有 PNG）
-- 背面結構：兜帽斗篷覆背，長袍垂墜，無外露裝備，無背面紋章（`DESIGN-PROPOSAL`，依既有已核准 PNG）
+- 身高（cm）：PENDING-USER-INPUT
+- 頭身比：PENDING-USER-INPUT
+- 肩寬（頭寬倍數）：PENDING-USER-INPUT
+- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
 
-## 色票與材質（固定色票，跨全部圖片不得漂移）
-- 主色：炭黑 **#2B2A2E**、深靛藍 **#2E3550**、暗褐 **#4A362B**（`DESIGN-PROPOSAL`；hex 依既有已核准 PNG 目視取近似值鎖定）
-- 輔色：收斂暗金／深銀神職紋飾（`DESIGN-PROPOSAL`）
-- 金屬：低調暗金扣件與紋章浮雕 **#8A7239**；暗銀束帶頭 **#6E7079**（`DESIGN-PROPOSAL`）
-- 寶石：無或極收斂（`DESIGN-PROPOSAL`）
-- 布料：厚織羊毛長袍、垂墜感強的兜帽斗篷、深色內襯（`DESIGN-PROPOSAL`）
-- 皮革：低調軟靴、束帶（`DESIGN-PROPOSAL`）
-- 特殊材質：袖中隱約可見的羊皮紙經卷／密令（`CANON` 袖藏；材質為 `DESIGN-PROPOSAL`）
-- 膚色／髮色／瞳色（hex）：膚 **#F0DECB**／髮 **#17151A**（近黑）／瞳 **#6E4A17**（深暗琥珀）（`DESIGN-PROPOSAL` 鎖定，依既有已核准 PNG 目視取值）
+## Identity Lock
 
-## 道具與特殊構造（僅出現在 09 道具表）
-- 武器：無（謀士、非戰鬥者）（`DESIGN-PROPOSAL`；文檔無武器描寫）
-- 飾品：左胸收斂的天諦正教神職紋飾（`DESIGN-PROPOSAL`）
-- 隨身道具：**藏於袖中的經卷與密令**（`CANON`）。**00–05 與 10 一律不出現**
-- 翅膀／角／尾巴／其他特殊構造：無（人類角色）
-- 配戴或連接方式：兜帽與斗篷連於長袍；經卷／密令收於寬袖內；束帶固定腰間（`DESIGN-PROPOSAL`，依既有已核准 PNG）
+- CANON：Iprashin appears silently in shadow as Andre's secret executor or ally and is ordered to bring in "reinforcements." Identity, faction, appearance, costume, body metrics, and the nature of the reinforcements are all PENDING-USER-INPUT. Do not turn concealment into a canon face, species, power, insignia, or equipment design.
+- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
+- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
 
-## 八種固定表情
-1. 自然 Neutral — 深不可測的沉靜預設神情
-2. 輕笑 Gentle smile — 城府之下一絲難辨真意的微笑
-3. 大笑、可見牙齒 Broad smile with visible teeth
-4. 開懷大笑 Joyful open laughter
-5. 驚訝 Surprise
-6. 憤怒 Anger — 宗教集會高聲指控時的冷厲
-7. 悲傷 Sadness
-8. 眨眼 Wink
+## Costume Lock
 
-> 表情表僅改變眉眼與嘴部；臉部身份、近黑短至中髮、深暗琥珀瞳與兜帽領口跨八格一致；臉須清楚可辨、不得入陰影。
+- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
+- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
+- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
 
-## 禁止特徵
-- 不可新增的配件：翅膀、角、尾巴、王冠、盔甲、武器、機械義肢
-- 不可出現的顏色：高飽和螢光色、粉彩系、與全書深色系衝突的鮮豔色
-- 不可改變的左右位置：神職紋章固定左胸，不得跨圖鏡像翻轉；兜帽主覆向須跨圖一致
-- 不可使用的風格：寫實攝影、3D／CGI、西方漫畫、Q版、厚黑邊、chibi；明亮歡快的打光
+## 固定色票與材質
 
-## 鎖定錨定預設值（可覆蓋）
-> 依既有已核准 PNG 與 STYLE_LOCK §8：以下辨識度關鍵項已在 00 號身份基準圖鎖成具體值，避免模型隨機決定。使用者可事後覆蓋任一項並重生對應圖片。
+- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
+- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#F0DECB、#6E4A17、#17151A、#2B2A2E、#2E3550、#4A362B、#8A7239、#6E7079
+- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
 
-| 項目 | 鎖定值 | 覆蓋方式 |
-| :--- | :--- | :--- |
-| 瞳色 | 深暗琥珀色 #6E4A17 | 改此欄並重生對應圖片 |
-| 髮色／髮長 | 近黑深色 #17151A、短至中長，前額髮際與整臉完全露出 | 改此欄並重生對應圖片 |
-| 兜帽露出量 | 兜帽向後推、壓低到整張臉與前額髮際清楚可見；兜帽只框臉、絕不遮臉 | 改此欄並重生對應圖片 |
-| 神職紋章 | 左胸單一收斂的暗金刺繡圓形天諦正教神職徽記 | 改此欄並重生對應圖片 |
-| 性別／年齡 | 中年男性謀士 | 改此欄並重生對應圖片 |
+## 道具與特殊構造
 
-## 正典衝突與待確認事項
-- **已決定**：
-  - 服裝版本採陰影謀士版（深色兜帽長袍＋袖藏經卷／密令＋半明半暗臉），與角色「先聞其聲、後見其人」形象對齊，並與既有已核准 `00–09` 號 PNG 一致。
-  - 00 號身份基準圖須讓臉**清楚可辨**、足以作為後續圖片的身份權威；設計整體傾向半明半暗與陰影，但基準圖不得把臉藏死。半明半暗的氛圍以「臉部一側柔和陰影」表現，而非遮蔽五官。
-  - 辨識度關鍵項（瞳色、髮色髮長、兜帽露出量、神職紋章、性別年齡）已鎖成上表具體值。
-  - 固定色票 hex 值依既有已核准 PNG 目視取近似值鎖定（見「色票與材質」），標記 `DESIGN-PROPOSAL`，使用者可覆蓋。
-- **`PENDING-USER-INPUT`**（僅存不影響辨識度之項）：
-  - 上表任一鎖定值的最終覆蓋確認。
-  - 天諦正教神職徽記的確切內部紋樣細節（已鎖定為左胸暗金圓形徽記，內部圖形可再細化）。
+- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
+- 所有可拆卸道具只出現在 06-ipranshin-prop-construction-sheet.png。
+- 01–05 與人形 07 一律零可拆卸道具。
+
+## Kinship Lock
+
+- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
+- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+
+## 八種表情／狀態
+
+neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+
+## 禁止與待確認
+
+- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
+- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
+- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。
