@@ -1,83 +1,38 @@
-# Codex Image Agent — 角色圖像生成資產
+# Story Character 圖片生成專案
 
-這個 repo 收錄《偽典》故事的**角色圖像提示詞包**：每個角色都有寫好的英文提示詞（`PROMPTS.md`）與設定表（`CHARACTER_SPEC.md`），交給 **Codex（或任何有圖像生成能力的 AI 代理）** 就能產出風格一致的角色設定圖。
+這個資料夾包含角色設定、圖片提示詞與 Codex 生圖流程。主要內容位於：
 
-角色資產全部在 [`Story_Character/`](Story_Character/)。其餘資料夾（`imagegen/`、`image_AI_Agent/`、`Text_To_Images_AI_Agent/`、`Image_To_Images_AI_Agent/`）是各式影像生成實驗與提示詞範例，與角色流程無關。
+- [`Story_Character/`](Story_Character/)：角色資料與生圖資產。
+- [`Story_Character/Story_Character_skill/`](Story_Character/Story_Character_skill/)：完整的三段式產圖流程。
 
----
+專案 Repository：[`cheng108025/Codex_Image_Agent`](https://github.com/cheng108025/Codex_Image_Agent)
 
-## 你需要準備什麼
+## Story_Character_skill
 
-1. 一個**能生成圖片**的 AI 代理（例如 Codex）。
-2. `Story_Character/style/` 內的**三張共用畫風參考圖**——它們只鎖「精緻日系奇幻設定稿」畫風，**不是角色本人**，絕不可複製其中的臉／髮／服裝。
+產圖流程分為三個 Skill：
 
----
+1. [`scene-to-characters`](Story_Character/Story_Character_skill/scene-to-characters/SKILL.md)
+   從故事場次文件整理出每個角色的資料。
 
-## 核心規則：兩階段生成（一定要照做）
+2. [`characters-to-sheets`](Story_Character/Story_Character_skill/characters-to-sheets/SKILL.md)
+   將角色資料整理成 `CHARACTER_SPEC.md` 與 `PROMPTS.md`。
 
-> 直接一次生成 01–09 會導致每張圖臉型、髮型、服裝都不一樣。**務必先做 00。**
+3. [`sheets-to-codex`](Story_Character/Story_Character_skill/sheets-to-codex/SKILL.md)
+   讓 Codex 讀取角色設定與提示詞，依序生成圖片並逐張驗收。
 
-**① 先只生成 `00` 身份基準圖**
-用 `style/` 三張圖鎖畫風，依 `PROMPTS.md` 的 00 提示詞，產出「同一角色的正面全身 ＋ 大型正面頭肩」。生成後**停下來給人確認**。
+如果指定角色已經有 `CHARACTER_SPEC.md` 與 `PROMPTS.md`，Codex 會直接從第三段 `sheets-to-codex` 開始生圖。
 
-**② 確認 00 後，才生成其餘編號**
-把核准的 `00` 當作 **Image 1（唯一身份／服裝正本）**，其餘每張圖都以它為準，臉與服裝不再漂移。
+生圖時會先製作角色的 `01` 身份基準圖並等待使用者確認；核准後，才會以該圖片鎖定角色身份，繼續生成其餘設定圖。失敗版本放入 `rejects/`，不覆蓋已核准圖片。
 
----
+## 如何使用
 
-## 怎麼叫 Codex 產生一個角色
+使用者只需要使用 Codex 開啟這份專案，然後輸入：
 
-以「克里茲」為例，直接把下面這段話（把路徑換成你要的角色）交給 Codex：
-
-```
-請按照 Story_Character/01_主角陣營/克里茲/PROMPTS.md 執行兩階段產圖。
-
-第一階段：只生成 00-kritz-character-identity-anchor.png，
-使用 Story_Character/style/ 的三張圖鎖定共同畫風，
-不得把其中角色當成新角色身份。生成後停止，等我確認。
-
-我確認 00 號圖後，再把它作為 Image 1 身份正本，
-依 PROMPTS.md 生成其餘編號（01–09）。
+```text
+讀取這份專案，並開始生圖流程。
+請先製作 {角色名字} 的圖片。
 ```
 
-通用格式：
-```
-請按照 Story_Character/{陣營資料夾}/{角色名}/PROMPTS.md 執行兩階段產圖。
-先只生成該角色的 00 身份基準圖（style/ 三張圖只鎖畫風），停下等我確認；
-核准後再以 00 為 Image 1 生成其餘編號。
-```
+將 `{角色名字}` 換成實際角色名稱即可。Codex 會自行尋找角色資料、讀取對應 Skill，並按照專案規則開始生圖。
 
-每個角色資料夾裡：
-- **`PROMPTS.md`** — 00–09（或該角色分級的編號）各一條獨立英文提示詞，直接複製給圖像工具即可。
-- **`CHARACTER_SPEC.md`** — 角色外貌／服裝／色票／道具設定，以及「鎖定錨定預設值（可覆蓋）」；若你想改某人的瞳色、髮色、紋章，改這裡的鎖定值再生成。
-
----
-
-## 角色清單與分級
-
-完整清單、每個角色的正典鎖定要點、以及各張圖編號對照，見
-**[`Story_Character/PROMPTS_INDEX.md`](Story_Character/PROMPTS_INDEX.md)**。
-
-| 分級 | 產出張數 | 角色 |
-| --- | --- | --- |
-| **Tier S** 完整包 | `00`–`09`（10 張） | 克里茲、蕾瓦娜斯、馬修、高文、葛洛莉雅、帕拉諾雅、艾維斯、班尼迪克 |
-| **Tier A** 輕量 | `00`+`05`+`06` | 皇后阿格妮絲、奧德里奇、阿爾伯特、托普、阿達瑪、哈努爾、馬爾科、艾德里、安德烈、伊普拉新、萊拉澤爾 |
-| **Tier B** 單張 | `00` | 強尼、歐文、阿拉法爾特、文森特、戴夫、加爾雷斯、鮑曼、菲利浦、賽希莉亞、聖喬治 |
-| **生物** | `00` | 巨龍、夜光馬 |
-
-> Tier A/B 只寫了部分編號；核准 00 後想補齊 01–09，可套用同一格式擴寫（見下方規範）。
-
-編號對照：`00` 身份錨 · `01–04` 正/左/背/右全身 · `05` 四視圖總表 · `06` 八表情臉部表 · `07` 服裝細節 · `08` 色票材質 · `09` 道具。
-
----
-
-## 想改或擴充時，先讀這兩份
-
-- **[`Story_Character/style/STYLE_LOCK.md`](Story_Character/style/STYLE_LOCK.md)** — 共用畫風正向／負向詞、畫布比例（對齊範例的 3:1）、防止複製範例角色、材質對齊、身份鎖定等規則。
-- **[`Story_Character/CLAUDE_CHARACTER_PROMPT_HANDOFF.md`](Story_Character/CLAUDE_CHARACTER_PROMPT_HANDOFF.md)** — 提示詞包的完整規格（各編號格式、八表情表規則、純道具表規則）。
-
----
-
-## 一句話總結
-
-**先生成 `00` → 人工確認臉與服裝 → 以 `00` 為身份正本生成其餘。** 三張 `style/` 圖全程只鎖畫風、不當角色本人。
+完整流程定義請參考 [`Story_Character/Story_Character_skill/README.md`](Story_Character/Story_Character_skill/README.md)。
