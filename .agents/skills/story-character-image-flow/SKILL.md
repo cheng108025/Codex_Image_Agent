@@ -1,6 +1,6 @@
 ---
 name: story-character-image-flow
-description: 從 Codex_Image_Agent 專案自動尋找指定角色、檢查是否已有正式 PNG；有圖角色保持凍結，無圖角色依 01–07／01–06 新版角色包與 STYLE_ANCHOR 開始生成第一張 01，尚無角色包者從故事文字建立新版角色包。當使用者說「讀取這份專案，並開始生圖流程」「請先製作某角色的圖片」「開始生成角色圖」或同義要求時使用。
+description: 從 Codex_Image_Agent 專案自動尋找指定角色、檢查是否已有正式 PNG；有圖角色保持凍結，無圖角色依 01–07／01–06 新版角色包與固定三張風格參考圖開始生成該角色 01，尚無角色包者從故事文字建立新版角色包。當使用者說「讀取這份專案，並開始生圖流程」「請先製作某角色的圖片」「開始生成角色圖」或同義要求時使用。
 ---
 
 # Story Character Image Flow
@@ -20,7 +20,7 @@ description: 從 Codex_Image_Agent 專案自動尋找指定角色、檢查是否
        → 先生成 01
 ```
 
-第一張圖生成後一律停止，呈現給使用者核准。
+每位角色的 01 生成後一律停止，呈現給使用者核准。不同角色不共用狀態，也不互相充當風格參考。
 
 ## 單次生成政策（最高優先）
 
@@ -35,6 +35,14 @@ description: 從 Codex_Image_Agent 專案自動尋找指定角色、檢查是否
 從使用者訊息擷取 `{角色名字}`。如果使用者真的保留大括號、沒有填入名字，才詢問實際角色名。
 
 此 repo 根目錄記為 `<repo-root>`。直接 clone `Codex_Image_Agent` 時，`<repo-root>` 就是目前 Git 根目錄，不得再加一層 `output/`。
+
+本專案固定使用以下三張風格參考圖，每次生圖都必須帶入：
+
+1. `<repo-root>/Story_Character/style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`
+2. `<repo-root>/Story_Character/style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`
+3. `<repo-root>/Story_Character/style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`
+
+三張圖只控制線條、上色、材質與光影，不得複製其中人物的臉、髮型、服裝、身材或身份。
 
 ## 步驟 1｜尋找角色
 
@@ -68,16 +76,16 @@ description: 從 Codex_Image_Agent 專案自動尋找指定角色、檢查是否
 符合以下特徵時走新版：
 
 - `PROMPTS.md` 有 `## 01`–`## 07`；非人形為 `## 01`–`## 06`。
-- 專案根有 `STYLE_ANCHOR.md`。
+- 固定三張風格參考圖全部存在。
 
 完整讀取：
 
 1. 角色的 `CHARACTER_SPEC.md`。
 2. 角色的 `PROMPTS.md`。
-3. 專案的 `STYLE_ANCHOR.md`。
+3. 固定三張風格參考圖。
 4. `<repo-root>/Story_Character/Story_Character_skill/sheets-to-codex/SKILL.md`。
 
-依 `sheets-to-codex` 前提與閘門執行，只先生成角色 `01`。`STYLE_ANCHOR.md` 若為 `PENDING-FIRST-REQUEST`，本次指定的零圖片角色自動登記為首角色；生成其 01 後停止等待核准。若角色包缺少必要新版章節，視為交接資料錯誤，停止並回報缺項，不在生圖階段改寫角色設定。
+依 `sheets-to-codex` 前提與閘門執行，只先生成本次指定角色的 `01`，帶入固定三張風格參考圖；生成後停止等待核准。角色自己的 01 核准後，02–07 另以該 01 作身份參考。若角色包缺少必要新版章節，視為交接資料錯誤，停止並回報缺項，不在生圖階段改寫角色設定。
 
 ### B. 只有故事文本、尚無角色包
 
@@ -94,7 +102,7 @@ repo 內已存在的來源路徑、專案名與角色名視為已提供，不重
 
 開始前確認目前環境有可用的圖片生成工具或 ImageGen 能力。
 
-- 有能力：讀取該工具的使用說明，帶入角色 Prompt 與必要參考圖後生成。
+- 有能力：讀取該工具的使用說明，帶入角色 Prompt、固定三張風格參考圖，以及 02–07 所需的本角色 01 身份參考後生成。
 - 沒有能力：停止並回報「角色與流程已定位，但目前 Codex 環境沒有圖片生成工具」，同時列出已定位的角色資料夾與預定輸出檔名。
 
 不得用空白檔、文字檔或假路徑冒充生成圖片。

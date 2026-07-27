@@ -1,237 +1,161 @@
-# 皇后阿格妮絲 — Image Generation Prompts
+# PROMPTS — 皇后阿格妮絲
 
-<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
-> **Authoritative story canon — source: <repo-root>/全角色總表.md**
->
-> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
-> Pair sync ID: agnes-F1B720F99C76
->
-> This character is the unnamed Queen and Kriz's mother; "Agnes" is not story canon and must remain a legacy working label only. She has smooth flowing brown hair that turns golden in candlelight, champagne-gold eyes, red lips, slender arms, a refined face, and a curvaceous figure. Her story costume is a pure-white satin nightdress. The pure-silver Pandora necklace is a removable prop and appears only on sheet 06. Her true name remains PENDING-USER-INPUT.
->
-> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
-<!-- MASTER-TABLE-CANON-REFRESH:END -->
+> Operation mode: CREATE-CHARACTER
+> Sources: <repo-root>/Story_Character/預告片_按場次重新整理.md + <repo-root>/全角色總表.md
+> Character type: human
+> Trailer evidence: Selected by 預告片_按場次重新整理.md; use that source as the exact scene authority
+> Generation gate: COMPLETE — approved 01 and generated 02–07 are present.
 
-## Codex 生成清單
+## Codex Generation Manifest
 
-- 操作模式：REFRESH-PAIR
-- Pair sync ID：agnes-F1B720F99C76
-- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
-- 圖片狀態：IMAGE-DRIFT-REVIEW-REQUIRED — 7 existing PNG file(s); documents refreshed by explicit user authorization, PNGs untouched.
-- 一致性：本檔與 CHARACTER_SPEC.md 使用完全相同的 Canonical Fact Map。
-- Input images：先讀 ../../STYLE_ANCHOR.md。01 依畫風錨狀態決定畫風輸入；02 之後以核准的本角色 01 作身份參考，非首角色另加專案畫風錨。
-- 單次生成：使用者每次要求最多呼叫一次圖片生成工具，只產出一張；生成後立即呈現並停止。技術檢查只回報，不自動重生。
+### (a) Exact filenames
+- [x] 01-queen-mother-front-fullbody.png — APPROVED
+- [x] 02-queen-mother-four-view-master.png — PRESENT
+- [x] 03-queen-mother-expression-sheet.png — PRESENT
+- [x] 04-queen-mother-costume-detail-sheet.png — PRESENT
+- [x] 05-queen-mother-color-material-sheet.png — PRESENT
+- [x] 06-queen-mother-prop-construction-sheet.png — PRESENT
+- [x] 07-queen-mother-body-reference-sheet.png — PRESENT
 
-| 編號 | 確切檔名 |
-| --- | --- |
-| 01 | 01-agnes-front-fullbody.png |
-| 02 | 02-agnes-four-view-master.png |
-| 03 | 03-agnes-expression-sheet.png |
-| 04 | 04-agnes-costume-detail-sheet.png |
-| 05 | 05-agnes-color-material-sheet.png |
-| 06 | 06-agnes-prop-construction-sheet.png |
-| 07 | 07-agnes-body-reference-sheet.png |
+### (b) Character gate
 
-第一階段只生成 01-agnes-front-fullbody.png，生成後停止等待使用者核准。核准後才逐次生成下一張；每次仍只生成一張。
+01-queen-mother-front-fullbody.png is approved and 02–07 are present. Do not regenerate or overwrite any sheet unless the user explicitly requests a replacement.
 
----
+### (c) Consistency statement
 
-## 01 — **01-agnes-front-fullbody.png**
+The filenames above exactly match the section filenames below. Identity, body metrics, costume and fixed palette come from the same Canonical Fact Map as CHARACTER_SPEC.md.
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 01
+### (d) Fixed input images
 
-Canonical character facts (do not add or contradict): This character is the unnamed Queen and Kriz's mother; "Agnes" is not story canon and must remain a legacy working label only. She has smooth flowing brown hair that turns golden in candlelight, champagne-gold eyes, red lips, slender arms, a refined face, and a curvaceous figure. Her story costume is a pure-white satin nightdress. The pure-silver Pandora necklace is a removable prop and appears only on sheet 06. Her true name remains PENDING-USER-INPUT.
+For 01, use all three style images below only as visual-style references and never copy their depicted person's identity:
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-Primary request:
-Render exactly one complete front full-body view in a standard neutral A-pose: feet shoulder-width apart, arms straight 30-45 degrees away from the torso, open hands, even weight, true orthographic projection. Character and locked costume only; no removable prop.
+For 02–07, additionally use ./01-queen-mother-front-fullbody.png as this character's identity reference while retaining all three fixed style images.
 
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
+### (e) Existing PNG state
 
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+All seven required PNG files are present. The approved 01 is the identity master for 02–07. Do not overwrite any existing PNG.
+
+### (f) Single-generation policy
+
+Each user image request permits at most one image-generation call and one new image. Present it immediately and stop. Technical inspection may report possible deviations but must not auto-reject, move or regenerate. Only after the user explicitly requests a modification may the prior unapproved candidate be placed in rejects/ and one replacement generated.
+
+## 01 — 01-queen-mother-front-fullbody.png
+
+Input images:
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
+
+Positive prompt:
+Full-body front view, face or head clearly visible and identifiable. Standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, no action pose, no contrapposto, no T-pose. Character and costume only, no weapons or props of any kind. Orthographic front camera, flat light-gray background, even shadowless studio light, entire body inside frame. 皇后阿格妮絲. CANON: flowing brown hair glowing gold in candlelight, champagne-gold eyes, red lips, delicate face and slender arms; DESIGN-PROPOSAL: fair warm skin. Body metrics: 170 cm; 7.4 heads; shoulders 2.15 head widths; slender hourglass build; bilateral symmetry. Costume: CANON: pure white satin nightgown and silver Pandora necklace; DESIGN-PROPOSAL: floor-length bias-cut gown with modest royal embroidery. Fixed palette: satin white #F4F0E8; champagne gold #C9A45C; silver #C8CCD3; muted crimson #A54852; fair skin #F1CFB8; brown-gold hair #8A6848; champagne eyes #C9A15A. Anatomically correct human hands; exactly five fingers on each hand, one thumb and four fingers, clearly separated natural digits; exactly five toes per foot.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+identity drift, wrong character, copied reference-person identity, age drift, palette drift, costume redesign, weapon, sword, scabbard, sheath, staff, shield, prop object, holding weapon, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, cropped head, cropped feet, perspective distortion, text, watermark, extra fingers, six fingers, too many fingers, fused fingers, missing fingers, duplicated thumbs, malformed hands, extra toes, missing toes
 
----
+## 02 — 02-queen-mother-four-view-master.png
 
-## 02 — **02-agnes-four-view-master.png**
+Input images:
+- ./01-queen-mother-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 02
-
-Canonical character facts (do not add or contradict): This character is the unnamed Queen and Kriz's mother; "Agnes" is not story canon and must remain a legacy working label only. She has smooth flowing brown hair that turns golden in candlelight, champagne-gold eyes, red lips, slender arms, a refined face, and a curvaceous figure. Her story costume is a pure-white satin nightdress. The pure-silver Pandora necklace is a removable prop and appears only on sheet 06. Her true name remains PENDING-USER-INPUT.
-
-Primary request:
-Create one four-view turnaround sheet in this exact order: front, anatomical-left profile, anatomical-right profile, back. Use the same neutral A-pose, identical scale and proportions, aligned head-top and ground lines, true orthographic views, zero removable props.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+One turnaround sheet with four complete views in this exact order: front, camera on the character's anatomical LEFT side, camera on the character's anatomical RIGHT side, back. Same neutral pose, height, scale and proportions in every panel; true orthographic camera; aligned head-top and ground lines. 皇后阿格妮絲. CANON: flowing brown hair glowing gold in candlelight, champagne-gold eyes, red lips, delicate face and slender arms; DESIGN-PROPOSAL: fair warm skin. Body metrics: 170 cm; 7.4 heads; shoulders 2.15 head widths; slender hourglass build; bilateral symmetry. Costume: CANON: pure white satin nightgown and silver Pandora necklace; DESIGN-PROPOSAL: floor-length bias-cut gown with modest royal embroidery. Fixed palette: satin white #F4F0E8; champagne gold #C9A45C; silver #C8CCD3; muted crimson #A54852; fair skin #F1CFB8; brown-gold hair #8A6848; champagne eyes #C9A15A. Anatomically correct human hands; exactly five fingers on each hand, one thumb and four fingers, clearly separated natural digits; exactly five toes per foot.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+identity drift, wrong character, copied reference-person identity, age drift, palette drift, costume redesign, weapon, sword, scabbard, sheath, staff, shield, prop object, holding weapon, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, cropped head, cropped feet, perspective distortion, text, watermark, extra fingers, six fingers, too many fingers, fused fingers, missing fingers, duplicated thumbs, malformed hands, extra toes, missing toes
 
----
+## 03 — 03-queen-mother-expression-sheet.png
 
-## 03 — **03-agnes-expression-sheet.png**
+Input images:
+- ./01-queen-mother-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 03
-
-Canonical character facts (do not add or contradict): This character is the unnamed Queen and Kriz's mother; "Agnes" is not story canon and must remain a legacy working label only. She has smooth flowing brown hair that turns golden in candlelight, champagne-gold eyes, red lips, slender arms, a refined face, and a curvaceous figure. Her story costume is a pure-white satin nightdress. The pure-silver Pandora necklace is a removable prop and appears only on sheet 06. Her true name remains PENDING-USER-INPUT.
-
-Primary request:
-Create exactly eight head-and-shoulders portrait panels in a clean 4x2 grid: neutral, gentle/relaxed, broad positive, joyful, surprised, angry, sad, alert/wink-equivalent. Change expression only; preserve identity and anatomy.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Eight head-and-shoulders portraits in a 4x2 grid, straight-on 0-degree camera, head occupies 70-75 percent of each cell. Exact order: neutral, gentle smile, broad smile with teeth, joyful open laughter, surprised, angry, sad, wink. Only expression changes. 皇后阿格妮絲. CANON: flowing brown hair glowing gold in candlelight, champagne-gold eyes, red lips, delicate face and slender arms; DESIGN-PROPOSAL: fair warm skin. Body metrics: 170 cm; 7.4 heads; shoulders 2.15 head widths; slender hourglass build; bilateral symmetry. Costume: CANON: pure white satin nightgown and silver Pandora necklace; DESIGN-PROPOSAL: floor-length bias-cut gown with modest royal embroidery. Fixed palette: satin white #F4F0E8; champagne gold #C9A45C; silver #C8CCD3; muted crimson #A54852; fair skin #F1CFB8; brown-gold hair #8A6848; champagne eyes #C9A15A.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+identity drift, different faces, hairstyle change, eye-color change, age change, profile view, tilted head, inconsistent grid, text, watermark, extra fingers, six fingers, too many fingers, fused fingers, missing fingers, duplicated thumbs, malformed hands, extra toes, missing toes
 
----
+## 04 — 04-queen-mother-costume-detail-sheet.png
 
-## 04 — **04-agnes-costume-detail-sheet.png**
+Input images:
+- ./01-queen-mother-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 04
-
-Canonical character facts (do not add or contradict): This character is the unnamed Queen and Kriz's mother; "Agnes" is not story canon and must remain a legacy working label only. She has smooth flowing brown hair that turns golden in candlelight, champagne-gold eyes, red lips, slender arms, a refined face, and a curvaceous figure. Her story costume is a pure-white satin nightdress. The pure-silver Pandora necklace is a removable prop and appears only on sheet 06. Her true name remains PENDING-USER-INPUT.
-
-Primary request:
-Create a costume construction detail sheet showing only Canon garment layers, front/back construction, collar, sleeves, waist, hem, footwear, fastenings, and material close-ups. No weapons or removable props.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Costume construction sheet with front and back garment breakdowns, detached outer-layer panels, seam and fastening callouts shown visually without readable text, plus one torso view without the outer layer for 3D body contour reference. No weapons. 皇后阿格妮絲. CANON: flowing brown hair glowing gold in candlelight, champagne-gold eyes, red lips, delicate face and slender arms; DESIGN-PROPOSAL: fair warm skin. Body metrics: 170 cm; 7.4 heads; shoulders 2.15 head widths; slender hourglass build; bilateral symmetry. Costume: CANON: pure white satin nightgown and silver Pandora necklace; DESIGN-PROPOSAL: floor-length bias-cut gown with modest royal embroidery. Fixed palette: satin white #F4F0E8; champagne gold #C9A45C; silver #C8CCD3; muted crimson #A54852; fair skin #F1CFB8; brown-gold hair #8A6848; champagne eyes #C9A15A. Anatomically correct human hands; exactly five fingers on each hand, one thumb and four fingers, clearly separated natural digits; exactly five toes per foot.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+identity drift, wrong character, copied reference-person identity, age drift, palette drift, costume redesign, weapon, sword, scabbard, sheath, staff, shield, prop object, holding weapon, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, cropped head, cropped feet, perspective distortion, text, watermark, extra fingers, six fingers, too many fingers, fused fingers, missing fingers, duplicated thumbs, malformed hands, extra toes, missing toes
 
----
+## 05 — 05-queen-mother-color-material-sheet.png
 
-## 05 — **05-agnes-color-material-sheet.png**
+Input images:
+- ./01-queen-mother-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 05
-
-Canonical character facts (do not add or contradict): This character is the unnamed Queen and Kriz's mother; "Agnes" is not story canon and must remain a legacy working label only. She has smooth flowing brown hair that turns golden in candlelight, champagne-gold eyes, red lips, slender arms, a refined face, and a curvaceous figure. Her story costume is a pure-white satin nightdress. The pure-silver Pandora necklace is a removable prop and appears only on sheet 06. Her true name remains PENDING-USER-INPUT.
-
-Primary request:
-Create a color-and-material reference sheet using only Canon named colors plus explicitly marked SPEC design-proposal hex candidates. Include clean swatches/material patches and one neutral reference subject. Do not render visible text or hex labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Color and material reference sheet: clean color swatches and material spheres corresponding exactly to satin white #F4F0E8; champagne gold #C9A45C; silver #C8CCD3; muted crimson #A54852; fair skin #F1CFB8; brown-gold hair #8A6848; champagne eyes #C9A15A, plus one small neutral full-body reference in the same identity and pose. No weapons or loose props. Flat neutral lighting. 皇后阿格妮絲. CANON: flowing brown hair glowing gold in candlelight, champagne-gold eyes, red lips, delicate face and slender arms; DESIGN-PROPOSAL: fair warm skin. Body metrics: 170 cm; 7.4 heads; shoulders 2.15 head widths; slender hourglass build; bilateral symmetry. Costume: CANON: pure white satin nightgown and silver Pandora necklace; DESIGN-PROPOSAL: floor-length bias-cut gown with modest royal embroidery. Fixed palette: satin white #F4F0E8; champagne gold #C9A45C; silver #C8CCD3; muted crimson #A54852; fair skin #F1CFB8; brown-gold hair #8A6848; champagne eyes #C9A15A. Anatomically correct human hands; exactly five fingers on each hand, one thumb and four fingers, clearly separated natural digits; exactly five toes per foot.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+identity drift, wrong character, copied reference-person identity, age drift, palette drift, costume redesign, weapon, sword, scabbard, sheath, staff, shield, prop object, holding weapon, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, cropped head, cropped feet, perspective distortion, text, watermark, extra fingers, six fingers, too many fingers, fused fingers, missing fingers, duplicated thumbs, malformed hands, extra toes, missing toes
 
----
+## 06 — 06-queen-mother-prop-construction-sheet.png
 
-## 06 — **06-agnes-prop-construction-sheet.png**
+Input images:
+- ./01-queen-mother-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 06
-
-Canonical character facts (do not add or contradict): This character is the unnamed Queen and Kriz's mother; "Agnes" is not story canon and must remain a legacy working label only. She has smooth flowing brown hair that turns golden in candlelight, champagne-gold eyes, red lips, slender arms, a refined face, and a curvaceous figure. Her story costume is a pure-white satin nightdress. The pure-silver Pandora necklace is a removable prop and appears only on sheet 06. Her true name remains PENDING-USER-INPUT.
-
-Primary request:
-Create a props/special-construction sheet containing only removable weapons, pendants, tools, tack, or special structures explicitly permitted by the Canon summary. If none are Canon, show only non-invented construction/material studies. No full character, portrait, face, text, or labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Props-only construction sheet for 皇后阿格妮絲: CANON: silver Pandora necklace, only in sheet 06. Show front, side and exploded construction views of every documented prop and detachable fitting. No full-body person, no face, no character silhouette; a headless tailor mannequin is permitted only for attachment placement.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+full-body character, face, head, human silhouette, action scene, prop being held, cropped object, duplicate object, inconsistent scale, text, watermark, extra fingers, six fingers, too many fingers, fused fingers, missing fingers, duplicated thumbs, malformed hands, extra toes, missing toes
 
----
+## 07 — 07-queen-mother-body-reference-sheet.png
 
-## 07 — **07-agnes-body-reference-sheet.png**
+Input images:
+- ./01-queen-mother-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 07
-
-Canonical character facts (do not add or contradict): This character is the unnamed Queen and Kriz's mother; "Agnes" is not story canon and must remain a legacy working label only. She has smooth flowing brown hair that turns golden in candlelight, champagne-gold eyes, red lips, slender arms, a refined face, and a curvaceous figure. Her story costume is a pure-white satin nightdress. The pure-silver Pandora necklace is a removable prop and appears only on sheet 06. Her true name remains PENDING-USER-INPUT.
-
-Primary request:
-Create a human body-reference sheet for modeling: front and anatomical-left profile at identical scale, neutral A-pose, plain tight dark-gray bodysuit, hair secured away from the silhouette, no costume outer layers, accessories, jewelry, weapons, props, text, or labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+SMPL-X body reference sheet with front and camera-on-anatomical-LEFT-side views. Preserve face identity. Fitted plain neutral body suit, body contour fully visible, long hair gathered away from shoulders and back. Standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed at approximately 30-45 degrees away from the body, palms open with fingers slightly spread, no action pose, no contrapposto, no T-pose. Character and costume only, no weapons or props of any kind. Body metrics: 170 cm; 7.4 heads; shoulders 2.15 head widths; slender hourglass build; bilateral symmetry. Anatomically correct human hands; exactly five fingers on each hand, one thumb and four fingers, clearly separated natural digits; exactly five toes per foot.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+armor, cape, cloak, outer garment, loose clothing, weapon, props, accessories, jewelry, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, cropped body, perspective distortion, extra fingers, six fingers, too many fingers, fused fingers, missing fingers, duplicated thumbs, malformed hands, extra toes, missing toes
 
----
+## Per-sheet REJECT Review Checklist
 
-## 逐張驗收清單
+- [ ] Face or head identity matches this character's approved 01.
+- [ ] Hair, surface pattern, eyes and age impression remain consistent.
+- [ ] Body proportions match Body Metrics Lock.
+- [ ] Costume structure matches Costume Lock.
+- [ ] Left/right asymmetry is correct and not mirrored.
+- [ ] Colors match the fixed hex palette.
+- [ ] Sheet layout, view count, order, neutral pose, zero-prop rule and flat lighting are satisfied.
+- [ ] Style matches all three fixed style-reference images.
+- [ ] Human hands, when visible, have exactly five fingers per hand: one thumb plus four fingers, with no extra, fused, duplicated or missing digits.
+- [ ] Kinship traits, where applicable, are consistent without cloning the relative.
 
-- [ ] Canon 身份、外貌、體型、服裝、道具、關係與時期未被推測內容覆蓋。
-- [ ] SPEC 與 PROMPTS 的 Pair sync ID 完全相同。
-- [ ] 01 為單一正面身份錨；02 為四視圖；03 恰好八格；其餘構圖符合各節。
-- [ ] 所有可拆卸武器、墜飾、工具與道具只出現在 06。
-- [ ] 圖片只用 Canon 命名色；候選 hex 不得覆蓋 Canon。
-- [ ] 無文字、標籤、logo、簽名或浮水印。
-- [ ] 有 PNG 的角色已完成 IMAGE-DRIFT-REVIEW-REQUIRED 複核。
+## PENDING-USER-INPUT
 
-驗收只回報偏差並等待使用者，不得自行移檔或重生成。只有使用者明確要求修改時，才歸檔上一張未核准候選並只生成一張新圖。
+PENDING-USER-INPUT: the character table says her true name is unrecorded while the trailer calls her Agnes; use the trailer label without declaring Agnes world-canon.
+
+## Instruction for Codex
+
+Read <repo-root>/Story_Character/01_主角陣營/皇后阿格妮絲/CHARACTER_SPEC.md and this PROMPTS.md. The package is complete; do not regenerate or overwrite an existing PNG unless the user explicitly requests a replacement. For an approved replacement request, generate exactly one image and present it for review.

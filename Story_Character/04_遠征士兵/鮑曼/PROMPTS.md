@@ -1,237 +1,160 @@
-# 鮑曼 — Image Generation Prompts
+# PROMPTS — 鮑曼
 
-<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
-> **Authoritative story canon — source: <repo-root>/全角色總表.md**
->
-> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
-> Pair sync ID: bowman-F1B720F99C76
->
-> Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
->
-> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
-<!-- MASTER-TABLE-CANON-REFRESH:END -->
+> Operation mode: CREATE-CHARACTER
+> Sources: <repo-root>/Story_Character/預告片_按場次重新整理.md + <repo-root>/全角色總表.md + <repo-root>/Story_Character/角色文檔.md
+> Character type: human memory-image
+> Trailer evidence: SCENE 14; preserve Bowman as Kriz's deliberately incomplete memory
+> Generation gate: READY — first generate only 01, present it, then stop for user approval.
 
-## Codex 生成清單
+## Codex Generation Manifest
 
-- 操作模式：REFRESH-PAIR
-- Pair sync ID：bowman-F1B720F99C76
-- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
-- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
-- 一致性：本檔與 CHARACTER_SPEC.md 使用完全相同的 Canonical Fact Map。
-- Input images：先讀 ../../STYLE_ANCHOR.md。01 依畫風錨狀態決定畫風輸入；02 之後以核准的本角色 01 作身份參考，非首角色另加專案畫風錨。
-- 單次生成：使用者每次要求最多呼叫一次圖片生成工具，只產出一張；生成後立即呈現並停止。技術檢查只回報，不自動重生。
+### (a) Exact filenames
+- [ ] 01-bowman-front-fullbody.png — PENDING-GENERATION
+- [ ] 02-bowman-four-view-master.png — PENDING-GENERATION
+- [ ] 03-bowman-expression-sheet.png — PENDING-GENERATION
+- [ ] 04-bowman-costume-detail-sheet.png — PENDING-GENERATION
+- [ ] 05-bowman-color-material-sheet.png — PENDING-GENERATION
+- [ ] 06-bowman-prop-construction-sheet.png — PENDING-GENERATION
+- [ ] 07-bowman-body-reference-sheet.png — PENDING-GENERATION
 
-| 編號 | 確切檔名 |
-| --- | --- |
-| 01 | 01-bowman-front-fullbody.png |
-| 02 | 02-bowman-four-view-master.png |
-| 03 | 03-bowman-expression-sheet.png |
-| 04 | 04-bowman-costume-detail-sheet.png |
-| 05 | 05-bowman-color-material-sheet.png |
-| 06 | 06-bowman-prop-construction-sheet.png |
-| 07 | 07-bowman-body-reference-sheet.png |
+### (b) Character gate
 
-第一階段只生成 01-bowman-front-fullbody.png，生成後停止等待使用者核准。核准後才逐次生成下一張；每次仍只生成一張。
+Generate only 01-bowman-front-fullbody.png first. Present that single image and stop. Generate 02–07 only after explicit user approval of 01.
 
----
+### (c) Consistency statement
 
-## 01 — **01-bowman-front-fullbody.png**
+The filenames above exactly match the section filenames below. The intentional facial erasure, body metrics, scout armor and palette come from the same Canonical Fact Map as CHARACTER_SPEC.md.
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 01
+### (d) Fixed input images
 
-Canonical character facts (do not add or contradict): Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
+For 01, use all three images only as style references and never copy their depicted person's identity:
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-Primary request:
-Render exactly one complete front full-body view in a standard neutral A-pose: feet shoulder-width apart, arms straight 30-45 degrees away from the torso, open hands, even weight, true orthographic projection. Character and locked costume only; no removable prop.
+For 02–07, additionally use ./01-bowman-front-fullbody.png as Bowman's memory-image identity reference while retaining all three style images.
 
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
+### (e) Existing PNG state
 
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+All files are PENDING-GENERATION. Do not overwrite any future approved PNG.
+
+### (f) Single-generation policy
+
+Each user image request permits at most one image-generation call and one new image. Present it immediately and stop. Technical inspection may report deviations but must not auto-reject, move or regenerate. Only an explicit modification request authorizes archiving the prior unapproved candidate and generating one replacement.
+
+## 01 — 01-bowman-front-fullbody.png
+
+Input images:
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
+
+Positive prompt:
+Full-body front view of Bowman as Kriz's incomplete memory of a fallen Hector scout. Standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed 30-45 degrees away from the body, palms open, no action pose, no contrapposto, no T-pose. True orthographic front camera, flat warm-gray background, even shadowless light, entire body visible. Adult male scout silhouette; the face softly loses specific features into pale memory haze and must remain intentionally unidentifiable, not wounded or monstrous. Short indistinct dark hair. DESIGN-PROPOSAL body metrics: 176 cm, 7.4 heads, shoulders 2.3 head widths, lean field-scout build. Standard light scout armor: charcoal gambeson, dull steel plates, worn leather straps, flexible boots, faded Hector-blue scarf. No weapon or prop. Exactly five fingers per hand and five toes per foot.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+clear resolved face, sharp eye color, celebrity face, heroic glamour portrait, skull, mask, visor, gore, zombie, copied reference identity, weapon, knife, map case, whistle, action pose, T-pose, cast shadow, rim light, cropped head, cropped feet, text, watermark, extra fingers, six fingers, fused fingers, missing fingers, malformed hands, extra toes
 
----
+## 02 — 02-bowman-four-view-master.png
 
-## 02 — **02-bowman-four-view-master.png**
+Input images:
+- ./01-bowman-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 02
-
-Canonical character facts (do not add or contradict): Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
-
-Primary request:
-Create one four-view turnaround sheet in this exact order: front, anatomical-left profile, anatomical-right profile, back. Use the same neutral A-pose, identical scale and proportions, aligned head-top and ground lines, true orthographic views, zero removable props.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+One turnaround sheet with four complete views in this exact order: front, camera on the character's anatomical LEFT side, camera on the character's anatomical RIGHT side, back. Same neutral A-pose, height, scale, lean scout proportions and armor in every panel; true orthographic camera; aligned head-top and ground lines. Preserve Bowman's intentionally erased, unidentifiable memory-face and the same charcoal light armor, dull steel, worn leather, faded blue scarf and pale memory haze. No weapons or loose props. Exactly five fingers per visible hand.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+clear different faces, identity invention, inconsistent facial erasure, different armor, weapon, prop, wrong view order, duplicate view, perspective, action pose, cast shadow, cropped body, text, watermark, extra fingers, six fingers, fused fingers, missing fingers, malformed hands
 
----
+## 03 — 03-bowman-expression-sheet.png
 
-## 03 — **03-bowman-expression-sheet.png**
+Input images:
+- ./01-bowman-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 03
-
-Canonical character facts (do not add or contradict): Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
-
-Primary request:
-Create exactly eight head-and-shoulders portrait panels in a clean 4x2 grid: neutral, gentle/relaxed, broad positive, joyful, surprised, angry, sad, alert/wink-equivalent. Change expression only; preserve identity and anatomy.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Eight head-and-shoulders memory portraits in a 4x2 grid, straight-on camera, same Bowman silhouette and armor neckline. Exact sequence: neutral memory trace, faint comradely warmth, barely readable smile, distant remembered laughter, startled trace, tense trace, sorrowful fading trace, final nearly blank memory. Only a faint expression trace changes; every face remains softly erased and unidentifiable, with no fixed eye color or recoverable facial geometry. Consistent pale haze and desaturated palette.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+sharp complete face, eight different people, clear eye color, identity invention, skull, mask, gore, horror, hairstyle change, armor change, profile view, inconsistent grid, text, watermark
 
----
+## 04 — 04-bowman-costume-detail-sheet.png
 
-## 04 — **04-bowman-costume-detail-sheet.png**
+Input images:
+- ./01-bowman-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 04
-
-Canonical character facts (do not add or contradict): Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
-
-Primary request:
-Create a costume construction detail sheet showing only Canon garment layers, front/back construction, collar, sleeves, waist, hem, footwear, fastenings, and material close-ups. No weapons or removable props.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Costume construction sheet for Bowman's standard Hector scout light armor: front and back breakdowns, detached charcoal gambeson layers, dull steel plates, worn leather straps, flexible field boots and faded Hector-blue scarf, plus one torso view without outer armor for body-contour reference. Preserve the same erased memory-face when the head is visible. No weapons, map case, whistle or utility knife. Flat orthographic production presentation with no readable labels. Exactly five fingers per visible hand.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+clear face, identity invention, heavy knight plate, ornate royal armor, weapon, knife, map case, whistle, action pose, dramatic light, cropped main views, text, watermark, extra fingers, six fingers, fused fingers, missing fingers, malformed hands
 
----
+## 05 — 05-bowman-color-material-sheet.png
 
-## 05 — **05-bowman-color-material-sheet.png**
+Input images:
+- ./01-bowman-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 05
-
-Canonical character facts (do not add or contradict): Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
-
-Primary request:
-Create a color-and-material reference sheet using only Canon named colors plus explicitly marked SPEC design-proposal hex candidates. Include clean swatches/material patches and one neutral reference subject. Do not render visible text or hex labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Color and material reference sheet with unlabeled swatches and material spheres for memory gray #B8BBC0, field charcoal #343940, faded Hector blue #465A70, worn leather #66503E, dull steel #7C858C, pale haze #D8D9D7 and indistinct dark hair #3A3838. Include one small neutral full-body reference preserving Bowman's erased, unidentifiable face and scout armor. Flat neutral lighting, no weapon or loose prop.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+clear face, fixed eye color, saturated heroic colors, palette drift, weapon, knife, map case, whistle, action scene, text, hex labels, watermark, cropped body, extra fingers, malformed hands
 
----
+## 06 — 06-bowman-prop-construction-sheet.png
 
-## 06 — **06-bowman-prop-construction-sheet.png**
+Input images:
+- ./01-bowman-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 06
-
-Canonical character facts (do not add or contradict): Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
-
-Primary request:
-Create a props/special-construction sheet containing only removable weapons, pendants, tools, tack, or special structures explicitly permitted by the Canon summary. If none are Canon, show only non-invented construction/material studies. No full character, portrait, face, text, or labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Props-only construction sheet for conservative DESIGN-PROPOSAL standard scout equipment: one worn leather map case, one simple signal whistle and one short utility knife with sheath. Show front, side and exploded views with consistent scale and construction. No casualty roster, no desk, no full-body person, no face and no character silhouette; a headless tailor mannequin may show belt attachment only.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+full-body character, face, head, clear identity, casualty roster, Kriz's desk, sword, shield, fantasy artifact, ornate decoration, prop being held, duplicate incompatible designs, text, watermark
 
----
+## 07 — 07-bowman-body-reference-sheet.png
 
-## 07 — **07-bowman-body-reference-sheet.png**
+Input images:
+- ./01-bowman-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 07
-
-Canonical character facts (do not add or contradict): Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
-
-Primary request:
-Create a human body-reference sheet for modeling: front and anatomical-left profile at identical scale, neutral A-pose, plain tight dark-gray bodysuit, hair secured away from the silhouette, no costume outer layers, accessories, jewelry, weapons, props, text, or labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+SMPL-X body reference sheet with front and camera-on-anatomical-LEFT-side views of the same adult male scout memory-image. Preserve the intentionally erased, unidentifiable face and indistinct short hair. Plain fitted neutral dark-gray body suit, full body contour visible. Standard neutral A-pose, true orthographic camera, identical scale and aligned ground line. DESIGN-PROPOSAL body metrics: 176 cm, 7.4 heads, shoulders 2.3 head widths, lean scout build. Exactly five fingers per hand and five toes per foot. No armor, scarf, weapon, prop or jewelry.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+clear face, fixed eye color, identity invention, armor, cape, scarf, loose clothing, weapon, props, accessories, jewelry, action pose, T-pose, cast shadow, cropped body, perspective, extra fingers, six fingers, fused fingers, missing fingers, malformed hands, extra toes
 
----
+## Per-sheet REJECT Review Checklist
 
-## 逐張驗收清單
+- [ ] The face remains intentionally erased and does not invent a definitive identity.
+- [ ] Hair silhouette, memory haze, age impression and scout silhouette remain consistent.
+- [ ] Body proportions match Body Metrics Lock.
+- [ ] Costume structure matches Costume Lock.
+- [ ] Colors match the fixed proposal palette.
+- [ ] Sheet layout, view count, order, neutral pose, zero-prop rule and flat lighting are satisfied.
+- [ ] Style matches all three fixed style-reference images.
+- [ ] Visible human hands have exactly five fingers per hand.
+- [ ] No other named character's identity has been copied.
 
-- [ ] Canon 身份、外貌、體型、服裝、道具、關係與時期未被推測內容覆蓋。
-- [ ] SPEC 與 PROMPTS 的 Pair sync ID 完全相同。
-- [ ] 01 為單一正面身份錨；02 為四視圖；03 恰好八格；其餘構圖符合各節。
-- [ ] 所有可拆卸武器、墜飾、工具與道具只出現在 06。
-- [ ] 圖片只用 Canon 命名色；候選 hex 不得覆蓋 Canon。
-- [ ] 無文字、標籤、logo、簽名或浮水印。
-- [ ] 有 PNG 的角色已完成 IMAGE-DRIFT-REVIEW-REQUIRED 複核。
+## PENDING-USER-INPUT
 
-驗收只回報偏差並等待使用者，不得自行移檔或重生成。只有使用者明確要求修改時，才歸檔上一張未核准候選並只生成一張新圖。
+PENDING-USER-INPUT: Bowman's clear facial features, eye color, exact hair color, age, weapon and personal history remain unavailable. The package intentionally represents the erased memory-image.
+
+## Instruction for Codex
+
+Read <repo-root>/Story_Character/04_遠征士兵/鮑曼/CHARACTER_SPEC.md and this PROMPTS.md. Follow the generation gate. Generate exactly one image per user request, begin with 01-bowman-front-fullbody.png, present it and stop for approval.

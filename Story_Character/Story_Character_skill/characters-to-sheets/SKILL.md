@@ -1,17 +1,17 @@
 ---
 name: characters-to-sheets
-description: 【產線第 2 段·中游】把上游指定角色的資料逐一建立成角色參考包——同一來源、同一輪寫入 CHARACTER_SPEC.md（版本 ID、Body Metrics、hex 色票、身份鎖、Kinship）與 PROMPTS.md（人形 01–07／非人形 01–06 的完整英文提示詞），禁止只產其中一份。當使用者要「替每個角色產設定圖提示詞」「把指定角色檔建成角色包」「產生 SPEC 與 PROMPTS」「/characters-to-sheets」時使用。不生圖、不掃描或批次刷新既有角色包。上游接 scene-to-characters，下游接 sheets-to-codex。
+description: 【產線第 2 段·中游】把偽典故事中指定角色的資料寫入上游已建立的角色資料夾——同一來源、同一輪寫入 CHARACTER_SPEC.md（版本 ID、Body Metrics、hex 色票、身份鎖、Kinship）與 PROMPTS.md（人形 01–07／非人形 01–06 的完整英文提示詞），並固定引用 Story_Character/style/ 內三張風格圖。當使用者要「替每個角色產設定圖提示詞」「把指定角色資料寫成 SPEC 與 PROMPTS」「/characters-to-sheets」時使用。不建立角色資料夾、不生圖、不掃描或批次刷新既有角色包。上游接 scene-to-characters，下游接 sheets-to-codex。
 ---
 
 # characters-to-sheets —【中游】角色檔 → SPEC ＋ 7 張制 PROMPTS
 
-產線三段的第 2 段。輸入上游指定的一份角色抽取檔或該角色的權威資料，逐角色建立資料夾中的 `CHARACTER_SPEC.md`＋`PROMPTS.md`（人形 01–07／非人形 01–06）。**每次只處理指定角色；兩份文件必須成對產生；只產 MD，不生圖**。
+產線三段的第 2 段。輸入上游指定的一份角色抽取檔或該角色的權威資料，在上游依角色表建立好的角色資料夾內寫入 `CHARACTER_SPEC.md`＋`PROMPTS.md`（人形 01–07／非人形 01–06）。**每次只處理指定角色；不建立角色資料夾；兩份文件必須成對產生；只產 MD，不生圖**。
 
 ```
 (上游) scene-to-characters → [本段] 角色檔 → SPEC ＋ PROMPTS  →  (下游) sheets-to-codex → Codex 生圖
 ```
 
-> **兩階段分清楚**：本段只做 **產 MD（Phase A）**——此時指定角色可以尚未有圖。PROMPTS 對「首角色 01」的引用是**檔名前向引用**，不要求該檔當下存在。生圖先後是下游（Phase B）的事。若輸入含多個新角色，依核准清單逐一建立；不得掃描專案並刷新未指定角色。
+> **兩階段分清楚**：本段只做 **產 MD（Phase A）**。每個角色的 01 固定使用三張風格圖；02–07 再加入該角色自己的核准 01 作身份參考。生圖先後是下游（Phase B）的事。若輸入含多個新角色，依核准清單逐一寫入上游已建立的資料夾；不得掃描專案並刷新未指定角色。
 
 ## SPEC／PROMPTS 成對同步契約（最高優先）
 
@@ -26,38 +26,31 @@ description: 【產線第 2 段·中游】把上游指定角色的資料逐一�
 
 ## 路徑/檔名約定（交接契約）
 - **`<repo-root>` ＝生圖 repo 根目錄**：直接 clone `Codex_Image_Agent` 時就是 clone 出來的資料夾；從外層 `claude-Godzilla-z` 專案使用時是 `output/`。**不要**兩者相加。
-- **路徑＝暫定可改**：專案根預設 `<repo-root>/<專案名>/`；接手者可搬，維持「一專案一根、每角色一子資料夾」。
-- **檔名＝固定不可改**：專案根 `STYLE_ANCHOR.md`；每角色資料夾 `CHARACTER_SPEC.md`、`PROMPTS.md`、`rejects/`；圖片 `NN-<name>-<sheet>.png`（`NN`＝01–07，非人形 01–06；`<sheet>` 固定字串見 §3）。`<name>` 沿用上游角色檔的英文小寫名。
+- **角色資料夾由上游建立**：固定為 `<repo-root>/Story_Character/<分類>/<中文角色資料夾名>/`。本段只能使用上游 `_INDEX.md`／核准角色表所列的既有目標路徑，不得自行建立、改名、移動或重新分類角色資料夾。
+- **風格圖固定**：`style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`、`style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`、`style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`。
+- **檔名固定不可改**：在既有角色資料夾寫 `CHARACTER_SPEC.md`、`PROMPTS.md`；圖片 `NN-<name>-<sheet>.png`（`NN`＝01–07，非人形 01–06；`<sheet>` 固定字串見 §3）。`<name>` 沿用上游角色檔的英文小寫名。`rejects/` 只在下游首次需要歸檔未核准候選時建立。
 
 ---
 
-## 執行前先確認（強制，core.md §10）
+## 執行前先確認（強制）
 1. **輸入角色檔**：確認本次指定的單一角色檔。若使用者給多個新角色，先固定清單，再逐一處理；不得自行把「全部」解讀成掃描並刷新既有角色包。
 2. **權威來源與優先序**：指定本輪唯一來源組合（例如 `全角色總表.md` 高於舊角色包）；同一輪不得讓 SPEC 與 PROMPTS 各自採用不同來源。
 3. **操作模式**：預設 `CREATE-CHARACTER`。只有使用者明確點名既有角色並授權修正時，使用 `UPDATE-ONE-PAIR`；不得使用批次刷新模式，也不得退化成單檔 patch。
-4. **專案名**：決定 `<repo-root>/<專案名>/`。
-5. **首角色**：若使用者已指定要先製作的零圖片角色，直接採用；尚未指定時保留 `PENDING-FIRST-REQUEST`，不得自行挑選。
-6. **首角色畫風 bootstrap 依據**：畫風參考圖路徑，或文字畫風描述。
-7. **人形/非人形**：非人形走 6 張（無 07）；01/02 用自然站立正交取代 A-pose。
-8. 辨識關鍵分歧（髮型/武器/角組等，上游標 PENDING 的）→ 本段不硬定，沿用 PENDING 並在檔頭鎖「未定案不得生成 01」。
+4. **輸出位置**：從上游 `_INDEX.md`／核准角色表取得指定角色的既有目標路徑，並確認該資料夾已存在。若不存在，回報 `UPSTREAM-FOLDER-MISSING` 並停止；不得由本段建立或另選分類。
+5. **固定風格圖**：確認三張檔案都存在且可讀；缺一張即停止，不得改用角色圖片代替。
+6. **人形/非人形**：非人形走 6 張（無 07）；01/02 用自然站立正交取代 A-pose。
+7. 辨識關鍵分歧（髮型/武器/角組等，上游標 PENDING 的）→ 本段不硬定，沿用 PENDING 並在檔頭鎖「未定案不得生成 01」。
 
 ---
 
 ## 詳細步驟
 
 ### 步驟 1｜專案初始化（只做一次）
-1. 建 `<repo-root>/<專案名>/`。
-2. 寫 `STYLE_ANCHOR.md`：
-```markdown
-# STYLE_ANCHOR — <專案名>
-- 狀態：`PENDING-APPROVAL`
-- 首角色：`PENDING-FIRST-REQUEST`
-- 畫風錨圖片：`PENDING-FIRST-REQUEST`
-- 核准日期：`PENDING-APPROVAL`
-- bootstrap 畫風依據：<畫風參考圖路徑或文字畫風描述>（僅供首角色 01 一次性使用，核准後失效）
-- 首次規則：第一次指定的零圖片角色自動登記為首角色，只生成其 01 並等待核准。
-- ACTIVE 規則：後續角色只認首角色 01，不得直接引用 bootstrap 依據。
-```
+1. 確認 `<repo-root>/Story_Character/` 與 `style/` 存在。
+2. 確認固定三張風格圖均存在、可讀且未被角色圖片替換。
+3. 讀取上游 `_INDEX.md`／核准角色表的資料夾映射，確認本次指定角色的目標資料夾已存在且路徑唯一。
+4. 若角色資料夾不存在，停止並回報 `UPSTREAM-FOLDER-MISSING`，要求先執行 `scene-to-characters` 的批次補建步驟；不得自行建立替代資料夾。
+5. 不建立任何風格狀態檔；固定三張風格圖存在即可。
 
 ### 步驟 2｜為指定角色寫入 CHARACTER_SPEC.md
 先建立該角色的 Canonical Fact Map，再從 Fact Map 逐欄填寫。若是明確授權的 `UPDATE-ONE-PAIR`，須重寫該角色所有受權威來源影響的欄位，清除相反舊值，不得只加註解覆蓋：
@@ -78,11 +71,11 @@ PROMPTS 的每個 Identity／Body／Costume／Color／Prop／Kinship invariants 
 
 #### 3.1 檔頭：Codex 生成清單（機器可讀，既有五項＋單次生成政策）
 - **(a) 確切檔名清單**：人形 01–07／非人形 01–06，逐一列出。
-- **(b) 兩階段閘門**：第一階段只生 01 → 停止等核准 → 核准後才生其餘。若 `STYLE_ANCHOR.md` 尚為 `PENDING-FIRST-REQUEST`，第一次指定的零圖片角色自動成為首角色；核准後其 01 登記為專案畫風錨。血緣角色標「家族錨點 <名> 的 01 須先核准」。
+- **(b) 角色兩階段閘門**：每位角色第一階段只生自己的 01 → 停止等核准 → 核准後才生該角色其餘張次。不同角色互不阻塞；血緣角色仍標「家族錨點 <名> 的 01 須先核准」。
 - **(c) 一致性聲明**：(a) 檔名與下方各節標題檔名逐一相同。
-- **(d) 雙層錨點 input images**：所有角色都先讀 `../../STYLE_ANCHOR.md` 動態解析，不在角色 Prompt 寫死首角色名稱。
-  - 被登記為首角色者：01 使用 `STYLE_ANCHOR.md` 的 bootstrap 畫風依據；02–07 的 Image 1＝自己 01。
-  - 後續角色：01 的 Image 1 空、Image 2＝`STYLE_ANCHOR.md` 登記的首角色 01（畫風）；02–07 的 Image 1＝自己 01（身份）、Image 2＝首角色 01（畫風）。
+- **(d) 固定 input images**：
+  - 01：固定帶入 `../../style/` 內三張風格圖，只控制畫風，不複製參考人物身份。
+  - 02–07：帶入本角色核准的 01 作身份參考，並同時帶入固定三張風格圖。
 - **(e) 既有 PNG 標記**：全 `PENDING-GENERATION`（新角色）或標「已生成/不得覆蓋」。
 - **(f) 單次生成政策**：寫明「使用者每次要求最多呼叫一次圖片生成工具、只產出一張；生成後立即呈現並停止；技術檢查只回報，不自動重生；只有使用者明確要求修改才將上一張未核准候選移入 `rejects/` 並另生一張」。
 
@@ -90,7 +83,7 @@ PROMPTS 的每個 Identity／Body／Costume／Color／Prop／Kinship invariants 
 
 **01 front-fullbody（身份錨點，stage 1）**
 - Primary：Full-body front view, standard A-pose, face clearly visible and identifiable. No weapon/prop.
-- 必含：A-pose 英文句、Body metrics、Identity invariants、Kinship invariants（有血緣才填）、Costume invariants（含「所有武器僅 06」）、Composition（正交正面、平背景）、Positive（依 `STYLE_ANCHOR.md` 判定 bootstrap 或已核准畫風錨）、零道具負面詞。
+- 必含：A-pose 英文句、Body metrics、Identity invariants、Kinship invariants（有血緣才填）、Costume invariants（含「所有武器僅 06」）、Composition（正交正面、平背景）、固定三張風格參考、零道具負面詞。
 
 **02 four-view-master**
 - Primary：One turnaround sheet, four full-body views 正面→左→右→背, same A-pose.
@@ -125,7 +118,7 @@ PROMPTS 的每個 Identity／Body／Costume／Color／Prop／Kinship invariants 
 - [ ] 左右不對稱位置正確、未鏡像
 - [ ] 色票未漂移（對照固定 hex）
 - [ ] 該張構圖規則（視圖數/順序/A-pose/零道具/平光）全滿足
-- [ ] **畫風與專案畫風錨（首角色 01）一致**（角色 2..N 適用）
+- [ ] **畫風與固定三張風格參考一致**（所有角色、所有張次適用）
 - [ ] 血緣相似：承襲特徵與家族錨點一致、刻意區分未混淆（有血緣才查）
 
 #### 3.4 檔尾：交給 Codex 的一鍵指令（區塊，下游會用）
@@ -134,11 +127,12 @@ PROMPTS 的每個 Identity／Body／Costume／Color／Prop／Kinship invariants 
 ### 步驟 4｜自查（grep）
 - 條數：人形 7 個 `## 01`–`## 07`／非人形 6 個。
 - 零道具殘留：01/02/03/04/05/07 內文不得出現手持武器；武器只在 06。
-- 所有角色 PROMPTS 只引用 `STYLE_ANCHOR.md`；不得直接出現 bootstrap 圖檔名或寫死首角色路徑。
+- 所有角色 PROMPTS 必須逐一列出固定三張風格圖；不得引用其他角色圖片作畫風參考。
 - hex：SPEC 色票每項有值；PROMPTS 用到的顏色與 SPEC 一致。
 - Kinship 成對：本角色與親屬互列。
-- 成對輸出：本輪每個被建立或明確修正的 `PROMPTS.md` 都必須有同角色的 `CHARACTER_SPEC.md`，反之亦然；檔案集合不相等即失敗。
-- 範圍隔離：Git diff 只能包含本輪指定角色、首次建立專案時的 `STYLE_ANCHOR.md`，以及使用者另行授權的文件；出現未指定角色包即失敗。
+- 成對輸出：本輪每個被寫入或明確修正的 `PROMPTS.md` 都必須有同角色的 `CHARACTER_SPEC.md`，反之亦然；檔案集合不相等即失敗。
+- 範圍隔離：Git diff 只能包含本輪指定角色，以及使用者另行授權的文件；出現未指定角色包即失敗。
+- 資料夾責任：Git diff 不得出現由本段新增、改名、移動或重新分類的角色資料夾；缺資料夾只能回報 `UPSTREAM-FOLDER-MISSING`。
 - Canon 對齊：名稱／別名、外貌、體型、服裝、道具、關係與時期逐欄比對；SPEC 與 PROMPTS 不得存在互斥敘述。
 - 舊值清理：搜尋本輪被權威來源取代的舊詞；若仍以 `CANON` 或鎖定正文存在，判定 `PAIR-SYNC-FAILED`。
 - 圖片保護：已有正式 PNG 而獲授權刷新文件者，若文字與圖片身份衝突，必須列出 `IMAGE-DRIFT-REVIEW-REQUIRED`，不得宣告整包完成。
@@ -154,4 +148,4 @@ PROMPTS 的每個 Identity／Body／Costume／Color／Prop／Kinship invariants 
 ## 鐵律
 **張號只有一種：人形 01–07、非人形 01–06。從故事文字建立新角色時直接使用此格式。**
 
-不生圖；每次只處理使用者指定角色，不掃描、不批次刷新既有角色包；SPEC 與 PROMPTS 必須同源、同輪、成對產出，禁止單邊 patch；產出的 PROMPTS 必須寫入「一次要求只生一張、技術檢查不自動重生」；不刪不覆蓋 PNG；已有正式 PNG 的角色包預設凍結，只有使用者明確點名並授權才可成對修正；辨識關鍵分歧 PENDING-USER-INPUT 並鎖「未定案不得生成 01」，不自決；非人形跳 A-pose 與 07；不發明文本沒有的數值（hex/身高標 DESIGN-PROPOSAL 可覆蓋）。
+不建立、改名、移動或重新分類角色資料夾；不生圖；每次只處理使用者指定角色，不掃描、不批次刷新既有角色包；SPEC 與 PROMPTS 必須同源、同輪、成對產出，禁止單邊 patch；產出的 PROMPTS 必須寫入「一次要求只生一張、技術檢查不自動重生」；不刪不覆蓋 PNG；已有正式 PNG 的角色包預設凍結，只有使用者明確點名並授權才可成對修正；辨識關鍵分歧 PENDING-USER-INPUT 並鎖「未定案不得生成 01」，不自決；非人形跳 A-pose 與 07；不發明文本沒有的數值（hex/身高標 DESIGN-PROPOSAL 可覆蓋）。

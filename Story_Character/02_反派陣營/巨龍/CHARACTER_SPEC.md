@@ -1,76 +1,79 @@
-# 巨龍 — CHARACTER_SPEC
+# CHARACTER_SPEC — 巨龍
 
-<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
-> **Authoritative story canon — source: <repo-root>/全角色總表.md**
->
-> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
-> Pair sync ID: dragon-F1B720F99C76
->
-> This is the non-human chaos dragon from chapter 10. It is controlled by Adama, later loses control and attacks the controlling side, and finally falls dead. Whether it has a proper name, intelligence, autonomous consciousness, or stable individuality is PENDING-USER-INPUT. Do not invent humanoid anatomy, clothing, rider gear, heraldry, or a bond with Adama beyond control in battle.
->
-> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
-<!-- MASTER-TABLE-CANON-REFRESH:END -->
-
-> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
-
-## 同步與狀態
-
-- 操作模式：REFRESH-PAIR
-- Pair sync ID：dragon-F1B720F99C76
-- 角色版本 ID：DRAGON-V1-STRATEGIC-WAR-BEAST
-- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
-- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
-- 身份正本：01-dragon-front-fullbody.png
-- 專案畫風正本：../../STYLE_ANCHOR.md
+> Operation mode: CREATE-CHARACTER
+> Authoritative sources: <repo-root>/Story_Character/預告片_按場次重新整理.md (appearance scope and scene version) + <repo-root>/全角色總表.md (identity facts and relationships)
+> Version ID: CHAOS_DRAGON-V1-1587_WAR_DRAGON
+> Identity master: PENDING-GENERATION → 01-chaos-dragon-front-fullbody.png
+> Generation gate: READY-FOR-DOWNSTREAM-01-REQUEST
+> Trailer evidence: Selected by 預告片_按場次重新整理.md; use that source as the exact scene authority
 
 ## Canonical Fact Map
 
-- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
-- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
-- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
+- Name: 巨龍
+- English asset slug: chaos-dragon
+- Character type: nonhuman
+- Production version: 1587-war-dragon
+- Appearance: CANON: giant dragon independently acts, is controlled by Adama, later loses control and dies; DESIGN-PROPOSAL: black basalt scales, crimson membrane wings, six backward horns and amber-red eyes
+- Costume: DESIGN-PROPOSAL: no clothing; segmented armored scale plates, scarred wing membranes and control harness attachment points
+- Props and special construction: CANON: Adama control device interface; DESIGN-PROPOSAL: broken harness and restraint rings, only in sheet 06
+- Kinship and relationship facts: No kinship; do not borrow human facial traits
+- Pending: PENDING-USER-INPUT: whether the trailer dragon and the table's chaos dragon are the same named individual, and its intelligence level, remain unresolved.
 
 ## Body Metrics Lock
 
-- 身高（cm）：PENDING-USER-INPUT
-- 頭身比：PENDING-USER-INPUT
-- 肩寬（頭寬倍數）：PENDING-USER-INPUT
-- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
+- Scale and proportions: approximately 18 m long; shoulder height 5.5 m; wingspan 24 m; massive quadrupedal-draconic frame; bilateral symmetry with battle damage allowed
+- Shoulder width is explicitly included above and must remain consistent across 01, 02, 04, 05 and 07 when applicable.
+- Symmetry: use only the asymmetry explicitly stated above; otherwise keep left and right structure consistent.
+- Anatomy lock: Follow the species body plan stated in Body Metrics; no duplicated heads, limbs, wings, tails, horns or facial organs.
 
 ## Identity Lock
 
-- CANON：This is the non-human chaos dragon from chapter 10. It is controlled by Adama, later loses control and attacks the controlling side, and finally falls dead. Whether it has a proper name, intelligence, autonomous consciousness, or stable individuality is PENDING-USER-INPUT. Do not invent humanoid anatomy, clothing, rider gear, heraldry, or a bond with Adama beyond control in battle.
-- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
-- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
+- CANON: giant dragon independently acts, is controlled by Adama, later loses control and dies; DESIGN-PROPOSAL: black basalt scales, crimson membrane wings, six backward horns and amber-red eyes
+- Preserve the same face or head construction, hair or surface pattern, eye design, age impression and distinguishing asymmetry in every sheet.
+- Do not copy the identity, face, costume or colors of any style-reference person.
 
 ## Costume Lock
 
-- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
-- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
-- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
+- DESIGN-PROPOSAL: no clothing; segmented armored scale plates, scarred wing membranes and control harness attachment points
+- 01, 02, 03, 04 and 05 show no handheld weapon or loose prop.
+- 07, when present, removes armor, cape, cloak, accessories and props and uses only a fitted neutral body suit.
 
-## 固定色票與材質
+## Color and Material Lock
 
-- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
-- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#5C1B33、#150F1A、#3B2350、#3A3A40、#241626、#FFF3D6、#D4C05A
-- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
+- Fixed production palette: basalt #17191C; charcoal scale #2D3034; crimson membrane #6D2028; horn ivory #B6AA92; ember eye #E05A2D; control silver #A8B1BA
+- Treat all unlabelled colors as DESIGN-PROPOSAL. Do not shift hue or material identity between sheets.
 
-## 道具與特殊構造
+## Prop and Special Construction Lock
 
-- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
-- 所有可拆卸道具只出現在 06-dragon-prop-construction-sheet.png。
-- 01–05 與人形 07 一律零可拆卸道具。
+- CANON: Adama control device interface; DESIGN-PROPOSAL: broken harness and restraint rings, only in sheet 06
+- All handheld weapons, scabbards, tools, pendants shown separately, riding tack and detachable props appear only in sheet 06.
 
 ## Kinship Lock
 
-- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
-- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+- No kinship; do not borrow human facial traits
+- Kinship similarity, where applicable, is limited to bone-structure cues and explicitly inherited colors. Do not clone hairstyle, age, expression or body mass.
 
-## 八種表情／狀態
+## Eight Expressions
 
-neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+1. neutral
+2. gentle smile
+3. broad smile with teeth
+4. joyful open laughter
+5. surprised
+6. angry
+7. sad
+8. wink
 
-## 禁止與待確認
+Only expression changes. Identity geometry, age, hair, eyes, skin or surface pattern and distinguishing asymmetry remain fixed.
 
-- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
-- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
-- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。
+## Prohibited Features
+
+- identity drift, age drift, costume redesign, palette drift, mirrored asymmetry
+- weapons or props outside sheet 06
+- cropped feet, cropped head, perspective distortion, action pose, dramatic cast shadows
+- extra limbs, duplicated anatomy, fused anatomy, missing anatomy
+- for humans: extra fingers, six fingers, fused fingers, missing fingers, duplicated thumbs, malformed hands, extra toes
+
+## PENDING-USER-INPUT
+
+PENDING-USER-INPUT: whether the trailer dragon and the table's chaos dragon are the same named individual, and its intelligence level, remain unresolved.

@@ -6,7 +6,7 @@
 
 ## 專案角色定位
 
-**第二角色**。畫風不再引用 bootstrap 依據，一律鎖定專案畫風錨——首角色 Lumi 的 `01-lumi-front-fullbody.png`（見 `../STYLE_ANCHOR.md`）。
+**測試角色**。所有張次固定使用 `../../Story_Character/style/` 內三張風格圖；Garo 的核准 01 只作 Garo 自己後續張次的身份參考。
 
 ## 身份正本鎖
 
@@ -57,5 +57,5 @@
 
 ## 畫風參考規則（本角色專屬提醒）
 
-- 本角色**不得**引用專案 bootstrap 文字畫風描述（該依據已隨 Lumi 01 核准而失效）。
-- 本角色畫風**唯一**參考來源：`../Lumi/01-lumi-front-fullbody.png`（專案畫風錨）。
+- 本角色固定使用 `../../Story_Character/style/` 內三張圖片作風格參考。
+- 不得引用 Lumi 或其他角色圖片作風格來源。

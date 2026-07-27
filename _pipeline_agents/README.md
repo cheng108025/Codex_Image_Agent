@@ -39,9 +39,9 @@ foreach ($s in 'scene-to-characters','characters-to-sheets','sheets-to-codex') {
 
 | Skill | bytes | SHA-256 |
 | --- | ---: | --- |
-| `skills/scene-to-characters/SKILL.md` | 7727 | `76116398187F7C7642B1A1E8371328F0D06CEA2E7912639B57785F775885EE37` |
-| `skills/characters-to-sheets/SKILL.md` | 15308 | `2DE1AAC4261881A0D890DE415BAF25C45344961D4EA9798B05C3BFE00BFA2171` |
-| `skills/sheets-to-codex/SKILL.md` | 10683 | `77351745540A4FE650F1A7582A13BEF6EF4424C7E2175E662E06E4B749C7D578` |
+| `skills/scene-to-characters/SKILL.md` | 10830 | `51E78B1CC6CBBB696146CD2DC5F1BE095361C300C47245C97F43B56564FAC804` |
+| `skills/characters-to-sheets/SKILL.md` | 15531 | `0D200934F002DC4D30E56474EC7DE339F962500D7D3B35E4DA290F5737F7C1D2` |
+| `skills/sheets-to-codex/SKILL.md` | 10632 | `F2D8393B361A06BCE99A69D344CB069B7D5B0980EAC501EA466471C7D233D94E` |
 
 > **`<repo-root>`**：clone `Codex_Image_Agent` 時＝clone 的根目錄；從外層專案執行時＝`output/`。
 > **兩者不可相加**，寫成 `output/output/...` 一定是錯的。
@@ -54,12 +54,13 @@ foreach ($s in 'scene-to-characters','characters-to-sheets','sheets-to-codex') {
 場次文件
   │  ① scene-to-characters      ──可派──▶  story-character-extractor
   ▼
-每角色抽取檔（characters_extracted/<name>.md）
+角色表＋每角色抽取檔（characters_extracted/<name>.md）
+  │  依角色表批次補建缺少的 Story_Character/<分類>/<角色>/ 空資料夾
   │  人工核准
   ▼
   │  ② characters-to-sheets     ──逐角色──▶  character-spec-manager
   ▼
-<專案>/<角色>/CHARACTER_SPEC.md ＋ PROMPTS.md（01–07）＋ <專案>/STYLE_ANCHOR.md
+在上游既有角色資料夾寫入 CHARACTER_SPEC.md ＋ PROMPTS.md（01–07）
   │
   ▼  ③ sheets-to-codex（交 Codex，兩階段）
 01–07 PNG（非人形 01–06）
@@ -71,7 +72,7 @@ foreach ($s in 'scene-to-characters','characters-to-sheets','sheets-to-codex') {
 
 | 張號 | 內容 |
 | --- | --- |
-| 01 | 正面全身（**身份錨點**；專案首角色的 01 同時是**畫風錨**） |
+| 01 | 正面全身，作為該角色自己的**身份錨點** |
 | 02 | 四視圖總表（正面→左→右→背） |
 | 03 | 八表情 |
 | 04 | 服裝拆解 |
@@ -79,13 +80,9 @@ foreach ($s in 'scene-to-characters','characters-to-sheets','sheets-to-codex') {
 | 06 | 道具（**武器唯一出現位置**） |
 | 07 | 素體（僅人形；非人形無此張，共 6 張） |
 
-### 畫風錨狀態
+### 固定風格參考
 
-| 狀態 | 意義 |
-| --- | --- |
-| `PENDING-APPROVAL`＋首角色 `PENDING-FIRST-REQUEST` | 尚未收到第一次零圖片角色請求；第一次指定者自動登記為首角色 |
-| `PENDING-APPROVAL`＋已登記首角色 | 首角色 01 未核准。全專案只能生首角色的 01，其餘擋住 |
-| `ACTIVE` | 首角色 01 已核准並成為正式畫風錨。角色 2..N 開放，一律只認此圖為畫風參考 |
+所有角色、所有張次固定引用 `Story_Character/style/` 內三張原始風格圖。每位角色自己的 01 只作該角色身份錨；不同角色不互相作畫風參考，也不維護 `PENDING／ACTIVE` 專案狀態。
 
 ### 檔案安全鐵律
 
@@ -95,11 +92,11 @@ foreach ($s in 'scene-to-characters','characters-to-sheets','sheets-to-codex') {
 
 | 檔案 | 類型 | 對應段 | 功能 |
 | --- | --- | --- | --- |
-| `skills/scene-to-characters/SKILL.md` | Skill 安裝副本 | ① | 場次文件 → 每角色抽取檔 |
-| `skills/characters-to-sheets/SKILL.md` | Skill 安裝副本 | ② | 抽取檔 → SPEC＋PROMPTS（01–07）＋STYLE_ANCHOR |
+| `skills/scene-to-characters/SKILL.md` | Skill 安裝副本 | ① | 場次文件 → 角色表與每角色抽取檔；依角色表補建缺少的角色資料夾 |
+| `skills/characters-to-sheets/SKILL.md` | Skill 安裝副本 | ② | 抽取檔＋上游既有角色資料夾 → SPEC＋PROMPTS（01–07），寫入固定三張風格圖路徑 |
 | `skills/sheets-to-codex/SKILL.md` | Skill 安裝副本 | ③ | 交 Codex 兩階段產圖與逐張驗收 |
-| `agents/story-character-extractor.md` | Agent 執行體 | ① | 逐場抽角色線索，CANON 帶 SCENE 出處、推測標 DESIGN-PROPOSAL、缺口標 PENDING-USER-INPUT |
-| `agents/character-spec-manager.md` | Agent 執行體 | ② | 每次接一份角色抽取檔，建該角色資料夾＋SPEC＋PROMPTS.md（01–07），不掃描或批次刷新既有角色包 |
+| `agents/story-character-extractor.md` | Agent 執行體 | ① | 逐場抽角色線索，並依核准角色表批次補建缺少的角色資料夾 |
+| `agents/character-spec-manager.md` | Agent 執行體 | ② | 每次接一份角色抽取檔，在上游既有角色資料夾寫 SPEC＋PROMPTS.md（01–07）；缺資料夾即停止 |
 
 ③ sheets-to-codex 是產圖編排，逐張要等使用者核准，不派 agent（但 Skill 本身仍需安裝）。
 
@@ -133,10 +130,10 @@ Copy-Item "$pkg\agents\*.md" ".claude\agents\" -Force
 
 ## 用法
 
-1. 有新場次文件 → `/scene-to-characters`（給文件路徑）→ 得到每角色抽取檔 → 人工核准
-2. `/characters-to-sheets`（指定專案名與單一角色檔；多個新角色逐一執行；若尚未指定首角色則保留動態首次請求）→ 每個角色各自得到資料夾＋SPEC＋PROMPTS.md（01–07）＋共用 STYLE_ANCHOR.md
+1. 有新場次文件 → `/scene-to-characters`（給文件路徑）→ 得到角色表與每角色抽取檔，並依角色表批次補建缺少的空角色資料夾 → 人工核准
+2. `/characters-to-sheets`（指定單一角色檔；多個新角色逐一執行）→ 在上游既有角色資料夾成對寫入 SPEC＋PROMPTS.md（01–07），統一引用固定三張風格圖
 3. `/sheets-to-codex` → 依各角色 PROMPTS.md 檔尾「交給 Codex 的一鍵指令」交 Codex 兩階段產圖
-4. 首角色 01 先生先核准 → STYLE_ANCHOR 轉 ACTIVE → 才開放其餘角色
+4. 每位角色自己的 01 先核准 → 才開放該角色 02–07；不同角色互不阻塞
 
 ## 角色資產邊界
 

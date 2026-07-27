@@ -1,209 +1,146 @@
-# 夜光馬 — Image Generation Prompts
+# PROMPTS — 夜光馬
 
-<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
-> **Authoritative story canon — source: <repo-root>/全角色總表.md**
->
-> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
-> Pair sync ID: nightglow-horse-F1B720F99C76
->
-> BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked nightglow horse. Do not generate sheet 01 and do not promote any legacy anatomy, glow pattern, palette, tack, or biography in this package to story canon until the user decides whether it is a unique character, an unnamed mount, or an ensemble creature.
->
-> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
-<!-- MASTER-TABLE-CANON-REFRESH:END -->
+> Operation mode: CREATE-CHARACTER
+> Sources: <repo-root>/Story_Character/預告片_按場次重新整理.md + <repo-root>/全角色總表.md
+> Character type: nonhuman
+> Trailer evidence: Selected by 預告片_按場次重新整理.md; use that source as the exact scene authority
+> Generation gate: READY — first generate only 01, present it, then stop for user approval.
 
-## Codex 生成清單
+## Codex Generation Manifest
 
-- 操作模式：REFRESH-PAIR
-- Pair sync ID：nightglow-horse-F1B720F99C76
-- 生成閘門：BLOCKED-PENDING-USER-INPUT
-- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
-- 一致性：本檔與 CHARACTER_SPEC.md 使用完全相同的 Canonical Fact Map。
-- Input images：先讀 ../../STYLE_ANCHOR.md。01 依畫風錨狀態決定畫風輸入；02 之後以核准的本角色 01 作身份參考，非首角色另加專案畫風錨。
-- 單次生成：使用者每次要求最多呼叫一次圖片生成工具，只產出一張；生成後立即呈現並停止。技術檢查只回報，不自動重生。
+### (a) Exact filenames
+- [ ] 01-night-horse-front-fullbody.png — PENDING-GENERATION
+- [ ] 02-night-horse-four-view-master.png — PENDING-GENERATION
+- [ ] 03-night-horse-expression-sheet.png — PENDING-GENERATION
+- [ ] 04-night-horse-costume-detail-sheet.png — PENDING-GENERATION
+- [ ] 05-night-horse-color-material-sheet.png — PENDING-GENERATION
+- [ ] 06-night-horse-prop-construction-sheet.png — PENDING-GENERATION
 
-| 編號 | 確切檔名 |
-| --- | --- |
-| 01 | 01-nightglow-horse-front-fullbody.png |
-| 02 | 02-nightglow-horse-four-view-master.png |
-| 03 | 03-nightglow-horse-expression-sheet.png |
-| 04 | 04-nightglow-horse-costume-detail-sheet.png |
-| 05 | 05-nightglow-horse-color-material-sheet.png |
-| 06 | 06-nightglow-horse-prop-construction-sheet.png |
+### (b) Character gate
 
-第一階段只生成 01-nightglow-horse-front-fullbody.png，生成後停止等待使用者核准。核准後才逐次生成下一張；每次仍只生成一張。
+Generate only 01-night-horse-front-fullbody.png first. Present that single image and stop. Generate the remaining sheets only after explicit user approval of 01. Other characters do not change this character's gate.
 
----
+### (c) Consistency statement
 
-## 01 — **01-nightglow-horse-front-fullbody.png**
+The filenames above exactly match the section filenames below. Identity, body metrics, costume and fixed palette come from the same Canonical Fact Map as CHARACTER_SPEC.md.
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 01
+### (d) Fixed input images
 
-Canonical character facts (do not add or contradict): BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked nightglow horse. Do not generate sheet 01 and do not promote any legacy anatomy, glow pattern, palette, tack, or biography in this package to story canon until the user decides whether it is a unique character, an unnamed mount, or an ensemble creature.
+For 01, use all three style images below only as visual-style references and never copy their depicted person's identity:
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-Primary request:
-Render exactly one complete front view of the non-human subject in a neutral natural standing pose, true orthographic projection, entire silhouette inside frame. No rider, harness, weapon, removable prop, text, or extra view.
+For 02–06, additionally use ./01-night-horse-front-fullbody.png as this character's identity reference while retaining all three fixed style images.
 
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
+### (e) Existing PNG state
 
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+All files are PENDING-GENERATION. Do not overwrite any future approved PNG.
+
+### (f) Single-generation policy
+
+Each user image request permits at most one image-generation call and one new image. Present it immediately and stop. Technical inspection may report possible deviations but must not auto-reject, move or regenerate. Only after the user explicitly requests a modification may the prior unapproved candidate be placed in rejects/ and one replacement generated.
+
+## 01 — 01-night-horse-front-fullbody.png
+
+Input images:
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
+
+Positive prompt:
+Full-body front view, face or head clearly visible and identifiable. Natural neutral species-appropriate standing pose, full weight balanced, all feet visible, no action, attack, flight or rearing pose, no handheld or loose props. Orthographic front camera, flat light-gray background, even shadowless studio light, entire body inside frame. 夜光馬. TRAILER CANON: luminous horse ridden by Kriz in SCENE 18; DESIGN-PROPOSAL: midnight-blue coat, cyan bioluminescent mane and tail, silver eyes and crystal-like fetlocks. Body metrics: withers height 170 cm; body length 250 cm; elegant warhorse build; four legs and bilateral symmetry. Costume: DESIGN-PROPOSAL: minimal black-silver riding tack with cyan crystal nodes; no human clothing. Fixed palette: midnight blue #17263A; cyan glow #63D9E7; silver #BFCAD5; black tack #202329; crystal blue #3EAEC3; eye silver #C9D7E2.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+identity drift, wrong character, copied reference-person identity, age drift, palette drift, costume redesign, weapon, sword, scabbard, sheath, staff, shield, prop object, holding weapon, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, cropped head, cropped feet, perspective distortion, text, watermark, duplicated limbs, extra wings, extra tail, extra horns, malformed species anatomy
 
----
+## 02 — 02-night-horse-four-view-master.png
 
-## 02 — **02-nightglow-horse-four-view-master.png**
+Input images:
+- ./01-night-horse-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 02
-
-Canonical character facts (do not add or contradict): BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked nightglow horse. Do not generate sheet 01 and do not promote any legacy anatomy, glow pattern, palette, tack, or biography in this package to story canon until the user decides whether it is a unique character, an unnamed mount, or an ensemble creature.
-
-Primary request:
-Create one four-view turnaround sheet in this exact order: front, anatomical-left profile, anatomical-right profile, back. Use the same neutral natural standing pose, identical scale and proportions, aligned head-top and ground lines, true orthographic views, zero removable props.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+One turnaround sheet with four complete views in this exact order: front, camera on the character's anatomical LEFT side, camera on the character's anatomical RIGHT side, back. Same neutral pose, height, scale and proportions in every panel; true orthographic camera; aligned head-top and ground lines. 夜光馬. TRAILER CANON: luminous horse ridden by Kriz in SCENE 18; DESIGN-PROPOSAL: midnight-blue coat, cyan bioluminescent mane and tail, silver eyes and crystal-like fetlocks. Body metrics: withers height 170 cm; body length 250 cm; elegant warhorse build; four legs and bilateral symmetry. Costume: DESIGN-PROPOSAL: minimal black-silver riding tack with cyan crystal nodes; no human clothing. Fixed palette: midnight blue #17263A; cyan glow #63D9E7; silver #BFCAD5; black tack #202329; crystal blue #3EAEC3; eye silver #C9D7E2.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+identity drift, wrong character, copied reference-person identity, age drift, palette drift, costume redesign, weapon, sword, scabbard, sheath, staff, shield, prop object, holding weapon, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, cropped head, cropped feet, perspective distortion, text, watermark, duplicated limbs, extra wings, extra tail, extra horns, malformed species anatomy
 
----
+## 03 — 03-night-horse-expression-sheet.png
 
-## 03 — **03-nightglow-horse-expression-sheet.png**
+Input images:
+- ./01-night-horse-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 03
-
-Canonical character facts (do not add or contradict): BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked nightglow horse. Do not generate sheet 01 and do not promote any legacy anatomy, glow pattern, palette, tack, or biography in this package to story canon until the user decides whether it is a unique character, an unnamed mount, or an ensemble creature.
-
-Primary request:
-Create exactly eight head and upper anatomy panels in a clean 4x2 grid: neutral, gentle/relaxed, broad positive, joyful, surprised, angry, sad, alert/wink-equivalent. Change expression only; preserve identity and anatomy.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Eight head-and-shoulders portraits in a 4x2 grid, straight-on 0-degree camera, head occupies 70-75 percent of each cell. Exact order: neutral, gentle smile, broad smile with teeth, joyful open laughter, surprised, angry, sad, wink. Only expression changes. 夜光馬. TRAILER CANON: luminous horse ridden by Kriz in SCENE 18; DESIGN-PROPOSAL: midnight-blue coat, cyan bioluminescent mane and tail, silver eyes and crystal-like fetlocks. Body metrics: withers height 170 cm; body length 250 cm; elegant warhorse build; four legs and bilateral symmetry. Costume: DESIGN-PROPOSAL: minimal black-silver riding tack with cyan crystal nodes; no human clothing. Fixed palette: midnight blue #17263A; cyan glow #63D9E7; silver #BFCAD5; black tack #202329; crystal blue #3EAEC3; eye silver #C9D7E2.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+identity drift, different faces, hairstyle change, eye-color change, age change, profile view, tilted head, inconsistent grid, text, watermark, duplicated limbs, extra wings, extra tail, extra horns, malformed species anatomy
 
----
+## 04 — 04-night-horse-costume-detail-sheet.png
 
-## 04 — **04-nightglow-horse-costume-detail-sheet.png**
+Input images:
+- ./01-night-horse-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 04
-
-Canonical character facts (do not add or contradict): BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked nightglow horse. Do not generate sheet 01 and do not promote any legacy anatomy, glow pattern, palette, tack, or biography in this package to story canon until the user decides whether it is a unique character, an unnamed mount, or an ensemble creature.
-
-Primary request:
-Create an anatomy and surface-construction detail sheet: head, limbs, joints, back, underside, and any Canon special structures. No invented equipment, rider, text, or labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Costume construction sheet with front and back garment breakdowns, detached outer-layer panels, seam and fastening callouts shown visually without readable text, plus one torso view without the outer layer for 3D body contour reference. No weapons. 夜光馬. TRAILER CANON: luminous horse ridden by Kriz in SCENE 18; DESIGN-PROPOSAL: midnight-blue coat, cyan bioluminescent mane and tail, silver eyes and crystal-like fetlocks. Body metrics: withers height 170 cm; body length 250 cm; elegant warhorse build; four legs and bilateral symmetry. Costume: DESIGN-PROPOSAL: minimal black-silver riding tack with cyan crystal nodes; no human clothing. Fixed palette: midnight blue #17263A; cyan glow #63D9E7; silver #BFCAD5; black tack #202329; crystal blue #3EAEC3; eye silver #C9D7E2.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+identity drift, wrong character, copied reference-person identity, age drift, palette drift, costume redesign, weapon, sword, scabbard, sheath, staff, shield, prop object, holding weapon, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, cropped head, cropped feet, perspective distortion, text, watermark, duplicated limbs, extra wings, extra tail, extra horns, malformed species anatomy
 
----
+## 05 — 05-night-horse-color-material-sheet.png
 
-## 05 — **05-nightglow-horse-color-material-sheet.png**
+Input images:
+- ./01-night-horse-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 05
-
-Canonical character facts (do not add or contradict): BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked nightglow horse. Do not generate sheet 01 and do not promote any legacy anatomy, glow pattern, palette, tack, or biography in this package to story canon until the user decides whether it is a unique character, an unnamed mount, or an ensemble creature.
-
-Primary request:
-Create a color-and-material reference sheet using only Canon named colors plus explicitly marked SPEC design-proposal hex candidates. Include clean swatches/material patches and one neutral reference subject. Do not render visible text or hex labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Color and material reference sheet: clean color swatches and material spheres corresponding exactly to midnight blue #17263A; cyan glow #63D9E7; silver #BFCAD5; black tack #202329; crystal blue #3EAEC3; eye silver #C9D7E2, plus one small neutral full-body reference in the same identity and pose. No weapons or loose props. Flat neutral lighting. 夜光馬. TRAILER CANON: luminous horse ridden by Kriz in SCENE 18; DESIGN-PROPOSAL: midnight-blue coat, cyan bioluminescent mane and tail, silver eyes and crystal-like fetlocks. Body metrics: withers height 170 cm; body length 250 cm; elegant warhorse build; four legs and bilateral symmetry. Costume: DESIGN-PROPOSAL: minimal black-silver riding tack with cyan crystal nodes; no human clothing. Fixed palette: midnight blue #17263A; cyan glow #63D9E7; silver #BFCAD5; black tack #202329; crystal blue #3EAEC3; eye silver #C9D7E2.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+identity drift, wrong character, copied reference-person identity, age drift, palette drift, costume redesign, weapon, sword, scabbard, sheath, staff, shield, prop object, holding weapon, action pose, contrapposto, T-pose, cast shadows, strong highlights, rim light, cropped head, cropped feet, perspective distortion, text, watermark, duplicated limbs, extra wings, extra tail, extra horns, malformed species anatomy
 
----
+## 06 — 06-night-horse-prop-construction-sheet.png
 
-## 06 — **06-nightglow-horse-prop-construction-sheet.png**
+Input images:
+- ./01-night-horse-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 06
-
-Canonical character facts (do not add or contradict): BLOCKING SOURCE MISMATCH: the new character master table contains no independently tracked nightglow horse. Do not generate sheet 01 and do not promote any legacy anatomy, glow pattern, palette, tack, or biography in this package to story canon until the user decides whether it is a unique character, an unnamed mount, or an ensemble creature.
-
-Primary request:
-Create a props/special-construction sheet containing only removable weapons, pendants, tools, tack, or special structures explicitly permitted by the Canon summary. If none are Canon, show only non-invented construction/material studies. No full character, portrait, face, text, or labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Props-only construction sheet for 夜光馬: TRAILER CANON: riding tack; DESIGN-PROPOSAL: crystal bridle and saddle components, only in sheet 06. Show front, side and exploded construction views of every documented prop and detachable fitting. No full-body person, no face, no character silhouette; a headless tailor mannequin is permitted only for attachment placement.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+full-body character, face, head, human silhouette, action scene, prop being held, cropped object, duplicate object, inconsistent scale, text, watermark, duplicated limbs, extra wings, extra tail, extra horns, malformed species anatomy
 
----
+## Per-sheet REJECT Review Checklist
 
-## 逐張驗收清單
+- [ ] Face or head identity matches this character's approved 01.
+- [ ] Hair, surface pattern, eyes and age impression remain consistent.
+- [ ] Body proportions match Body Metrics Lock.
+- [ ] Costume structure matches Costume Lock.
+- [ ] Left/right asymmetry is correct and not mirrored.
+- [ ] Colors match the fixed hex palette.
+- [ ] Sheet layout, view count, order, neutral pose, zero-prop rule and flat lighting are satisfied.
+- [ ] Style matches all three fixed style-reference images.
+- [ ] Human hands, when visible, have exactly five fingers per hand: one thumb plus four fingers, with no extra, fused, duplicated or missing digits.
+- [ ] Kinship traits, where applicable, are consistent without cloning the relative.
 
-- [ ] Canon 身份、外貌、體型、服裝、道具、關係與時期未被推測內容覆蓋。
-- [ ] SPEC 與 PROMPTS 的 Pair sync ID 完全相同。
-- [ ] 01 為單一正面身份錨；02 為四視圖；03 恰好八格；其餘構圖符合各節。
-- [ ] 所有可拆卸武器、墜飾、工具與道具只出現在 06。
-- [ ] 圖片只用 Canon 命名色；候選 hex 不得覆蓋 Canon。
-- [ ] 無文字、標籤、logo、簽名或浮水印。
-- [ ] 有 PNG 的角色已完成 IMAGE-DRIFT-REVIEW-REQUIRED 複核。
+## PENDING-USER-INPUT
 
-驗收只回報偏差並等待使用者，不得自行移檔或重生成。只有使用者明確要求修改時，才歸檔上一張未核准候選並只生成一張新圖。
+PENDING-USER-INPUT: the character is absent from the total character table; species origin, intelligence and exact luminous anatomy are provisional.
+
+## Instruction for Codex
+
+Read <repo-root>/Story_Character/05_傳說與背景/夜光馬/CHARACTER_SPEC.md and this PROMPTS.md. Follow the generation gate. Generate exactly one image per user request, begin with 01-night-horse-front-fullbody.png, present it and stop for approval.

@@ -19,8 +19,8 @@
 
 ## 主要內容
 
-- [`Story_Character/`](Story_Character/)：角色資料與生圖資產（31 位角色）
-- **26 位＝目前可生成格式**（人形 01–07、非人形 01–06）
+- [`Story_Character/`](Story_Character/)：角色資料與生圖資產（32 位預告片具名角色）
+- **32 位皆有成對 SPEC／PROMPTS**（人形 01–07、非人形 01–06）；其中皇后阿格妮絲已有完整 01–07 PNG
 - **5 位＝既有圖片凍結資產**（奧德里奇、伊普拉新、克里茲、班尼迪克、蕾瓦娜斯）——不進入本次文字或生圖流程
 - [`Story_Character/Story_Character_skill/`](Story_Character/Story_Character_skill/)：**正式三段式產圖流程**
 - [`_sandbox_project/`](_sandbox_project/)：新版 01–07 流程的最小完整範例（Lumi／Garo）
@@ -29,10 +29,10 @@
 ## 正式流程：三段 Skill（01–07）
 
 1. [`scene-to-characters`](Story_Character/Story_Character_skill/scene-to-characters/SKILL.md)
-   從故事場次文件整理出每個角色的資料。
+   從故事場次文件整理出角色表與每個角色的資料，並依核准角色表批次補建尚不存在的角色資料夾。
 
 2. [`characters-to-sheets`](Story_Character/Story_Character_skill/characters-to-sheets/SKILL.md)
-   將角色資料整理成 `CHARACTER_SPEC.md` 與 `PROMPTS.md`（01–07），並建立 `STYLE_ANCHOR.md`。
+   在上游已建立的角色資料夾內，將角色資料整理成 `CHARACTER_SPEC.md` 與 `PROMPTS.md`（01–07），並寫入固定三張風格參考圖的使用規則。
 
 3. [`sheets-to-codex`](Story_Character/Story_Character_skill/sheets-to-codex/SKILL.md)
    讓 Codex 讀取角色設定與提示詞，依序生成圖片並逐張驗收。
@@ -43,7 +43,7 @@
 
 | 張號 | 內容 |
 | --- | --- |
-| 01 | 正面全身。**身份錨點**；專案首角色的 01 同時是**畫風錨** |
+| 01 | 正面全身，作為該角色自己的身份錨點 |
 | 02 | 四視圖總表（正面→左→右→背） |
 | 03 | 八表情 |
 | 04 | 服裝拆解 |
@@ -51,14 +51,11 @@
 | 06 | 道具。**武器唯一出現位置** |
 | 07 | 素體（僅人形；非人形共 6 張） |
 
-### 兩階段與畫風錨
+### 固定風格參考與角色身份錨
 
-生圖時會先製作**專案首角色的 `01` 身份基準圖並等待使用者確認**；核准後：
+所有角色、所有張次固定使用 `Story_Character/style/` 內三張原始參考圖控制畫風，不建立額外狀態檔，也不使用角色間的風格依賴。
 
-- `<repo-root>/<專案名>/STYLE_ANCHOR.md` 狀態由 `PENDING-APPROVAL` 改為 `ACTIVE`
-- 該 01 成為全專案唯一畫風錨，角色 2..N 一律只認它
-
-失敗版本放入該角色的 `rejects/`，**不覆蓋已核准圖片**。
+每位角色先製作自己的 `01` 身份基準圖並等待使用者確認；該角色的 02–07 再以自己的核准 01 鎖定身份。不同角色之間不互相充當畫風參考。失敗版本放入該角色的 `rejects/`，**不覆蓋已核准圖片**。
 
 ## 直接進入 sheets-to-codex 的條件
 
@@ -67,7 +64,7 @@
 - [ ] 設定圖為 01–07 格式（非人形 01–06）
 - [ ] `CHARACTER_SPEC.md` 完整：版本 ID、Body Metrics Lock、固定 hex 色票、身份正本欄、Kinship Lock
 - [ ] `PROMPTS.md` 完整：檔頭 Codex 生成清單五項齊（檔名／兩階段閘門／一致性聲明／input images／既有 PNG 標記）
-- [ ] 專案根目錄有 `STYLE_ANCHOR.md`
+- [ ] `Story_Character/style/` 內三張固定風格參考圖全部存在
 - [ ] 沒有阻擋生圖的 `PENDING-USER-INPUT`（檔頭無「未定案不得生成 01」鎖）
 - [ ] `PROMPTS.md` 中有明確的 `## 01`–`## 07` 生圖段落（非人形 `## 01`–`## 06`）
 
@@ -98,8 +95,8 @@
 一鍵入口會依角色現況選擇：
 
 - 已有正式 PNG 的角色：整個角色包先凍結，不修改提示詞或圖片。
-- 沒有 PNG 的既有角色：讀取 01–07／01–06 角色包與 `STYLE_ANCHOR.md`，執行 `sheets-to-codex`，先生 01。
-- 只有故事文本、尚無角色包：依序執行 `scene-to-characters` → `characters-to-sheets` → `sheets-to-codex`，直接建立新版格式。
+- 沒有 PNG 的既有角色：讀取 01–07／01–06 角色包與固定三張風格參考圖，執行 `sheets-to-codex`，先生該角色 01。
+- 只有故事文本、尚無角色包：依序執行 `scene-to-characters`（按角色表補建資料夾）→ `characters-to-sheets`（寫入 SPEC＋PROMPTS）→ `sheets-to-codex`，直接建立新版格式。
 
 不論走哪條路，第一張身份錨點圖完成後都會停止，等待使用者核准。
 

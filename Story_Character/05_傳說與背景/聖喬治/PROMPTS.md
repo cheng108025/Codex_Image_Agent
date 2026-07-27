@@ -1,237 +1,161 @@
-# 聖喬治 — Image Generation Prompts
+# PROMPTS — 聖喬治
 
-<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
-> **Authoritative story canon — source: <repo-root>/全角色總表.md**
->
-> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
-> Pair sync ID: st-george-F1B720F99C76
->
-> Saint George appears through scripture, the hero festival, oaths, and comparisons as a heroic saint and dragon slayer in the faith. The story has not fully defined whether he is a religious-canon figure or a physically historical person in this world. Any concrete face, armor, age, weapon construction, or body measurement remains DESIGN-PROPOSAL; a removable spear or dragon-slaying prop appears only on sheet 06.
->
-> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
-<!-- MASTER-TABLE-CANON-REFRESH:END -->
+> Operation mode: CREATE-CHARACTER
+> Sources: <repo-root>/Story_Character/預告片_按場次重新整理.md + <repo-root>/全角色總表.md + <repo-root>/Story_Character/角色文檔.md
+> Character type: human iconographic figure
+> Trailer evidence: SCENE 00 mural and SCENE 02 legend; generate the in-world mural depiction only
+> Generation gate: READY — first generate only 01, present it, then stop for user approval.
 
-## Codex 生成清單
+## Codex Generation Manifest
 
-- 操作模式：REFRESH-PAIR
-- Pair sync ID：st-george-F1B720F99C76
-- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
-- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
-- 一致性：本檔與 CHARACTER_SPEC.md 使用完全相同的 Canonical Fact Map。
-- Input images：先讀 ../../STYLE_ANCHOR.md。01 依畫風錨狀態決定畫風輸入；02 之後以核准的本角色 01 作身份參考，非首角色另加專案畫風錨。
-- 單次生成：使用者每次要求最多呼叫一次圖片生成工具，只產出一張；生成後立即呈現並停止。技術檢查只回報，不自動重生。
+### (a) Exact filenames
+- [ ] 01-saint-george-front-fullbody.png — PENDING-GENERATION
+- [ ] 02-saint-george-four-view-master.png — PENDING-GENERATION
+- [ ] 03-saint-george-expression-sheet.png — PENDING-GENERATION
+- [ ] 04-saint-george-costume-detail-sheet.png — PENDING-GENERATION
+- [ ] 05-saint-george-color-material-sheet.png — PENDING-GENERATION
+- [ ] 06-saint-george-prop-construction-sheet.png — PENDING-GENERATION
+- [ ] 07-saint-george-body-reference-sheet.png — PENDING-GENERATION
 
-| 編號 | 確切檔名 |
-| --- | --- |
-| 01 | 01-st-george-front-fullbody.png |
-| 02 | 02-st-george-four-view-master.png |
-| 03 | 03-st-george-expression-sheet.png |
-| 04 | 04-st-george-costume-detail-sheet.png |
-| 05 | 05-st-george-color-material-sheet.png |
-| 06 | 06-st-george-prop-construction-sheet.png |
-| 07 | 07-st-george-body-reference-sheet.png |
+### (b) Character gate
 
-第一階段只生成 01-st-george-front-fullbody.png，生成後停止等待使用者核准。核准後才逐次生成下一張；每次仍只生成一張。
+Generate only 01-saint-george-front-fullbody.png first. Present that single image and stop. Generate 02–07 only after explicit user approval of 01. Approval applies to the in-world mural icon and does not establish physical historicity.
 
----
+### (c) Consistency statement
 
-## 01 — **01-st-george-front-fullbody.png**
+The filenames above exactly match the section filenames below. Iconographic identity, body metrics, armor, palette and mural-scope lock come from the same Canonical Fact Map as CHARACTER_SPEC.md.
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 01
+### (d) Fixed input images
 
-Canonical character facts (do not add or contradict): Saint George appears through scripture, the hero festival, oaths, and comparisons as a heroic saint and dragon slayer in the faith. The story has not fully defined whether he is a religious-canon figure or a physically historical person in this world. Any concrete face, armor, age, weapon construction, or body measurement remains DESIGN-PROPOSAL; a removable spear or dragon-slaying prop appears only on sheet 06.
+For 01, use all three images only as style references and never copy their depicted person's identity:
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-Primary request:
-Render exactly one complete front full-body view in a standard neutral A-pose: feet shoulder-width apart, arms straight 30-45 degrees away from the torso, open hands, even weight, true orthographic projection. Character and locked costume only; no removable prop.
+For 02–07, additionally use ./01-saint-george-front-fullbody.png as the mural icon's identity reference while retaining all three style images.
 
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
+### (e) Existing PNG state
 
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+All files are PENDING-GENERATION. Do not overwrite any future approved PNG.
+
+### (f) Single-generation policy
+
+Each user image request permits at most one image-generation call and one new image. Present it immediately and stop. Technical inspection may report deviations but must not auto-reject, move or regenerate. Only an explicit modification request authorizes archiving the prior unapproved candidate and generating one replacement.
+
+## 01 — 01-saint-george-front-fullbody.png
+
+Input images:
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
+
+Positive prompt:
+Full-body front identity reference for Hector's in-world Hero Festival mural depiction of Saint George, not a confirmed living historical person. Standard neutral A-pose: standing upright, feet shoulder-width apart, arms straight and relaxed 30-45 degrees away from the body, palms open, no action pose, no contrapposto, no T-pose. True orthographic front camera, flat warm-gray background, even shadowless production light, entire body visible. Classical dragon-slaying holy knight; DESIGN-PROPOSAL mature solemn masculine face, bronze-brown swept-back hair and blue-gray eyes. DESIGN-PROPOSAL body metrics: 188 cm, 7.8 heads, shoulders 2.5 head widths, idealized heroic build. Antique silver-steel full plate with aged-gold edging, ivory tabard and short ceremonial mantle, restrained sacred-gold glow. No lance, dragon, weapon or prop. Exactly five fingers per hand and five toes per foot.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+claim of living historical scene, Kriz face, Benedict face, Aldrich face, copied reference identity, modern armor, weapon, lance, spear, dragon, gore, action pose, T-pose, cast shadow, rim light, cropped head, cropped feet, text, watermark, extra fingers, six fingers, fused fingers, missing fingers, malformed hands, extra toes
 
----
+## 02 — 02-saint-george-four-view-master.png
 
-## 02 — **02-st-george-four-view-master.png**
+Input images:
+- ./01-saint-george-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 02
-
-Canonical character facts (do not add or contradict): Saint George appears through scripture, the hero festival, oaths, and comparisons as a heroic saint and dragon slayer in the faith. The story has not fully defined whether he is a religious-canon figure or a physically historical person in this world. Any concrete face, armor, age, weapon construction, or body measurement remains DESIGN-PROPOSAL; a removable spear or dragon-slaying prop appears only on sheet 06.
-
-Primary request:
-Create one four-view turnaround sheet in this exact order: front, anatomical-left profile, anatomical-right profile, back. Use the same neutral A-pose, identical scale and proportions, aligned head-top and ground lines, true orthographic views, zero removable props.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+One turnaround sheet of the same approved Saint George mural icon with four complete views in this exact order: front, camera on the character's anatomical LEFT side, camera on the character's anatomical RIGHT side, back. Same neutral A-pose, height, heroic proportions, face and antique plate armor in every panel; true orthographic camera; aligned head-top and ground lines. Preserve silver steel, aged gold, ivory tabard, short red mantle and restrained sacred-gold radiance. No lance, dragon, weapon or loose prop. Exactly five fingers per visible hand.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+different faces, copied project character, wrong view order, duplicate view, living battle scene, weapon, lance, dragon, action pose, perspective, cast shadow, cropped body, text, watermark, extra fingers, six fingers, fused fingers, missing fingers, malformed hands
 
----
+## 03 — 03-saint-george-expression-sheet.png
 
-## 03 — **03-st-george-expression-sheet.png**
+Input images:
+- ./01-saint-george-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 03
-
-Canonical character facts (do not add or contradict): Saint George appears through scripture, the hero festival, oaths, and comparisons as a heroic saint and dragon slayer in the faith. The story has not fully defined whether he is a religious-canon figure or a physically historical person in this world. Any concrete face, armor, age, weapon construction, or body measurement remains DESIGN-PROPOSAL; a removable spear or dragon-slaying prop appears only on sheet 06.
-
-Primary request:
-Create exactly eight head-and-shoulders portrait panels in a clean 4x2 grid: neutral, gentle/relaxed, broad positive, joyful, surprised, angry, sad, alert/wink-equivalent. Change expression only; preserve identity and anatomy.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Eight head-and-shoulders portraits of the same approved in-world Saint George mural icon in a 4x2 grid, straight-on camera, identical scale and armor neckline. Exact order: solemn neutral, gentle blessing, restrained victorious smile, open celebratory joy, sacred revelation, righteous anger, compassion and grief, calm reassuring wink. Only expression changes. Preserve the mature idealized face, bronze-brown swept-back hair, blue-gray eyes and sacred iconographic character.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+eight different people, Kriz face, Benedict face, Aldrich face, hairstyle change, eye-color change, age change, profile view, modern person, inconsistent grid, weapon, dragon, text, watermark
 
----
+## 04 — 04-saint-george-costume-detail-sheet.png
 
-## 04 — **04-st-george-costume-detail-sheet.png**
+Input images:
+- ./01-saint-george-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 04
-
-Canonical character facts (do not add or contradict): Saint George appears through scripture, the hero festival, oaths, and comparisons as a heroic saint and dragon slayer in the faith. The story has not fully defined whether he is a religious-canon figure or a physically historical person in this world. Any concrete face, armor, age, weapon construction, or body measurement remains DESIGN-PROPOSAL; a removable spear or dragon-slaying prop appears only on sheet 06.
-
-Primary request:
-Create a costume construction detail sheet showing only Canon garment layers, front/back construction, collar, sleeves, waist, hem, footwear, fastenings, and material close-ups. No weapons or removable props.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Costume construction sheet for the approved Saint George mural armor: front and back armor breakdowns, detached plate layers, articulated shoulder, elbow, gauntlet, hip and knee construction, ivory tabard and short ceremonial mantle, plus one torso view without outer plate for body-contour reference. Silver-steel plate, aged-gold edging and restrained sacred-gold glow. No lance, dragon, weapon or loose prop. Flat orthographic production presentation with no readable labels. Exactly five fingers per visible hand.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+identity drift, modern armor, costume redesign, weapon, lance, spear, dragon, battle pose, dramatic scenery, cropped main views, readable text, watermark, extra fingers, six fingers, fused fingers, missing fingers, malformed hands
 
----
+## 05 — 05-saint-george-color-material-sheet.png
 
-## 05 — **05-st-george-color-material-sheet.png**
+Input images:
+- ./01-saint-george-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 05
-
-Canonical character facts (do not add or contradict): Saint George appears through scripture, the hero festival, oaths, and comparisons as a heroic saint and dragon slayer in the faith. The story has not fully defined whether he is a religious-canon figure or a physically historical person in this world. Any concrete face, armor, age, weapon construction, or body measurement remains DESIGN-PROPOSAL; a removable spear or dragon-slaying prop appears only on sheet 06.
-
-Primary request:
-Create a color-and-material reference sheet using only Canon named colors plus explicitly marked SPEC design-proposal hex candidates. Include clean swatches/material patches and one neutral reference subject. Do not render visible text or hex labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Color and material reference sheet with unlabeled swatches and material spheres for silver steel #A8AFB5, sacred gold #D5B45D, aged gold #A98538, ivory #E9E1CF, mantle red #87423C, bronze-brown hair #624838, blue-gray eyes #657889 and warm skin #D9B096. Include one small neutral full-body reference of the same approved Saint George mural icon. Flat neutral lighting, no lance, dragon, weapon or loose prop.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+palette drift, neon colors, black evil armor, copied project character, weapon, lance, dragon, action scene, text, hex labels, watermark, cropped body, extra fingers, malformed hands
 
----
+## 06 — 06-saint-george-prop-construction-sheet.png
 
-## 06 — **06-st-george-prop-construction-sheet.png**
+Input images:
+- ./01-saint-george-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 06
-
-Canonical character facts (do not add or contradict): Saint George appears through scripture, the hero festival, oaths, and comparisons as a heroic saint and dragon slayer in the faith. The story has not fully defined whether he is a religious-canon figure or a physically historical person in this world. Any concrete face, armor, age, weapon construction, or body measurement remains DESIGN-PROPOSAL; a removable spear or dragon-slaying prop appears only on sheet 06.
-
-Primary request:
-Create a props/special-construction sheet containing only removable weapons, pendants, tools, tack, or special structures explicitly permitted by the Canon summary. If none are Canon, show only non-invented construction/material studies. No full character, portrait, face, text, or labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+Props-only construction sheet for Saint George's in-world mural iconography. Show one coherent ceremonial dragon-slaying lance in complete front, side, tip, shaft-joint and exploded construction views, plus one shallow-relief generic dragon emblem for mural staging. The emblem must be generic iconography and must not copy the project's living Giant Dragon identity. No full-body person, face, severed dragon anatomy, gore or battle scene.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+full-body character, face, living project Giant Dragon, realistic dead dragon, gore, severed anatomy, multiple incompatible lances, weapon being held, action scene, text, watermark
 
----
+## 07 — 07-saint-george-body-reference-sheet.png
 
-## 07 — **07-st-george-body-reference-sheet.png**
+Input images:
+- ./01-saint-george-front-fullbody.png
+- ../../style/SV8zdQHTYqQAAAABJRU5ErkJggg.png
+- ../../style/McEZ7GwGWkAAAAABJRU5ErkJggg.png
+- ../../style/8fJgh1kde6P3IAAAAASUVORK5CYII.png
 
-~~~text
-Use case: stylized-concept
-Asset type: modeling reference sheet 07
-
-Canonical character facts (do not add or contradict): Saint George appears through scripture, the hero festival, oaths, and comparisons as a heroic saint and dragon slayer in the faith. The story has not fully defined whether he is a religious-canon figure or a physically historical person in this world. Any concrete face, armor, age, weapon construction, or body measurement remains DESIGN-PROPOSAL; a removable spear or dragon-slaying prop appears only on sheet 06.
-
-Primary request:
-Create a human body-reference sheet for modeling: front and anatomical-left profile at identical scale, neutral A-pose, plain tight dark-gray bodysuit, hair secured away from the silhouette, no costume outer layers, accessories, jewelry, weapons, props, text, or labels.
-
-Source invariants:
-- Use only the Canon facts above.
-- Read CHARACTER_SPEC.md for the same Pair sync ID.
-- Treat all unstated details as DESIGN-PROPOSAL or PENDING-USER-INPUT.
-- All removable props are forbidden outside sheet 06.
-- Preserve the approved 01 identity on sheets 02 onward when an approved 01 exists.
-
-Style:
-refined Japanese anime fantasy production character sheet, clean delicate linework, controlled soft cel shading with subtle painterly rendering, flat even ambient lighting, low-contrast warm light-gray background, orthographic presentation, high-resolution concept art
+Positive prompt:
+SMPL-X body reference for the same approved in-world Saint George mural icon, with complete front and camera-on-anatomical-LEFT-side views at identical scale. Preserve the mature idealized face, bronze-brown hair and heroic body proportions without asserting historical reality. Plain fitted neutral dark-gray body suit, hair gathered away from the neck, standard neutral A-pose, true orthographic camera and aligned ground line. DESIGN-PROPOSAL body metrics: 188 cm, 7.8 heads, shoulders 2.5 head widths. Exactly five fingers per hand and five toes per foot. No armor, mantle, lance, dragon, weapon, prop or jewelry.
 
 Negative prompt:
-photorealistic, live-action, 3D render, CGI, western comic style, chibi, thick outlines, dramatic scenery, extreme perspective, cropped subject, duplicate subject, extra limbs, malformed hands, invented identity traits, invented costume, invented props, text, labels, letters, numbers, logo, signature, watermark, cast shadows, rim light
-~~~
+armor, cape, mantle, tabard, loose clothing, weapon, lance, dragon, props, accessories, jewelry, action pose, T-pose, cast shadow, cropped body, perspective, extra fingers, six fingers, fused fingers, missing fingers, malformed hands, extra toes
 
----
+## Per-sheet REJECT Review Checklist
 
-## 逐張驗收清單
+- [ ] Identity matches the approved in-world mural icon without copying another project character.
+- [ ] Hair, eyes, age impression and armor identity remain consistent.
+- [ ] Body proportions match Body Metrics Lock.
+- [ ] Costume structure matches Costume Lock.
+- [ ] Colors match the fixed proposal palette.
+- [ ] Lance and dragon emblem appear only in sheet 06.
+- [ ] Sheet layout, view count, order, neutral pose, zero-prop rule and flat lighting are satisfied.
+- [ ] Style matches all three fixed style-reference images.
+- [ ] Visible human hands have exactly five fingers per hand.
+- [ ] No image claims Saint George is confirmed as a physically historical person.
 
-- [ ] Canon 身份、外貌、體型、服裝、道具、關係與時期未被推測內容覆蓋。
-- [ ] SPEC 與 PROMPTS 的 Pair sync ID 完全相同。
-- [ ] 01 為單一正面身份錨；02 為四視圖；03 恰好八格；其餘構圖符合各節。
-- [ ] 所有可拆卸武器、墜飾、工具與道具只出現在 06。
-- [ ] 圖片只用 Canon 命名色；候選 hex 不得覆蓋 Canon。
-- [ ] 無文字、標籤、logo、簽名或浮水印。
-- [ ] 有 PNG 的角色已完成 IMAGE-DRIFT-REVIEW-REQUIRED 複核。
+## PENDING-USER-INPUT
 
-驗收只回報偏差並等待使用者，不得自行移檔或重生成。只有使用者明確要求修改時，才歸檔上一張未核准候選並只生成一張新圖。
+PENDING-USER-INPUT: Saint George's status as a religious-canonical figure versus a physically historical person remains unresolved. These prompts define only the Hero Festival mural and legend depiction.
+
+## Instruction for Codex
+
+Read <repo-root>/Story_Character/05_傳說與背景/聖喬治/CHARACTER_SPEC.md and this PROMPTS.md. Follow the generation gate. Generate exactly one image per user request, begin with 01-saint-george-front-fullbody.png, present it and stop for approval.

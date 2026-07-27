@@ -1,76 +1,86 @@
-# 鮑曼 — CHARACTER_SPEC
+# CHARACTER_SPEC — 鮑曼
 
-<!-- MASTER-TABLE-CANON-REFRESH:BEGIN -->
-> **Authoritative story canon — source: <repo-root>/全角色總表.md**
->
-> Source SHA-256: F1B720F99C76183EBE7254C4CA150517A046D1D2BCEDD911DB6D9AD866EDC129
-> Pair sync ID: bowman-F1B720F99C76
->
-> Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
->
-> Only facts stated above are CANON. Unstated visual details are DESIGN-PROPOSAL or PENDING-USER-INPUT; they must never be promoted to Canon by inference.
-<!-- MASTER-TABLE-CANON-REFRESH:END -->
-
-> 本檔與同資料夾 PROMPTS.md 由同一份 Canonical Fact Map 成對重建。用途為 3D 建模參考包；正式影片仍以核准的 Blender／VRM 模型為唯一身份正本。
-
-## 同步與狀態
-
-- 操作模式：REFRESH-PAIR
-- Pair sync ID：bowman-F1B720F99C76
-- 角色版本 ID：BOWMAN-V1-FIRST-RECON
-- 生成閘門：READY-FOR-DOWNSTREAM-CHECK
-- 圖片狀態：PENDING-GENERATION — no direct PNG exists.
-- 身份正本：01-bowman-front-fullbody.png
-- 專案畫風正本：../../STYLE_ANCHOR.md
+> Operation mode: CREATE-CHARACTER
+> Authoritative sources: <repo-root>/Story_Character/預告片_按場次重新整理.md (SCENE 14 appearance scope) + <repo-root>/全角色總表.md (identity and military role) + <repo-root>/Story_Character/角色文檔.md (memory-image design)
+> Version ID: BOWMAN-V1-1586_FORGOTTEN_SCOUT
+> Identity master: PENDING-GENERATION → 01-bowman-front-fullbody.png
+> Generation gate: READY-FOR-DOWNSTREAM-01-REQUEST
+> Trailer evidence: SCENE 14; Bowman exists only through Kriz's memory, the casualty roster and a deliberately fading flashback
 
 ## Canonical Fact Map
 
-- 名稱／別名、外貌、體型、服裝、道具、關係、時期與 PENDING：以上方權威 Canon 摘要為唯一故事事實。
-- 未被摘要明載的臉、髮、瞳、年齡、身材、服裝、武器、血緣或歷史：PENDING-USER-INPUT，不得自行升格為 Canon。
-- 舊角色包中的非衝突視覺補完全部降級為 DESIGN-PROPOSAL。
+- Name: 鮑曼
+- English asset slug: bowman
+- Character type: human memory-image
+- Production version: 1586-forgotten-scout
+- Appearance: TRAILER CANON: a fallen scout whose face cannot be reconstructed in Kriz's memory and fades toward a blank, featureless face; DESIGN-PROPOSAL: adult male silhouette with short indistinct dark hair
+- Costume: CHARACTER-DOC CANON: standard scout light-armor silhouette; DESIGN-PROPOSAL: layered charcoal gambeson, dull steel plates, worn leather straps and a faded Hector-blue scarf
+- Props and special construction: no personal weapon or prop is Canon; DESIGN-PROPOSAL: standard scout map case, signal whistle and utility knife, only in sheet 06
+- Kinship and relationship facts: no recorded blood relation; one of Eivis's recruited pioneer soldiers and one of the dead scouts remembered by Kriz
+- Pending: PENDING-USER-INPUT: clear facial features, eye color, exact hair color, age, weapon and personal history are intentionally unavailable; do not invent a clearly identifiable face
 
 ## Body Metrics Lock
 
-- 身高（cm）：**175**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
-- 頭身比：**7.0**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
-- 肩寬（頭寬倍數）：**約 2.0 倍頭寬**（DESIGN-PROPOSAL；只保留數值，不沿用舊體型敘述）
-- 左右不對稱：只採用 Canon 摘要明載內容；未指定側別時為 PENDING-USER-INPUT。
+- Scale and proportions: DESIGN-PROPOSAL: 176 cm; 7.4 heads; shoulders 2.3 head widths; lean field-scout build; bilateral symmetry
+- Shoulder width is explicitly included above and must remain consistent across 01, 02, 04, 05 and 07.
+- Symmetry: keep left and right anatomy consistent; only the memory-erasure effect may remain softly irregular.
+- Anatomy lock: exactly two arms, two hands, two legs and two feet; exactly five fingers on each hand and five toes on each foot; no extra, fused, duplicated or missing digits.
 
 ## Identity Lock
 
-- CANON：Bowman is one of the frontier warriors recruited by Eivis. The story does not specify background, face, hair, eyes, age, body measurements, costume, or weapon. Every existing visual detail remains DESIGN-PROPOSAL and must not be described as story canon.
-- 臉部身份、髮型、瞳色、膚色與體型不得加入摘要未載的固定事實。
-- 若已有核准 01，後續圖片維持該圖身份；若與新 Canon 衝突，先處理 IMAGE-DRIFT-REVIEW-REQUIRED。
+- The identity is the absence of recoverable identity: an adult scout with a face that softly loses specific features into pale memory haze.
+- Never replace the erased face with a sharp handsome hero face, skull, monster face, mask, helmet visor or horror wound.
+- Preserve the same silhouette, armor construction and degree of facial erasure across all sheets.
+- Do not copy the identity, face, costume or colors of any style-reference person.
 
 ## Costume Lock
 
-- 只鎖定 Canon 摘要明載的服裝版本與材質方向。
-- 摘要列出兩個時期／服裝時，必須分開建立版本，不得混穿。
-- 未載細節均為 DESIGN-PROPOSAL 或 PENDING-USER-INPUT。
+- CHARACTER-DOC CANON: standard scout light-armor silhouette.
+- DESIGN-PROPOSAL: layered charcoal gambeson, dull steel plates, worn leather straps, flexible field boots and a faded Hector-blue scarf.
+- 01, 02, 03, 04 and 05 show no handheld weapon or loose prop.
+- 07 removes armor, scarf, accessories and props and uses only a fitted neutral body suit.
 
-## 固定色票與材質
+## Color and Material Lock
 
-- Canon 明載的色名優先；任何 hex 僅為建模候選，不得反向覆蓋 Canon 色名。
-- Canon 未指定色名；沿用的舊版候選 hex 全部為 DESIGN-PROPOSAL：#6A6E73、#3D2E22、#4A463F
-- Canon 色名與候選 hex 發生衝突時：PENDING-USER-INPUT，不得生圖定案。
+- Fixed production palette, all DESIGN-PROPOSAL: memory gray #B8BBC0; field charcoal #343940; faded Hector blue #465A70; worn leather #66503E; dull steel #7C858C; pale haze #D8D9D7; indistinct dark hair #3A3838
+- The face must remain low-detail and desaturated; do not assign a Canon eye or skin color.
+- Treat all unlabelled colors as DESIGN-PROPOSAL. Do not shift palette or material identity between sheets.
 
-## 道具與特殊構造
+## Prop and Special Construction Lock
 
-- 只允許 Canon 摘要明載的可拆卸武器、飾品、工具、坐騎裝具或特殊構造。
-- 所有可拆卸道具只出現在 06-bowman-prop-construction-sheet.png。
-- 01–05 與人形 07 一律零可拆卸道具。
+- No personal weapon or prop is Canon.
+- DESIGN-PROPOSAL standard scout map case, signal whistle and utility knife appear only in sheet 06.
+- The casualty roster and Kriz's desk are scene props, not Bowman identity props, and must not appear in this character package.
 
 ## Kinship Lock
 
-- 親屬、婚姻、父子女、手足與陣營關係只採 Canon 摘要明載內容。
-- 摘要未明載可視化承襲特徵時，不得自行發明家族臉。
+- No recorded blood relation.
+- Military relationship only: Eivis recruited Bowman as a pioneer soldier; Kriz remembers him as one of the dead scouts.
+- Do not clone Eivis, Kriz or any other soldier's face, hairstyle, age or body mass.
 
-## 八種表情／狀態
+## Eight Expressions
 
-neutral／gentle or relaxed／broad positive／joyful／surprised／angry／sad／alert or wink-equivalent。只改表情或狀態，不改身份與 Canon 特徵。
+1. neutral memory trace
+2. faint comradely warmth
+3. barely readable smile
+4. distant remembered laughter
+5. startled trace
+6. tense trace
+7. sorrowful fading trace
+8. final nearly blank memory
 
-## 禁止與待確認
+Only the remaining expression trace changes. Facial specificity must stay intentionally indistinct and must never become a new clear identity.
 
-- 禁止任何與權威 Canon 摘要相反的舊髮色、瞳色、體型、服裝、道具、關係或時期設定。
-- BLOCKING SOURCE MISMATCH 或重大身份 PENDING 未解決前，不得生成 01。
-- 有既有 PNG 的角色須先完成圖片漂移複核；本輪不修改、不刪除、不重新命名任何 PNG。
+## Prohibited Features
+
+- clear fully resolved face, sharp eye color, celebrity face, heroic glamour portrait
+- skull face, mask, visor, gore, horror disfigurement, zombie traits
+- identity drift, age drift, costume redesign, palette drift
+- weapons or props outside sheet 06
+- cropped feet, cropped head, perspective distortion, action pose, dramatic cast shadows
+- extra limbs, duplicated anatomy, fused anatomy, missing anatomy
+- extra fingers, six fingers, fused fingers, missing fingers, duplicated thumbs, malformed hands, extra toes
+
+## PENDING-USER-INPUT
+
+PENDING-USER-INPUT: Bowman's clear facial features, eye color, exact hair color, age, weapon and personal history are not recoverable from the current text. This package intentionally represents the erased memory-image and must not invent a definitive face.

@@ -1,4 +1,4 @@
-# PROMPTS.md — Lumi（首角色／專案畫風錨候選）
+# PROMPTS.md — Lumi（固定三張風格參考測試）
 
 ## 用途聲明
 
@@ -17,15 +17,15 @@
 
 **(b) 兩階段閘門**
 - 第一階段：只生 `01-lumi-front-fullbody.png` → **停止，等使用者核准**。
-- **Lumi 核准後，01 登記為專案畫風錨**（更新 `../STYLE_ANCHOR.md` 狀態為 ACTIVE），並解鎖第二階段。
+- **Lumi 的 01 核准後**，該圖只作 Lumi 自己 02–07 的身份參考，並解鎖第二階段。
 - 第二階段：核准後才生 02–07。
 - 血緣角色順序：不適用（Kinship=無）。
 
 **(c) 生成清單與各節標題檔名一致**：上列 (a) 七個檔名與下方 `## 01`–`## 07` 各節標題一一對應，無增減。
 
-**(d) 雙層錨點 input images 說明（首角色）**
-- 01：Input images = **bootstrap 畫風依據（文字，非圖像）**：「refined Japanese anime fantasy character design, clean linework, soft cel shading」。無任何既有 PNG 可引用。
-- 02–07：Input images Image 1 = **Lumi 自己的 `01-lumi-front-fullbody.png`**（角色身份錨，鎖臉/髮/服裝身份與延續 01 已建立之畫風）。Lumi 是首角色，尚無其他更高層畫風錨可引用。
+**(d) 固定 input images 說明**
+- 01：Input images = `../../Story_Character/style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`、`../../Story_Character/style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`、`../../Story_Character/style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`（只控制風格）。
+- 02–07：另加 Lumi 自己核准的 `01-lumi-front-fullbody.png` 作身份參考，並持續帶入固定三張風格圖。
 
 **(e) 既有 PNG 標記**
 - `01-lumi-front-fullbody.png`：PENDING-GENERATION
@@ -41,7 +41,7 @@
 
 ## 01 — `01-lumi-front-fullbody.png`
 
-- **Use case**：角色身份錨點建立（stage 1）；同時作為專案畫風錨候選圖。
+- **Use case**：角色身份錨點建立（stage 1）。
 - **Asset type**：正面全身 A-pose 零道具參考圖。
 - **Input images**：無圖像輸入。文字畫風依據＝「refined Japanese anime fantasy character design, clean linework, soft cel shading」。
 - **Primary request**：Full-body front view of Lumi, a young female humanoid character, standing in standard A-pose, face clearly visible and identifiable.
@@ -184,9 +184,9 @@
 生成後停止，交還使用者核准。
 
 【使用者核准 01 後】：
-1. 更新 <repo-root>/_sandbox_project/STYLE_ANCHOR.md 狀態為 ACTIVE，畫風錨＝Lumi/01-lumi-front-fullbody.png。
-2. 依序生成 02–07（依 PROMPTS.md 對應章節），每張生成後先過文末 REJECT 驗收清單再進下一張。
-3. 全數通過後，Lumi 參考包視為完成，Garo 可開始生成。
+1. 將 Lumi 的核准 01 作為 Lumi 自己 02–07 的身份參考。
+2. 依序生成 02–07（依 PROMPTS.md 對應章節），每張持續帶入固定三張風格圖並在生成後先過文末 REJECT 驗收清單。
+3. 全數通過後，Lumi 參考包視為完成。
 ```
 
 ---
@@ -202,5 +202,5 @@
 - [ ] 左右不對稱位置正確、未鏡像
 - [ ] 色票未漂移（對照固定 hex）
 - [ ] 該張構圖規則（視圖數/順序/A-pose/零道具/平光）全滿足
-- [ ] **畫風與專案畫風錨（首角色 01）一致**（Lumi 為首角色，01 本身即畫風錨建立圖，02–07 對照 01 檢核）
+- [ ] **畫風與固定三張風格參考一致**
 - [ ] 血緣相似：不適用（Kinship＝無）

@@ -17,16 +17,15 @@
 
 **(b) 兩階段閘門**
 - 第一階段：只生 `01-garo-front-fullbody.png` → **停止，等使用者核准**。
-- 本角色非首角色，核准後**不**登記畫風錨（畫風錨固定為 Lumi 01，不因 Garo 核准而變動）。
+- Garo 的 01 核准後只作 Garo 自己 02–07 的身份參考。
 - 第二階段：核准後才生 02–07。
 - 血緣角色順序：不適用（Kinship=無，與 Lumi 無血緣）。
 
 **(c) 生成清單與各節標題檔名一致**：上列 (a) 七個檔名與下方 `## 01`–`## 07` 各節標題一一對應，無增減。
 
-**(d) 雙層錨點 input images 說明（角色 2..N）**
-- 本角色**不引用**專案 bootstrap 文字畫風描述或 bootstrap 圖片。
-- 01：Image 1 = 空（本角色尚無自己的 01）；Image 2 = **`../Lumi/01-lumi-front-fullbody.png`**（專案畫風錨，僅供畫風參考，非身份參考）。
-- 02–07：Image 1 = **Garo 自己的 `01-garo-front-fullbody.png`**（角色身份錨，鎖臉/髮/服裝身份）；Image 2 = **`../Lumi/01-lumi-front-fullbody.png`**（專案畫風錨，鎖線條/上色/材質/光影風格）。
+**(d) 固定 input images 說明**
+- 01：固定帶入 `../../Story_Character/style/SV8zdQHTYqQAAAABJRU5ErkJggg.png`、`../../Story_Character/style/McEZ7GwGWkAAAAABJRU5ErkJggg.png`、`../../Story_Character/style/8fJgh1kde6P3IAAAAASUVORK5CYII.png`（只控制風格）。
+- 02–07：另加 Garo 自己核准的 `01-garo-front-fullbody.png` 作身份參考，並持續帶入固定三張風格圖。
 
 **(e) 既有 PNG 標記**
 - `01-garo-front-fullbody.png`：PENDING-GENERATION
@@ -44,14 +43,14 @@
 
 - **Use case**：角色身份錨點建立（stage 1）。
 - **Asset type**：正面全身 A-pose 零道具參考圖。
-- **Input images**：Image 1 = 空（無自己的 01）；Image 2 = `../Lumi/01-lumi-front-fullbody.png`（畫風參考，僅供線條/上色/光影風格對照，非身份參考）。
+- **Input images**：固定三張 `../../Story_Character/style/` 風格圖；本張尚無 Garo 身份參考。
 - **Primary request**：Full-body front view of Garo, an adult male humanoid warrior, standing in standard A-pose, face clearly visible and identifiable. **No weapon or sword visible in this image.**
 - **Identity invariants**：深棕短髮（short, practical soldier cut）；灰藍瞳（#7A8B9A）；小麥膚色（#C79A70）；成年男性臉型，方正下顎、粗眉。
 - **Kinship invariants**：無血緣角色，與 Lumi 無血緣關係，不適用。
 - **Body metrics**（01 必填）：身高 182cm；7.5 頭身；肩寬＝頭寬×1.8；全對稱，無不對稱特徵。
 - **Costume invariants**：深棕皮甲（主色 #5A3A22）、焦棕滾邊縫線（#3E2814）、暗鐵灰扣具（#6B6B6B）、深灰麻布內襯（#4A4A4A）。**無長劍、無劍鞘、無任何佩掛武器**（武器僅於 06 出現）。
 - **Composition**：Single character, centered, full body from head to feet visible, plain neutral flat background, orthographic front camera, no perspective distortion.
-- **Positive style**：畫風完全對照 Image 2（Lumi 01）：refined Japanese anime fantasy character design, clean linework, soft cel shading, flat even ambient lighting. **不得引用 bootstrap 文字畫風描述或 bootstrap 圖片。**
+- **Positive style**：畫風完全對照固定三張風格圖：refined Japanese anime fantasy character design, clean linework, soft cel shading, flat even ambient lighting.
 - **Negative prompt**：`action pose, contrapposto, hands on hips, crossed arms, T-pose, weapon-holding stance, weapon, sword, scabbard, sheath, staff, shield, prop object, holding weapon, weapon in hand, cast shadows, strong highlights, rim light`
 - **Constraints**：
   ```
@@ -65,7 +64,7 @@
 
 - **Use case**：四視圖總表，供 3D 建模比對輪廓。
 - **Asset type**：四視圖總表（正面→左→右→背）。
-- **Input images**：Image 1 = `01-garo-front-fullbody.png`（身份錨）；Image 2 = `../Lumi/01-lumi-front-fullbody.png`（畫風錨）。
+- **Input images**：`01-garo-front-fullbody.png`（身份）＋固定三張 `../../Story_Character/style/` 風格圖。
 - **Primary request**：Four-view orthographic master sheet of Garo: front → anatomical LEFT side → anatomical RIGHT side → back, same A-pose, true orthographic alignment across all four views. **No weapon visible.**
 - **Identity invariants**：同 01（深棕短髮、灰藍瞳、小麥膚色、方正下顎）；四視圖臉部/髮型一致無漂移。
 - **Kinship invariants**：無血緣角色，不適用。
@@ -82,7 +81,7 @@
 
 - **Use case**：表情參考，供動畫/表演調用。
 - **Asset type**：八表情臉部表，固定 4×2 網格。
-- **Input images**：Image 1 = `01-garo-front-fullbody.png`（身份錨，鎖臉型）；Image 2 = `../Lumi/01-lumi-front-fullbody.png`（畫風錨）。
+- **Input images**：`01-garo-front-fullbody.png`（身份，鎖臉型）＋固定三張 `../../Story_Character/style/` 風格圖。
 - **Primary request**：8-expression facial sheet of Garo in a fixed 4x2 grid: neutral, smile, laugh/battle-cry, sad, angry, surprised, stern, determined.
 - **Identity invariants**：深棕短髮、灰藍瞳、小麥膚色、方正下顎；每格臉型/髮型與 01 一致，僅表情肌肉變化。
 - **Kinship invariants**：無血緣角色，不適用。
@@ -99,7 +98,7 @@
 
 - **Use case**：服裝細節表，供服裝建模拆解。
 - **Asset type**：服裝細節表；披風/外層拆解面板＋一組無外層軀幹視圖。
-- **Input images**：Image 1 = `01-garo-front-fullbody.png`（身份錨＋服裝基準）；Image 2 = `../Lumi/01-lumi-front-fullbody.png`（畫風錨）。
+- **Input images**：`01-garo-front-fullbody.png`（身份＋服裝基準）＋固定三張 `../../Story_Character/style/` 風格圖。
 - **Primary request**：Costume detail sheet for Garo's leather armor: chest plate seams, shoulder pauldron close-up, buckle/strap details, plus one torso view without the outer armor layer (undershirt/padding only). **No sword or scabbard shown.**
 - **Identity invariants**：小麥膚色、成年男性體型，僅作服裝背景參照，不需完整臉部特寫。
 - **Kinship invariants**：無血緣角色，不適用。
@@ -116,7 +115,7 @@
 
 - **Use case**：色票／材質定案表，供 3D 貼圖上色。
 - **Asset type**：色票／材質表，固定 hex。
-- **Input images**：Image 1 = `01-garo-front-fullbody.png`（身份基準）；Image 2 = `../Lumi/01-lumi-front-fullbody.png`（畫風與色感基準）。
+- **Input images**：`01-garo-front-fullbody.png`（身份基準）＋固定三張 `../../Story_Character/style/` 風格圖。
 - **Primary request**：Color and material reference sheet for Garo with labeled swatches: primary leather, trim, metal buckle, fabric lining, skin, hair, eyes, each with fixed hex value.
 - **Identity invariants**：膚色 #C79A70、髮色 #3B2A1E、瞳色 #7A8B9A，需與 01 一致。
 - **Kinship invariants**：無血緣角色，不適用。
@@ -133,7 +132,7 @@
 
 - **Use case**：道具／特殊構造表——**長劍唯一出現位置**。
 - **Asset type**：道具／特殊構造表；武器（含佩掛方式）。
-- **Input images**：Image 1 = `01-garo-front-fullbody.png`（身份/比例參照）；Image 2 = `../Lumi/01-lumi-front-fullbody.png`（畫風錨，武器繪製線條/材質亦須對齊此畫風）。
+- **Input images**：`01-garo-front-fullbody.png`（身份／比例）＋固定三張 `../../Story_Character/style/` 風格圖。
 - **Primary request**：Prop construction sheet for Garo's long sword: full blade + hilt + crossguard construction view, plus a small inset showing how it is worn/sheathed at the character's waist/back.
 - **Identity invariants**：不適用（本張以道具為主體，非角色臉部特寫）。
 - **Kinship invariants**：無血緣角色，不適用。
@@ -150,7 +149,7 @@
 
 - **Use case**：素體參考圖，供 SMPL-X／參數化人體擬合。
 - **Asset type**：素體參考圖（僅人形）；無鎧甲無外層、貼身素體衣。
-- **Input images**：Image 1 = `01-garo-front-fullbody.png`（身份錨，保留臉部身份）；Image 2 = `../Lumi/01-lumi-front-fullbody.png`（畫風錨）。
+- **Input images**：`01-garo-front-fullbody.png`（身份，保留臉部身份）＋固定三張 `../../Story_Character/style/` 風格圖。
 - **Primary request**：Body reference sheet of Garo in a form-fitting bodysuit (no armor, no outer garment), front view + left side view, full body silhouette clearly visible. **No sword or scabbard shown.**
 - **Identity invariants**：深棕短髮、灰藍瞳、小麥膚色、方正下顎，臉部身份與 01 一致。
 - **Kinship invariants**：無血緣角色，不適用。
@@ -177,13 +176,13 @@
 規格檔：CHARACTER_SPEC.md
 提示詞檔：PROMPTS.md
 
-前提：Lumi 的 01-lumi-front-fullbody.png 已核准並登記為專案畫風錨（見 ../STYLE_ANCHOR.md）。
+前提：固定三張 `Story_Character/style/` 風格圖存在且可讀。
 
-階段一：僅生成 01-garo-front-fullbody.png（依 PROMPTS.md「## 01」欄位；Image 2 固定引用 ../Lumi/01-lumi-front-fullbody.png 作畫風參考）。
+階段一：僅生成 01-garo-front-fullbody.png（依 PROMPTS.md「## 01」欄位；固定帶入三張風格圖）。
 生成後停止，交還使用者核准。
 
 【使用者核准 01 後】：
-1. 依序生成 02–07（依 PROMPTS.md 對應章節，Image 1＝自己 01、Image 2＝Lumi 01），每張生成後先過文末 REJECT 驗收清單再進下一張。
+1. 依序生成 02–07（身份參考＝自己 01；風格參考＝固定三張風格圖），每張生成後先過文末 REJECT 驗收清單再進下一張。
 2. 長劍僅可出現於 06；其餘六張若偵測到武器即 REJECT。
 ```
 
@@ -200,6 +199,6 @@
 - [ ] 左右不對稱位置正確、未鏡像
 - [ ] 色票未漂移（對照固定 hex）
 - [ ] 該張構圖規則（視圖數/順序/A-pose/零道具/平光）全滿足
-- [ ] **畫風與專案畫風錨（首角色 Lumi 01）一致**（非本角色自創畫風）
+- [ ] **畫風與固定三張風格參考一致**
 - [ ] 血緣相似：不適用（Kinship＝無，與 Lumi 無血緣）
 - [ ] 長劍僅出現於 06；01/02/04/07 未見任何武器
